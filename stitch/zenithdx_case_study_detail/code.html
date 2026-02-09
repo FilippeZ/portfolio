@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ZenithDx Case Study Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0066ff",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#000000", // Overriding based on specific prompt request for #000000
+                        "surface-dark": "#0f1723",
+                        "border-dark": "#20314b",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"],
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .grid-bg {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, #20314b 1px, transparent 1px),
+                              linear-gradient(to bottom, #20314b 1px, transparent 1px);
+            mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen flex flex-col">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 flex items-center justify-between border-b border-solid border-slate-200 dark:border-border-dark bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-6 py-4 lg:px-10">
+<div class="flex items-center gap-4">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined">health_metrics</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight">ZenithDx Series</h2>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<nav class="flex gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Case Studies</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<button class="flex items-center gap-2 rounded bg-primary px-4 py-2 text-sm font-bold text-white transition hover:bg-primary/90">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Download PDF</span>
+</button>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined cursor-pointer">menu</span>
+</div>
+</header>
+<main class="flex-1 w-full max-w-[1200px] mx-auto px-4 py-8 md:px-10 md:py-16">
+<!-- Hero Section -->
+<section class="mb-16 md:mb-24">
+<div class="flex flex-col gap-2 mb-6">
+<div class="flex items-center gap-2 text-primary font-mono text-sm tracking-wide uppercase">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                    Case Study 01
+                </div>
+<h1 class="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-300 max-w-4xl">
+                    ZenithDx: Multimodal Clinical Co-Pilot
+                </h1>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-border-dark border border-border-dark rounded-lg overflow-hidden">
+<div class="bg-background-dark p-6 flex flex-col gap-1">
+<p class="text-slate-400 text-xs font-mono uppercase tracking-wider">Role</p>
+<p class="font-medium text-lg">Lead Architect &amp; PM</p>
+</div>
+<div class="bg-background-dark p-6 flex flex-col gap-1">
+<p class="text-slate-400 text-xs font-mono uppercase tracking-wider">Timeline</p>
+<p class="font-medium text-lg">6 Months</p>
+</div>
+<div class="bg-background-dark p-6 flex flex-col gap-1">
+<p class="text-slate-400 text-xs font-mono uppercase tracking-wider">Client</p>
+<p class="font-medium text-lg">HealthTech Ventures</p>
+</div>
+<div class="bg-background-dark p-6 flex flex-col gap-1">
+<p class="text-slate-400 text-xs font-mono uppercase tracking-wider">Outcome</p>
+<p class="font-medium text-lg text-primary">HIPAA Compliant</p>
+</div>
+</div>
+<!-- Hero Image/Visual -->
+<div class="mt-8 relative w-full h-[300px] md:h-[480px] rounded-lg overflow-hidden border border-border-dark group">
+<div class="absolute inset-0 bg-black/40 z-10 transition-opacity duration-500 group-hover:opacity-20"></div>
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Abstract visualization of digital healthcare data network with blue nodes" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBRVkCBy1IT4LeSqq68MXO0P8J3HOecLooRUJ6sWos8laiRWujcGwrfOo2AEH3_qrSzwBS-mLkPTa5NWwcW9P-Seo7djJOawoG-MrCxRjAEIcPYGRSzCUh6zZ3X6Hg2GtIwXZDSL-3p9WB1LiDtT7CPFBT6-CJQMr6xZzZ4cOdeCzDdKa_5CIQTWnr7BTyBqTwdoDB64DGwLx708XqXZSEk9tiNbNH7jYy4PuM1V_IbREKi7-3YjIVk7W0TKQGMmlKITbGh__LL5rnk');">
+</div>
+<div class="absolute bottom-0 left-0 z-20 p-8 w-full bg-gradient-to-t from-background-dark to-transparent">
+<div class="flex items-center gap-2 text-white/80 font-mono text-sm">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span data-location="San Francisco, USA">San Francisco, USA</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Overview Split Section -->
+<section class="mb-20">
+<div class="grid grid-cols-1 lg:grid-cols-2 border-y border-border-dark">
+<!-- Left Pane: Challenge -->
+<div class="py-12 lg:pr-12 lg:border-r border-border-dark flex flex-col gap-6">
+<h3 class="text-2xl font-bold flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">psychology_alt</span>
+                        The Challenge
+                    </h3>
+<p class="text-slate-300 leading-relaxed text-lg">
+                        Processing clinical data at scale requires rigorous adherence to compliance standards while maintaining speed. The primary challenge was orchestrating multimodal data flows—text, imaging, and genetics—in a way that allowed for real-time querying without compromising patient privacy or data integrity. Legacy systems were siloed, creating a bottleneck for clinicians needing immediate insights.
+                    </p>
+<ul class="space-y-3 mt-2">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-red-400 mt-0.5 text-sm">close</span>
+<span class="text-slate-400">Fragmented data sources slowing diagnosis</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-red-400 mt-0.5 text-sm">close</span>
+<span class="text-slate-400">High latency in cross-referencing patient history</span>
+</li>
+</ul>
+</div>
+<!-- Right Pane: Impact -->
+<div class="py-12 lg:pl-12 flex flex-col gap-6">
+<h3 class="text-2xl font-bold flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">shutter_speed</span>
+                        The Impact
+                    </h3>
+<p class="text-slate-300 leading-relaxed text-lg">
+                        By implementing an agentic workflow system, we achieved a scalable architecture that keeps humans in the loop (HITL) for critical decisions. The new Co-Pilot reduced information retrieval time by 40% and ensured 100% auditability for compliance reviews.
+                    </p>
+<div class="grid grid-cols-2 gap-4 mt-4">
+<div class="p-4 rounded border border-border-dark bg-surface-dark/50">
+<p class="text-3xl font-mono font-bold text-primary mb-1">40%</p>
+<p class="text-sm text-slate-400">Efficiency Boost</p>
+</div>
+<div class="p-4 rounded border border-border-dark bg-surface-dark/50">
+<p class="text-3xl font-mono font-bold text-primary mb-1">100%</p>
+<p class="text-sm text-slate-400">HITL Compliance</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Deep Dive: Architecture -->
+<section class="mb-24">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+<div>
+<h2 class="text-3xl font-bold mb-2">Technical Architecture</h2>
+<p class="text-slate-400 max-w-xl">High-level system design leveraging distributed agents for secure data processing.</p>
+</div>
+<div class="flex gap-2 flex-wrap">
+<span class="px-3 py-1 rounded-full border border-border-dark bg-surface-dark text-xs font-mono text-primary">Azure Mesh</span>
+<span class="px-3 py-1 rounded-full border border-border-dark bg-surface-dark text-xs font-mono text-primary">LangGraph</span>
+<span class="px-3 py-1 rounded-full border border-border-dark bg-surface-dark text-xs font-mono text-primary">FAISS</span>
+</div>
+</div>
+<div class="relative w-full rounded-xl border border-border-dark bg-surface-dark overflow-hidden min-h-[500px] flex flex-col">
+<!-- Mac-like header for the card -->
+<div class="flex items-center gap-2 px-4 py-3 border-b border-border-dark bg-background-dark/50">
+<div class="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/50"></div>
+<div class="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div>
+<div class="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50"></div>
+<div class="ml-4 text-xs font-mono text-slate-500">zenithdx_architecture_v2.json</div>
+</div>
+<!-- Diagram Area -->
+<div class="flex-1 relative p-8 md:p-12 grid-bg flex items-center justify-center">
+<!-- Simplified CSS/HTML Representation of a Diagram -->
+<div class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+<!-- Input Node -->
+<div class="border border-primary/30 bg-background-dark/80 p-6 rounded-lg backdrop-blur-sm relative group">
+<div class="absolute -top-3 left-4 bg-background-dark px-2 text-xs font-mono text-primary border border-primary/30 rounded">Input_Stream</div>
+<div class="flex items-center gap-3 mb-3 text-slate-200">
+<span class="material-symbols-outlined">clinical_notes</span>
+<span class="font-mono text-sm">EHR Data</span>
+</div>
+<div class="h-1 w-full bg-border-dark rounded overflow-hidden">
+<div class="h-full bg-primary w-2/3"></div>
+</div>
+<!-- Connector Line -->
+<div class="hidden md:block absolute top-1/2 -right-8 w-8 h-px bg-primary/50"></div>
+<div class="hidden md:block absolute top-1/2 -right-1 w-2 h-2 rounded-full bg-primary"></div>
+</div>
+<!-- Processing Node (Center) -->
+<div class="border border-primary bg-background-dark/90 p-6 rounded-lg shadow-[0_0_30px_rgba(0,102,255,0.15)] relative">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white px-3 py-1 text-xs font-mono rounded shadow-lg">Core_Agent_Swarm</div>
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between text-xs font-mono text-slate-400">
+<span>Validation</span>
+<span class="text-green-400">OK</span>
+</div>
+<div class="flex items-center justify-between text-xs font-mono text-slate-400">
+<span>Vectorization</span>
+<span class="text-blue-400 animate-pulse">Running...</span>
+</div>
+<div class="flex items-center justify-between text-xs font-mono text-slate-400">
+<span>Privacy Filter</span>
+<span class="text-green-400">Active</span>
+</div>
+</div>
+<!-- Connector Line -->
+<div class="hidden md:block absolute top-1/2 -right-8 w-8 h-px bg-primary/50"></div>
+<div class="hidden md:block absolute top-1/2 -right-1 w-2 h-2 rounded-full bg-primary"></div>
+</div>
+<!-- Output Node -->
+<div class="border border-primary/30 bg-background-dark/80 p-6 rounded-lg backdrop-blur-sm relative">
+<div class="absolute -top-3 right-4 bg-background-dark px-2 text-xs font-mono text-primary border border-primary/30 rounded">Output_Interface</div>
+<div class="flex items-center gap-3 mb-3 text-slate-200">
+<span class="material-symbols-outlined">dataset</span>
+<span class="font-mono text-sm">Structured JSON</span>
+</div>
+<div class="text-xs font-mono text-slate-500 bg-black/50 p-2 rounded border border-border-dark">
+                                { "diagnosis_confidence": 0.98 }
+                            </div>
+</div>
+</div>
+<!-- Background connecting lines (Abstract) -->
+<svg class="absolute inset-0 pointer-events-none opacity-20" height="100%" width="100%">
+<pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.5"></path>
+</pattern>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+</div>
+</section>
+<!-- Process Timeline -->
+<section class="mb-24">
+<div class="flex flex-col gap-10">
+<h2 class="text-3xl font-bold px-4">Development Process</h2>
+<div class="relative pl-4 md:pl-0">
+<!-- Vertical Line -->
+<div class="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-border-dark transform md:-translate-x-1/2"></div>
+<!-- Step 1 -->
+<div class="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between mb-16 group">
+<div class="md:w-[45%] md:text-right pr-8 order-2 md:order-1 pl-16 md:pl-0">
+<h4 class="text-xl font-bold text-white mb-2">Discovery &amp; Compliance Mapping</h4>
+<p class="text-slate-400 text-sm">Analyzed HIPAA/GDPR requirements and defined data ingestion schemas for unstructured clinical notes.</p>
+</div>
+<div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 order-1 md:order-2 flex items-center justify-center">
+<div class="w-4 h-4 rounded-full bg-background-dark border-2 border-primary group-hover:scale-125 transition-transform duration-300"></div>
+</div>
+<div class="md:w-[45%] pl-16 md:pl-8 order-3">
+<span class="text-xs font-mono text-primary border border-primary/20 bg-primary/10 px-2 py-1 rounded">Month 1</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between mb-16 group">
+<div class="md:w-[45%] md:text-right pr-8 order-2 md:order-1 pl-16 md:pl-0">
+<span class="text-xs font-mono text-slate-500 border border-border-dark bg-surface-dark px-2 py-1 rounded">Month 2-3</span>
+</div>
+<div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 order-1 md:order-2 flex items-center justify-center">
+<div class="w-4 h-4 rounded-full bg-background-dark border-2 border-slate-600 group-hover:border-primary transition-colors duration-300"></div>
+</div>
+<div class="md:w-[45%] pl-16 md:pl-8 order-3">
+<h4 class="text-xl font-bold text-white mb-2">Architecture &amp; MVP</h4>
+<p class="text-slate-400 text-sm">Built the Azure Clinical Data Mesh and deployed the first version of the retrieval-augmented generation (RAG) pipeline.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between mb-16 group">
+<div class="md:w-[45%] md:text-right pr-8 order-2 md:order-1 pl-16 md:pl-0">
+<h4 class="text-xl font-bold text-white mb-2">Federated Learning Integration</h4>
+<p class="text-slate-400 text-sm">Implemented privacy-preserving model training across distributed hospital nodes without data egress.</p>
+</div>
+<div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 order-1 md:order-2 flex items-center justify-center">
+<div class="w-4 h-4 rounded-full bg-background-dark border-2 border-slate-600 group-hover:border-primary transition-colors duration-300"></div>
+</div>
+<div class="md:w-[45%] pl-16 md:pl-8 order-3">
+<span class="text-xs font-mono text-slate-500 border border-border-dark bg-surface-dark px-2 py-1 rounded">Month 4-5</span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between mb-6 group">
+<div class="md:w-[45%] md:text-right pr-8 order-2 md:order-1 pl-16 md:pl-0">
+<span class="text-xs font-mono text-slate-500 border border-border-dark bg-surface-dark px-2 py-1 rounded">Month 6</span>
+</div>
+<div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 order-1 md:order-2 flex items-center justify-center">
+<div class="w-4 h-4 rounded-full bg-background-dark border-2 border-slate-600 group-hover:border-primary transition-colors duration-300"></div>
+</div>
+<div class="md:w-[45%] pl-16 md:pl-8 order-3">
+<h4 class="text-xl font-bold text-white mb-2">System Audit &amp; Handoff</h4>
+<p class="text-slate-400 text-sm">Final security penetration testing and documentation delivery for the internal engineering team.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Features Grid -->
+<section class="mb-24">
+<h2 class="text-3xl font-bold mb-8">Key Features</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Feature 1 -->
+<div class="p-6 rounded-lg border border-border-dark bg-surface-dark/40 hover:bg-surface-dark transition duration-300 group">
+<div class="w-10 h-10 rounded bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20">
+<span class="material-symbols-outlined text-primary">smart_toy</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2">Agentic Workflows</h3>
+<p class="text-slate-400 text-sm leading-relaxed">Self-correcting AI agents that verify their own outputs against medical ontologies before presenting to clinicians.</p>
+</div>
+<!-- Feature 2 -->
+<div class="p-6 rounded-lg border border-border-dark bg-surface-dark/40 hover:bg-surface-dark transition duration-300 group">
+<div class="w-10 h-10 rounded bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20">
+<span class="material-symbols-outlined text-primary">hub</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2">Federated Learning</h3>
+<p class="text-slate-400 text-sm leading-relaxed">Enables model improvement across institutions without sharing raw patient data, preserving privacy.</p>
+</div>
+<!-- Feature 3 -->
+<div class="p-6 rounded-lg border border-border-dark bg-surface-dark/40 hover:bg-surface-dark transition duration-300 group">
+<div class="w-10 h-10 rounded bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20">
+<span class="material-symbols-outlined text-primary">description</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2">Auto-Documentation</h3>
+<p class="text-slate-400 text-sm leading-relaxed">Automatically generates compliant clinical notes from multimodal inputs, reducing administrative burden.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="border-t border-border-dark bg-background-dark py-12">
+<div class="max-w-[1200px] mx-auto px-6 lg:px-10 flex flex-col items-center text-center gap-8">
+<div class="flex flex-col gap-2">
+<h3 class="text-2xl font-bold text-white">Ready to see more?</h3>
+<p class="text-slate-400">Explore other projects in healthcare AI and system architecture.</p>
+</div>
+<a class="group relative inline-flex items-center justify-center px-8 py-3 text-sm font-bold text-white transition-all duration-200 bg-transparent border border-white rounded hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-white" href="#">
+<span class="material-symbols-outlined mr-2 group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                Return to Portfolio
+            </a>
+<div class="w-full h-px bg-border-dark mt-8"></div>
+<div class="flex flex-col md:flex-row justify-between items-center w-full text-xs text-slate-500 font-mono">
+<p>© 2023 ZenithDx Project Series. All rights reserved.</p>
+<div class="flex gap-4 mt-4 md:mt-0">
+<a class="hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms</a>
+<a class="hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

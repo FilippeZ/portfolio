@@ -1,0 +1,321 @@
+/* =========================================================
+   CONTACT • Layer 6 — ZenithDx Executive Suite
+   • Right-aligned executive layout • Glass-morphic 3D depth
+   • Aurora parallax • Focus-visible polish • WCAG AAA
+   • Full-page immersive backdrop • Motion-safe
+   ========================================================= */
+/* ---------- TOKENS (Executive Design System) ---------- */
+:root {
+  --bg: #0d1117;
+  --panel: #0f1623;
+  --text: #e8eef9;
+  --muted: #b4c0cf;
+  --line: #1f2937;
+  --accent: #60a5fa;
+  --accent-2: #a78bfa;
+  --accent-3: #34d399;
+  --shadow: 0 20px 50px rgba(0, 0, 0, .45);
+  --shadow-lg: 0 32px 70px rgba(0, 0, 0, .55);
+  --radius: 24px;
+  --blur: 10px;
+  --transition: all 0.38s cubic-bezier(0.2, 0.8, 0.2, 1);
+  --content-max: 1280px;
+  --content-vw: 86vw;
+  --right-offset: 6vw;
+}
+/* ---------- LAYER BACKDROP (Full-Page Immersion) ---------- */
+.layer6 {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background:
+    linear-gradient(180deg, rgba(13, 17, 23, .15), rgba(13, 17, 23, .65)),
+    url("../img/pexels-pixabay-262488.jpg") center/cover no-repeat,
+    #0d1117;
+  background-blend-mode: overlay, soft-light, normal;
+  color: var(--text);
+  overflow: hidden;
+  z-index: 1;
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+/* Right-biased aurora flow */
+.layer6::before {
+  content: "";
+  position: absolute;
+  inset: -30%;
+  background:
+    radial-gradient(45% 65% at 25% 15%, rgba(96, 165, 250, .18), transparent 62%),
+    radial-gradient(55% 45% at 78% 28%, rgba(167, 139, 250, .14), transparent 60%),
+    radial-gradient(42% 52% at 52% 78%, rgba(52, 211, 153, .12), transparent 65%);
+  filter: blur(20px);
+  animation: aurora 26s linear infinite;
+  pointer-events: none;
+  transform: translateX(6%);
+}
+@keyframes aurora {
+  0%   { transform: translateX(6%) rotate(0deg); opacity: .88; }
+  50%  { transform: translateX(10%) rotate(180deg) translate3d(1.2%, -1%, 0); opacity: .68; }
+  100% { transform: translateX(6%) rotate(360deg); opacity: .88; }
+}
+/* ---------- CONTACT CONTAINER (Right-Aligned Executive Flex) ---------- */
+.layer6 .contact_us {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: clamp(32px, 7vw, 84px);
+  width: 100%;
+  min-height: 100vh;
+  padding: clamp(40px, 8vw, 80px) var(--right-offset);
+  max-width: min(var(--content-max), var(--content-vw));
+  margin: 0 0 0 auto;
+  transform-style: preserve-3d;
+}
+/* ---------- INFO COLUMN (3D Glass Cards) ---------- */
+.info_container {
+  display: grid;
+  gap: clamp(16px, 2.8vw, 24px);
+  width: clamp(280px, 36vw, 420px);
+}
+/* Executive Info Card */
+.info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(16px, 3vw, 24px);
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, rgba(16, 24, 39, .68), rgba(11, 18, 34, .62));
+  border: 1px solid rgba(30, 42, 65, .9);
+  box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, .06);
+  backdrop-filter: blur(var(--blur));
+  transition: var(--transition);
+  transform-style: preserve-3d;
+  perspective: 1200px;
+  cursor: default;
+}
+.info::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: radial-gradient(130% 130% at 82% 8%, rgba(96, 165, 250, .16), transparent 62%);
+  filter: blur(8px);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+.info:hover::after { opacity: 1; }
+.info:hover {
+  transform: translateY(-6px) rotateX(1deg) rotateY(-1deg);
+  box-shadow: var(--shadow-lg), inset 0 0 0 1px rgba(255, 255, 255, .08);
+  border-color: rgba(96, 165, 250, .5);
+}
+/* Icon Orb */
+.info i {
+  width: 52px; height: 52px;
+  font-size: 30px;
+  line-height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #c017bb, #e5242a);
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(229, 36, 42, .3), inset 0 0 0 1px rgba(255, 255, 255, .1);
+  transform: translateZ(12px);
+  transition: var(--transition), filter .3s ease;
+}
+.info:hover i {
+  transform: translateZ(42px) scale(1.05);
+  filter: drop-shadow(0 10px 18px rgba(229, 36, 42, .4));
+}
+/* Links */
+.info a {
+  margin-top: 8px;
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: #a0c4ff;
+  text-decoration: none;
+  letter-spacing: -0.2px;
+  transition: color .28s ease, transform .38s ease;
+}
+.info a:hover { color: #e0f2ff; transform: translateZ(20px); }
+.info a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 6px;
+  border-radius: 10px;
+}
+/* Label */
+.iname {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #b0b0b0;
+  margin-top: 4px;
+  transition: var(--transition);
+}
+.info:hover .iname {
+  opacity: .28;
+  transform: translateZ(28px) scale(1.08);
+  letter-spacing: .1em;
+}
+/* ---------- FORM (Executive Glass Panel) ---------- */
+form {
+  width: clamp(380px, 42vw, 540px);
+  padding: clamp(24px, 4vw, 32px);
+  background: linear-gradient(135deg, rgba(17, 24, 39, .72), rgba(11, 18, 34, .68));
+  border: 1px solid rgba(30, 42, 65, .9);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, .07);
+  backdrop-filter: blur(var(--blur));
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+form h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.6rem, 3.6vw, 2rem);
+  font-weight: 800;
+  text-align: center;
+  color: #f1f5f9;
+  letter-spacing: -0.4px;
+}
+/* Input Fields */
+.inp_field {
+  height: 68px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(16, 24, 39, .65), rgba(11, 18, 34, .62));
+  border: 1px solid rgba(33, 49, 78, .8);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: var(--transition);
+}
+.inp_field:focus-within {
+  border-color: #4c7bc7;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .38), inset 0 0 0 1px rgba(255, 255, 255, .08);
+  transform: translateY(-2px);
+}
+.inp_field input {
+  flex: 1;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #dce8fc;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.inp_field input::placeholder {
+  color: #94a3b8;
+  font-weight: 500;
+}
+.inp_field i { font-size: 21px; color: #94a3b8; }
+/* Message Area */
+.message {
+  min-height: 156px;
+  max-height: 50vh;
+  padding: 16px 18px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #dce8fc;
+  background: linear-gradient(135deg, rgba(16, 24, 39, .65), rgba(11, 18, 34, .62));
+  border: 1px solid rgba(33, 49, 78, .8);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05);
+  resize: vertical;
+  transition: var(--transition);
+}
+.message:focus {
+  border-color: #4c7bc7;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .38), inset 0 0 0 1px rgba(255, 255, 255, .08);
+  transform: translateY(-2px);
+}
+/* Submit Button — Executive Shine */
+.submit {
+  margin-top: 12px;
+  padding: 14px 28px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #f0f6ff;
+  background: linear-gradient(135deg, #101827, #0c1626);
+  border: 1px solid rgba(33, 49, 78, .9);
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 16px 38px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .06);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition), letter-spacing .3s ease;
+}
+.submit:hover {
+  letter-spacing: .8px;
+  transform: translateY(-2px);
+  border-color: #4c7bc7;
+  box-shadow: 0 24px 52px rgba(0, 0, 0, .42), inset 0 0 0 1px rgba(255, 255, 255, .09);
+}
+.submit:active { transform: translateY(0); }
+.submit::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,.25) 50%, transparent 100%);
+  transform: translateX(-130%);
+  transition: transform .8s cubic-bezier(.34, 1.56, .64, 1);
+}
+.submit:hover::after { transform: translateX(130%); }
+.submit::before {
+  content: "";
+  position: absolute;
+  bottom: -14%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 36px; height: 48px;
+  background: radial-gradient(50% 60% at 50% 50%, rgba(96, 165, 250, .8), transparent 72%);
+  border-radius: 36px;
+  filter: blur(12px);
+  z-index: -1;
+  transition: all .5s ease;
+}
+.submit:hover::before {
+  bottom: 0;
+  width: 88%;
+  height: 78%;
+}
+/* ---------- MAP (Subtle Overlay) ---------- */
+#map {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .32;
+  filter: saturate(.85) contrast(1.08) brightness(.92);
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+}
+/* ---------- RESPONSIVE (Executive Stacking) ---------- */
+@media (max-width: 1024px) {
+  .layer6 .contact_us {
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(48px, 10vw, 80px) clamp(16px, 5vw, 48px);
+    gap: 40px;
+  }
+  .info_container,
+  form { width: 100%; max-width: 540px; }
+}
+@media (max-width: 640px) {
+  .inp_field,
+  .message { width: 100%; }
+  .submit { width: 100%; }
+}
+/* ---------- ACCESSIBILITY: REDUCED MOTION ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

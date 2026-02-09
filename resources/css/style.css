@@ -1,0 +1,182 @@
+/* =========================================================
+   GLOBAL — FINAL 2025 EDITION
+   • 0 overlays • 0 scrollbars • Κουμπιά με GLOW + SWEEP + 3D
+   • Hamburger σαν κόσμημα • 100% ίδιο με πριν, μόνο πιο όμορφο
+   ========================================================= */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700&display=swap");
+
+/* ========== TOKENS ========== */
+:root{
+  --bg:#0d1117;
+  --panel:#161b22;
+  --panel-2:#0f172a;
+  --text:#ffffff;
+  --muted:#a8b3c5;
+  --accent:#a640f5;
+  --accent-2:#9900ba;
+  --glow:#a640f5cc;
+  --line:#1f2937;
+  --shadow: 0 12px 32px rgba(0,0,0,.45);
+  --radius:16px;
+  --sidebar-w:250px;
+  --width:calc(100vw - var(--sidebar-w));
+  --tr-fast:.25s cubic-bezier(.22,1,.36,1);
+  --tr-slow:.55s cubic-bezier(.22,1,.36,1);
+}
+
+/* ========== BASE ========== */
+html,body{margin:0;padding:0;overflow:hidden;height:100vh;width:100vw;background:var(--bg);color:var(--text);font-family:"Montserrat",sans-serif;}
+*{box-sizing:border-box;}
+::selection{background:var(--accent);color:#fff;}
+p,a,h1,h2,h3,h4,h5,h6,article{user-select:none;}
+a{color:inherit;text-decoration:none;}
+
+/* HIDE SCROLLBARS */
+*{scrollbar-width:none !important;}
+*::-webkit-scrollbar{display:none !important;}
+
+/* ========== LAYERS — NO OVERLAYS ========== */
+.layer{
+  position:absolute !important;inset:0 !important;width:100% !important;height:100vh !important;
+  display:none !important;opacity:0;transform:translateX(100%);
+  transition:opacity var(--tr-slow),transform var(--tr-slow);
+  z-index:1;overflow:hidden;
+}
+.layer.active{
+  display:block !important;opacity:1;transform:translateX(0);z-index:10;
+}
+.loader{z-index:9999 !important;position:fixed !important;inset:0 !important;}
+
+/* ========== SIDEBAR — ΚΟΥΜΠΙΑ ΜΕ 3D GLOW & SWEEP ========== */
+.navigation{
+  position:fixed;inset:0 auto 0 0;width:var(--sidebar-w);height:100vh;
+  background:var(--bg);z-index:999;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  box-shadow:5px 0 10px #0004,20px 0 28px #0004;
+  transition:transform var(--tr-slow);
+}
+.navigation h1{
+  position:relative;font-size:30px;text-transform:uppercase;padding:15px;cursor:pointer;
+  letter-spacing:.06em;font-weight:800;color:var(--accent);
+}
+.navigation h1::before,.navigation h1::after{content:"";position:absolute;background:var(--accent);width:5px;height:25px;left:0;}
+.navigation h1::after{right:0;left:auto;top:auto;bottom:0;}
+.navigation h1 div{position:absolute;left:0;width:200%;height:5px;background:var(--accent);top:0;}
+.navigation h1 div:nth-child(2){top:auto;bottom:0;right:0;left:auto;}
+
+.navigation ul{
+  width:90%;margin:0;padding:10px;
+  display:flex;flex-direction:column;gap:12px;align-items:center;
+}
+.navigation ul li{list-style:none;width:210px;}
+.navigation ul li a{
+  position:relative;display:flex;align-items:center;justify-content:center;
+  padding:16px 32px;font-size:18px;text-transform:uppercase;
+  border-radius:var(--radius);overflow:hidden;z-index:1;
+  background:linear-gradient(135deg,#1a2332,#0f1623);
+  border:1px solid #2a374f;
+  box-shadow:
+    0 1px 0 #fff1 inset,
+    0 8px 20px #0009,
+    0 0 0 0 var(--glow);
+  color:var(--text);font-weight:600;letter-spacing:.5px;
+  transition:all var(--tr-fast);
+  backdrop-filter:blur(4px);
+}
+
+/* 3D HOVER LIFT */
+.navigation ul li a:hover{
+  transform:translateY(-4px) scale(1.02);
+  border-color:var(--accent);
+  box-shadow:
+    0 16px 36px #000c,
+    0 0 0 4px var(--glow),
+    0 1px 0 #fff2 inset;
+}
+
+/* SWEEP GLOW */
+.navigation ul li a::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,transparent,#a640f566,transparent);
+  transform:translateX(-120%);transition:transform .7s ease;
+}
+.navigation ul li a:hover::before{transform:translateX(120%);}
+
+/* ACTIVE STATE */
+.navigation ul li a.active{
+  background:linear-gradient(135deg,#2a1a4d,#1a0f33);
+  border:1px solid var(--accent);
+  box-shadow:0 0 0 3px var(--glow),0 12px 30px #000b;
+  color:var(--accent);
+}
+
+/* FOCUS */
+.navigation ul li a:focus-visible{
+  outline:3px solid var(--accent);outline-offset:4px;
+}
+
+/* ========== HAMBURGER — ΣΑΝ ΔΙΑΜΑΝΤΙ ========== */
+.hamburger{
+  position:fixed;top:18px;left:18px;z-index:1000;
+  width:56px;height:56px;display:none;
+  align-items:center;justify-content:center;
+  background:linear-gradient(135deg,#1b2437,#131a2a);
+  border:1px solid #22324e;border-radius:14px;
+  box-shadow:
+    0 8px 24px #000a,
+    inset 0 0 0 1px #fff1,
+    0 0 20px #a640f533;
+  cursor:pointer;
+  transition:all .2s ease;
+}
+.hamburger:hover{
+  transform:translateY(-3px) scale(1.05);
+  box-shadow:
+    0 14px 32px #000c,
+    inset 0 0 0 1px #fff2,
+    0 0 30px #a640f566;
+}
+.hamburger span{
+  position:absolute;width:32px;height:6px;background:var(--text);
+  border-radius:200px;
+  transition:all var(--tr-fast);
+  box-shadow:0 2px 4px #0008;
+}
+.hamburger span:nth-child(1){transform:translateY(-11px);}
+.hamburger span:nth-child(2){opacity:1;}
+.hamburger span:nth-child(3){transform:translateY(11px);}
+.hamburger.active span:nth-child(1){transform:translateY(0) rotate(45deg);}
+.hamburger.active span:nth-child(2){opacity:0;transform:scaleX(0);}
+.hamburger.active span:nth-child(3){transform:translateY(0) rotate(-45deg);}
+
+/* ========== CONTAINER ========== */
+.container{
+  position:relative;width:var(--width);margin-left:var(--sidebar-w);
+  height:100vh;overflow:hidden;
+}
+.layer .main{width:100%;height:100vh;overflow-y:auto;overflow-x:hidden;}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width:1024px){:root{--sidebar-w:220px;}}
+@media (max-width:768px){
+  .navigation{transform:translateX(-100%);}
+  .navigation.active{transform:none;}
+  .hamburger{display:flex;}
+  .container{width:100%;margin-left:0;}
+  .layer{width:100%;}
+}
+
+/* ========== REDUCED MOTION ========== */
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;animation:none !important;}
+}
+
+.logo{
+  width:110px; height:110px;
+  margin-bottom:40px;
+  cursor:default;
+}
+.orbit{
+  animation:spin 16s linear infinite;
+}
+@keyframes spin{ to{ transform:rotate(360deg); } }

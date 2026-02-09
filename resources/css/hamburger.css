@@ -1,0 +1,110 @@
+/* =========================================================
+   HAMBURGER MENU — Professional, Clean, Transition-Based Animation
+   - Fixed positioning for overlay menu toggle
+   - Smooth cross ("X") transformation on active state
+   - Accessibility: Focus states and cursor pointer
+   - Responsive: Adjusts for smaller screens
+   - No keyframes; relies on CSS transitions for performance
+   ========================================================= */
+
+/* ---------- THEME TOKENS ---------- */
+:root {
+  --hamburger-size: 50px;
+  --hamburger-bar-width: 30px;
+  --hamburger-bar-height: 6px;
+  --hamburger-bar-spacing: 10px;
+  --hamburger-bg: rgba(255, 255, 255, 0.1);
+  --hamburger-bar-color: white;
+  --hamburger-active-margin: 200px;
+  --hamburger-radius: 5px;
+  --hamburger-transition: 0.4s ease-in-out;
+}
+
+/* ---------- BASE CONTAINER ---------- */
+.hamburger {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: var(--hamburger-size);
+  height: var(--hamburger-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  border-radius: var(--hamburger-radius);
+  background: var(--hamburger-bg);
+  transition: margin-left var(--hamburger-transition);
+  z-index: 1000; /* Ensures it's above other elements */
+}
+
+/* Active State (Menu Open) */
+.hamburger.active {
+  margin-left: var(--hamburger-active-margin);
+}
+
+/* ---------- BARS ---------- */
+.hamburger .bar1,
+.hamburger .bar2,
+.hamburger .bar3 {
+  position: absolute;
+  width: var(--hamburger-bar-width);
+  height: var(--hamburger-bar-height);
+  border-radius: 200px; /* Pill-shaped for modern look */
+  background: var(--hamburger-bar-color);
+  transition: transform var(--hamburger-transition), opacity var(--hamburger-transition);
+}
+
+/* Initial Bar Positions */
+.hamburger .bar1 {
+  transform: translateY(calc(-1 * var(--hamburger-bar-spacing)));
+}
+
+.hamburger .bar2 {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.hamburger .bar3 {
+  transform: translateY(var(--hamburger-bar-spacing));
+}
+
+/* Animate to "X" on Active */
+.hamburger.active .bar1 {
+  transform: translateY(0) rotate(45deg);
+}
+
+.hamburger.active .bar2 {
+  transform: scaleX(0);
+  opacity: 0;
+}
+
+.hamburger.active .bar3 {
+  transform: translateY(0) rotate(-45deg);
+}
+
+/* ---------- ACCESSIBILITY & INTERACTIONS ---------- */
+.hamburger:focus-visible {
+  outline: 2px solid var(--accent, #60a5fa); /* Custom accent from root */
+  outline-offset: 4px;
+}
+
+/* ---------- RESPONSIVE ADJUSTMENTS ---------- */
+@media (max-width: 480px) {
+  :root {
+    --hamburger-size: 44px;
+    --hamburger-bar-width: 26px;
+    --hamburger-bar-height: 5px;
+    --hamburger-bar-spacing: 8px;
+  }
+}
+
+/* ---------- REDUCED MOTION SUPPORT ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .hamburger,
+  .hamburger .bar1,
+  .hamburger .bar2,
+  .hamburger .bar3 {
+    transition: none !important;
+  }
+}

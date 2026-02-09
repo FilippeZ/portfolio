@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Filippos-Paraskevas Zygouris // Portfolio</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0066ff",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#050505", /* Almost pure black for clinical feel */
+                        "surface-dark": "#0A0A0A",
+                        "border-dark": "#222222",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"], /* Adding a mono font for the technical feel */
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "linear-gradient(to right, #111 1px, transparent 1px), linear-gradient(to bottom, #111 1px, transparent 1px)",
+                    }
+                },
+            },
+        }
+    </script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        /* Custom scrollbar for clinical feel */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050505;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 0px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #444;
+        }
+        
+        .clinical-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, #1a1a1a 1px, transparent 1px), linear-gradient(to bottom, #1a1a1a 1px, transparent 1px);
+            mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+        }
+
+        .hover-invert-text:hover {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-white font-display antialiased overflow-x-hidden selection:bg-primary selection:text-white">
+<div class="relative min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 border-b border-border-dark bg-background-dark/95 backdrop-blur-sm">
+<div class="max-w-[1200px] mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-5 text-primary">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-sm md:text-base font-bold tracking-tight text-white uppercase">Filippos-Paraskevas Zygouris</h1>
+<span class="text-[10px] font-mono text-gray-500 uppercase tracking-widest">AI &amp; Data Architect // SYS.ADMIN</span>
+</div>
+</div>
+<nav class="hidden md:flex items-center gap-1">
+<a class="px-4 py-2 text-xs font-mono uppercase tracking-wide text-gray-400 hover:text-white transition-colors" href="#">About</a>
+<a class="px-4 py-2 text-xs font-mono uppercase tracking-wide text-white border-b border-primary" href="#">Toolbox</a>
+<a class="px-4 py-2 text-xs font-mono uppercase tracking-wide text-gray-400 hover:text-white transition-colors" href="#">Portfolio</a>
+<a class="px-4 py-2 text-xs font-mono uppercase tracking-wide text-gray-400 hover:text-white transition-colors" href="#">Contact</a>
+</nav>
+<button class="md:hidden text-white p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="hidden md:block">
+<button class="group relative px-5 py-2 overflow-hidden bg-transparent border border-gray-700 hover:border-white transition-colors">
+<div class="absolute inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full opacity-10"></div>
+<span class="relative text-xs font-mono uppercase font-bold tracking-widest">Connect</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center w-full">
+<!-- Hero / Expertise Grid Section -->
+<section class="w-full max-w-[1200px] px-4 md:px-8 py-12 md:py-20 relative">
+<!-- Decorative grid lines background -->
+<div class="absolute inset-0 clinical-grid opacity-20 pointer-events-none z-0"></div>
+<div class="relative z-10 mb-10 flex flex-col md:flex-row md:items-end justify-between border-b border-border-dark pb-6">
+<div>
+<span class="text-primary font-mono text-xs uppercase mb-2 block tracking-widest">System Modules</span>
+<h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white">Technical Expertise</h2>
+</div>
+<div class="mt-4 md:mt-0 font-mono text-xs text-gray-500 text-right">
+<p>STATUS: ACTIVE</p>
+<p>UPTIME: 99.9%</p>
+</div>
+</div>
+<!-- The Clinical Grid -->
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-border-dark">
+<!-- Item 1: AI -->
+<div class="group relative p-8 border-r border-b border-border-dark bg-background-dark transition-colors duration-300 hover:bg-surface-dark">
+<div class="absolute top-4 right-4 text-gray-700 font-mono text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">MOD_01</div>
+<div class="text-white mb-6 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-4xl font-light">smart_toy</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2 group-hover:translate-x-1 transition-transform">AI &amp; GenAI</h3>
+<p class="text-gray-400 text-sm font-light leading-relaxed mb-4">Architecting large-scale inference engines and retrieval augmented generation systems.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-[#111] border border-gray-800 text-[10px] font-mono text-gray-300 uppercase">LLMs</span>
+<span class="px-2 py-1 bg-[#111] border border-gray-800 text-[10px] font-mono text-gray-300 uppercase">RAG</span>
+<span class="px-2 py-1 bg-[#111] border border-gray-800 text-[10px] font-mono text-gray-300 uppercase">PyTorch</span>
+</div>
+</div>
+<!-- Item 2: Governance -->
+<div class="group relative p-8 border-r border-b border-border-dark bg-background-dark transition-colors duration-300 hover:bg-surface-dark">
+<div class="absolute top-4 right-4 text-gray-700 font-mono text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">MOD_02</div>
+<div class="text-white mb-6 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-4xl font-light">gavel</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2 group-hover:translate-x-1 transition-transform">Governance</h3>
+<p class="text-gray-400 text-sm font-light leading-relaxed mb-4">Implementing compliance frameworks for high-stakes AI deployment.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-[#111] border border-gray-800 text-[10px] font-mono text-gray-300 uppercase">EU AI Act</span>
+<span class="px-2 py-1 bg-[#111] border border-gray-800 text-[10px] font-mono text-gray-300 uppercase">GDPR</span>
+<span class="px-2 py-1 bg-[#111] border border-gray-800 text-[10px] font-mono text-gray-300 uppercase">Ethics</span>
+</div>
+</div>
+<!-- Item 3: Cloud -->
+<div class="group relative p-8 border-r border-b border-border-dark bg-background-dark transition-colors duration-300 hover:bg-surface-dark">
+<div class="absolute top-4 right-4 text-gray-700 font-mono text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">MOD_03</div>
+<div class="text-white mb-6 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-4xl font-light">cloud</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2 group-hover:translate-x-1 transition-transform">Cloud / DevOps</h3>
+<p class="text-gray-400 text-sm font-light leading-relaxed mb-4">Scalable infrastructure design across multi-cloud environments.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-[#111] border border-gray-800 text-[10px] font-mono text-gray-300 uppercase">AWS/Azure</span>
+<span class="px-2 py-1 bg-[#111] border border-gray-800 text-[10px] font-mono text-gray-300 uppercase">K8s</span>
+<span class="px-2 py-1 bg-[#111] border border-gray-800 text-[10px] font-mono text-gray-300 uppercase">Terraform</span>
+</div>
+</div>
+<!-- Item 4: Data Engineering -->
+<div class="group relative p-8 border-r border-b border-border-dark bg-background-dark transition-colors duration-300 hover:bg-surface-dark">
+<div class="absolute top-4 right-4 text-gray-700 font-mono text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">MOD_04</div>
+<div class="text-white mb-6 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-4xl font-light">hub</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2 group-hover:translate-x-1 transition-transform">Data Engineering</h3>
+<p class="text-gray-400 text-sm font-light leading-relaxed mb-4">Building robust pipelines for real-time and batch data processing.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-[#111] border border-gray-800 text-[10px] font-mono text-gray-300 uppercase">Spark</span>
+<span class="px-2 py-1 bg-[#111] border border-gray-800 text-[10px] font-mono text-gray-300 uppercase">Kafka</span>
+<span class="px-2 py-1 bg-[#111] border border-gray-800 text-[10px] font-mono text-gray-300 uppercase">Snowflake</span>
+</div>
+</div>
+<!-- Item 5: Programming -->
+<div class="group relative p-8 border-r border-b border-border-dark bg-background-dark transition-colors duration-300 hover:bg-surface-dark">
+<div class="absolute top-4 right-4 text-gray-700 font-mono text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">MOD_05</div>
+<div class="text-white mb-6 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-4xl font-light">terminal</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2 group-hover:translate-x-1 transition-transform">Programming</h3>
+<p class="text-gray-400 text-sm font-light leading-relaxed mb-4">Polyglot development focusing on performance and type safety.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-[#111] border border-gray-800 text-[10px] font-mono text-gray-300 uppercase">Python</span>
+<span class="px-2 py-1 bg-[#111] border border-gray-800 text-[10px] font-mono text-gray-300 uppercase">Rust</span>
+<span class="px-2 py-1 bg-[#111] border border-gray-800 text-[10px] font-mono text-gray-300 uppercase">SQL</span>
+</div>
+</div>
+<!-- Item 6: HPC -->
+<div class="group relative p-8 border-r border-b border-border-dark bg-background-dark transition-colors duration-300 hover:bg-surface-dark">
+<div class="absolute top-4 right-4 text-gray-700 font-mono text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">MOD_06</div>
+<div class="text-white mb-6 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-4xl font-light">memory</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2 group-hover:translate-x-1 transition-transform">HPC</h3>
+<p class="text-gray-400 text-sm font-light leading-relaxed mb-4">Optimizing workloads for supercomputing environments.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-[#111] border border-gray-800 text-[10px] font-mono text-gray-300 uppercase">CUDA</span>
+<span class="px-2 py-1 bg-[#111] border border-gray-800 text-[10px] font-mono text-gray-300 uppercase">MPI</span>
+<span class="px-2 py-1 bg-[#111] border border-gray-800 text-[10px] font-mono text-gray-300 uppercase">Slurm</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section class="w-full bg-[#080808] border-t border-border-dark py-12 md:py-20">
+<div class="max-w-[1200px] mx-auto px-4 md:px-8">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-12">
+<div>
+<span class="text-primary font-mono text-xs uppercase mb-2 block tracking-widest">Case Studies</span>
+<h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white">Selected Works</h2>
+</div>
+<!-- Filter Bar -->
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 text-xs font-mono uppercase bg-white text-black font-bold border border-white">All</button>
+<button class="px-4 py-2 text-xs font-mono uppercase text-gray-400 border border-transparent hover:border-gray-700 hover:text-white transition-all">Data</button>
+<button class="px-4 py-2 text-xs font-mono uppercase text-gray-400 border border-transparent hover:border-gray-700 hover:text-white transition-all">AI</button>
+<button class="px-4 py-2 text-xs font-mono uppercase text-gray-400 border border-transparent hover:border-gray-700 hover:text-white transition-all">Cloud</button>
+<button class="px-4 py-2 text-xs font-mono uppercase text-gray-400 border border-transparent hover:border-gray-700 hover:text-white transition-all">Product</button>
+<button class="px-4 py-2 text-xs font-mono uppercase text-gray-400 border border-transparent hover:border-gray-700 hover:text-white transition-all">Governance</button>
+</div>
+</div>
+<!-- Portfolio Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Card 1: ZenithDx -->
+<div class="group relative aspect-[16/9] md:aspect-[16/10] overflow-hidden bg-surface-dark border border-border-dark cursor-pointer">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/60 z-10 transition-colors duration-300"></div>
+<img alt="Dark abstract representation of medical data visualization with blue glowing nodes." class="absolute inset-0 w-full h-full object-cover grayscale opacity-80 group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Dark abstract representation of medical data visualization with blue glowing nodes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIyJZ0joRQ7DDTyAlA2Ojxb3gd68KOlWaMHftVwcppVxznWK5xoZBSmTPhbIjxlsjsKP16t1imYv3_z4v1Yk37zKg80kOco7tu_Z0igCZzwFLsqJtaeVnVbIPPOqgY0eRofTBb0gYVS40ga5NKROMhvqALnAegiquTwuB7W7fiL8AHmgIUmUKpjHe9P-qnUKzDZLCuLwD2XRBO9-QfSKue4jvIh533ypXvcKUpe-ggL3sNwaClRmqP4i-TwgwFevn5geU1IIHDVd2j"/>
+<!-- Overlay Content -->
+<div class="absolute inset-0 z-20 p-8 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="px-2 py-1 bg-primary/20 text-primary border border-primary/40 text-[10px] font-mono uppercase backdrop-blur-md">AI / Health</span>
+<span class="text-white/40 font-mono text-xs">ID: 084</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-white mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">ZenithDx</h3>
+<p class="text-gray-300 text-sm max-w-md opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-75">AI-Driven Diagnostic Pipeline utilizing computer vision for early detection anomalies.</p>
+</div>
+<!-- Hover Reveal Button -->
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+<div class="bg-black/80 backdrop-blur border border-white/20 px-6 py-3 flex items-center gap-3">
+<span class="text-primary font-mono text-sm uppercase tracking-widest">Clinical Case Study</span>
+<span class="material-symbols-outlined text-white text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2: Federated Learning -->
+<div class="group relative aspect-[16/9] md:aspect-[16/10] overflow-hidden bg-surface-dark border border-border-dark cursor-pointer">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/60 z-10 transition-colors duration-300"></div>
+<img alt="Server room racking with high contrast lighting emphasizing data security." class="absolute inset-0 w-full h-full object-cover grayscale opacity-80 group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Server room racking with high contrast lighting emphasizing data security." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2-wqG0R8tTpjZySn743X2szzLvDBKKuSeCjje4gMwTcjbkaNeAtOPUEcCnRF0xKK5k9BOKEj0vbbe2pyCu0HM8OutVHTN0cZ7i5-MC_9kIhKTNuBBc4yzIN6l4rmX2WKOd0TQY1psC_eM3n50bbjBjhuBE59SIwRa-9WLq_8c4YoPokKPI5SyZoKXAQ2TB4WL_GE-EdSeqxO8_uRoD_rPCIglJxQABVAJ-I0FD7285ElAJmBVqR89tjp044d6LxMVSWUaThI2SglX"/>
+<!-- Overlay Content -->
+<div class="absolute inset-0 z-20 p-8 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="px-2 py-1 bg-white/10 text-white border border-white/20 text-[10px] font-mono uppercase backdrop-blur-md">Governance / AI</span>
+<span class="text-white/40 font-mono text-xs">ID: 102</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-white mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Federated Learning</h3>
+<p class="text-gray-300 text-sm max-w-md opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-75">Privacy-Preserving ML Framework designed for cross-silo data collaboration.</p>
+</div>
+<!-- Hover Reveal Button -->
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+<div class="bg-black/80 backdrop-blur border border-white/20 px-6 py-3 flex items-center gap-3">
+<span class="text-primary font-mono text-sm uppercase tracking-widest">Clinical Case Study</span>
+<span class="material-symbols-outlined text-white text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3: Placeholder (Abstract) -->
+<div class="group relative aspect-[16/9] md:aspect-[16/10] overflow-hidden bg-surface-dark border border-border-dark cursor-pointer">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/60 z-10 transition-colors duration-300"></div>
+<img alt="Digital globe network connection points on dark background." class="absolute inset-0 w-full h-full object-cover grayscale opacity-80 group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Digital globe network connection points on dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN91E9W5JrWUOfQgkZZxD_wL9WeqRwnYpcGYHGJYdPj437EfoIl-LkKTmIkWAZX7qQMck-Ir7abbo8HIEdLUAYgxsGj693bQmqszT18hu45HOMyTXkQpVdXzn2m1v1MsTDRmj3JBHMm5AvJLV1K-5Mh9NpZkhg4VRDRa0bSKla1s22OYF9tFjezDESWhHJ-pYQkVABNvMOyuNgT2CZEAQkbvtoluVHmPB_URhyJbJfJlfFMD16I6f2aEFfPm3bmpeqTRBochyyNUll"/>
+<!-- Overlay Content -->
+<div class="absolute inset-0 z-20 p-8 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="px-2 py-1 bg-white/10 text-white border border-white/20 text-[10px] font-mono uppercase backdrop-blur-md">Cloud / Net</span>
+<span class="text-white/40 font-mono text-xs">ID: 099</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-white mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Global Mesh</h3>
+<p class="text-gray-300 text-sm max-w-md opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-75">Low-latency distributed network architecture for edge computing.</p>
+</div>
+<!-- Hover Reveal Button -->
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+<div class="bg-black/80 backdrop-blur border border-white/20 px-6 py-3 flex items-center gap-3">
+<span class="text-primary font-mono text-sm uppercase tracking-widest">Clinical Case Study</span>
+<span class="material-symbols-outlined text-white text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4: Placeholder (Abstract) -->
+<div class="group relative aspect-[16/9] md:aspect-[16/10] overflow-hidden bg-surface-dark border border-border-dark cursor-pointer">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/60 z-10 transition-colors duration-300"></div>
+<img alt="Close up of cyber security lock and code on screen." class="absolute inset-0 w-full h-full object-cover grayscale opacity-80 group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Close up of cyber security lock and code on screen." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI7RpMiUM_n2sw_gKO2zMkbH1HJTWsOzn27s5f0SgDasXvCkc-EFPIwI9HfBQMcYBNhIjQ3YOcJQw2DNg99Knvv7utgbuCBCZVfD_6gRBe08WFg-y3oqdZWN90MkqRKJOMuNF60hAEO8nfFrrq4__6Zi3GDyJ0T6bBolJlwS8B3S2vJAtELZCZH3vkWZBcGalum4oOi8I7-K6iAaKadxusMx190EylgC31dJ9cA6mky2kQkMgylY9vdEHViw-pNx0QTAx2PwzzR4hj"/>
+<!-- Overlay Content -->
+<div class="absolute inset-0 z-20 p-8 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="px-2 py-1 bg-white/10 text-white border border-white/20 text-[10px] font-mono uppercase backdrop-blur-md">Security</span>
+<span class="text-white/40 font-mono text-xs">ID: 115</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-white mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Zero Trust Core</h3>
+<p class="text-gray-300 text-sm max-w-md opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-75">Implementation of identity-aware proxies for internal tooling.</p>
+</div>
+<!-- Hover Reveal Button -->
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+<div class="bg-black/80 backdrop-blur border border-white/20 px-6 py-3 flex items-center gap-3">
+<span class="text-primary font-mono text-sm uppercase tracking-widest">Clinical Case Study</span>
+<span class="material-symbols-outlined text-white text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full border-t border-border-dark bg-[#050505] py-12">
+<div class="max-w-[1200px] mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-left">
+<p class="text-white text-sm font-bold uppercase tracking-widest">Filippos-Paraskevas Zygouris</p>
+<p class="text-gray-500 text-xs mt-1">AI &amp; Data Architect</p>
+</div>
+<div class="flex gap-6">
+<a class="text-gray-500 hover:text-white transition-colors text-sm font-mono uppercase" href="#">LinkedIn</a>
+<a class="text-gray-500 hover:text-white transition-colors text-sm font-mono uppercase" href="#">GitHub</a>
+<a class="text-gray-500 hover:text-white transition-colors text-sm font-mono uppercase" href="#">X/Twitter</a>
+</div>
+<div class="text-right">
+<p class="text-gray-600 text-[10px] font-mono uppercase">System Version 2.4.0</p>
+<p class="text-gray-600 text-[10px] font-mono uppercase mt-1">© 2023 All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

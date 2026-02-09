@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Filippos-Paraskevas Zygouris - Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0066ff",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1723",
+                        "surface-dark": "#172336",
+                        "border-dark": "#20314b",
+                        "text-secondary": "#8da7ce",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom Scrollbar for horizontal scrolling */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* Grayscale filter for avatars */
+        .clinical-avatar {
+            filter: grayscale(100%) contrast(1.1);
+            transition: filter 0.3s ease;
+        }
+        .clinical-avatar:hover {
+            filter: grayscale(0%) contrast(1);
+        }
+
+        /* Map styling */
+        .map-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .map-overlay {
+            background: linear-gradient(180deg, rgba(15, 23, 35, 0) 0%, rgba(15, 23, 35, 0.8) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen flex flex-col">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-solid border-border-dark bg-background-dark/80 backdrop-blur-md">
+<div class="px-4 md:px-10 py-3 flex items-center justify-between max-w-[1440px] mx-auto w-full">
+<div class="flex items-center gap-4 text-white">
+<div class="size-8 text-primary">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M39.5563 34.1455V13.8546C39.5563 15.708 36.8773 17.3437 32.7927 18.3189C30.2914 18.916 27.263 19.2655 24 19.2655C20.737 19.2655 17.7086 18.916 15.2073 18.3189C11.1227 17.3437 8.44365 15.708 8.44365 13.8546V34.1455C8.44365 35.9988 11.1227 37.6346 15.2073 38.6098C17.7086 39.2069 20.737 39.5564 24 39.5564C27.263 39.5564 30.2914 39.2069 32.7927 38.6098C36.8773 37.6346 39.5563 35.9988 39.5563 34.1455Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M10.4485 13.8519C10.4749 13.9271 10.6203 14.246 11.379 14.7361C12.298 15.3298 13.7492 15.9145 15.6717 16.3735C18.0007 16.9296 20.8712 17.2655 24 17.2655C27.1288 17.2655 29.9993 16.9296 32.3283 16.3735C34.2508 15.9145 35.702 15.3298 36.621 14.7361C37.3796 14.246 37.5251 13.9271 37.5515 13.8519C37.5287 13.7876 37.4333 13.5973 37.0635 13.2931C36.5266 12.8516 35.6288 12.3647 34.343 11.9175C31.79 11.0295 28.1333 10.4437 24 10.4437C19.8667 10.4437 16.2099 11.0295 13.657 11.9175C12.3712 12.3647 11.4734 12.8516 10.9365 13.2931C10.5667 13.5973 10.4713 13.7876 10.4485 13.8519ZM37.5563 18.7877C36.3176 19.3925 34.8502 19.8839 33.2571 20.2642C30.5836 20.9025 27.3973 21.2655 24 21.2655C20.6027 21.2655 17.4164 20.9025 14.7429 20.2642C13.1498 19.8839 11.6824 19.3925 10.4436 18.7877V34.1275C10.4515 34.1545 10.5427 34.4867 11.379 35.027C12.298 35.6207 13.7492 36.2054 15.6717 36.6644C18.0007 37.2205 20.8712 37.5564 24 37.5564C27.1288 37.5564 29.9993 37.2205 32.3283 36.6644C34.2508 36.2054 35.702 35.6207 36.621 35.027C37.4573 34.4867 37.5485 34.1546 37.5563 34.1275V18.7877ZM41.5563 13.8546V34.1455C41.5563 36.1078 40.158 37.5042 38.7915 38.3869C37.3498 39.3182 35.4192 40.0389 33.2571 40.5551C30.5836 41.1934 27.3973 41.5564 24 41.5564C20.6027 41.5564 17.4164 41.1934 14.7429 40.5551C12.5808 40.0389 10.6502 39.3182 9.20848 38.3869C7.84205 37.5042 6.44365 36.1078 6.44365 34.1455L6.44365 13.8546C6.44365 12.2684 7.37223 11.0454 8.39581 10.2036C9.43325 9.3505 10.8137 8.67141 12.343 8.13948C15.4203 7.06909 19.5418 6.44366 24 6.44366C28.4582 6.44366 32.5797 7.06909 35.657 8.13948C37.1863 8.67141 38.5667 9.3505 39.6042 10.2036C40.6278 11.0454 41.5563 12.2684 41.5563 13.8546Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] hidden md:block">Filippos-Paraskevas Zygouris</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-white hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Work</a>
+<a class="text-white hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">About</a>
+<a class="text-white hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Testimonials</a>
+<a class="text-white hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Contact</a>
+</nav>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded h-10 px-6 bg-primary hover:bg-blue-600 transition-all text-white text-sm font-bold leading-normal tracking-[0.015em] shadow-[0_0_15px_rgba(0,102,255,0.3)]">
+<span class="truncate">Get in Touch</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow w-full max-w-[1440px] mx-auto flex flex-col items-center">
+<!-- Testimonials Section -->
+<section class="w-full px-4 md:px-10 py-16 md:py-24 border-b border-border-dark">
+<div class="max-w-[1200px] mx-auto w-full">
+<div class="flex items-end justify-between mb-12">
+<h2 class="text-white text-3xl md:text-4xl font-bold leading-tight tracking-tight uppercase">
+                        ENDORSEMENTS
+                    </h2>
+<div class="flex gap-2">
+<button class="size-10 rounded border border-border-dark bg-surface-dark flex items-center justify-center hover:border-primary text-white transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="size-10 rounded border border-border-dark bg-surface-dark flex items-center justify-center hover:border-primary text-white transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="flex overflow-x-auto no-scrollbar gap-6 pb-4 -mx-4 px-4 md:mx-0 md:px-0">
+<!-- Testimonial 1 -->
+<article class="flex-none w-[320px] md:w-[380px] p-6 rounded-lg bg-surface-dark border border-border-dark flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-gray-800 border border-gray-700 clinical-avatar">
+<img alt="Portrait of a professional man in business attire" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHqmIwaXmNNtSgiAN89S0bsJNnDeH-BGNEkx6dgFxVwECJD1wMslxb4SL7tyPK7ThvHuOf19RguxcxpPHtrrSqCDeyhxt_txFa9-PfI3VXyyXY4mIHSY8BJj-QgmrGibznBmvWC7qlVwd6rvDhCpBAhsc4wGcTXxjff0Ld8U5kOMDRtE6L9LejkkuF-iJEzrt-q8flfRQgubUSSpPs_sGgUdTlbctIKm_tp4TP0SdDoKNbPu9uJ5zOx0So5rMkwwpeJ-Rhrrc44muI"/>
+</div>
+<div>
+<h4 class="text-white font-bold text-base leading-none">Christos Makris</h4>
+<span class="text-text-secondary text-xs uppercase tracking-wider mt-1 block">Project Manager</span>
+</div>
+</div>
+</div>
+<div aria-label="5 stars" class="flex text-primary gap-0.5">
+<span class="material-symbols-outlined text-[20px] fill-current">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current">star</span>
+</div>
+<p class="text-gray-300 text-sm leading-relaxed">
+                            "Filippos delivered an architecture that scaled effortlessly. His ability to translate complex data requirements into a seamless, high-performance system was critical to our Q3 success."
+                        </p>
+</article>
+<!-- Testimonial 2 -->
+<article class="flex-none w-[320px] md:w-[380px] p-6 rounded-lg bg-surface-dark border border-border-dark flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-gray-800 border border-gray-700 clinical-avatar">
+<img alt="Portrait of a male developer with glasses" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAxCPLi_vxyqZUygj8ynBkxa0jLqgVePJ_bCMLs7URPxJT2Xszrt0qp4tQtryQ-hkVg1mKAormS2zuOOliPQRsklc6eTXliSotPfvsqe9fFfYbevYsnXza-u2aXZALjlwssKNQ8yPhCyLEs2JgmkeA2MceX-AkiSJ1998bHvqvNGgszEisbHB5OQBx5tl_MEgsZBJHnuEMAenkr2Kn5xmAf00LvF8yUSEsz8kyynnym9ttjBPHMVegUiL5fYinXDwEp3jVBgSvxlgL"/>
+</div>
+<div>
+<h4 class="text-white font-bold text-base leading-none">Miodrag Zivanovic</h4>
+<span class="text-text-secondary text-xs uppercase tracking-wider mt-1 block">Lead Developer</span>
+</div>
+</div>
+</div>
+<div class="flex text-primary gap-0.5">
+<span class="material-symbols-outlined text-[20px] fill-current">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current">star</span>
+</div>
+<p class="text-gray-300 text-sm leading-relaxed">
+                            "The data insights provided transformed our workflow. It wasn't just code; it was a complete paradigm shift in how we handle our data streams."
+                        </p>
+</article>
+<!-- Testimonial 3 -->
+<article class="flex-none w-[320px] md:w-[380px] p-6 rounded-lg bg-surface-dark border border-border-dark flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-gray-800 border border-gray-700 clinical-avatar">
+<img alt="Portrait of a female data scientist" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO6yCfs2Sk4L1YVBFAloeTqieHlcjt1vMeY_PoivUNVYrPnsYmqdc302Hy2VPPKpLDUv1O5CWH9tfrkQa6lWrIqW2_52o6C-B9GbjmNAhVLtCg3lZ7KKqIFyzRw7kLk9xVRPWQWDnQwIBfRFqhKjqBYOIuUnqbLuMvPR4l43gw9dXs5dEGIguCyJRhVerq8PBL3ld5vEStyjT4R4HpQ9PPbhp6XLZ08yCjB-7c82V39egCOkuV8Tpll0-uCINUVoaQBcFLcVo6xYOy"/>
+</div>
+<div>
+<h4 class="text-white font-bold text-base leading-none">Sarah Jenkins</h4>
+<span class="text-text-secondary text-xs uppercase tracking-wider mt-1 block">Data Scientist</span>
+</div>
+</div>
+</div>
+<div class="flex text-primary gap-0.5">
+<span class="material-symbols-outlined text-[20px] fill-current">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current">star</span>
+</div>
+<p class="text-gray-300 text-sm leading-relaxed">
+                            "Precision and speed. Working with Filippos is like upgrading your entire tech stack overnight. Highly recommended for mission-critical projects."
+                        </p>
+</article>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="w-full px-4 md:px-10 py-16 md:py-24">
+<div class="max-w-[1200px] mx-auto w-full">
+<div class="mb-12">
+<h2 class="text-text-secondary text-sm font-bold tracking-widest uppercase mb-2">Initiate Collaboration</h2>
+<h1 class="text-white text-3xl md:text-5xl font-black tracking-tight leading-none uppercase">
+                        CONTACT PROTOCOL
+                    </h1>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+<!-- Left Column: Details & Map -->
+<div class="flex flex-col gap-8">
+<!-- Contact Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Email -->
+<div class="group p-5 bg-surface-dark border border-border-dark hover:border-primary/50 transition-colors rounded-lg">
+<div class="text-primary mb-3">
+<span class="material-symbols-outlined text-3xl">mail</span>
+</div>
+<h3 class="text-white text-sm font-bold uppercase tracking-wider mb-1">Electronic Mail</h3>
+<p class="text-text-secondary text-sm font-mono">contact@filippos.dev</p>
+</div>
+<!-- Phone -->
+<div class="group p-5 bg-surface-dark border border-border-dark hover:border-primary/50 transition-colors rounded-lg">
+<div class="text-primary mb-3">
+<span class="material-symbols-outlined text-3xl">call</span>
+</div>
+<h3 class="text-white text-sm font-bold uppercase tracking-wider mb-1">Secure Line</h3>
+<p class="text-text-secondary text-sm font-mono">+30 690 123 4567</p>
+</div>
+</div>
+<!-- Map Area -->
+<div class="w-full h-[300px] rounded-lg border border-border-dark bg-surface-dark map-container relative group">
+<!-- Fallback/Static Image for Mapbox Style Map -->
+<img alt="Dark themed map showing the streets of Lamia, Greece in a high contrast style" class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-40 transition-opacity duration-500" data-location="Lamia, Greece" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmMeNj_egsxGzh7iAZ-4QNiuOx0fpFRzkd5fOTwvRkGeHx97GiqZVZaZ4G5Bsl-DU5RFzr12liivviI3fPTaSuAXtbh2b8mdlee85Ft8m0fqKU7d-cNDcfeornJJ7psXqvWLVlhSX2SARnXul1FffDPug17o5TV8BSyADr8wX-_3h-HmsOdCT4n20R-QhAvuy8N0t2TZ4c_YZMLrXfHon_73O8m4jynsQoJg0IG6hFkL1DVMtpwFvtkCstRxOIkaYfeWw42om6UXt3"/>
+<!-- Overlay UI for Map -->
+<div class="absolute inset-0 p-6 flex flex-col justify-between pointer-events-none">
+<div class="flex justify-between items-start">
+<div class="bg-background-dark/90 backdrop-blur px-3 py-1 rounded border border-border-dark">
+<span class="text-xs text-primary font-mono uppercase">● Operational Base</span>
+</div>
+</div>
+<div class="self-start">
+<h3 class="text-white text-2xl font-bold uppercase">Lamia, GR</h3>
+<p class="text-text-secondary text-xs font-mono">LAT: 38.8960° N | LONG: 22.4430° E</p>
+</div>
+</div>
+<!-- Center Pin -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+<div class="size-4 bg-primary rounded-full animate-ping absolute opacity-75"></div>
+<div class="size-3 bg-primary rounded-full relative shadow-[0_0_10px_#0066ff]"></div>
+</div>
+</div>
+<!-- Social Links -->
+<div class="flex items-center gap-4 pt-4 border-t border-border-dark">
+<a class="size-10 flex items-center justify-center rounded bg-surface-dark border border-border-dark text-text-secondary hover:text-white hover:bg-primary hover:border-primary transition-all duration-300 group" href="#">
+<!-- LinkedIn Icon (using generic svg for demo consistency) -->
+<svg aria-hidden="true" class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+</a>
+<a class="size-10 flex items-center justify-center rounded bg-surface-dark border border-border-dark text-text-secondary hover:text-white hover:bg-primary hover:border-primary transition-all duration-300" href="#">
+<!-- GitHub -->
+<svg aria-hidden="true" class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+</a>
+<a class="size-10 flex items-center justify-center rounded bg-surface-dark border border-border-dark text-text-secondary hover:text-white hover:bg-primary hover:border-primary transition-all duration-300" href="#">
+<!-- Instagram -->
+<svg aria-hidden="true" class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.79-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+</div>
+</div>
+<!-- Right Column: Form -->
+<div class="bg-surface-dark border border-border-dark p-6 md:p-8 rounded-lg shadow-lg">
+<form class="flex flex-col gap-6">
+<div class="space-y-1">
+<label class="text-xs font-bold text-text-secondary uppercase tracking-widest" for="name">Identity / Name</label>
+<input class="w-full bg-background-dark border border-border-dark rounded p-3 text-white placeholder-gray-600 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all" id="name" placeholder="Enter full designation" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="text-xs font-bold text-text-secondary uppercase tracking-widest" for="email">Coordinates / Email</label>
+<input class="w-full bg-background-dark border border-border-dark rounded p-3 text-white placeholder-gray-600 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all" id="email" placeholder="name@domain.com" type="email"/>
+</div>
+<div class="space-y-1">
+<label class="text-xs font-bold text-text-secondary uppercase tracking-widest" for="message">Transmission / Message</label>
+<textarea class="w-full bg-background-dark border border-border-dark rounded p-3 text-white placeholder-gray-600 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all resize-none" id="message" placeholder="Enter transmission content..." rows="5"></textarea>
+</div>
+<button class="mt-2 w-full bg-primary hover:bg-blue-600 text-white font-bold py-4 rounded tracking-wider uppercase transition-all shadow-[0_0_20px_rgba(0,102,255,0.2)] hover:shadow-[0_0_25px_rgba(0,102,255,0.4)] active:scale-[0.99] flex items-center justify-center gap-2" type="button">
+<span>Initialize Transmission</span>
+<span class="material-symbols-outlined text-lg">send</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Global Footer -->
+<footer class="w-full border-t border-border-dark bg-background-dark text-white py-12">
+<div class="max-w-[1440px] mx-auto px-4 md:px-10 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex flex-col gap-2 items-center md:items-start">
+<span class="text-lg font-bold">FZ</span>
+<p class="text-text-secondary text-xs">AI &amp; Data Architect. Building scalable intelligence.</p>
+<p class="text-gray-600 text-[10px] mt-2 font-mono">© 2024 Filippos-Paraskevas Zygouris. All rights reserved.</p>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-6 md:gap-12">
+<nav class="flex gap-6">
+<a class="text-sm font-medium text-text-secondary hover:text-white transition-colors" href="#">Work</a>
+<a class="text-sm font-medium text-text-secondary hover:text-white transition-colors" href="#">About</a>
+<a class="text-sm font-medium text-text-secondary hover:text-white transition-colors" href="#">Testimonials</a>
+<a class="text-sm font-medium text-text-secondary hover:text-white transition-colors" href="#">Contact</a>
+</nav>
+</div>
+</div>
+</footer>
+</body></html>

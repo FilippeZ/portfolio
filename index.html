@@ -1,0 +1,2204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="AI, ML, CDSS, Portfolio" />
+    <meta name="description" content="Portfolio — Filippos-Paraskevas Zygouris" />
+    <title>Filippos-Paraskevas Zygouris — Portfolio</title>
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="/resources/swiper-js/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link href="/resources/mapbox-gl/mapbox-gl.css" rel="stylesheet" />
+    <!-- Project CSS -->
+    <link rel="stylesheet" href="/resources/css/loader.css" />
+    <link rel="stylesheet" href="/resources/css/hamburger.css" />
+    <link rel="stylesheet" href="/resources/css/home.css" />
+    <link rel="stylesheet" href="/resources/css/about.css" />
+    <link rel="stylesheet" href="/resources/css/services.css" />
+    <link rel="stylesheet" href="/resources/css/portfolio.css" />
+    <link rel="stylesheet" href="/resources/css/comments.css" />
+    <link rel="stylesheet" href="/resources/css/contact.css" />
+    <link rel="stylesheet" href="/resources/css/style.css" />
+    <link rel="shortcut icon" href="/resources/img/favicon.ico" type="image/x-icon" />
+</head>
+<body class="loading">
+    <div class="loader" role="status" aria-live="polite" aria-label="Loading">
+        <div class="c c1" aria-hidden="true"></div>
+        <div class="c c2" aria-hidden="true"></div>
+        <div class="c c3" aria-hidden="true"></div>
+        <div class="c c4" aria-hidden="true"></div>
+        <div class="c c5" aria-hidden="true"></div>
+        <div class="c c6" aria-hidden="true"></div>
+    </div>
+    <script>
+        // Use DOMContentLoaded to ensure HTML is parsed before running script
+        document.addEventListener("DOMContentLoaded", () => {
+            const loader = document.querySelector(".loader");
+            const body = document.body;
+            if (loader) {
+                // Add class to trigger CSS fade-out transition
+                loader.classList.add("remove");
+            
+                // Remove from layout after transition (e.g., 1s)
+                setTimeout(() => {
+                    loader.style.display = "none";
+                    body.classList.remove("loading"); // Optional: remove loading class from body
+                }, 1000);
+            }
+        });
+    </script>
+    <button type="button" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
+        <div class="bar1" aria-hidden="true"></div>
+        <div class="bar2" aria-hidden="true"></div>
+        <div class="bar3" aria-hidden="true"></div>
+    </button>
+    <nav class="navigation" id="primary-navigation" aria-label="Primary Site Navigation">
+        <h1 aria-label="Filippos">
+  <span class="logo-glow"></span>
+  <span class="logo-text">Filippos</span>
+  <span class="logo-ring" aria-hidden="true"></span>
+</h1>
+    
+        <ul>
+            <li><a href="#home-section" onclick="event.preventDefault(); home();">home</a></li>
+            <li>
+                <a href="#about-section" onclick="event.preventDefault(); about(); animate4?.play();">about</a>
+            </li>
+            <li><a href="#services-section" onclick="event.preventDefault(); services(); animate6?.play();">Expertise</a></li>
+            <li><a href="#portfolio-section" onclick="event.preventDefault(); portfolio();">portfolio</a></li>
+            <li><a href="#comments-section" onclick="event.preventDefault(); comments();">comments</a></li>
+            <li><a href="#contact-section" onclick="event.preventDefault(); contact(); animate5?.play()">contact</a></li>
+        </ul>
+        <footer>
+            <p>&copy; <span id="copyright-year">2025</span></p>
+            <script>
+                // Dynamically sets the copyright year
+                document.getElementById("copyright-year").textContent = new Date().getFullYear();
+            </script>
+        </footer>
+    </nav>
+    <div class="container">
+        <div class="layer layer1 active" id="home-section">
+        
+            <main class="home" aria-labelledby="home-title">
+            
+                <div class="canvas_container" aria-hidden="true">
+                    <canvas></canvas>
+                </div>
+                <div class="content-for-home">
+                
+                    <div class="img-container" aria-hidden="true"></div>
+                    <h2 id="home-title" class="home-title" style="text-align:center;">Filippos-Paraskevas Zygouris</h2>
+                    <p class="home-subtitle" style="text-align:center; max-width:60ch; margin:.25rem auto 1.5rem auto; color:#8fa3b8;">
+                        Cloud Solution Architect | AI & Data Architect | Product Manager | Compliance Leader | Healthcare Innovator
+                    </p>
+                    <ul class="social-icons" aria-label="Social media profiles">
+                        <li class="s-icon">
+                            <a href="https://www.facebook.com/philip.zygouris/" target="_blank" rel="noopener noreferrer" aria-label="Filippos-Paraskevas Zygouris on Facebook">
+                                <i class="fab fa-facebook" aria-hidden="true"></i>
+                            </a>
+                            <span class="s-name">Facebook</span>
+                        </li>
+                        <li class="s-icon">
+                            <a href="https://www.instagram.com/philip_zygouris/" target="_blank" rel="noopener noreferrer" aria-label="Filippos-Paraskevas Zygouris on Instagram">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <span class="s-name">Instagram</span>
+                        </li>
+                        <li class="s-icon">
+                            <a href="https://www.linkedin.com/in/filippos-paraskevas-zygouris-8a88a8266/" target="_blank" rel="noopener noreferrer" aria-label="Filippos-Paraskevas Zygouris on LinkedIn">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                            <span class="s-name">LinkedIn</span>
+                        </li>
+                        <li class="s-icon">
+                            <a href="https://codeberg.org/Filippos" target="_blank" rel="noopener noreferrer" aria-label="Filippos-Paraskevas Zygouris on Codeberg/GitHub">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                            <span class="s-name">GitHub</span>
+                        </li>
+                        <li class="s-icon">
+                            <a href="mailto:filippos.paraskevas.zygouris@gmail.com" aria-label="Email Filippos-Paraskevas Zygouris">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <span class="s-name">Email</span>
+                        </li>
+                    </ul>
+                </div>
+            </main>
+        </div>
+        <!-- ABOUT -->
+        <div class="layer layer2" id="about-section">
+            <style>
+/* ==============================
+    THEME TOKENS
+===============================*/
+:root {
+    --nav-w: 290px;
+    --bg: #0d1117;
+    --panel: #0f1623;
+    --panel-2: #0b1222;
+    --text: #e5e7eb;
+    --muted: #9fb0c6;
+    --heading: #ffffff;
+    --line: #1f2736;
+    --accent: #60a5fa;
+    --accent-2: #a78bfa;
+    --accent-3: #34d399;
+    --radius: 18px;
+    --shadow: 0 10px 30px rgba(0, 0, 0, .35); /* Refined shadow */
+}
+/* ==============================
+    GLOBAL STYLES
+===============================*/
+html {
+    scroll-behavior: smooth;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+/* Note: Assuming this is part of a larger page.
+   If standalone, uncomment body rules.
+*/
+body {
+    /* font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    */
+}
+/* ==============================
+    LAYOUT + HERO
+===============================*/
+.layer2 .about.main {
+    padding-left: calc(var(--nav-w) + 24px);
+    padding-right: clamp(16px, 4vw, 48px);
+}
+@media (max-width:1100px) {
+    .layer2 .about.main {
+        padding-left: clamp(16px, 4vw, 32px);
+    }
+}
+.layer2 .wrapper {
+    max-width: 1700px;
+    margin: 0 auto;
+}
+.layer2 .wrapper .face {
+    display: grid;
+    grid-template-columns: 1.12fr .88fr;
+    gap: clamp(28px, 4vw, 64px);
+    align-items: center;
+}
+@media (max-width:980px) {
+    .layer2 .wrapper .face {
+        grid-template-columns: 1fr;
+        grid-auto-flow: dense;
+    }
+    .layer2 .wrapper .face1 { grid-row: 2; }
+    .layer2 .wrapper .face2 { grid-row: 1; }
+}
+.layer2 .face1 .content .text {
+    max-width: 68ch;
+    line-height: 1.7;
+    color: #a7b6c9;
+    font-size: 1.05rem; /* Increased font size */
+}
+#about-title {
+    font-size: clamp(2.1rem, 5vw, 2.8rem);
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+}
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+    padding: .9rem 1.2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: transform .2s ease, background .2s ease, border-color .2s ease;
+    box-shadow: var(--shadow);
+}
+.button.primary {
+    background: linear-gradient(180deg, #2563eb, #1d4ed8);
+    color: #fff;
+}
+.button.primary:hover {
+    transform: translateY(-2px) scale(1.02); /* Refined hover */
+}
+.button.secondary {
+    background: #0f172a;
+    color: #c9d7f2;
+    border-color: #23324a;
+}
+.button.secondary:hover {
+    border-color: #375074;
+    transform: translateY(-2px) scale(1.02); /* Refined hover */
+}
+/* ==============================
+    BIG PORTRAIT
+===============================*/
+.about-visual {
+    --w: clamp(320px, 30vw, 480px);
+    width: var(--w);
+    aspect-ratio: 3/4;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 24px;
+    overflow: visible;
+    isolation: isolate;
+    transform: translateY(10px) scale(.985);
+    opacity: 0;
+    transition: transform 800ms cubic-bezier(.18, .65, .2, 1), opacity 800ms ease-out;
+    box-shadow: var(--shadow), inset 0 0 0 1px rgba(255, 255, 255, .06);
+    background:
+        radial-gradient(120% 120% at 80% 10%, rgba(96, 165, 250, .15) 0%, rgba(167, 139, 250, .08) 40%, transparent 70%),
+        linear-gradient(180deg, #0f172a, #0b1222);
+}
+.about-visual.in {
+    transform: none;
+    opacity: 1;
+}
+.about-visual .about-portrait {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    filter: saturate(1.06) contrast(1.02);
+    animation: floatY 12s ease-in-out infinite;
+    transform-origin: 50% 60%;
+}
+.about-visual .glow {
+    position: absolute;
+    inset: -30%;
+    pointer-events: none;
+    background: radial-gradient(40% 40% at 70% 20%, rgba(96, 165, 250, .35), transparent 60%);
+    mix-blend-mode: screen;
+    animation: glowSweep 7s linear infinite;
+}
+@keyframes floatY {
+    0% { transform: translateY(0) }
+    50% { transform: translateY(-8px) }
+    100% { transform: translateY(0) }
+}
+@keyframes glowSweep {
+    0% { transform: rotate(0deg); opacity: .65 }
+    50% { opacity: .35 }
+    100% { transform: rotate(360deg); opacity: .65 }
+}
+@media (prefers-reduced-motion:reduce) {
+    .about-visual .about-portrait { animation: none !important; }
+}
+/* ==============================
+    ABOUT TABS + SCROLL AREA
+===============================*/
+.about_nav {
+    margin: 48px 0 18px;
+}
+.about_nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+}
+.about_nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .7rem 1.1rem;
+    border-radius: 999px;
+    color: var(--text);
+    text-decoration: none;
+    background: #0b1222;
+    border: 1px solid #1e2a3d;
+    font-size: 0.9rem;
+    transition: background .2s ease, border-color .2s ease; /* Added transition */
+}
+.about_nav a:not(.active):hover {
+    background: #111a2e;
+    border-color: #2a3c57;
+}
+.about_nav a.active {
+    background: linear-gradient(180deg, #1f2b44, #151f33);
+    border-color: #334766;
+}
+.about_container {
+    display: none;
+}
+.about_container.active {
+    display: block;
+    max-height: min(60vh, 620px);
+    overflow: auto;
+    padding-right: 10px; /* Adjusted padding */
+    padding-bottom: 40px; /* SCROLLBAR FIX: Added padding to bottom */
+    scroll-behavior: smooth;
+    overscroll-behavior: contain;
+}
+/* Custom scrollbar */
+.about_container.active::-webkit-scrollbar { width: 10px; }
+.about_container.active::-webkit-scrollbar-track { background: #0b1222; border-radius: 10px; }
+.about_container.active::-webkit-scrollbar-thumb { background: linear-gradient(#22324b, #1a2a44); border: 1px solid #2b3e5d; border-radius: 10px; }
+.about_container.active { scrollbar-color: #22324b #0b1222; scrollbar-width: thin; }
+/* ==============================
+    SKILLS — ICON CARDS
+===============================*/
+.skills-toolbox { margin-top: 2px; }
+.tool-grid {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(160px,1fr) );
+    gap: 18px;
+}
+.tool {
+    position: relative;
+    background: linear-gradient(180deg,#0f172a,#0c1426);
+    border: 1px solid #1f2b3f;
+    border-radius: 16px;
+    padding: 22px 16px 18px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+.tool:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: radial-gradient(110% 60% at 50% 0%, rgba(96,165,250,.15), transparent 60%);
+    opacity: .9;
+}
+.tool:hover {
+    transform: translateY(-4px);
+    border-color: #33507b;
+    box-shadow: 0 8px 20px rgba(0,0,0,.3); /* Refined hover shadow */
+}
+.tool svg { width: 46px; height: 46px; display: block; margin: 0 auto 10px; fill: currentColor; /* Use text color for simple icons */ }
+.tool .t-name { font-weight: 600; color: #e2e9f8; }
+.tool .t-sub { font-size: .86rem; color: var(--muted); margin-top: 4px; }
+/* Specific icon colors */
+.tool svg.python-icon path:nth-child(1) { fill: #3776AB; }
+.tool svg.python-icon path:nth-child(2) { fill: #FFD43B; }
+.tool svg.mysql-icon path:nth-child(1) { fill: #00618A; }
+.tool svg.mysql-icon path:nth-child(2) { fill: #E48E00; }
+.tool svg.azure-icon path:nth-child(1) { fill: #0072C6; }
+.tool svg.azure-icon path:nth-child(2) { fill: #7FBA00; }
+.tool svg.azure-icon path:nth-child(3) { fill: #FFB900; }
+.tool svg.azure-icon path:nth-child(4) { fill: #F25022; }
+.tool svg.openai-icon path { fill: #00A98F; }
+/* ==============================
+    EXPERIENCE & EDUCATION SHARED STYLES
+===============================*/
+.xp-list, .edu-grid {
+    display: grid;
+    gap: 16px; /* Consistent gap */
+}
+.xp-row { /* This style seems unused, but we'll keep it */
+    position: relative;
+    background: linear-gradient(180deg, #0f1623, #0b1222);
+    border: 1px solid #1e2a3d;
+    border-radius: 16px; /* Consistent radius */
+    padding: 16px;
+    box-shadow: var(--shadow);
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; /* Added transition */
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    align-items: start;
+    gap: 14px;
+}
+.xp-row:hover {
+    transform: translateY(-4px);
+    border-color: #334766;
+    box-shadow: 0 8px 20px rgba(0,0,0,.3);
+}
+@media (max-width:700px) {
+    .xp-row { grid-template-columns: 1fr; }
+}
+/* NEW/UPDATED .edu-card styles for professional layout */
+.edu-card {
+    position: relative;
+    background: linear-gradient(180deg, #0f1623, #0b1222);
+    border: 1px solid #1e2a3d;
+    border-radius: 16px; /* Consistent radius */
+    padding: 20px; /* Increased padding */
+    box-shadow: var(--shadow);
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; /* Added transition */
+    display: flex;
+    flex-direction: row-reverse; /* MOVES IMAGE TO THE RIGHT */
+    align-items: flex-start; /* Align items to the top */
+    gap: 24px; /* Increased gap */
+    /* Animation properties */
+    transform: translateY(10px) scale(.98);
+    opacity: 0;
+}
+.edu-card.in { transform: none; opacity: 1; }
+.edu-card:hover {
+    transform: translateY(-4px);
+    border-color: #334766;
+    box-shadow: 0 8px 20px rgba(0,0,0,.3);
+}
+/* Wrapper for the new image */
+.edu-card-image-wrapper {
+    flex-shrink: 0;
+    margin-top: 4px; /* Align with text better */
+    transition: transform .3s ease, background .3s ease; /* Added transition */
+}
+.edu-card-image {
+    width: 120px; /* Default size (for Certs & Events) */
+    height: 120px; /* Default size (for Certs & Events) */
+    object-fit: cover;
+    border-radius: 12px; /* Softer radius */
+    background-color: #1f2736; /* Placeholder bg */
+}
+/* Wrapper for the text content */
+.edu-card-content {
+    flex: 1; /* Take remaining space */
+    min-width: 0; /* Fix flexbox overflow issue */
+}
+/* NEW STYLES FOR EDUCATION TAB */
+#tab-education .edu-card-image-wrapper {
+    margin-top: 6px; /* Align better with larger text */
+    background: rgba(255,255,255,0.03);
+    border: 1px solid #2a3c57;
+    border-radius: 16px; /* Outer wrapper radius */
+    padding: 6px;
+}
+#tab-education .edu-card-image {
+    width: 180px; /* Make Education images larger */
+    height: 180px; /* Make Education images larger */
+    border-radius: 12px; /* Inner image radius */
+}
+#tab-education .edu-card:hover .edu-card-image-wrapper {
+    transform: scale(1.03); /* Subtle zoom on image wrapper */
+    background: rgba(255,255,255,0.05);
+}
+/* Responsive stacking for mobile */
+@media (max-width: 768px) { /* Widened breakpoint */
+    .edu-card {
+        flex-direction: column-reverse; /* STACKS IMAGE ON TOP */
+        align-items: stretch; /* Stretch items to full width */
+    }
+    .edu-card-image-wrapper {
+        width: 100%;
+    }
+    .edu-card-image {
+        width: 100%;
+        height: 150px; /* Taller aspect ratio for mobile (Certs) */
+    }
+    /* NEW: Specific mobile height for larger Education images */
+    #tab-education .edu-card-image {
+        height: 200px;
+    }
+}
+/* Timestamp column specific style */
+.stamp {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: .2px;
+}
+.stamp .range {
+    display: inline-block;
+    padding: .35rem .6rem;
+    border-radius: 999px;
+    background: #0b1424;
+    border: 1px solid #203049;
+    color: #cfe3ff;
+    font-weight: 600;
+}
+.stamp .role { color: #9fb0c6; font-size: .9rem; }
+/* Meta badges (used in both) */
+.edu-meta, .xp-meta { /* Added xp-meta for consistency */
+    margin-bottom: 8px; /* Space below badges */
+}
+.badge {
+    display: inline-block;
+    padding: .22rem .55rem;
+    font-size: .78rem;
+    color: #cfe3ff;
+    background: #0b1424;
+    border: 1px solid #203049;
+    border-radius: 999px;
+    margin: 0 6px 6px 0;
+}
+/* Titles (used in both) */
+.edu-title, .xp-title {
+    margin: .15rem 0;
+    color: #e8f0ff;
+    font-size: 1.15rem; /* Slightly larger title */
+    font-weight: 600;
+}
+/* Organization/Company/Subtitle (used in both) */
+.edu-org, .xp-org, .xp-company {
+    margin: 0 0 .4rem;
+    color: #a9bad1;
+    font-size: 0.95rem; /* Slightly larger */
+}
+/* Description text (used in both) */
+.edu-desc, .xp-desc {
+    color: #9fb0c6;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+.xp-desc ul, .edu-desc ul { /* Style lists nicely */
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+.xp-desc li, .edu-desc li {
+    margin-bottom: 4px;
+}
+/* Education specific icon */
+.edu-cap {
+    width: 20px; height: 20px; margin-right: 8px; display: inline-block; vertical-align: -3px;
+    background: linear-gradient(180deg, #60a5fa, #1e40af);
+    clip-path: polygon(50% 0, 100% 35%, 50% 70%, 0 35%);
+    box-shadow: 0 2px 8px rgba(0,0,0,.35);
+    animation: capWobble 2.2s ease-in-out infinite;
+}
+@keyframes capWobble {
+    0%, 100% { transform: translateY(0) rotate(0deg) }
+    50% { transform: translateY(-2px) rotate(2deg) }
+}
+/* ==============================
+    INTERACTIVE DEGREE ANIMATION
+===============================*/
+.degree-container {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.degree-text {
+    display: inline-block;
+    color: var(--accent-3);
+    font-weight: 600;
+}
+.degree-video {
+    display: none; width: 100px; height: auto;
+    vertical-align: middle; border-radius: 8px;
+}
+.degree-container:hover .degree-text { display: none; }
+.degree-container:hover .degree-video { display: inline-block; }
+
+/* Additional responsive adjustments */
+@media (max-width: 768px) {
+    .tool-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 12px;
+    }
+    .about_nav a {
+        font-size: 0.8rem;
+        padding: .6rem 1rem;
+    }
+    .face1 .content .text {
+        font-size: 1rem;
+    }
+    #about-title {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 480px) {
+    .tool-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-visual {
+        --w: 100%;
+    }
+}
+</style>
+<div class="about main" aria-labelledby="about-title">
+        <div class="wrapper">
+            <div class="face face1">
+                <div class="content">
+                    <p>Hello,</p>
+                    <h1 id="about-title">I'm Filippos-Paraskevas Zygouris</h1>
+                    <p class="text">
+                        As a Healthcare Innovator, my approach focuses on delivering
+          high-value solutions in the health sector, always operating under
+          the strict umbrella of a Compliance Leader to ensure regulatory
+          adherence and explainability. The execution
+          is based on three pillars: As a Product Manager, I translate
+          business needs into technical requirements, as a Cloud Solution
+          Architect, I design the secure and scalable infrastructure and as
+          an AI & Data Architect, I implement the core intelligence,
+          leveraging my expertise across the entire spectrum, from hardware
+          (HPC) for high-performance solutions to Software Engineering for
+          ensuring quality.
+                    </p>
+                    <a class="button primary"
+                        href="public/resources/CV_ZYGOURIS-FILIPPOS-PARASKEVAS.pdf"
+                        download="Filippos_Paraskevas_Zygouris_CV">Download CV</a>
+                    <a class="button secondary" href="#contact-section" onclick="event.preventDefault(); contact(); animate5?.play();">Hire Me</a>
+                </div>
+            </div>
+        
+            <div class="face face2">
+                <div class="about-visual" aria-hidden="true">
+                    <img src="/resources/img/bg1.png" alt="Portrait of Filippos-Paraskevas Zygouris"
+                        class="about-portrait"
+                        onload="this.closest('.about-visual').classList.add('in')" />
+                    <span class="glow"></span>
+                </div>
+            </div>
+        </div>
+        <nav class="about_nav" aria-label="About tabs">
+            <ul>
+                <li><a class="active" href="#" data-tab="skills">Skills</a></li>
+                <li><a href="#" data-tab="experience">Certs & Events</a></li>
+                <li><a href="#" data-tab="education">Education & Experience</a></li>
+            </ul>
+        </nav>
+        <!-- ==========================
+                SKILLS (Icon Grid) - Curated to Top 10
+            =========================== -->
+<div class="about_container active" id="tab-skills">
+    <!-- TECHNICAL SKILLS -->
+    <section class="skills-toolbox" aria-label="Technical Skills">
+        <h3 class="section-title">Technical Skills</h3>
+        <div class="tool-grid">
+
+            <!-- 1. AI & Machine Learning -->
+            <!-- Deep Learning (DL, CV, NLP) -->
+            <div class="tool">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/TensorFlowLogo.svg/120px-TensorFlowLogo.svg.png" alt="TensorFlow" class="skill-icon">
+                <div class="t-name">Deep Learning</div>
+                <div class="t-sub">DL, CV, NLP</div>
+            </div>
+
+            <!-- LLMs -->
+            <div class="tool">
+                <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" class="skill-icon">
+                <div class="t-name">LLMs</div>
+                <div class="t-sub">Large Language Models</div>
+            </div>
+
+            <!-- GANs -->
+            <div class="tool">
+                <img src="public/resources/img/vz.jpg" alt="GANs" class="skill-icon">
+                <div class="t-name">GANs</div>
+                <div class="t-sub">Generative Adversarial Nets</div>
+            </div>
+
+            <!-- GNNs -->
+            <div class="tool">
+                <img src="https://pytorch-geometric.readthedocs.io/en/latest/_static/img/pyg_logo.png" alt="PyG" class="skill-icon">
+                <div class="t-name">GNNs</div>
+                <div class="t-sub">Graph Neural Networks</div>
+            </div>
+
+            <!-- 2. Generative AI & Agents -->
+            <!-- OpenAI API -->
+            <div class="tool">
+                <img src="https://openai.com/favicon.ico" alt="OpenAI" class="skill-icon">
+                <div class="t-name">OpenAI API</div>
+                <div class="t-sub">Generative AI</div>
+            </div>
+
+            <!-- LangGraph -->
+            <div class="tool">
+                <img src="public/resources/img/langgraph-color.png" alt="LangGraph" class="skill-icon">
+                <div class="t-name">LangGraph</div>
+                <div class="t-sub">AI Agent Orchestration</div>
+            </div>
+
+            <!-- CrewAI -->
+            <div class="tool">
+                <img src="public/resources/img/crew.png" alt="CrewAI" class="skill-icon">
+                <div class="t-name">CrewAI</div>
+                <div class="t-sub">Multi-Agent Systems</div>
+            </div>
+
+            <!-- RAG -->
+            <div class="tool">
+                <img src="public/resources/img/rag.png" alt="RAG" class="skill-icon">
+                <div class="t-name">RAG</div>
+                <div class="t-sub">Retrieval-Augmented Gen</div>
+            </div>
+
+            <!-- 3. Explainable AI & Governance -->
+            <!-- XAI (SHAP, LIME) -->
+            <div class="tool">
+                <img src="public/resources/img/fd.png" alt="SHAP" class="skill-icon">
+                <div class="t-name">XAI</div>
+                <div class="t-sub">SHAP, LIME</div>
+            </div>
+
+            <!-- AI Ethics -->
+            <div class="tool">
+                <img src="public/resources/img/gdpr.png" alt="Ethics" class="skill-icon">
+                <div class="t-name">AI Ethics</div>
+                <div class="t-sub">EU AI Act, GDPR, HIPAA</div>
+            </div>
+
+            <!-- 4. Cloud & DevOps -->
+            <!-- Azure -->
+            <div class="tool">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Microsoft_Azure_Logo.svg/120px-Microsoft_Azure_Logo.svg.png" alt="Azure" class="skill-icon">
+                <div class="t-name">Azure</div>
+                <div class="t-sub">Cloud & DevOps</div>
+            </div>
+
+            <!-- Docker -->
+            <div class="tool">
+                <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" class="skill-icon">
+                <div class="t-name">Docker</div>
+                <div class="t-sub">Containers</div>
+            </div>
+
+            <!-- Kubernetes -->
+            <div class="tool">
+                <img src="public/resources/img/kub.png" alt="Kubernetes" class="skill-icon">
+                <div class="t-name">Kubernetes</div>
+                <div class="t-sub">Orchestration</div>
+            </div>
+
+            <!-- CI/CD (Azure DevOps) -->
+            <div class="tool">
+                <img src="public/resources/img/ci.png" alt="Azure DevOps" class="skill-icon">
+                <div class="t-name">CI/CD</div>
+                <div class="t-sub">Azure DevOps</div>
+            </div>
+
+            <!-- 5. Data Engineering -->
+            <!-- FAISS (Vector DB) -->
+            <div class="tool">
+                <img src="public/resources/img/faiss.png" alt="FAISS" class="skill-icon">
+                <div class="t-name">FAISS</div>
+                <div class="t-sub">Vector Databases</div>
+            </div>
+
+            <!-- ETL/ELT -->
+            <div class="tool">
+                <img src="public/resources/img/wtl.png" alt="Airflow" class="skill-icon">
+                <div class="t-name">ETL/ELT</div>
+                <div class="t-sub">Data Pipelines</div>
+            </div>
+
+            <!-- SQL/MySQL -->
+            <div class="tool">
+                <img src="https://www.mysql.com/common/logos/logo-mysql-170x115.png" alt="MySQL" class="skill-icon">
+                <div class="t-name">SQL/MySQL</div>
+                <div class="t-sub">Data Querying</div>
+            </div>
+
+            <!-- 6. Programming & APIs -->
+            <!-- Python -->
+            <div class="tool">
+                <img src="public/resources/img/Py.png" alt="Python" class="skill-icon">
+                <div class="t-name">Python</div>
+                <div class="t-sub">Programming</div>
+            </div>
+
+            <!-- C -->
+            <div class="tool">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/120px-C_Programming_Language.svg.png" alt="C" class="skill-icon">
+                <div class="t-name">C</div>
+                <div class="t-sub">Systems Programming</div>
+            </div>
+
+            <!-- REST APIs -->
+            <div class="tool">
+                <img src="public/resources/img/rr.png" alt="Postman" class="skill-icon">
+                <div class="t-name">REST APIs</div>
+                <div class="t-sub">API Development</div>
+            </div>
+
+            <!-- 7. High-Performance Computing -->
+            <!-- NVIDIA DGX -->
+            <div class="tool">
+                <img src="public/resources/img/nv.png" alt="NVIDIA DGX" class="skill-icon">
+                <div class="t-name">NVIDIA DGX</div>
+                <div class="t-sub">Multi-GPU</div>
+            </div>
+
+            <!-- OpenMP / MPI -->
+            <div class="tool">
+                <img src="public/resources/img/prl.png" alt="OpenMP" class="skill-icon">
+                <div class="t-name">OpenMP/MPI</div>
+                <div class="t-sub">Parallel Processing</div>
+            </div>
+
+            <!-- 8. Networking -->
+            <!-- TCP/IP -->
+            <div class="tool">
+                <img src="public/resources/img/tcp.png" alt="TCP/IP" class="skill-icon">
+                <div class="t-name">TCP/IP</div>
+                <div class="t-sub">Networking</div>
+            </div>
+
+            <!-- BGP / SDN -->
+            <div class="tool">
+                <img src="public/resources/img/sdn.png" alt="SDN" class="skill-icon">
+                <div class="t-name">BGP/SDN</div>
+                <div class="t-sub">Routing & SDN</div>
+            </div>
+
+            <!-- DNS / VLAN -->
+            <div class="tool">
+                <img src="public/resources/img/vlan.jpeg" alt="DNS" class="skill-icon">
+                <div class="t-name">DNS/VLAN</div>
+                <div class="t-sub">Network Services</div>
+            </div>
+
+            <!-- NEW: Mathematics Expert -->
+            <div class="tool">
+                <img src="public/resources/img/math.png" alt="Mathematics" class="skill-icon">
+                <div class="t-name">Mathematics</div>
+                <div class="t-sub">Prob, Stats, LinAlg, Calc</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SOFT SKILLS -->
+    <section class="skills-toolbox" aria-label="Soft Skills">
+        <h3 class="section-title">Soft Skills</h3>
+        <div class="tool-grid soft-grid">
+            <div class="tool">
+                <img src="public/resources/img/lead.png" alt="Leadership" class="skill-icon">
+                <div class="t-name">Leadership</div>
+            </div>
+            <div class="tool">
+                <img src="public/resources/img/prob.png" alt="Problem Solving" class="skill-icon">
+                <div class="t-name">Problem Solving</div>
+            </div>
+            <div class="tool">
+                <img src="public/resources/img/enter.png" alt="Entrepreneurship" class="skill-icon">
+                <div class="t-name">Entrepreneurship</div>
+            </div>
+            <div class="tool">
+                <img src="public/resources/img/strat.png" alt="Strategic Thinking" class="skill-icon">
+                <div class="t-name">Strategic Thinking</div>
+            </div>
+            <div class="tool">
+                <img src="https://img.icons8.com/fluency/48/project-management.png" alt="Project Coordination" class="skill-icon">
+                <div class="t-name">Project Coordination</div>
+            </div>
+            <div class="tool">
+                <img src="public/resources/img/stake.png" alt="Stakeholder Mgmt" class="skill-icon">
+                <div class="t-name">Stakeholder Managment</div>
+            </div>
+            <div class="tool">
+                <img src="https://img.icons8.com/fluency/48/teamwork.png" alt="Cross-functional" class="skill-icon">
+                <div class="t-name">Cross-functional</div>
+            </div>
+            <div class="tool">
+                <img src="public/resources/img/agile.png" alt="Agile & Scrum" class="skill-icon">
+                <div class="t-name">Agile & Scrum</div>
+            </div>
+            <div class="tool">
+                <img src="public/resources/img/prod.png" alt="Product Management" class="skill-icon">
+                <div class="t-name">Product Management</div>
+            </div>
+            <div class="tool">
+                <img src="public/resources/img/tech.png" alt="Technical Comm" class="skill-icon">
+                <div class="t-name">Technical Communication</div>
+            </div>
+            <div class="tool">
+                <img src="public/resources/img/ada.png" alt="Adaptability" class="skill-icon">
+                <div class="t-name">Adaptability</div>
+            </div>
+            <div class="tool">
+                <img src="public/resources/img/wor.png" alt="Work Ethic" class="skill-icon">
+                <div class="t-name">Work Ethic</div>
+            </div>
+            <div class="tool">
+                <img src="https://img.icons8.com/fluency/48/time-management.png" alt="Time Management" class="skill-icon">
+                <div class="t-name">Time Management</div>
+            </div>
+            <div class="tool">
+                <img src="https://img.icons8.com/fluency/48/innovation.png" alt="Innovation" class="skill-icon">
+                <div class="t-name">Innovation</div>
+            </div>
+            <div class="tool">
+                <img src="https://img.icons8.com/fluency/48/public-speaking.png" alt="Public Speaking" class="skill-icon">
+                <div class="t-name">Public Speaking</div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<style>
+/* Icon styling */
+.skill-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.1);
+    padding: 4px;
+}
+
+/* Optional: Dark mode friendly */
+@media (prefers-color-scheme: dark) {
+    .skill-icon {
+        filter: brightness(1.2);
+    }
+}
+
+/* Ensure tool grid layout remains clean */
+.tool {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 12px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.tool:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.t-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-top: 6px;
+}
+
+.t-sub {
+    font-size: 0.75rem;
+    opacity: 0.8;
+    margin-top: 2px;
+}
+
+/* Section titles */
+.section-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    color: var(--primary-color, #2563eb);
+    text-align: center;
+}
+</style>
+        <!-- =======================================
+                EXPERIENCE (Certs & Events)
+            ======================================== -->
+        <div class="about_container" id="tab-experience">
+            <section class="experience" aria-label="Certifications & Professional Development">
+                <div class="edu-grid"> <!-- Using .edu-card layout -->
+               
+                    <article class="edu-card">
+                        <div class="edu-card-content">
+                            <div class="xp-meta">
+                                <span class="badge">Virtual Tour</span>
+                                <span class="badge">Jun 7, 2022</span>
+                            </div>
+                            <h3 class="xp-title">Microsoft Datacenter Experience: Virtual Tour</h3>
+                            <p class="xp-org">Participant</p>
+                            <p class="xp-desc">
+                                Completed an interactive 3D tour of Azure datacenter design, AI accelerators (Maia, Cobalt), sustainability, and global operations.
+                            </p>
+                        </div>
+                        <div class="edu-card-image-wrapper">
+                            <img src="https://www.cnet.com/a/img/resize/94d603762d21e9a002300bdea0d93a5e133a7e16/hub/2009/10/07/10556205-f0fe-11e2-8c7c-d4ae52e62bcc/CH1245.jpg?auto=webp&width=1200" alt="Microsoft Azure datacenter interior" class="edu-card-image" loading="lazy" />
+                        </div>
+                    </article>
+                    <article class="edu-card">
+                        <div class="edu-card-content">
+                            <div class="xp-meta">
+                                <span class="badge">Conference</span>
+                                <span class="badge">Jun 29, 2022</span>
+                            </div>
+                            <h3 class="xp-title">Microsoft Envision Greece</h3>
+                            <p class="xp-org">Event Attendee</p>
+                            <p class="xp-desc">
+                                Engaged with digital leaders on transformation, post-pandemic acceleration, cybersecurity, and tech sustainability.
+                            </p>
+                        </div>
+                        <div class="edu-card-image-wrapper">
+                            <img src="https://r2.cms-shared-media.twodo.cz/e2dd59c9-ac20-4f31-ae03-476d713105f2/2e07cd2c-4782-4603-9f74-47814d4bdb4f/12-22-2023_52f9010a-f6c4-48bb-8bc9-da584a5cd638/file.png" alt="Microsoft Envision conference stage" class="edu-card-image" loading="lazy" />
+                        </div>
+                    </article>
+               
+                    <article class="edu-card">
+                        <div class="edu-card-content">
+                            <div class="xp-meta">
+                                <span class="badge">Certification</span>
+                                <span class="badge">Feb 2023</span>
+                            </div>
+                            <h3 class="xp-title">Microsoft Certified: Azure AI Fundamentals (AI-900)</h3>
+                            <p class="xp-org">Microsoft</p>
+                            <p class="xp-desc">
+                                Validated foundational knowledge of machine learning and artificial intelligence concepts and their implementation on Microsoft Azure.
+                            </p>
+                        </div>
+                        <div class="edu-card-image-wrapper">
+                            <img src="https://media.licdn.com/dms/image/v2/D5610AQHuo6Pb0vttaQ/image-shrink_1280/B56ZXlAfBHGUAM-/0/1743303865722?e=2147483647&v=beta&t=zg6146CQNJUbkbCacu5snlYK71UP4Rpi3zlDkkwpb2A" alt="Azure AI Fundamentals certification badge" class="edu-card-image" loading="lazy" />
+                        </div>
+                    </article>
+                    <article class="edu-card">
+                        <div class="edu-card-content">
+                            <div class="xp-meta">
+                                <span class="badge">Conference</span>
+                                <span class="badge">Mar 21, 2023</span>
+                            </div>
+                            <h3 class="xp-title">NVIDIA GTC 2023: Accelerated Computing & AI</h3>
+                            <p class="xp-org">Event Attendee</p>
+                            <p class="xp-desc">
+                                Explored generative AI, robotics, Industrial Metaverse, and DGX labs. Featured keynotes by Jensen Huang and leaders from OpenAI.
+                            </p>
+                        </div>
+                        <div class="edu-card-image-wrapper">
+                            <img src="public/resources/img/elements/nvidia.jpg" alt="NVIDIA GTC conference keynote with Jensen Huang" class="edu-card-image" loading="lazy" />
+                        </div>
+                    </article>
+                    <article class="edu-card">
+                        <div class="edu-card-content">
+                            <div class="xp-meta">
+                                <span class="badge">Certificate</span>
+                                <span class="badge">Apr 25, 2023</span>
+                            </div>
+                            <h3 class="xp-title">Certificate: Elements of AI</h3>
+                            <p class="xp-org">University of Helsinki & MinnaLearn</p>
+                            <p class="xp-desc">
+                                Completed foundational course on AI, its implications, and practical applications.
+                            </p>
+                        </div>
+                        <div class="edu-card-image-wrapper">
+                            <img src="public/resources/img/elements/university-of-helsinki-dark-logo.jpg" alt="Elements of AI certificate from University of Helsinki" class="edu-card-image" loading="lazy" />
+                        </div>
+                    </article>
+                    <article class="edu-card">
+                        <div class="edu-card-content">
+                            <div class="xp-meta">
+                                <span class="badge">Credential</span>
+                                 <span class="badge">Apr 29-30, 2023</span>
+                            </div>
+                            <h3 class="xp-title">Cisco Networking Credentials</h3>
+                            <p class="xp-org">Cisco Networking Academy</p>
+                             <ul class="xp-desc">
+                                 <li>Badge of Networking Basics (April 29, 2023)</li>
+                                 <li>Credential of Networking Devices and Initial Config (April 30, 2023)</li>
+                             </ul>
+                        </div>
+                        <div class="edu-card-image-wrapper">
+                            <img src="public/resources/img/elements/cisco.png" alt="Cisco Networking Academy badge" class="edu-card-image" loading="lazy" />
+                        </div>
+                    </article>
+               
+                    <article class="edu-card">
+                        <div class="edu-card-content">
+                            <div class="xp-meta">
+                                <span class="badge">Event</span>
+                                <span class="badge">Nov 16–18, 2023</span>
+                            </div>
+                            <h3 class="xp-title">Microsoft Ignite 2023</h3>
+                            <p class="xp-org">Event Attendee</p>
+                            <p class="xp-desc">
+                                Hands-on with Azure AI, data modernization, IoT, and cloud-native patterns.
+                            </p>
+                        </div>
+                        <div class="edu-card-image-wrapper">
+                            <img src="https://msftstories.thesourcemediaassets.com/sites/710/2024/11/Charles-Lamanna-Ignite-2024.png" alt="Microsoft Ignite conference event" class="edu-card-image" loading="lazy" />
+                        </div>
+                    </article>
+                    <article class="edu-card">
+                        <div class="edu-card-content">
+                            <div class="xp-meta">
+                                <span class="badge">Workshop</span>
+                                <span class="badge">Nov 24, 2023</span>
+                            </div>
+                            <h3 class="xp-title">PwC “Break AI” Workshop</h3>
+                            <p class="xp-org">Selected Participant</p>
+                            <p class="xp-desc">
+                                Selected among 30 students for advanced training in AI risk management, tinyML, distributed AI, NVIDIA strategy, and OWASP security.
+                            </p>
+                        </div>
+                        <div class="edu-card-image-wrapper">
+                            <img src="public/resources/img/elements/pwc.jpeg" alt="PwC AI workshop event" class="edu-card-image" loading="lazy" />
+                        </div>
+                    </article>
+               
+                    <article class="edu-card">
+                        <div class="edu-card-content">
+                            <div class="xp-meta">
+                                <span class="badge">Event</span>
+                                 <span class="badge">Nov 18–22, 2024</span>
+                            </div>
+                            <h3 class="xp-title">Microsoft Ignite 2024</h3>
+                            <p class="xp-org">Event Attendee</p>
+                             <p class="xp-desc">
+                                 Explored Copilot, autonomous agents, and Azure AI stack. Attended Satya Nadella’s keynote on generative AI.
+                            </p>
+                        </div>
+                        <div class="edu-card-image-wrapper">
+                            <img src="https://msftstories.thesourcemediaassets.com/sites/710/2024/11/IGNITE24_Satya_Full-Keynote_Thumb.png" alt="Microsoft Ignite 2024 Satya Nadella keynote" class="edu-card-image" loading="lazy" />
+                        </div>
+                    </article>
+                    <article class="edu-card">
+                        <div class="edu-card-content">
+                            <div class="xp-meta">
+                                <span class="badge">Competition</span>
+                                <span class="badge">Date TBD</span> <!-- Add Date -->
+                            </div>
+                            <h3 class="xp-title">8th CSR Competition</h3>
+                            <p class="xp-org">Competition Participant</p>
+                             <p class="xp-desc">
+                                 Supported by the European Parliament Office in Greece, I developed AI-driven Corporate Social Responsibility (CSR) strategies for CSR HELLAS, ensuring alignment with the UN Sustainable Development Goals (SDGs) and placing a special focus on SDG#17 (Partnership for the Goals) as a key enabler for the 2030 agenda.
+                            </p>
+                        </div>
+                        <div class="edu-card-image-wrapper">
+                            <img src="public/resources/img/elements/csr.jpg" alt="CSR competition award ceremony" class="edu-card-image" loading="lazy" />
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+        <!-- ==========================
+                EDUCATION
+            =========================== -->
+        <div class="about_container" id="tab-education">
+            <section class="education" aria-label="Education & Experience">
+                <div class="edu-grid">
+                    <article class="edu-card">
+                        <div class="edu-card-content">
+                            <div class="edu-meta">
+                                <span class="badge">High School</span>
+                                <span class="badge">2017 — 2020</span>
+                            </div>
+                            <h3 class="edu-title"><span class="edu-cap"></span>High School Diploma</h3>
+                            <p class="edu-org">Grade: 19.8/20 (Excellent)</p>
+                             <p class="edu-desc">Graduated with top honors, laying a strong academic foundation.</p>
+                        </div>
+                        <div class="edu-card-image-wrapper">
+                            <img src="https://newsroom.ocde.us/wp-content/uploads/2025/09/PANA3047-2560x1707.jpeg" alt="High school diploma graduation ceremony" class="edu-card-image" loading="lazy" />
+                        </div>
+                    </article>
+                    <article class="edu-card">
+                        <div class="edu-card-content">
+                            <div class="edu-meta">
+                                <span class="badge">Master</span>
+                                <span class="badge">2020 — 2025</span>
+                            </div>
+                            <h3 class="edu-title"><span class="edu-cap"></span>Computer Engineering & Informatics (Master's Degree)</h3>
+                            <p class="edu-org">
+                                University of Patras, Greece ·
+                                <span class="degree-container">
+                                    <span class="degree-text">Grade: 8.05/10</span>
+                                    <video
+                                        id="degree-animation"
+                                        class="degree-video"
+                                        src="/resources/video.mp4"
+                                        muted
+                                        loop
+                                        playsinline
+                                        aria-label="Animation of 8 turning into infinity">
+                                    </video>
+                                </span>
+                            </p>
+                            <p class="edu-desc">
+                                As a top 5% Master's graduate (8.05/10 GPA), my thesis project, ZenithDx, was a validated MVP for a human-centered AI co-pilot in Emergency Departments. This single project integrated my expertise across four roles: Product Manager (leading the full lifecycle), AI & Data Architect (engineering a multimodal pipeline with CV, NLP, and Graph Transformers), Cloud Architect (designing for scalability), and Compliance Leader (embedding XAI for governance). I am now excited to leverage this comprehensive experience to build innovative, reliable, and scalable solutions.
+                            </p>
+                        </div>
+                        <div class="edu-card-image-wrapper">
+                            <img src="public/resources/img/5.jpg" alt="University of Patras campus building" class="edu-card-image" loading="lazy" />
+                        </div>
+                    </article>
+                    <article class="edu-card">
+                        <div class="edu-card-content">
+                            <div class="edu-meta">
+                                <span class="badge">Internship</span>
+                                <span class="badge">Jul 2022 - Aug 2022</span>
+                            </div>
+                            <h3 class="edu-title"><span class="edu-cap"></span>Data Scientist</h3>
+                            <p class="edu-org">Kavala, Greece</p>
+                            <p class="edu-desc">
+                                As a Data Scientist in the UNBOUND PROMETHEUS program, I applied advanced data science to heavy machinery in the mining and construction sectors. Under the guidance of Professor Paul O’Leary, I analyzed complex, real-world multivariate time-series (MVTS) data, gaining expertise in AI and Data Architecture. This included designing Cyber-Physical Systems, applying hybrid ML models like LSTM-VAEs and PCA, and managing secure data infrastructure (Data Warehouses, SFTP). The program successfully bridged advanced academic research with practical industry challenges.
+                            </p>
+                        </div>
+                        <div class="edu-card-image-wrapper">
+                            <img src="public/resources/img/4.jpeg" alt="Data science summer school seminar" class="edu-card-image" loading="lazy" />
+                        </div>
+                    </article>
+                    <article class="edu-card">
+                        <div class="edu-card-content">
+                            <div class="edu-meta">
+                                <span class="badge">Part-time</span>
+                                <span class="badge">Jul 2023 – May 2025</span>
+                            </div>
+                            <h3 class="edu-title"><span class="edu-cap"></span>Beta Microsoft Learn Student Ambassador (Azure Cloud & AI/Data Architecture)</h3>
+                            <p class="edu-org">Global (Hybrid)</p>
+                            <p class="edu-desc">
+                                As a Microsoft Learn Student Ambassador specializing in Cloud Solutions Architecture and AI/Data Engineering, I bridge academic theory with practical application on the Azure platform. I lead peers in building end-to-end, ethical AI solutions using services like AI Search, Computer Vision, and Text Analytics for Health. Beyond technical workshops, I foster a global learning community by mentoring new Ambassadors and collaborating with faculty, empowering my peers to design the secure, scalable, and sound cloud architectures of the future.
+                            </p>
+                        </div>
+                        <div class="edu-card-image-wrapper">
+                            <img src="public/resources/img/3.jpg" alt="Microsoft Learn Student Ambassador program badge" class="edu-card-image" loading="lazy" />
+                        </div>
+                    </article>
+                    <article class="edu-card">
+                        <div class="edu-card-content">
+                            <div class="edu-meta">
+                                <span class="badge">Internship</span>
+                                <span class="badge">Mar 2024 - May 2024</span>
+                            </div>
+                            <h3 class="edu-title"><span class="edu-cap"></span>Product Manager & Software Engineer</h3>
+                            <p class="edu-org">Lisbon, Portugal (Remote)</p>
+                            <p class="edu-desc">
+                                As Product Manager and Analysis Lead for the D-PBL Erasmus+ initiative, I led a 3-month international project to enhance railway accessibility. Leveraging my expertise as a Solution Architect and Compliance Leader, I guided the end-to-end product lifecycle, combining strategic product management and backlog organization with hands-on software engineering. I successfully coordinated this remote, Agile team to ensure our solution was technically sound, met key accessibility standards, and achieved all project deliverables.
+                            </p>
+                        </div>
+                        <div class="edu-card-image-wrapper">
+                            <img src="public/resources/img/2.png" alt="Erasmus+ internship program in Europe" class="edu-card-image" loading="lazy" />
+                        </div>
+                    </article>
+                    <article class="edu-card">
+                        <div class="edu-card-content">
+                            <div class="edu-meta">
+                                <span class="badge">Volunteering</span>
+                                <span class="badge">Oct 20–25, 2024</span>
+                            </div>
+                            <h3 class="edu-title"><span class="edu-cap"></span>Product & Project Coordinator</h3>
+                            <p class="edu-org">Patras, Greece</p>
+                            <p class="edu-desc">
+                                As a core volunteer organizer for Startup Week Patras 2024, I provided key project coordination and organizational support, engaging with the end-to-end product lifecycle. I managed logistics for sessions on product validation, UX, and AI, while facilitating engagement with stakeholders from leading firms like PwC and Yodiwo. This experience allowed me to directly support the local entrepreneurial ecosystem by bridging high-level business goals with practical execution and stakeholder management.
+                            </p>
+                        </div>
+                        <div class="edu-card-image-wrapper">
+                            <img src="public/resources/img/1.jpg" alt="Startup Week event in Patras Greece" class="edu-card-image" loading="lazy" />
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<script>
+/* Reveal portrait */
+(function(){
+    const el = document.querySelector('.about-visual');
+    if(!el) return;
+    const io = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{ if(e.isIntersecting){ el.classList.add('in'); io.unobserve(el); } });
+    }, {threshold:.3});
+    io.observe(el);
+})();
+/* Tabs + scroll-to top inside pane for better UX */
+(function(){
+    const nav = document.querySelector('.about_nav');
+    if(!nav) return;
+    const links = nav.querySelectorAll('a');
+    const panes = {
+        skills: document.getElementById('tab-skills'),
+        experience: document.getElementById('tab-experience'),
+        education: document.getElementById('tab-education')
+    };
+    // Check if panes exist before trying to use them
+    Object.keys(panes).forEach(key => {
+        if (!panes[key]) {
+            console.warn(`Tab pane for "${key}" not found.`);
+            delete panes[key]; // Remove non-existent pane reference
+        }
+    });
+    function activate(key){
+        links.forEach(a => a.classList.toggle('active', a.dataset.tab===key));
+        Object.values(panes).forEach(p => p && p.classList.remove('active')); // Check if p exists
+        const pane = panes[key];
+        if(!pane) return; // Exit if pane doesn't exist
+        pane.classList.add('active');
+        // Use 'instant' for immediate scroll, 'auto' is fallback
+        pane.scrollTo({top:0, behavior: 'instant'});
+    }
+    links.forEach(a => a.addEventListener('click', e => {
+        e.preventDefault();
+        activate(a.dataset.tab);
+    }));
+    // Activate the first available tab
+    const firstAvailableTabKey = Object.keys(panes)[0] || 'skills'; // Default to 'skills' if no panes found
+     links.forEach(a => {
+         if(a.dataset.tab === firstAvailableTabKey) {
+             activate(firstAvailableTabKey);
+         }
+    });
+    // Fallback if the first link doesn't match any pane
+    if (!document.querySelector('.about_nav a.active')) {
+       activate(firstAvailableTabKey);
+    }
+})();
+/* Animate cards on first view */
+(function(){
+    const cards = document.querySelectorAll('.edu-card'); // Select cards from both education and experience tabs
+    if(!cards.length) return;
+    // Use the .about_container as the root for the intersection observer
+    const scrollContainers = document.querySelectorAll('.about_container');
+    if (!scrollContainers.length) return;
+    scrollContainers.forEach(container => {
+        const io = new IntersectionObserver((entries)=>{
+            entries.forEach(({isIntersecting, target})=>{
+                if(isIntersecting){
+                    target.classList.add('in');
+                    io.unobserve(target);
+                }
+            });
+        }, {
+            root: container, // Observe within the tab panel
+            threshold: .2
+        });
+        // Observe cards *within* this specific container
+        container.querySelectorAll('.edu-card').forEach(c => io.observe(c));
+    });
+})();
+/* Degree Animation Script */
+(function(){
+    const video = document.getElementById('degree-animation');
+    if (!video) return;
+    const container = video.closest('.degree-container');
+    if (!container) return;
+    container.addEventListener('mouseenter', () => { // Changed to mouseenter for reliability
+        video.play().catch(e => console.log("Play interrupted")); // Catch potential errors
+    });
+    container.addEventListener('mouseleave', () => { // Changed to mouseleave
+        video.pause();
+        video.currentTime = 0;
+    });
+})();
+</script>
+        </div>
+        <!-- SERVICES -->
+        <div class="layer layer3" id="services-section">
+  <div class="services main" aria-labelledby="services-title">
+    <!--
+      Note: The scrollable region height is set to 100vh.
+      This might be too tall if this component isn't meant to fill the entire screen.
+      You might want to adjust 'height: 100vh' or set 'max-height' instead.
+    -->
+    <!-- CSS for fade-in animations -->
+    <style>
+      .fade-in-element {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .fade-in-element.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+ 
+      /* Apply a staggered delay for children of a visible container if needed */
+      .fade-in-element.is-visible .fade-in-child-1 {
+        transition-delay: 0.1s;
+      }
+      .fade-in-element.is-visible .fade-in-child-2 {
+        transition-delay: 0.2s;
+      }
+ 
+      /* Ensure hero text has a reasonable width */
+      .hero-text {
+         flex: 1; /* Allows text to take available space */
+         max-width: 70ch; /* Limits line length for readability */
+         min-width: 300px; /* Ensure it doesn't get too squished */
+      }
+ 
+      .hero {
+        padding: 2rem 0; /* Add some padding */
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .typography {
+        display: flex; /* Use flexbox for horizontal layout */
+        align-items: baseline; /* Align text nicely */
+        justify-content: center; /* Horizontally center the flex items */
+        gap: 1rem; /* Space between "I am an" and rotating text */
+        width: 100%;
+        text-align: center; /* Center text (for fallback or if flex wasn't used) */
+        padding: 2rem 0 1rem 0; /* Add padding */
+        font-size: 3.5rem; /* Font size for "I am an" */
+      }
+      /* Added/updated styles for the rotating text box */
+      .t-box {
+        /* This height must be large enough for the new .box-side font size.
+           You may need to adjust this value based on the original CSS. */
+        height: 2.5rem; /* Adjusted height for smaller text */
+        margin-top: 0; /* Reset margin */
+      }
+      .box-side {
+        font-size: 2rem; /* Set to a smaller font size */
+        /* The height and line-height should match the .t-box height */
+        height: 2.5rem; /* Match .t-box height */
+        line-height: 2.5rem; /* Match .t-box height */
+      }
+
+      .capabilities {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin: 2rem 0;
+      }
+      .capabilities.left {
+        flex-direction: row;
+      }
+      .capabilities.right {
+        flex-direction: row-reverse;
+      }
+      .capabilities img {
+        max-width: 50%;
+        height: auto;
+      }
+      .c_content {
+        flex: 1;
+      }
+
+      @media (max-width: 768px) {
+        .typography {
+          font-size: 2.5rem;
+        }
+        .box-side {
+          font-size: 1.5rem;
+        }
+        .t-box {
+          height: 1.8rem;
+        }
+        .box-side {
+          height: 1.8rem;
+          line-height: 1.8rem;
+        }
+        .hero {
+          flex-direction: column;
+        }
+        .hero video {
+          width: 100%;
+          height: auto;
+        }
+        .capabilities.left, .capabilities.right {
+          flex-direction: column;
+        }
+        .capabilities img {
+          max-width: 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .typography {
+          font-size: 2rem;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+        .hero-text {
+          min-width: auto;
+        }
+      }
+    </style>
+    <div
+      class="scroll-area"
+      role="region"
+      aria-label="My Professional Services"
+      tabindex="0"
+      style="overflow-y: auto; height: 90vh; overflow-x: hidden;"
+    >
+      <!-- "I am an..." text moved to the top, with rotating text on the right -->
+      <span class="typography fade-in-element">
+        <span class="t_dummy">I am an</span>
+        <span class="t-box" aria-live="polite">
+          <span class="box-side box-front">Cloud Architect</span>
+          <span class="box-side box-top">AI & Data Architect</span>
+          <span class="box-side box-back">Product Manager</span>
+          <span class="box-side box-bottom">Compliance Leader</span>
+          <span class="box-side box-left">Healthcare Innovator</span>
+        </span>
+      </span>
+      <!-- Hero section with profile video on the left -->
+<!-- HERO SECTION — Video Left + Text Right (Aligned with Your CSS) -->
+<div class="hero fade-in-element">
+  <!-- VIDEO: Left Side, Large, Professional -->
+  <div class="video-wrapper">
+    <video
+      src="/resources/video1.mp4"
+      poster="https://previews.123rf.com/images/antoniodiaz/antoniodiaz1412/antoniodiaz141200042/34521820-attractive-young-civil-engineer-wearing-a-helmet-and-a-suit-and-supervising-a-construction-project.jpg"
+      alt="A professional profile video"
+      preload="metadata"
+      muted
+      autoplay
+      loop
+      playsinline
+      class="fade-in-child-1"
+    >
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- TEXT: Right Side, Hero Text -->
+  <p class="hero-text fade-in-child-2" id="services-title">
+    To illustrate my expertise, I frame the digital evolution in Healthcare as being guided by the essential "umbrella" of <strong>Compliance and Explainable AI (XAI)</strong>, which ensures all innovation is safe, transparent, and trustworthy; this overarching framework is supported by three critical pillars: <strong>Product Management</strong>, which defines the "why" by focusing on user needs and compliant value creation, <strong>Cloud Architecture</strong>, which establishes the secure and scalable "where" for housing data and applications, and <strong>AI & Data Architecture</strong>, which powers the "how" by generating the intelligent insights that drive progress. The core principle is that only when these three pillars operate in complete synergy under the governance of Compliance and XAI can we responsibly and successfully transform healthcare for the better.
+  </p>
+</div>
+      <!-- Capability Sections with fade-in animation -->
+      <section class="capabilities left move-little-down fade-in-element">
+        <img
+          src="public/resources/1.png"
+          alt="Cloud solution architecture diagram for a modern application"
+          loading="lazy"
+        />
+        <p class="c_content">
+          <span class="c_title">Cloud Solutions Architect</span>
+          As a Cloud Solution Architect, I design and implement the secure, scalable, and resilient infrastructure required for modern, data-intensive applications. My expertise is centered on Microsoft Azure, where I architect end-to-end systems leveraging services like Azure AI Search, Computer Vision, and Microsoft Entra ID for robust security. This practical experience was proven in my thesis project, ZenithDx, where I designed the complete cloud backend. I reinforce this work through my leadership as a Beta Microsoft Learn Student Ambassador, mentoring peers in building and deploying ethically sound solutions on Azure.
+        </p>
+      </section>
+      <section class="capabilities right fade-in-element">
+        <p class="c_content">
+          <span class="c_title">AI & Data Architect</span>
+          My core specialization lies in being an AI & Data Architect, where I engineer the intelligent systems that transform complex data into actionable insights. This was demonstrated in my thesis, ZenithDx, for which I built the core autonomous AI agent. I orchestrated a sophisticated multimodal pipeline that fused Computer Vision for X-ray analysis, NLP for clinical notes, and a Heterogeneous Graph Transformer for patient histories. My expertise spans the full stack, from foundational ML models (like GNNs and GANs) to advanced LLM agents and high-performance computing (HPC) for training.
+        </p>
+        <img
+          src="public/resources/2.png"
+          alt="Visualization of an AI model processing healthcare data"
+          loading="lazy"
+        />
+      </section>
+      <section class="capabilities left fade-in-element">
+        <img
+          src="public/resources/3.jpg"
+          alt="A diagram showing an agile product management workflow"
+          loading="lazy"
+          style="
+            background: #2929292f;
+            backdrop-filter: blur(4px);
+            border-radius: 40px;
+          "
+        />
+        <p class="c_content">
+          <span class="c_title">Product Manager</span>
+          In my role as a Product Manager, I bridge the gap between complex technical possibilities and real-world user needs, translating critical clinical and business requirements into viable product roadmaps. My experience leading the D-PBL Erasmus+ initiative for the European Commission proves this, where I managed an international, cross-functional team in a remote Agile environment. I guided the entire product lifecycle from conception and backlog organization to a validated MVP, demonstrating my ability to lead teams and connect strategic goals with advanced technical solutions.
+        </p>
+      </section>
+      <section class="capabilities right fade-in-element">
+        <p class="c_content">
+          <span class="c_title">Compliance Leader</span>
+          As a Compliance Leader, I operate under the guiding principle that all innovation must be ethically sound, transparent, and trustworthy. I ensure solutions adhere to robust data governance and emerging regulations like the EU AI Act by embedding compliance from the initial design phase. This is not just theoretical; in my ZenithDx project, I implemented Explainable AI (XAI) methods to produce transparent, auditable diagnostic reports. This technical foundation is supported by formal certifications in research compliance, enabling me to build systems that are not only powerful but also safe and responsible.
+        </p>
+        <img
+          src="public/resources/4.jpg"
+          alt="Architecture diagram of secure, compliant AI infrastructure"
+          loading="lazy"
+        />
+      </section>
+      <section class="capabilities left fade-in-element">
+        <img
+          src="public/resources/5.jpg"
+          alt="Abstract image representing healthcare innovation"
+          loading="lazy"
+        />
+        <p class="c_content">
+          <span class="c_title">Healthcare Innovator</span>
+          My primary passion and focus is as a Healthcare Innovator, dedicated to engineering high-impact solutions that solve complex clinical challenges and improve patient outcomes. This domain is the central theme of my work, most notably in my thesis, ZenithDx, a human-centered AI co-pilot designed to support clinicians in high-pressure Emergency Departments. By integrating all my multidisciplinary skills from cloud architecture to compliant AI and product management, I am driven to build the next generation of reliable, life-changing healthcare technologies that augment human expertise and deliver tangible value.
+        </p>
+      </section>
+    </div>
+  </div>
+  <!-- JavaScript for Intersection Observer -->
+  <script>
+    // Self-invoking function to avoid polluting the global scope
+    (function() {
+      // Check if IntersectionObserver is supported
+      if (!('IntersectionObserver' in window)) {
+        console.warn('IntersectionObserver not supported. Fade-in animations will not work.');
+        // Optionally, make all elements visible immediately
+        document.querySelectorAll('.fade-in-element').forEach(el => {
+          el.classList.add('is-visible');
+        });
+        return;
+      }
+      const scrollArea = document.querySelector('.scroll-area');
+      const targets = document.querySelectorAll('.fade-in-element');
+      if (!scrollArea || targets.length === 0) {
+        return;
+      }
+      const options = {
+        root: scrollArea, // Observe intersections relative to the .scroll-area
+        rootMargin: '0px 0px -50px 0px', // Trigger when element is 50px from the bottom
+        threshold: 0.01 // Trigger as soon as 1% is visible
+      };
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Add the 'is-visible' class to trigger the animation
+            entry.target.classList.add('is-visible');
+            // Stop observing the element after it has become visible
+            obs.unobserve(entry.target);
+          }
+        });
+      }, options);
+      // Start observing all target elements
+      targets.forEach(target => {
+        observer.observe(target);
+      });
+    })();
+  </script>
+</div>
+        </div>
+        <!-- PORTFOLIO -->
+<div class="layer layer4" id="portfolio-section">
+  <div class="portfolio main">
+    
+    <div class="tip main" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="allContent">
+        
+        <div class="description" aria-hidden="true">
+          <div class="pro_intro">
+            <div class="nameplate">
+              <h1 id="modal-title" data-title>Project Title</h1>
+              <span>Category: <span data-category>Category</span></span>
+            </div>
+            <div class="other_text">
+              <p data-brief>The project brief will load here once you click a project.</p>
+            </div>
+          </div>
+
+          <div class="pro_info">
+            <p><strong>Date:</strong> <span data-date>Loading...</span></p>
+            <p><strong>Client:</strong> <span data-client>Loading...</span></p>
+            <p><strong>Tools:</strong> <span data-tools>Loading...</span></p>
+            <p><strong>Link:</strong> 
+              <a href="#" data-link target="_blank" rel="noopener noreferrer">View Case Study</a>
+            </p>
+          </div>
+        </div>
+
+        <button class="closeButton" type="button" aria-label="Toggle project details">
+          <span class="label">Project Details</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+
+        <button class="exitButton" type="button" aria-label="Close project viewer">
+          <span aria-hidden="true">×</span>
+        </button>
+
+        <div class="port_content">
+          <div class="swiper-container-2">
+            <div class="swiper-wrapper"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="filter-controls" aria-label="Portfolio category filters" style="justify-content: center;">
+      <button type="button" class="filter active" data-filter="all">All Projects</button>
+      <button type="button" class="filter" data-filter=".data">Data & Analytics</button>
+      <button type="button" class="filter" data-filter=".ai">Generative & Agentic AI</button>
+      <button type="button" class="filter" data-filter=".cloud">Cloud Solutions</button>
+      <button type="button" class="filter" data-filter=".product">Product & Leadership</button>
+      <button type="button" class="filter" data-filter=".gov">Governance & Compliance</button>
+    </nav>
+
+    <div class="mymixcont" id="portfolio-grid">
+
+      <div class="mix data" data-project="zenithdx-data" tabindex="0" role="button" aria-label="View ZenithDx – Multimodal Data Orchestration">
+        <img src="/resources/img/portfolios/web/1.jpg" alt="ZenithDx – Multimodal Data Orchestration">
+        <div class="title">ZenithDx – Multimodal Data Orchestration</div>
+      </div>
+      <div class="mix data" data-project="travel-db" tabindex="0" role="button" aria-label="View Travel Agency Relational DB & Java GUI">
+        <img src="/resources/img/portfolios/web/5.jpg" alt="Travel Agency Relational DB & Java GUI">
+        <div class="title">Relational Database Architecture, Modeling, and Data Logic Layer Implementation</div>
+      </div>
+      <div class="mix data" data-project="etl-covid" tabindex="0" role="button" aria-label="View COVID-19 Economic Impact ETL Pipeline">
+        <img src="/resources/img/portfolios/web/3.jpeg" alt="COVID-19 Economic Impact ETL Pipeline">
+        <div class="title">End-to-End ETL Pipeline Architecture for Economic Impact Analytics</div>
+      </div>
+      <div class="mix data" data-project="genomic" tabindex="0" role="button" aria-label="View Genomic Data Pipeline & Bioinformatics">
+        <img src="/resources/img/portfolios/web/2.jpg" alt="Genomic Data Pipeline & Bioinformatics">
+        <div class="title">Genomic Data Pipeline & Bioinformatics</div>
+      </div>
+      <div class="mix data" data-project="indexing-poc" tabindex="0" role="button" aria-label="View Multidimensional Indexing PoC">
+        <img src="/resources/img/portfolios/web/6.jpg" alt="Multidimensional Indexing PoC">
+        <div class="title">Multidimensional Indexing for High-Performance Analytics</div>
+      </div>
+      <div class="mix data" data-project="azure-mesh" tabindex="0" role="button" aria-label="View Azure Real-Time Clinical Data Mesh">
+        <img src="/resources/img/portfolios/web/7.png" alt="Azure Real-Time Clinical Data Mesh">
+        <div class="title">Azure Real-Time Clinical Data Mesh (NEW)</div>
+      </div>
+
+      <div class="mix ai" data-project="zenithdx-ai" tabindex="0" role="button" aria-label="View ZenithDx – Agentic Clinical Co-Pilot">
+        <img src="/resources/img/portfolios/logo/1.jpg" alt="ZenithDx – Agentic Clinical Co-Pilot">
+        <div class="title">ZenithDx – Agentic Clinical Co-Pilot</div>
+      </div>
+      <div class="mix ai" data-project="melanoma-fl" tabindex="0" role="button" aria-label="View Federated Learning – Melanoma Detection">
+        <img src="/resources/img/portfolios/logo/2.jpg" alt="Federated Learning – Melanoma Detection">
+        <div class="title">Multicloud GenAI & Federated Learning – Personalized Melanoma Detection</div>
+      </div>
+      <div class="mix ai" data-project="wgan-telco" tabindex="0" role="button" aria-label="View WGAN-GP Synthetic Telecom Data">
+        <img src="/resources/img/portfolios/logo/3.png" alt="WGAN-GP Synthetic Telecom Data">
+        <div class="title">Privacy-Preserving GenAI for 5G Telecommunications - WGAN-GP Production Architecture</div>
+      </div>
+      <div class="mix ai" data-project="knn-parallel" tabindex="0" role="button" aria-label="View Hybrid Parallel k-NN Regression">
+        <img src="/resources/img/portfolios/logo/4.jpg" alt="Hybrid Parallel k-NN Regression">
+        <div class="title">Hybrid Parallel k-NN Regression</div>
+      </div>
+        <div class="mix ai" data-project="mpi" tabindex="0" role="button" aria-label="View Designing Scalable Architectures for Distributed ML Workloads">
+        <img src="/resources/img/portfolios/logo/8.jpg" alt="Designing Scalable Architectures for Distributed ML Workloads">
+        <div class="title">Designing Scalable Architectures for Distributed ML Workloads</div>
+      </div>
+      <div class="mix ai" data-project="edge-ai" tabindex="0" role="button" aria-label="View Edge AI Safety Agent – Jetson Orin">
+        <img src="/resources/img/portfolios/logo/5.png" alt="Edge AI Safety Agent – Jetson Orin">
+        <div class="title">Edge AI Agent for Real-Time Clinical and Operational Safety (NEW)</div>
+      </div>
+
+      <div class="mix cloud" data-project="azure-ai-studio" tabindex="0" role="button" aria-label="View Mission-Critical AI on Azure">
+        <img src="/resources/img/portfolios/card/2.png" alt="Mission-Critical AI on Azure">
+        <div class="title">Architecting a Mission-Critical Healthcare AI and Data Platform on Azure</div>
+      </div>
+      <div class="mix cloud" data-project="azure-security" tabindex="0" role="button" aria-label="View Zero-Trust Security for Healthcare">
+        <img src="/resources/img/portfolios/card/3.png" alt="Zero-Trust Security for Healthcare">
+        <div class="title">Architectural Risk Analysis and Azure Security Design for Cloud Platforms</div>
+      </div>
+      <div class="mix cloud" data-project="hybrid-network" tabindex="0" role="button" aria-label="View Hybrid Cloud Networking (GNS3)">
+        <img src="/resources/img/portfolios/card/4.jpg" alt="Hybrid Cloud Networking (GNS3)">
+        <div class="title">Foundational Hybrid Cloud Networking and Core Infrastructure Design</div>
+      </div>
+      <div class="mix cloud" data-project="4g-simulation" tabindex="0" role="button" aria-label="View 4G Handover Performance Simulation">
+        <img src="/resources/img/portfolios/card/5.jpeg" alt="4G Handover Performance Simulation">
+        <div class="title">Architectural Performance Modeling for Distributed Network Systems</div>
+      </div>
+      <div class="mix cloud" data-project="linux-devops" tabindex="0" role="button" aria-label="View Linux Compute & DevOps Automation">
+        <img src="/resources/img/portfolios/card/1.jpg" alt="Linux Compute & DevOps Automation">
+        <div class="title">Designing and Optimizing Linux-Based Compute and DevOps Solutions for Cloud Platforms</div>
+      </div>
+      <div class="mix cloud" data-project="zencloud" tabindex="0" role="button" aria-label="Architecting a High-Performance Hybrid AI Platform">
+        <img src="/resources/img/portfolios/card/15.jpg" alt="Architecting a High-Performance Hybrid AI Platform">
+        <div class="title">ZenithDx - Architecting a High-Performance Hybrid AI Platform</div>
+      </div>
+      <div class="mix cloud" data-project="azurecloud" tabindex="0" role="button" aria-label="Azure Well-Architected Optimization for a Mission-Critical Clinical Data Platform">
+        <img src="/resources/img/portfolios/card/16.jpg" alt="Azure Well-Architected Optimization for a Mission-Critical Clinical Data Platform">
+        <div class="title">Azure Well-Architected Optimization for a Mission-Critical Clinical Data Platform (NEW)</div>
+      </div>
+
+      <div class="mix product" data-project="deafnav" tabindex="0" role="button" aria-label="View DeafNav – Erasmus+ Accessibility">
+        <img src="/resources/img/portfolios/app/1.jpg" alt="DeafNav – Erasmus+ Accessibility">
+        <div class="title">Hybrid Product & Project Management for the D-PBL Erasmus+ Railway Accessibility Initiative</div>
+      </div>
+      <div class="mix product" data-project="zenithdx-pm" tabindex="0" role="button" aria-label="View ZenithDx – Full Product Lifecycle">
+        <img src="/resources/img/portfolios/app/2.jpeg" alt="ZenithDx – Full Product Lifecycle">
+        <div class="title">ZenithDx – End-to-End Product Management</div>
+      </div>
+      <div class="mix product" data-project="ux-klm" tabindex="0" role="button" aria-label="View KLM & Fitts’ Law UX Benchmarking">
+        <img src="/resources/img/portfolios/app/4.jpg" alt="KLM & Fitts’ Law UX Benchmarking">
+        <div class="title">Product Quality & UX Test Management</div>
+      </div>
+      <div class="mix product" data-project="whiteboxer" tabindex="0" role="button" aria-label="Product Quality Management - White-Box Test Strategy & Path Analysis">
+        <img src="/resources/img/portfolios/app/3.jpg" alt="AProduct Quality Management - White-Box Test Strategy & Path Analysis">
+        <div class="title">Product Quality Management - White-Box Test Strategy & Path Analysis</div>
+      </div>
+    <div class="mix product" data-project="startup-week" tabindex="0" role="button" aria-label="View Strategic Project Coordination & Product Lifecycle Immersion at Startup Week Patras 2024">
+        <img src="/resources/img/portfolios/app/5.jpg" alt="Strategic Project Coordination & Product Lifecycle Immersion at Startup Week Patras 2024">
+        <div class="title">Strategic Project Coordination & Product Lifecycle Immersion</div>
+      </div>
+      <div class="mix product" data-project="casm" tabindex="0" role="button" aria-label="View ZenithDx – Full Product Lifecycle">
+        <img src="/resources/img/portfolios/app/6.jpg" alt="ZenithDx – Full Product Lifecycle">
+        <div class="title">AI-Integrated Clinical & Administrative Service Management (CASM) Platform Implementation (NEW)</div>
+      </div>
+
+      <div class="mix gov" data-project="xai-gov" tabindex="0" role="button" aria-label="View Explainable AI Governance Framework">
+        <img src="/resources/img/portfolios/icon/11.jpg" alt="Explainable AI Governance Framework">
+        <div class="title">Operationalizing an Explainable AI (XAI) Governance Framework for Auditable, High-Risk Systems</div>
+      </div>
+      <div class="mix gov" data-project="csr-ai" tabindex="0" role="button" aria-label="View Ethical AI & UN SDG Policy">
+        <img src="/resources/img/portfolios/icon/2.jpg" alt="Ethical AI & UN SDG Policy">
+        <div class="title">Strategic Policy Design for Ethical AI and Sustainable CSR Governance</div>
+      </div>
+      <div class="mix gov" data-project="zenithdx-gov" tabindex="0" role="button" aria-label="View ZenithDx – HITL & XAI Compliance">
+        <img src="/resources/img/portfolios/icon/9.jpg" alt="ZenithDx – HITL & XAI Compliance">
+        <div class="title">ZenithDx – AI Governance & Compliance Framework</div>
+      </div>
+      <div class="mix gov" data-project="bigdata-ethics" tabindex="0" role="button" aria-label="View Big Data Ethics & Accountability">
+        <img src="/resources/img/portfolios/icon/10.jpeg" alt="Big Data Ethics & Accountability">
+        <div class="title">Strategic Analysis for a Big Data Ethics & Accountability</div>
+      </div>
+     <div class="mix gov" data-project="newgov" tabindex="0" role="button" aria-label="View Big Data Ethics & Accountability">
+        <img src="/resources/img/portfolios/icon/4.jpg" alt="Big Data Ethics & Accountability">
+        <div class="title">Leading Clinical AI Governance - Policy Design, Bias Monitoring, and Regulatory Auditability (NEW)</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+        <!-- TESTIMONIALS -->
+<div class="layer layer5" id="comments-section">
+    <div class="testimonial">
+        <h1><span>What My Professional Network Says</span></h1>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Testimonial 1 -->
+                <div class="swiper-slide">
+                    <img src="public/resources/img/people/1741256863369.jpeg" alt="Ayushri Bhuyan - Professional headshot" loading="lazy" />
+                    <h4>Ayushri Bhuyan<br><small>Master's Student, University of Galway</small></h4>
+                    <div class="rating" aria-label="5 stars">
+                        <label>★</label><label>★</label><label>★</label><label>★</label><label>★</label>
+                    </div>
+                    <p><span class="quote-left">“</span>Conducting a session with Filippos was great. The way he explained the uses and technicalities of Azure services was insightful. His management skills are excellent. It was a highly valuable experience working with him.<span class="quote-right">”</span></p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="swiper-slide">
+                    <img src="public/resources/img/people/makris_1000.jpg" alt="Christos Makris - Professional headshot" loading="lazy" />
+                    <h4>Christos Makris<br><small>Associate Professor, Department of Computer Engineering & Informatics, University of Patras</small></h4>
+                    <div class="rating" aria-label="5 stars">
+                        <label>★</label><label>★</label><label>★</label><label>★</label><label>★</label>
+                    </div>
+                    <p><span class="quote-left">“</span>Mr. Zygouris impressed me with his professionalism, discipline, and innovative algorithmic thinking. He delivered efficient and original solutions in end-to-end architecture (AI, Cloud, Data) and implemented a human-centered AI co-pilot. His integration of Explainable AI (XAI) frameworks significantly enhanced transparency and user trust. His contribution was pivotal, and I recommend him unreservedly.<span class="quote-right">”</span></p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="swiper-slide">
+                    <img src="public/resources/img/people/mio.jpeg" alt="Xenos - Professional headshot" loading="lazy" />
+                    <h4>Miodrag Zivanovic<br><small>Software Developer at SAP</small></h4>
+                    <div class="rating" aria-label="5 stars">
+                        <label>★</label><label>★</label><label>★</label><label>★</label><label>★</label>
+                    </div>
+                    <p><span class="quote-left">“</span>I had the opportunity to work with Filippos on the D-PBL Erasmus+ international project. Our collaboration and communication were excellent, despite the fact that English is not the native language for either of us. Filippos contributed valuable ideas, successfully handled challenging tasks, and was one of the key members of the team.<span class="quote-right">”</span></p>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="swiper-slide">
+                    <img src="public/resources/img/people/xenos.jpg" alt="Xenos - Professional headshot" loading="lazy" />
+                    <h4>Michalis Xenos<br><small>Professor, Department of Computer Engineering & Informatics, University of Patras</small></h4>
+                    <div class="rating" aria-label="5 stars">
+                        <label>★</label><label>★</label><label>★</label><label>★</label><label>★</label>
+                    </div>
+                    <p><span class="quote-left">“</span>Filippos is an exceptional engineer who, during his studies, demonstrated a high level of scientific curiosity, a strong aptitude for practical problem-solving, and consistently exhibited exemplary ethics. <span class="quote-right">”</span></p>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="swiper-slide">
+                    <img src="public/resources/img/people/thomas.jpeg" alt="Thomas - Professional headshot" loading="lazy" />
+                    <h4>Thomas Ntoupis<br><small>Digital Policy and Artificial Intelligence Advisor</small></h4>
+                    <div class="rating" aria-label="5 stars">
+                        <label>★</label><label>★</label><label>★</label><label>★</label><label>★</label>
+                    </div>
+                    <p><span class="quote-left">“</span>Collaborating with Filippos on the UNBOUND PROMETHEUS Data Science program was a genuine pleasure. From the outset, Filippos demonstrated a powerful combination of deep technical knowledge and sharp analytical insight. He possesses a standout talent for navigating complex datasets, identifying key patterns, and engineering them into practical, high-impact solutions. Beyond his technical skills, he is a dedicated and highly collaborative teammate, consistently elevating the group's work. I have no doubt that Filippos will be an invaluable asset to any organization looking to lead in the AI and Data Science field.<span class="quote-right">”</span></p>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="swiper-slide">
+                    <img src="public/resources/img/people/jose.jpeg" alt="Jose - Professional headshot" loading="lazy" />
+                    <h4>José Paulo Marques dos Santos<br><small>Associate Professor, Vice-Rector for Pedagogical Innovation, University of Maia</small></h4>
+                    <div class="rating" aria-label="5 stars">
+                        <label>★</label><label>★</label><label>★</label><label>★</label><label>★</label>
+                    </div>
+                    <p><span class="quote-left">“</span>Filippos-Paraskevas demonstrated exceptional leadership throughout the D-PBL program, skillfully coordinating a multinational team across five countries (Greece, Lithuania, Portugal, Serbia, and Spain), and across multiple fields (Design, Engineering, and Management & Marketing), while serving as Product Manager for the DeafNav project. His ability to analyze complex accessibility requirements, guide technical discussions, and maintain an effective Scrum workflow was instrumental to the project's success, and his professionalism and collaborative approach made him a standout participant in the program. <span class="quote-right">”</span></p>
+                </div>
+                                <!-- Testimonial 7 -->
+                <div class="swiper-slide">
+                    <img src="public/resources/img/people/zagla.jpeg" alt="Zaglaridou - Professional headshot" loading="lazy" />
+                    <h4>Elena Zaglaridou<br><small>EMEA regional partnerships, Microsoft Elevate</small></h4>
+                    <div class="rating" aria-label="5 stars">
+                        <label>★</label><label>★</label><label>★</label><label>★</label><label>★</label>
+                    </div>
+                    <p><span class="quote-left">“</span>I would like to express my appreciation for the exceptional contribution of Filippos within the framework of our collaboration in the Microsoft Learn Student Ambassadors program. His efforts were decisively focused on applying the technical aspects of Azure AI & Cloud to real-world scenarios, with a particular emphasis on the HealthTech sector. Filippos achieved significant results by organizing high-level events. He also played an active role in mentoring new Ambassadors and supporting peers by speaking at their events. The dedication, technical expertise, and collaborative spirit Filippos demonstrated are exemplary and make him a valuable member of the MLSA community.<span class="quote-right">”</span></p>
+                </div>
+                                                <!-- Testimonial 8 -->
+                <div class="swiper-slide">
+                    <img src="public/resources/img/people/roui.jpeg" alt="Rouit - Professional headshot" loading="lazy" />
+                    <h4>Rouitanko Madi Betsaleel<br><small>Site Reliability Engineer</small></h4>
+                    <div class="rating" aria-label="5 stars">
+                        <label>★</label><label>★</label><label>★</label><label>★</label><label>★</label>
+                    </div>
+                    <p><span class="quote-left">“</span>As a fellow Microsoft Learn Student Ambassador, I’ve been impressed by Filippos’s dedication to Cloud Architecture and AI compliance. He’s a very smart and kind person who works on projects that create real impact, and I truly admire his passion for HealthTech. His enthusiasm and thought leadership make him a valuable voice in our global tech community.<span class="quote-right">”</span></p>
+                </div>
+                                                <!-- Testimonial 9 -->
+                <div class="swiper-slide">
+                    <img src="public/resources/img/people/gaut.jpeg" alt="Gaut - Professional headshot" loading="lazy" />
+                    <h4>Arpit Singh Gautam<br><small>Data Scientist, Dell CSG CTO Lab</small></h4>
+                    <div class="rating" aria-label="5 stars">
+                        <label>★</label><label>★</label><label>★</label><label>★</label><label>★</label>
+                    </div>
+                    <p><span class="quote-left">“</span>I had the opportunity to collaborate with Filippos on a research-driven project that aimed to bridge AI and healthcare innovation. From the very beginning, he demonstrated remarkable clarity of vision and a strong ability to translate complex research goals into a structured, actionable roadmap. His entrepreneurial initiative in assembling and guiding a high-impact team reflected both leadership and foresight. Filippos showcased deep technical expertise in areas such as Agentic AI, Explainable AI, and Medical Imaging, integrating these domains seamlessly to advance clinically meaningful innovation. He combines technical depth with an impressive ability to align research direction toward tangible real-world outcomes, making him an inspiring and forward-thinking collaborator.<span class="quote-right">”</span></p>
+                </div>
+                                                <!-- Testimonial 10 -->
+
+                </div>
+
+            <!-- Swiper Controls -->
+            <div class="swiper-pagination" role="tablist"></div>
+            <div class="swiper-button-next" aria-label="Next testimonial" role="button" tabindex="0"></div>
+            <div class="swiper-button-prev" aria-label="Previous testimonial" role="button" tabindex="0"></div>
+        </div>
+    </div>
+</div>
+        <!-- CONTACT -->
+        <div class="layer layer6" id="contact-section">
+            <div class="contact_us">
+              <div id="map" role="img" aria-label="Office location map"></div>
+              <address class="info_container">
+                <div class="info info1">
+                  <i class="fas fa-phone-alt"></i>
+                  <span class="iname">Phone</span>
+                  <a href="tel:+306975922894">+30 697 592 2894</a>
+                </div>
+                <div class="info info2">
+                  <i class="fas fa-home"></i>
+                  <span class="iname">Address</span>
+                  <a
+                    href="https://www.google.com/maps/place/Lamia+351+00,+Greece/@38.8997433,22.4337387,14z/data=!3m1!4b1!4m6!3m5!1s0x135f45553b3f43f1:0x5344ba71e6c6fec7!8m2!3d38.8997433!4d22.4337387!16zL20vMDJrNnhn?entry=ttu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <h3>Lamia</h3>
+                    <span>Central Greece</span><br />
+                    <span>Greece</span>
+                  </a>
+                </div>
+                <div class="info info3">
+                  <i class="fas fa-envelope"></i>
+                  <span class="iname">Email</span>
+                  <a href="mailto:filippos.paraskevas.zygouris@gmail.com">filippos.paraskevas.zygouris@gmail.com</a>
+                </div>
+              </address>
+              <form id="contactForm" action="#" novalidate>
+  <h1>Get In Touch</h1>
+  <div class="inp_field">
+    <i class="fas fa-user"></i>
+    <input type="text" name="name" class="fname" id="fname" placeholder="Full Name" required autocomplete="name" />
+  </div>
+  <div class="inp_field">
+    <i class="fas fa-envelope"></i>
+    <input type="email" name="email" class="email" id="email" placeholder="Email" required autocomplete="email" />
+  </div>
+  <div class="inp_field">
+    <i class="fas fa-angle-double-right"></i>
+    <input type="text" name="subject" class="subject" id="subject" placeholder="Subject" required />
+  </div>
+  <textarea name="message" cols="30" rows="5" class="message" id="message" placeholder="Message" required></textarea>
+  <button class="submit" id="submit" type="submit">Submit</button>
+</form>
+            </div>
+        </div>
+    </div>
+    <!-- Vendors -->
+    <script src="/resources/js/jquery.min.js"></script>
+    <script src="/resources/js/mixitup.min.js"></script>
+    <script src="/resources/swiper-js/swiper-bundle.min.js"></script>
+    <script src="/resources/mapbox-gl/mapbox-gl.js"></script>
+    <script src="/resources/js/email.min.js"></script>
+    <script src="/resources/js/vanilla-tilt.min.js"></script>
+    <script src="/resources/js/anime.min.js"></script>
+    <!-- Local JS -->
+    <script src="/resources/js/home.js"></script>
+    <script src="/resources/js/about.js"></script>
+    <script src="/resources/js/services.js"></script>
+    <script src="/resources/js/portfolio.js"></script>
+    <script src="/resources/js/comments.js"></script>
+    <script src="/resources/js/main.js"></script>
+    <!-- CONTACT LOGIC + Mapbox -->
+   <script type="module">
+  // === EMAILJS SETUP ===
+  const SERVICE_ID = "service_9bqyw69";
+  const TEMPLATE_ID = "template_4dy99vn";
+  const PUBLIC_KEY = "3fxFFkWVca6-zrgMY";
+  // Αρχικοποίηση EmailJS
+  if (typeof emailjs !== 'undefined') {
+    emailjs.init(PUBLIC_KEY);
+  } else {
+    console.error("EmailJS failed to load. Check /resources/js/email.min.js");
+  }
+  // === MAPBOX (προαιρετικό) ===
+  if (typeof mapboxgl !== 'undefined' && document.getElementById('map')) {
+    mapboxgl.accessToken = "pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw";
+    const map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/light-v10',
+      center: [22.4337387, 38.8997433],
+      zoom: 12,
+      pitch: 45,
+      bearing: -17.6,
+      antialias: true
+    });
+    map.on('load', () => {
+      const layers = map.getStyle().layers;
+      let labelLayerId;
+      for (let i = 0; i < layers.length; i++) {
+        if (layers[i].type === 'symbol' && layers[i].layout?.['text-field']) {
+          labelLayerId = layers[i].id;
+          break;
+        }
+      }
+      map.addLayer({
+        'id': '3d-buildings',
+        'source': 'composite',
+        'source-layer': 'building',
+        'filter': ['==', 'extrude', 'true'],
+        'type': 'fill-extrusion',
+        'minzoom': 15,
+        'paint': {
+          'fill-extrusion-color': '#aaa',
+          'fill-extrusion-height': ['interpolate', ['linear'], ['zoom'], 15, 0, 15.05, ['get', 'height']],
+          'fill-extrusion-base': ['interpolate', ['linear'], ['zoom'], 15, 0, 15.05, ['get', 'min_height']],
+          'fill-extrusion-opacity': 0.6
+        }
+      }, labelLayerId);
+    });
+  }
+  // === TILT EFFECTS ===
+  function initTilt() {
+    if (window.VanillaTilt) {
+      ['.info1', '.info2', '.info3'].forEach(selector => {
+        document.querySelectorAll(selector).forEach(el => {
+          VanillaTilt.init(el, { max: 10, speed: 200, glare: true, "max-glare": 0.5 });
+        });
+      });
+    }
+  }
+  // === UI HELPERS ===
+  const UI = {
+    sending(form) {
+      form.classList.add('sending');
+      form.querySelector('.submit').textContent = 'Στέλνω...';
+    },
+    success(form) {
+      form.classList.remove('sending', 'error');
+      form.classList.add('success');
+      setTimeout(() => form.classList.remove('success'), 3000);
+    },
+    error(form) {
+      form.classList.remove('sending', 'success');
+      form.classList.add('error');
+      setTimeout(() => form.classList.remove('error'), 3000);
+    },
+    clear(form) {
+      form.classList.remove('sending', 'success', 'error');
+    }
+  };
+  // === FORM SUBMIT ===
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submit');
+    if (!form || !submitBtn) {
+      console.warn("Contact form not found!");
+      return;
+    }
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      console.log("Form submitted!");
+      // Validation
+      const name = form.fname.value.trim();
+      const email = form.email.value.trim();
+      const subject = form.subject.value.trim();
+      const message = form.message.value.trim();
+      if (!name || !email || !subject || !message) {
+        alert("Παρακαλώ συμπληρώστε όλα τα πεδία.");
+        return;
+      }
+      // UI: Loading
+      submitBtn.disabled = true;
+      UI.sending(form);
+      try {
+        await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form);
+        console.log("Email sent successfully!");
+        alert("Ευχαριστώ! Το μήνυμά σου στάλθηκε.");
+        form.reset();
+        UI.success(form);
+      } catch (error) {
+        console.error("EmailJS Error:", error);
+        alert("Σφάλμα αποστολής. Δοκίμασε ξανά ή στείλε email στο filippos.paraskevas.zygouris@gmail.com");
+        UI.error(form);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit";
+      }
+    });
+    // Clear status on input
+    form.querySelectorAll('input, textarea').forEach(input => {
+      input.addEventListener('input', () => UI.clear(form));
+    });
+    // Init tilt after DOM
+    initTilt();
+  });
+</script>
+    <!-- Page Animations / Tab switching / About image reveal -->
+    <script defer>
+      // ======== Button & contact reveal (anime.js) ========
+      const animate4 = anime({
+        targets: ".button",
+        scale: [0, 1],
+        delay: anime.stagger(150, { start: 600 }),
+        autoplay: false,
+        duration: 650,
+        easing: "easeOutBack",
+      });
+      const animate5 = anime({
+        targets: [
+          document.querySelectorAll(".info"),
+          document.querySelectorAll(".inp_field"),
+          ".message",
+          ".submit",
+        ],
+        translateY: [50, 0],
+        rotateX: [90, 0],
+        opacity: [0, 1],
+        delay: anime.stagger(200, { start: 300 }),
+        duration: 650,
+        autoplay: false,
+        easing: "easeOutQuint",
+      });
+      const animate6 = anime({
+        targets: [".services .t_dummy", ".services .hero-text"],
+        duration: 900,
+        scaleX: [0, 1],
+        delay: anime.stagger(250, { start: 400 }),
+        autoplay: false,
+        easing: "easeOutExpo",
+      });
+      function responsiveAutoPlay() {
+        if (window.innerWidth <= 632) {
+          animate5.play();
+          animate4.play();
+          animate6.play();
+        }
+      }
+      responsiveAutoPlay();
+      window.addEventListener("resize", responsiveAutoPlay);
+      // ======== About Tabs ========
+      (function () {
+        const navLinks = document.querySelectorAll(".about_nav a");
+        const container = document.getElementById("aboutTabs");
+        const classes = ["one", "two", "three"];
+        navLinks.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            navLinks.forEach((l) => l.classList.remove("active"));
+            link.classList.add("active");
+            const target = link.getAttribute("data-text");
+            classes.forEach((c) => container.classList.remove(c));
+            container.classList.add(target);
+          });
+        });
+      })();
+      // ======== About Portrait Reveal (Intersection Observer) ========
+      (function () {
+        const el = document.querySelector(".about-visual");
+        if (!el) return;
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                el.classList.add("in");
+                observer.unobserve(el);
+              }
+            });
+          },
+          { threshold: 0.3 }
+        );
+        observer.observe(el);
+      })();
+    </script>
+</body>
+</html>

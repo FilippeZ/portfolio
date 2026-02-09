@@ -1,0 +1,189 @@
+/* =========================================================
+   FULLSCREEN LOADER • Professional + Advanced Animations
+   - Preserves existing HTML structure (.loader + .c.c1..c6)
+   - Smooth exit transition (opacity, visibility, pointer-events)
+   - 3D staggered ring spins with glow and ripple center
+   - Respects prefers-reduced-motion for accessibility
+   - Cleaned up: Removed unused HSL/hue variables
+   - Consistent theming with CSS variables for easy customization
+   ========================================================= */
+
+/* ---------- THEME TOKENS ---------- */
+:root {
+  --loader-bg: #0d1117;
+  --loader-glow-primary: rgba(96,165,250,.18);
+  --loader-glow-secondary: rgba(167,139,250,.12);
+  --loader-ripple-color: rgba(96,165,250,.35);
+  --loader-dot-gradient: radial-gradient(circle at 30% 30%, #eaf2ff, #60a5fa 60%, #1d4ed8 100%);
+  --loader-ring-colors: orangered, indigo, dodgerblue, green, gold, aqua; /* Array-like for rings */
+}
+
+/* ---------- OVERLAY ---------- */
+.loader {
+  position: fixed; /* Ensures full-viewport coverage */
+  inset: 0;
+  z-index: 1000;
+  background: radial-gradient(1200px 800px at 75% 10%, rgba(96,165,250,.08), transparent 60%) var(--loader-bg);
+  display: block;
+  opacity: 1;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+  visibility: visible;
+  pointer-events: auto;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Soft moving backdrop sheen for depth */
+.loader::before {
+  content: "";
+  position: absolute;
+  inset: -30%;
+  background:
+    radial-gradient(40% 40% at 70% 20%, rgba(96,165,250,.14), transparent 60%),
+    radial-gradient(30% 30% at 30% 80%, rgba(167,139,250,.10), transparent 60%);
+  mix-blend-mode: screen;
+  filter: blur(6px) saturate(110%);
+  animation: loaderSheen 9s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes loaderSheen {
+  0% { transform: rotate(0deg) scale(1); opacity: 0.55; }
+  50% { transform: rotate(180deg) scale(1.04); opacity: 0.35; }
+  100% { transform: rotate(360deg) scale(1); opacity: 0.55; }
+}
+
+/* Exit Transition */
+.loader.remove {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: -1; /* Move below other elements after exit */
+}
+
+/* ---------- RINGS (.c1..c6 Classes) ---------- */
+.loader .c {
+  --size: 300px; /* Default; overridden per ring */
+  --thickness: 7px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--size);
+  height: var(--size);
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  border-radius: 50%;
+  border: var(--thickness) solid transparent;
+  /* Subtle inner bevel for depth */
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.04) inset,
+    0 12px 24px rgba(0,0,0,.35);
+  filter: drop-shadow(0 0 12px var(--loader-glow-primary));
+  animation:
+    spinZ 1.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate,
+    glowPulse 2.4s ease-in-out infinite;
+}
+
+/* Multi-axis spin for 3D depth */
+@keyframes spinZ {
+  0% { transform: translate(-50%, -50%) rotateZ(0deg) rotateX(6deg) rotateY(-4deg); }
+  100% { transform: translate(-50%, -50%) rotateZ(120deg) rotateX(-6deg) rotateY(4deg); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { filter: drop-shadow(0 0 10px var(--loader-glow-primary)); }
+  50% { filter: drop-shadow(0 0 18px var(--loader-glow-primary)); }
+}
+
+/* Per-Ring Customization (Size, Delay for Staggered Effect) */
+.loader .c.c1 { --size: 300px; animation-delay: 0s; }
+.loader .c.c2 { --size: 260px; animation-delay: 0.08s; }
+.loader .c.c3 { --size: 220px; animation-delay: 0.16s; }
+.loader .c.c4 { --size: 180px; animation-delay: 0.24s; }
+.loader .c.c5 { --size: 140px; animation-delay: 0.32s; }
+.loader .c.c6 { --size: 100px; animation-delay: 0.40s; }
+
+/* Ring Border Colors (Top/Right for Spin Effect) */
+.loader .c.c1 { border-top-color: orangered; border-right-color: orangered; }
+.loader .c.c2 { border-top-color: indigo; border-right-color: indigo; }
+.loader .c.c3 { border-top-color: dodgerblue; border-right-color: dodgerblue; }
+.loader .c.c4 { border-top-color: green; border-right-color: green; }
+.loader .c.c5 { border-top-color: gold; border-right-color: gold; }
+.loader .c.c6 { border-top-color: aqua; border-right-color: aqua; }
+
+/* Counter-Rotation on Even Rings for Added Complexity */
+.loader .c.c2,
+.loader .c.c4,
+.loader .c.c6 {
+  animation-name: spinZReverse, glowPulse;
+}
+
+@keyframes spinZReverse {
+  0% { transform: translate(-50%, -50%) rotateZ(0deg) rotateX(-5deg) rotateY(5deg); }
+  100% { transform: translate(-50%, -50%) rotateZ(-120deg) rotateX(5deg) rotateY(-5deg); }
+}
+
+/* ---------- CENTER DOT + RIPPLE ---------- */
+.loader::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--loader-dot-gradient);
+  box-shadow:
+    0 0 0 2px rgba(255,255,255,.06),
+    0 10px 22px rgba(0,0,0,.35);
+  animation: beat 1.6s ease-in-out infinite;
+}
+
+@keyframes beat {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.12); }
+}
+
+/* Concentric Ripple Rings */
+.loader .ripple {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.loader .ripple::before,
+.loader .ripple::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%) scale(0.6);
+  border-radius: 50%;
+  border: 2px solid var(--loader-ripple-color);
+  opacity: 0;
+  animation: ripple 2.4s ease-out infinite;
+}
+
+.loader .ripple::after {
+  animation-delay: 1.2s;
+}
+
+@keyframes ripple {
+  0% { transform: translate(-50%, -50%) scale(0.6); opacity: 0.35; }
+  70% { opacity: 0.08; }
+  100% { transform: translate(-50%, -50%) scale(2.2); opacity: 0; }
+}
+
+/* ---------- ACCESSIBILITY: REDUCED MOTION ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .loader::before,
+  .loader::after,
+  .loader .c,
+  .loader .ripple::before,
+  .loader .ripple::after {
+    animation: none !important;
+  }
+}
