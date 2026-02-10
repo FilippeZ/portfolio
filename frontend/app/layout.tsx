@@ -6,8 +6,11 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains-mono" });
 
 export const metadata: Metadata = {
-    title: "Filippos-Paraskevas Zygouris // Computer Engineer & AI Regulatory Specialist",
+    title: "Filippos P. Zygouris // Institutional Architect & AI Regulatory Specialist",
     description: "SaMD Quality Assurance, AI Regulatory Specialist, and Sovereign AI Architect.",
+    icons: {
+        icon: "/resources/img/favicon.ico",
+    }
 };
 
 export default function RootLayout({

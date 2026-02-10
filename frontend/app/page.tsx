@@ -1,9 +1,11 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Expertise from "@/components/Expertise";
+import Authority from "@/components/Authority";
 import About from "@/components/About";
 import Portfolio from "@/components/Portfolio";
 import Testimonials from "@/components/Testimonials";
+import Evolution from "@/components/Evolution";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -14,9 +16,11 @@ export default function Home() {
             <main className="flex-grow flex flex-col items-center w-full">
                 <Hero />
                 <Expertise />
+                <Authority />
                 <About />
                 <Portfolio />
                 <Testimonials />
+                <Evolution />
                 <Contact />
             </main>
             <Footer />

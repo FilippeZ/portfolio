@@ -35,7 +35,7 @@ export default function Testimonials() {
                         Endorsements
                     </span>
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-                        Trusted by Leaders <br className="hidden md:block" /> & Innovators
+                        Trusted by Leaders & Innovators
                     </h2>
                     <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
                 </motion.div>

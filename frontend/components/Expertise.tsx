@@ -2,38 +2,39 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
-export default function About() {
+export default function Expertise() {
     const competencies = [
         {
             id: "01",
-            icon: "shield_lock",
-            title: "The Shield",
-            desc: "MDR Article 15, ISO 13485, PRRC Responsibilities. Regulatory Governance & QA."
+            icon: "gavel",
+            title: "SaMD QA/RA",
+            desc: "The Shield. MDR Article 15, ISO 13485, and PRRC Responsibilities. Engineering audit-ready documentation for CE Marking."
         },
         {
             id: "02",
-            icon: "deployed_code",
-            title: "The Engine",
-            desc: "Agentic AI, RAG, XAI (Explainability). Core AI & Deep Engineering."
+            icon: "psychology",
+            title: "AI Regulatory Auditing",
+            desc: "The Engine. Performance valuation of Agentic AI. Mapping LLM behaviors to safety thresholds and EU AI Act requirements."
         },
         {
             id: "03",
-            icon: "hub",
-            title: "The Bridge",
-            desc: "Sovereign Architecture & Public Policy. Aligning tech with EU values."
+            icon: "policy",
+            title: "Institutional Policy",
+            desc: "The Bridge. Bridging technical engineering with EU policy frameworks (EYE/EU) to shape the future of sovereign engineering."
         },
         {
             id: "04",
-            icon: "cloud",
-            title: "Cloud",
-            desc: "Sovereign Cloud & Data Residency (EU-Only). 100% Audit-Ready Infrastructure."
+            icon: "payments",
+            title: "Tech Valuation",
+            desc: "The Asset. Assessing IP strength and technical maturity (TRL) for AI-driven MedTech assets and innovation grants."
         },
         {
             id: "05",
-            icon: "integration_instructions",
-            title: "Product",
-            desc: "SaMD Lifecycle (IEC 62304). Compliance-by-Design methodology."
+            icon: "cloud_done",
+            title: "Sovereign Cloud",
+            desc: "The Vault. Data residency and security design for 100% compliant, EU-based healthcare data mesh infrastructures."
         }
     ];
 
@@ -60,7 +61,7 @@ export default function About() {
     return (
         <section id="expertise" className="bg-surface-dark border-t border-white/10 py-20 lg:py-32 relative">
             <div className="max-w-7xl mx-auto px-6">
-                {/* Section Header */}
+                {/* Section Header - Aristotle's Ethos/Logos */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -71,19 +72,19 @@ export default function About() {
                     <div className="max-w-2xl">
                         <div className="flex items-center gap-3 mb-4">
                             <span className="h-px w-8 bg-primary"></span>
-                            <span className="font-mono text-primary text-sm uppercase tracking-wider">The Framework</span>
+                            <span className="font-mono text-primary text-sm uppercase tracking-wider">The Strategic Framework</span>
                         </div>
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight">
-                            Navigating complexity through <br />
-                            <span className="text-slate-400">Regulatory Engineering</span>
+                            Bridging innovation with <br />
+                            <span className="text-slate-400">Institutional Legitimacy</span>
                         </h2>
                     </div>
                     <div className="hidden md:block">
-                        <span className="material-symbols-outlined text-6xl text-white/5 rotate-12">architecture</span>
+                        <span className="material-symbols-outlined text-6xl text-white/5 rotate-12">balance</span>
                     </div>
                 </motion.div>
 
-                {/* Grid Layout */}
+                {/* Grid Layout - Monroe's Motivated Sequence (Implicit) */}
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
@@ -95,7 +96,7 @@ export default function About() {
                         <motion.div
                             key={item.id}
                             variants={itemVariants}
-                            className="group bg-background-dark border border-white/10 hover:border-primary/50 p-6 rounded transition-colors duration-300 relative overflow-hidden flex flex-col justify-between min-h-[240px]"
+                            className="group bg-background-dark border border-white/10 hover:border-primary/50 p-6 rounded transition-colors duration-300 relative overflow-hidden flex flex-col justify-between min-h-[260px]"
                         >
                             <div className="absolute top-0 right-0 p-3 opacity-20 group-hover:opacity-100 transition-opacity">
                                 <span className="font-mono text-xs text-primary">{item.id}</span>
@@ -112,7 +113,7 @@ export default function About() {
                     ))}
                 </motion.div>
 
-                {/* Narrative / Additional Info Area */}
+                {/* Aristotle's Triangle: Pathos & Vision */}
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -125,18 +126,21 @@ export default function About() {
                         <div className="relative z-10 flex flex-col md:flex-row gap-8 items-start">
                             <div className="flex-1">
                                 <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                                    <span className="material-symbols-outlined text-primary">hub</span>
-                                    The Integration
+                                    <span className="material-symbols-outlined text-primary">verified_user</span>
+                                    Ethos & Logos: The Bridge Engineer Philosophy
                                 </h3>
                                 <p className="text-slate-400 leading-relaxed">
-                                    I operate at the intersection of deep-tech innovation and European healthcare governance. My mission is to champion a &quot;Compliance-by-Design&quot; methodology, ensuring that high-risk AI systems (SaMD) are engineered to meet the EU AI Act and MDR standards from the ground up. I combine expertise in Agentic AI frameworks with a rigorous command of Quality Management Systems (QMS) to architect &quot;Sovereign Healthcare&quot; infrastructures.
+                                    Leveraging a <span className="text-white font-medium">CEID Integrated Master (Top 5%)</span> and specialized <span className="text-white font-medium">TEE Engineering License</span>, I translate neural weights into legal evidence. By mapping strict MDR and AI Act mandates into the CI/CD pipeline, I ensure that <span className="text-blue-400">Sovereign AI</span> is not just a vision, but a legally bulletproof clinical reality for European citizens.
                                 </p>
                             </div>
                             <div className="flex-none">
-                                <a className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-white transition-colors group" href="#">
-                                    Read full manifesto
+                                <Link
+                                    href="#contact"
+                                    className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-white transition-colors group"
+                                >
+                                    Discuss Regulatory Strategy
                                     <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

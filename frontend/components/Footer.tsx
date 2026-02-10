@@ -19,12 +19,11 @@ export default function Footer() {
                     <div className="md:col-span-2">
                         <Link href="/" className="block mb-6 group">
                             <span className="text-2xl font-black text-white tracking-tight group-hover:text-blue-500 transition-colors">
-                                FILIPPOS Z.
+                                FILIPPOS P. ZYGOURIS
                             </span>
                         </Link>
                         <p className="text-gray-400 text-sm leading-relaxed max-w-sm mb-8">
-                            Architecting intelligent systems and data-driven solutions for the future.
-                            Building the bridge between complex algorithms and human impact.
+                            Architecting the institutional survival of AI systems. Bridging the gap between Innovation and Regulation.
                         </p>
                         <div className="flex gap-4">
                             <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 hover:border-blue-500 transition-all duration-300">
@@ -43,7 +42,7 @@ export default function Footer() {
                     <div>
                         <h4 className="text-sm font-bold text-white uppercase tracking-widest mb-6">Navigation</h4>
                         <ul className="space-y-4">
-                            {['Home', 'About', 'Portfolio', 'Contact'].map((item) => (
+                            {['Authority', 'About', 'Portfolio', 'Testimonials'].map((item) => (
                                 <li key={item}>
                                     <Link href={`#${item.toLowerCase()}`} className="text-gray-400 hover:text-blue-400 text-sm transition-colors flex items-center gap-2 group">
                                         <span className="w-0 overflow-hidden group-hover:w-2 transition-all duration-300 h-[1px] bg-blue-500"></span>

@@ -4,6 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from "framer-motion";
 
+import Image from "next/image";
+
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -33,10 +35,10 @@ export default function Header() {
     };
 
     const navLinks = [
+        { name: "Authority", href: "/#authority" },
         { name: "About", href: "/#about" },
-        { name: "Toolbox", href: "/#expertise" },
         { name: "Portfolio", href: "/#portfolio" },
-        { name: "Contact", href: "/#contact" },
+        { name: "Testimonials", href: "/#testimonials" },
     ];
 
     return (
@@ -46,19 +48,18 @@ export default function Header() {
         >
             <div className="max-w-[1400px] mx-auto px-6 flex items-center justify-between">
                 {/* LOGO */}
-                <Link href="/" className="flex items-center gap-3 group relative z-50">
-                    <div className="relative w-10 h-10 flex items-center justify-center bg-white/5 border border-white/10 rounded-xl overflow-hidden group-hover:border-primary/50 transition-colors">
-                        <span className="material-symbols-outlined text-white text-[20px] group-hover:text-primary transition-colors">terminal</span>
-                        <div className="absolute inset-0 bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <Link href="/" className="flex items-center gap-4 group relative z-50">
+                    <div className="relative w-14 h-14 flex items-center justify-center transition-all duration-500">
+                        <Image
+                            src="/resources/img/home_logo_bg_hero.png"
+                            alt="Filippos Zygouris Logo"
+                            fill
+                            className="object-contain opacity-100 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-500"
+                        />
                     </div>
-                    <div className="flex flex-col">
-                        <h1 className="text-sm font-bold tracking-tight text-white uppercase group-hover:text-primary transition-colors">
-                            FILIPPOS Z.
-                        </h1>
-                        <span className="text-[9px] font-mono text-gray-500 uppercase tracking-widest">
-                            AI ENGINEER
-                        </span>
-                    </div>
+                    <h1 className="text-base font-bold tracking-tight text-white uppercase group-hover:text-primary transition-colors">
+                        FILIPPOS P. ZYGOURIS
+                    </h1>
                 </Link>
 
                 {/* DESKTOP NAVIGATION */}

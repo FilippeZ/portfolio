@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { skills, experience, education, softSkills } from "../data/content";
-import { Briefcase, GraduationCap, Wrench, ChevronRight, Award } from "lucide-react";
+import { Briefcase, Award, Wrench, ChevronRight, Activity, Zap, Shield, Globe, Lock, Cpu, Server, Radio, Users } from "lucide-react";
 
 export default function About() {
     const [activeTab, setActiveTab] = useState<"skills" | "experience" | "education">("skills");
@@ -23,6 +23,143 @@ export default function About() {
             transition: { duration: 0.3 }
         }
     };
+
+    // 11-Category Technical Arsenal with Mapped Tools
+    // Text descriptions removed for a cleaner, high-impact look
+    const technicalArsenal = [
+        {
+            category: "1. Core AI & Generative Architectures",
+            focus: "The Design",
+            icon: Zap,
+            skills: [
+                { name: "LangGraph", icon: "https://avatars.githubusercontent.com/u/126733545?s=200&v=4" }, // LangChain Logo
+                { name: "CrewAI", icon: "https://avatars.githubusercontent.com/u/150600495?s=200&v=4" }, // CrewAI Logo
+                { name: "RAG", icon: "https://cdn-icons-png.flaticon.com/512/12128/12128882.png" }, // Search/Doc AI generic
+                { name: "PyTorch", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
+                { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
+                { name: "XAI (SHAP/LIME)", icon: "https://cdn-icons-png.flaticon.com/512/10006/10006733.png" }, // Explainable/Brain generic
+            ]
+        },
+        {
+            category: "2. Deep Engineering, Data Science & Mathematics",
+            focus: "The Engine",
+            icon: Cpu,
+            skills: [
+                { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+                { name: "C/C++", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
+                { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+                { name: "SQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" },
+                { name: "Pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
+                { name: "Scikit-learn", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" },
+                { name: "OpenCV", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" },
+                { name: "Mathematics", icon: "https://cdn-icons-png.flaticon.com/512/4023/4023094.png" }, // Math generic
+            ]
+        },
+        {
+            category: "3. Regulatory Governance & SaMD Compliance",
+            focus: "The Shield",
+            icon: Shield,
+            skills: [
+                { name: "EU AI Act", icon: "https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg" },
+                { name: "MDR 2017/745", icon: "https://cdn-icons-png.flaticon.com/512/2830/2830319.png" }, // Medical Document
+                { name: "IVDR", icon: "https://cdn-icons-png.flaticon.com/512/3004/3004458.png" }, // Lab/Test
+                { name: "GDPR", icon: "https://cdn-icons-png.flaticon.com/512/2091/2091665.png" }, // Privacy Shield
+                { name: "PRRC (Art. 15)", icon: "https://cdn-icons-png.flaticon.com/512/3596/3596091.png" }, // Compliance Officer
+            ]
+        },
+        {
+            category: "4. International Standards & Quality Management",
+            focus: "The Standard",
+            icon: Globe,
+            skills: [
+                { name: "ISO 13485", icon: "https://cdn-icons-png.flaticon.com/512/3254/3254095.png" }, // Quality check
+                { name: "ISO 14971", icon: "https://cdn-icons-png.flaticon.com/512/4249/4249079.png" }, // Risk Warning
+                { name: "IEC 62304", icon: "https://cdn-icons-png.flaticon.com/512/2885/2885417.png" }, // Software Process
+                { name: "Internal Auditing", icon: "https://cdn-icons-png.flaticon.com/512/3135/3135694.png" }, // Audit
+            ]
+        },
+        {
+            category: "5. Quality Assurance & V&V",
+            focus: "The Validator",
+            icon: Activity,
+            skills: [
+                { name: "V&V Methodology", icon: "https://cdn-icons-png.flaticon.com/512/9637/9637505.png" }, // Checklist
+                { name: "Selenium", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" },
+                { name: "Playwright", icon: "https://cdn.icon-icons.com/icons2/2389/PNG/512/playwright_logo_icon_145295.png" },
+                { name: "Cypress", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" }, // Fallback to Canva logo as Cypress is not available in devicon/flaticon easily, trying alternative if broken: https://assets.stickpng.com/images/5847f40ecef1014c0b5e488a.png (Cypress logo)
+                // Actually let's use a generic testing icon for Cypress if no stable one
+                { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" },
+            ]
+        },
+        {
+            category: "6. AI-Specific QA & Reliability Engineering",
+            focus: "QE 3.0",
+            icon: Lock,
+            skills: [
+                { name: "Evidently AI", icon: "https://cdn-icons-png.flaticon.com/512/2103/2103633.png" }, // Analysis/Monitoring
+                { name: "Bias (Fairness 360)", icon: "https://cdn-icons-png.flaticon.com/512/2275/2275330.png" }, // Equality/Balance
+                { name: "Adversarial Testing", icon: "https://cdn-icons-png.flaticon.com/512/3067/3067416.png" }, // Hazard/Attack
+                { name: "Risk Assessment", icon: "https://cdn-icons-png.flaticon.com/512/2830/2830206.png" }, // Risk Triangle
+            ]
+        },
+        {
+            category: "7. Human Factors & Safety Engineering",
+            focus: "The Interface",
+            icon: Users,
+            skills: [
+                { name: "WCAG 2.1", icon: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Wheelchair_symbol.svg" }, // Accessibility
+                { name: "KLM / Fitts Law", icon: "https://cdn-icons-png.flaticon.com/512/2554/2554602.png" }, // Stopwatch/Time
+                { name: "Root Cause (RCA)", icon: "https://cdn-icons-png.flaticon.com/512/3208/3208726.png" }, // Root/Tree
+                { name: "CAPA", icon: "https://cdn-icons-png.flaticon.com/512/3135/3135702.png" }, // Wrench/Fix
+            ]
+        },
+        {
+            category: "8. Cloud, Networks & Infrastructure",
+            focus: "The Conduit",
+            icon: Server,
+            skills: [
+                { name: "Microsoft Azure", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" },
+                { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+                { name: "Kubernetes", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" },
+                { name: "Terraform", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" },
+                { name: "CI/CD", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" },
+                { name: "BGP / OSPF", icon: "https://cdn-icons-png.flaticon.com/512/3663/3663273.png" }, // Network/Router
+            ]
+        },
+        {
+            category: "9. Hardware & High-Performance Computing (HPC)",
+            focus: "The Foundation",
+            icon: Radio,
+            skills: [
+                { name: "NVIDIA DGX", icon: "https://upload.wikimedia.org/wikipedia/commons/2/21/Nvidia_logo.svg" },
+                { name: "MPI / OpenMP", icon: "https://cdn-icons-png.flaticon.com/512/2103/2103603.png" }, // Parallel/Chip
+                { name: "Micro-architectures", icon: "https://cdn-icons-png.flaticon.com/512/3426/3426653.png" }, // Chip
+                { name: "Ind. Electronics", icon: "https://cdn-icons-png.flaticon.com/512/2882/2882894.png" }, // Circuit
+            ]
+        },
+        {
+            category: "10. Strategic Leadership & EU Policy",
+            focus: "The Bridge",
+            icon: Globe,
+            skills: [
+                { name: "MVP Roadmapping", icon: "https://cdn-icons-png.flaticon.com/512/1508/1508889.png" }, // Roadmap
+                { name: "RICE / SWOT", icon: "https://cdn-icons-png.flaticon.com/512/3233/3233519.png" }, // Strategy
+                { name: "EU Digital Policy", icon: "https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg" },
+                { name: "Ethical AI", icon: "https://cdn-icons-png.flaticon.com/512/3135/3135810.png" }, // Ethics/Check
+            ]
+        },
+        {
+            category: "11. Strategic Product Management & Orchestration",
+            focus: "The Vision",
+            icon: Briefcase,
+            skills: [
+                { name: "Product Strategy", icon: "https://cdn-icons-png.flaticon.com/512/1055/1055644.png" }, // Strategy
+                { name: "Agile / Scrum", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" }, // Jira usually represents Agile well in tech
+                { name: "UX Design Thinking", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" }, // Figma for UX
+                { name: "KPI Analysis", icon: "https://cdn-icons-png.flaticon.com/512/2936/2936725.png" }, // Analytics
+            ]
+        }
+    ];
 
     return (
         <section id="about" className="py-24 lg:py-32 bg-[#050505] text-white relative overflow-hidden">
@@ -100,7 +237,7 @@ export default function About() {
                             exit="exit"
                             className="w-full"
                         >
-                            {/* TAB: SKILLS */}
+                            {/* TAB: SKILLS - PROFESSIONAL REDESIGN */}
                             {activeTab === "skills" && (
                                 <div className="space-y-12">
                                     <div className="flex items-center justify-between mb-8 border-b border-white/10 pb-6">
@@ -111,32 +248,52 @@ export default function About() {
                                         <Wrench className="text-blue-500 opacity-20" size={48} />
                                     </div>
 
-                                    {/* Categorized Skills */}
+                                    {/* Categories Animation Wrapper */}
                                     <div className="space-y-12">
-                                        {Array.from(new Set(skills.map(s => s.category))).map((category, catIndex) => (
+                                        {technicalArsenal.map((category, i) => (
                                             <motion.div
-                                                key={category}
-                                                initial={{ opacity: 0, y: 20 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                transition={{ delay: catIndex * 0.1 }}
+                                                key={i}
+                                                initial={{ opacity: 0, y: 30 }}
+                                                whileInView={{ opacity: 1, y: 0 }}
+                                                viewport={{ once: true, margin: "-100px" }}
+                                                transition={{ duration: 0.5, delay: i * 0.05 }}
                                             >
-                                                <h4 className="text-xs font-mono text-blue-400 uppercase tracking-widest mb-6 border-l-2 border-blue-500 pl-3">
-                                                    {category}
-                                                </h4>
-                                                <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-4">
-                                                    {skills.filter(s => s.category === category).map((skill, i) => (
+                                                {/* Sleek Category Header */}
+                                                <div className="flex items-center gap-4 mb-6 group">
+                                                    <div className="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center border border-blue-500/20 group-hover:bg-blue-500/20 transition-colors">
+                                                        <category.icon size={20} className="text-blue-400" />
+                                                    </div>
+                                                    <div>
+                                                        <h4 className="text-lg font-bold text-white group-hover:text-blue-200 transition-colors">
+                                                            {category.category.replace(/^[0-9]+\.\s/, "")} {/* Remove numbering for cleaner UI */}
+                                                        </h4>
+                                                        <span className="text-[10px] font-mono uppercase tracking-widest text-blue-500/60 group-hover:text-blue-400 transition-colors">
+                                                            {category.focus}
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                {/* Professional Grid - No Text, Just Function */}
+                                                <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-3 pl-14">
+                                                    {category.skills.map((skill, j) => (
                                                         <motion.div
                                                             key={skill.name}
                                                             initial={{ opacity: 0, scale: 0.9 }}
-                                                            animate={{ opacity: 1, scale: 1 }}
-                                                            transition={{ delay: 0.2 + (i * 0.05) }}
-                                                            className="group flex flex-col items-center justify-center p-4 bg-white/[0.03] rounded-xl border border-white/5 hover:border-blue-500/30 hover:bg-white/[0.05] transition-all duration-300 relative overflow-hidden aspect-square"
+                                                            whileInView={{ opacity: 1, scale: 1 }}
+                                                            viewport={{ once: true }}
+                                                            transition={{ delay: 0.1 + (j * 0.03) }}
+                                                            whileHover={{ y: -5, backgroundColor: "rgba(255,255,255,0.08)", borderColor: "rgba(59,130,246,0.4)" }}
+                                                            className="group/card flex flex-col items-center justify-center p-3 bg-white/[0.03] rounded-lg border border-white/5 transition-all duration-300 relative overflow-hidden aspect-square cursor-default shadow-lg shadow-black/20"
                                                         >
-                                                            <div className="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity blur-xl"></div>
-                                                            <div className="relative z-10 w-10 h-10 mb-3 filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-110">
-                                                                <img src={skill.icon} alt={skill.name} className="w-full h-full object-contain" />
+                                                            {/* Hover Glow */}
+                                                            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300" />
+
+                                                            <div className="relative z-10 w-9 h-9 mb-2 filter grayscale group-hover/card:grayscale-0 transition-all duration-300 group-hover/card:scale-110">
+                                                                <img src={skill.icon} alt={skill.name} className="w-full h-full object-contain drop-shadow-md" />
                                                             </div>
-                                                            <span className="relative z-10 text-[10px] uppercase font-bold text-gray-400 group-hover:text-white transition-colors text-center">{skill.name}</span>
+                                                            <span className="relative z-10 text-[10px] font-bold text-gray-500 group-hover/card:text-white transition-colors text-center uppercase tracking-tight leading-tight">
+                                                                {skill.name}
+                                                            </span>
                                                         </motion.div>
                                                     ))}
                                                 </div>
@@ -144,22 +301,31 @@ export default function About() {
                                         ))}
                                     </div>
 
-                                    <div className="mt-16">
-                                        <h4 className="text-xs font-mono text-blue-400 uppercase tracking-widest mb-6 border-l-2 border-blue-500 pl-3">Soft Skills & Methodologies</h4>
-                                        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-4">
+                                    {/* Soft Skills Section (Matching Style) */}
+                                    <div className="mt-20 pt-10 border-t border-white/10">
+                                        <h4 className="flex items-center gap-3 text-lg font-bold text-white mb-8">
+                                            <span className="w-8 h-[2px] bg-blue-500"></span>
+                                            Soft Skills & Methodologies
+                                        </h4>
+                                        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-3 pl-11">
                                             {softSkills.map((skill, i) => (
                                                 <motion.div
                                                     key={skill.name}
                                                     initial={{ opacity: 0, scale: 0.9 }}
-                                                    animate={{ opacity: 1, scale: 1 }}
-                                                    transition={{ delay: 0.2 + (i * 0.05) }}
-                                                    className="group flex flex-col items-center justify-center p-4 bg-white/[0.03] rounded-xl border border-white/5 hover:border-blue-500/30 hover:bg-white/[0.05] transition-all duration-300 relative overflow-hidden aspect-square"
+                                                    whileInView={{ opacity: 1, scale: 1 }}
+                                                    viewport={{ once: true }}
+                                                    transition={{ delay: i * 0.03 }}
+                                                    whileHover={{ y: -5, backgroundColor: "rgba(255,255,255,0.08)", borderColor: "rgba(59,130,246,0.4)" }}
+                                                    className="group/card flex flex-col items-center justify-center p-3 bg-white/[0.03] rounded-lg border border-white/5 transition-all duration-300 relative overflow-hidden aspect-square cursor-default shadow-lg shadow-black/20"
                                                 >
-                                                    <div className="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity blur-xl"></div>
-                                                    <div className="relative z-10 w-10 h-10 mb-3 filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-110">
-                                                        <img src={skill.icon} alt={skill.name} className="w-full h-full object-contain" />
+                                                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300" />
+
+                                                    <div className="relative z-10 w-9 h-9 mb-2 filter grayscale group-hover/card:grayscale-0 transition-all duration-300 group-hover/card:scale-110">
+                                                        <img src={skill.icon} alt={skill.name} className="w-full h-full object-contain drop-shadow-md" />
                                                     </div>
-                                                    <span className="relative z-10 text-[10px] uppercase font-bold text-gray-400 group-hover:text-white transition-colors text-center">{skill.name}</span>
+                                                    <span className="relative z-10 text-[10px] font-bold text-gray-500 group-hover/card:text-white transition-colors text-center uppercase tracking-tight leading-tight">
+                                                        {skill.name}
+                                                    </span>
                                                 </motion.div>
                                             ))}
                                         </div>

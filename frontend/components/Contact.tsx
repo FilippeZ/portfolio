@@ -165,34 +165,34 @@ export default function Contact() {
                 >
                     {/* INFO BLOCK: GLASS CARDS */}
                     <div className="lg:col-span-5 flex flex-col gap-6">
-                        <motion.div variants={itemVariants} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <motion.div variants={itemVariants} className="grid grid-cols-1 gap-4 xl:grid-cols-2">
                             <motion.a
-                                href="mailto:hello@fpz.ai"
-                                className="group p-8 bg-white/[0.02] border border-white/5 rounded-[2rem] hover:bg-white/[0.04] hover:border-primary/50 transition-all overflow-hidden relative"
+                                href="mailto:filippos.paraskevas.zygouris@gmail.com"
+                                className="group p-8 bg-white/[0.02] border border-white/5 rounded-[2rem] hover:bg-white/[0.04] hover:border-primary/50 transition-all overflow-hidden relative min-h-[180px] flex flex-col justify-center"
                             >
-                                <div className="absolute -right-4 -top-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl group-hover:scale-150 transition-transform"></div>
+                                <div className="absolute -right-4 -top-4 w-32 h-32 bg-primary/10 rounded-full blur-2xl group-hover:scale-150 transition-transform"></div>
                                 <div className="relative z-10">
-                                    <div className="text-[10px] font-mono text-gray-500 uppercase tracking-widest mb-8 flex items-center gap-2">
+                                    <div className="text-[10px] font-mono text-gray-500 uppercase tracking-widest mb-6 flex items-center gap-2">
                                         <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
                                         Signal Protocol
                                     </div>
                                     <div className="text-xl font-bold text-white mb-1">Email</div>
-                                    <div className="text-sm text-gray-400 group-hover:text-primary transition-colors">hello@fpz.ai</div>
+                                    <div className="text-sm md:text-base text-gray-300 group-hover:text-primary transition-colors break-all">filippos.paraskevas.zygouris@gmail.com</div>
                                 </div>
                             </motion.a>
 
                             <motion.a
-                                href="tel:+306912345678"
-                                className="group p-8 bg-white/[0.02] border border-white/5 rounded-[2rem] hover:bg-white/[0.04] hover:border-secondary/50 transition-all overflow-hidden relative"
+                                href="tel:+306975922894"
+                                className="group p-8 bg-white/[0.02] border border-white/5 rounded-[2rem] hover:bg-white/[0.04] hover:border-secondary/50 transition-all overflow-hidden relative min-h-[180px] flex flex-col justify-center"
                             >
-                                <div className="absolute -right-4 -top-4 w-24 h-24 bg-secondary/10 rounded-full blur-2xl group-hover:scale-150 transition-transform"></div>
+                                <div className="absolute -right-4 -top-4 w-32 h-32 bg-secondary/10 rounded-full blur-2xl group-hover:scale-150 transition-transform"></div>
                                 <div className="relative z-10">
-                                    <div className="text-[10px] font-mono text-gray-500 uppercase tracking-widest mb-8 flex items-center gap-2">
+                                    <div className="text-[10px] font-mono text-gray-500 uppercase tracking-widest mb-6 flex items-center gap-2">
                                         <div className="w-1.5 h-1.5 rounded-full bg-secondary"></div>
                                         Secure Line
                                     </div>
                                     <div className="text-xl font-bold text-white mb-1">Phone</div>
-                                    <div className="text-sm text-gray-400 group-hover:text-secondary transition-colors">+30 691...</div>
+                                    <div className="text-sm md:text-base text-gray-300 group-hover:text-secondary transition-colors">+30 697 592 2894</div>
                                 </div>
                             </motion.a>
                         </motion.div>

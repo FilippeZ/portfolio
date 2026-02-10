@@ -38,6 +38,14 @@ const nextConfig = {
                 protocol: 'https',
                 hostname: 'newsroom.ocde.us',
             },
+            {
+                protocol: 'https',
+                hostname: 'cdn-icons-png.flaticon.com',
+            },
+            {
+                protocol: 'https',
+                hostname: 'cdn.jsdelivr.net',
+            },
         ],
     },
 };
