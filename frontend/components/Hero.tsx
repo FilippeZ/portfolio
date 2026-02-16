@@ -80,7 +80,7 @@ export default function Hero() {
                             transition={{ duration: 0.1 }}
                             className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter leading-[1.0] text-white"
                         >
-                            {["THE", "SIGN-OFF", "AUTHORITY", "FOR", "COMPLIANT", "AI."].map((word, i) => (
+                            {["THE", "SIGN-OFF", "TECHNICAL", "AUTHORITY"].map((word, i) => (
                                 <span key={i} className="inline-block overflow-hidden h-[1.15em] mr-[0.2em] last:mr-0">
                                     <motion.span
                                         initial={{ y: "100%" }}
@@ -92,7 +92,7 @@ export default function Hero() {
                                         }}
                                         className="block"
                                     >
-                                        {word === "AI." ? (
+                                        {word === "AUTHORITY" ? (
                                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">
                                                 {word}
                                             </span>
@@ -114,19 +114,19 @@ export default function Hero() {
                     >
                         <div className="space-y-4">
                             <h2 className="text-2xl md:text-3xl font-light text-gray-300">
-                                Filippos P. Zygouris <span className="text-blue-500 font-mono text-xl block sm:inline mt-2 sm:mt-0">(M.Eng. | TEE Licensed)</span>
+                                Filippos P. Zygouris <span className="text-blue-500 font-mono text-xl block sm:inline mt-2 sm:mt-0">(M.Eng. | Licensed TEE Engineer)</span>
                             </h2>
                             <p className="text-xl md:text-2xl font-medium text-white italic border-l-4 border-blue-500 pl-6 py-2">
-                                "I don’t just build algorithms, I architect their institutional survival."
+                                "My signature transforms code into a certified Technical Work. I institutionally guarantee the safety, quality, and compliance of technology with the law."
                             </p>
                         </div>
 
                         <div className="space-y-4 text-gray-400 leading-relaxed font-light">
                             <p className="text-lg md:text-xl">
-                                In the era of the <span className="text-white font-medium">EU AI Act and MDR</span>, the Compliance Gap is where innovation goes to die. Engineers build with speed; Regulators exclude with rigor. This friction creates a vacuum that stalls breakthroughs.
+                                In high-risk markets, innovation without documentation is just a risk. Companies need <span className="text-white font-medium">Generalist Engineers</span> who get their hands dirty with development (Engineering), but take full responsibility for Quality Assurance (QA), Regulatory Affairs (RA), and Policy.
                             </p>
                             <p className="text-lg md:text-xl border-l-2 border-white/10 pl-6">
-                                I bridge that divide. As a <span className="text-white font-medium">TEE Licensed Engineer and SaMD Specialist</span>, I translate the fluidity of Agentic AI & LLMs into the rigid structures of <span className="text-blue-400 font-medium">EU Regulatory Power</span>. I don't just verify code, I validate the future of your company, ensuring your innovation survives the audit and conquers the market.
+                                I bridge that gap. As a <span className="text-white font-medium">Chartered Engineer</span>, I don't just verify code; I ensure the product is technically sound, quality-tested, and fully compliant with the strictest frameworks (MDR/FDA, EU AI Act, GDPR). My mission is to transform regulatory requirements into a <span className="text-blue-400 font-medium">technical advantage</span>, always prioritizing user safety.
                             </p>
                         </div>
                     </motion.div>

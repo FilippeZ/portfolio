@@ -15,7 +15,7 @@ import "swiper/css/pagination";
 
 export default function Testimonials() {
     return (
-        <section id="testimonials" className="py-24 bg-background-dark relative z-10 overflow-hidden">
+        <section id="testimonials" className="py-16 md:py-24 bg-background-dark relative z-10 overflow-hidden">
             {/* Background Decorative Elements */}
             <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
                 <div className="absolute top-[20%] left-[10%] w-96 h-96 bg-primary rounded-full filter blur-[120px]"></div>
@@ -23,7 +23,7 @@ export default function Testimonials() {
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[url('/resources/img/grid.svg')] opacity-20"></div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-6 relative z-10">
+            <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -34,7 +34,7 @@ export default function Testimonials() {
                     <span className="text-primary font-mono text-sm uppercase tracking-widest mb-3 block">
                         Endorsements
                     </span>
-                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
                         Trusted by Leaders & Innovators
                     </h2>
                     <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
@@ -48,22 +48,21 @@ export default function Testimonials() {
                 >
                     <Swiper
                         modules={[Navigation, Pagination, Autoplay]}
-                        spaceBetween={30}
+                        spaceBetween={20}
                         slidesPerView={1}
                         breakpoints={{
-                            640: { slidesPerView: 1 },
-                            768: { slidesPerView: 2 },
-                            1024: { slidesPerView: 3 },
+                            768: { slidesPerView: 2, spaceBetween: 30 },
+                            1024: { slidesPerView: 3, spaceBetween: 30 },
                         }}
                         pagination={{ clickable: true, dynamicBullets: true }}
                         navigation={true}
                         autoplay={{ delay: 5000, disableOnInteraction: false }}
                         loop={true}
-                        className="testimonials-swiper py-10 px-4"
+                        className="testimonials-swiper py-4 md:py-10"
                     >
                         {testimonials.map((testimonial, index) => (
                             <SwiperSlide key={index} className="h-auto">
-                                <div className="bg-surface-light/5 backdrop-blur-xl border border-white/10 p-8 rounded-3xl relative h-full flex flex-col hover:border-primary/30 transition-all duration-300 group hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10">
+                                <div className="bg-surface-light/5 backdrop-blur-xl border border-white/10 p-6 md:p-8 rounded-2xl md:rounded-3xl relative h-full flex flex-col hover:border-primary/30 transition-all duration-300 group hover:md:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10">
                                     {/* Verified Badge */}
                                     <div className="absolute top-6 right-6 flex items-center gap-1 bg-green-500/10 border border-green-500/20 px-3 py-1 rounded-full">
                                         <svg className="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 20 20">
@@ -73,13 +72,13 @@ export default function Testimonials() {
                                     </div>
 
                                     {/* Quote Icon */}
-                                    <div className="text-primary/10 text-8xl font-serif leading-none absolute top-4 left-4 -z-10 group-hover:text-primary/20 transition-colors">
+                                    <div className="text-primary/10 text-6xl md:text-8xl font-serif leading-none absolute top-4 left-4 -z-10 group-hover:text-primary/20 transition-colors">
                                         &ldquo;
                                     </div>
 
                                     {/* Content */}
                                     <div className="flex-grow mb-8 relative z-10 pt-4">
-                                        <p className="text-gray-300 text-lg leading-relaxed font-light">
+                                        <p className="text-gray-300 text-base md:text-lg leading-relaxed font-light break-words">
                                             {testimonial.content}
                                         </p>
                                     </div>
@@ -94,8 +93,8 @@ export default function Testimonials() {
                                     </div>
 
                                     {/* Author */}
-                                    <div className="flex items-center gap-4 mt-auto border-t border-white/5 pt-6">
-                                        <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-primary/20 group-hover:border-primary transition-colors">
+                                    <div className="flex items-center gap-3 md:gap-4 mt-auto border-t border-white/5 pt-5 md:pt-6">
+                                        <div className="relative w-12 h-12 md:w-14 h-14 rounded-full overflow-hidden border-2 border-primary/20 group-hover:border-primary transition-colors">
                                             <Image
                                                 src={testimonial.image}
                                                 alt={testimonial.name}
@@ -133,6 +132,7 @@ export default function Testimonials() {
         }
         .swiper-button-next,
         .swiper-button-prev {
+          display: none !important;
           color: white;
           background: rgba(255, 255, 255, 0.05);
           width: 48px;
@@ -141,6 +141,12 @@ export default function Testimonials() {
           backdrop-filter: blur(4px);
           border: 1px solid rgba(255, 255, 255, 0.1);
           transition: all 0.3s;
+        }
+        @media (min-width: 768px) {
+          .swiper-button-next,
+          .swiper-button-prev {
+            display: flex !important;
+          }
         }
         .swiper-button-next:hover,
         .swiper-button-prev:hover {

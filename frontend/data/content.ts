@@ -515,7 +515,7 @@ export const experience = [
         org: "Strategic Delegate (Vienna, Austria)",
         date: "Nov 2025",
         desc: "Strategic Delegate analyzing EU Sovereign Innovation and Data Residency. The event highlighted the shift to 'Digital Resilience'—a unified European digital fortress where innovation and compliance are twin pillars. Gained critical insights on architecting for speed within complex regulatory and geopolitical landscapes.",
-        image: "/fotogra/microsoft%20european%20digital%20commitment%20day.jpeg",
+        image: "/fotogra/microsoft_european_digital_commitment_day.jpeg",
         type: "Event"
     },
     {
@@ -644,7 +644,7 @@ export const education = [
     },
     // B. Professional Evolution
     {
-        title: "Advanced Industrial AI & Data Engineering",
+        title: "Advanced Industrial AI & Process Validation",
         org: "F.H.L. I. KIRIAKIDIS Group | Kavala, Greece (On-site)",
         date: "Jul 2022 – Aug 2022",
         desc: "Under the auspices of the UNBOUND PROMETHEUS scholarship, I applied advanced algorithms to real-world, large-scale industrial data, managing logistics for 330,000 tons of marble. Utilizing the KDD (Knowledge Discovery in Databases) cycle and IQR-based anomaly detection, I identified and resolved three critical bottlenecks in the production process, ensuring operational continuity. This experience acted as a catalyst for my shift toward Quality Assurance (QA) and Process Validation in high-stakes environments.",
@@ -652,16 +652,16 @@ export const education = [
         type: "Internship"
     },
     {
-        title: "Azure AI Engineer & Solutions Advocate",
+        title: "Azure AI Engineer & Solutions Architect",
         org: "Microsoft (Beta Student Ambassador) | Global (Hybrid)",
         date: "Jul 2023 – Jan 2026",
-        desc: "In this leadership role, I functioned as a Cloud Governance Architect, training over 125 specialists in Azure AI orchestration and Responsible AI. My contribution focused on designing solutions that promote Sovereign Data Residency, ensuring that cloud utilization aligns fully with GDPR and the EU AI Act. Through algorithmic bias mitigation and risk management, I bridged the gap between raw technological power and regulatory ethics.",
-        image: "/resources/img/3.jpg",
+        desc: "As a Microsoft Certified Azure AI Engineer Associate and Beta Student Ambassador, I have trained over 125 specialists in Azure AI orchestration and Responsible AI, bridging the gap between raw technological power and regulatory ethics. I specialize in designing architectures that prioritize Sovereign Data Residency, ensuring cloud solutions align with GDPR and the EU AI Act through systematic algorithmic bias mitigation and rigorous risk management. By translating academic theory into industrial application, I guide peers through the implementation of end-to-end intelligent systems, utilizing tools like Azure AI Search and Text Analytics for Health, while mentoring fellow Ambassadors toward their Alpha Milestone to foster a global community dedicated to secure, scalable, and ethically sound AI.",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/1200px-Microsoft_logo.svg.png",
         type: "Ambassador"
     },
     {
-        title: "Technical Product Manager & Solution Architect",
-        org: "D-PBL Erasmus+ | Lisbon, Portugal (Remote)",
+        title: "Technical Product Manager",
+        org: "European Commission (Erasmus+ D-PBL) | Lisbon, Portugal (Remote)",
         date: "Mar 2024 – May 2024",
         desc: "I led a multinational team of 10+ experts from five European countries to develop the 'DeafNav' project, an IoT infrastructure designed for the safety of deaf travelers. Acting as the 'bridge' between Policy and Engineering, I translated European accessibility directives into WCAG technical specifications using Agile Scrum methodology. My proficiency in precise sprint planning led to the delivery of a functional prototype in just three months, earning international leadership accolades.",
         image: "/resources/img/2.png",

@@ -1,5 +1,8 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
+import { useLanguage } from "@/context/LanguageContext";
+import { locales } from "@/data/locales";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from "framer-motion";
@@ -34,11 +37,14 @@ export default function Header() {
         }
     };
 
+    const { language } = useLanguage();
+    const t = locales[language];
+
     const navLinks = [
-        { name: "Authority", href: "/#authority" },
-        { name: "About", href: "/#about" },
-        { name: "Portfolio", href: "/#portfolio" },
-        { name: "Testimonials", href: "/#testimonials" },
+        { name: t.nav.authority, href: "/#authority" },
+        { name: t.nav.about, href: "/#about" },
+        { name: t.nav.portfolio, href: "/#portfolio" },
+        { name: t.nav.testimonials, href: "/#testimonials" },
     ];
 
     return (
@@ -79,6 +85,7 @@ export default function Header() {
 
                 {/* CONNECT BUTTON & MOBILE TOGGLE */}
                 <div className="flex items-center gap-4">
+
                     <motion.div
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
@@ -90,7 +97,7 @@ export default function Header() {
                             onClick={(e) => handleScroll(e, "/#contact")}
                             className="group relative px-8 py-3 rounded-full bg-white text-black font-bold text-xs tracking-widest uppercase overflow-hidden transition-transform hover:scale-105"
                         >
-                            <span className="relative z-10 group-hover:text-white transition-colors duration-300">Let's Talk</span>
+                            <span className="relative z-10 group-hover:text-white transition-colors duration-300">{t.nav.contact}</span>
                             <div className="absolute inset-0 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
                         </a>
                     </motion.div>
@@ -135,6 +142,15 @@ export default function Header() {
                                     </Link>
                                 </motion.div>
                             ))}
+
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.5 }}
+                                className="mt-8"
+                            >
+
+                            </motion.div>
                         </nav>
                     </motion.div>
                 )}

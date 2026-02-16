@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { skills, experience, education, softSkills } from "../data/content";
-import { Briefcase, Award, Wrench, ChevronRight, Activity, Zap, Shield, Globe, Lock, Cpu, Server, Radio, Users } from "lucide-react";
+import { Briefcase, Award, Wrench, ChevronRight, Activity, Zap, Shield, Globe, Lock, Cpu, Server, Radio, Users, GraduationCap } from "lucide-react";
 
 export default function About() {
     const [activeTab, setActiveTab] = useState<"skills" | "experience" | "education">("skills");
@@ -372,8 +372,16 @@ export default function About() {
                                                         <div className="text-sm font-medium text-gray-400 mb-4">{item.org}</div>
 
                                                         {item.image && (
-                                                            <div className="w-full h-40 relative rounded-lg overflow-hidden mb-4 border border-white/5">
-                                                                <Image src={item.image} alt={item.title} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                                                            <div className="w-full aspect-video relative rounded-lg overflow-hidden mb-6 border border-white/5 shadow-2xl bg-black/20">
+                                                                <Image
+                                                                    src={item.image}
+                                                                    alt={item.title}
+                                                                    fill
+                                                                    className={`group-hover:scale-105 transition-transform duration-700 ${["Certification", "Certificate", "Credential", "Ambassador", "Lead Engineer", "Policy Advisor", "Internship"].some(t => item.type.includes(t))
+                                                                            ? "object-contain p-4"
+                                                                            : "object-cover object-top"
+                                                                        }`}
+                                                                />
                                                             </div>
                                                         )}
 
@@ -390,51 +398,103 @@ export default function About() {
                                 </div>
                             )}
 
-                            {/* TAB: EDUCATION (Using education data which is Edu/Work) */}
+
+
+                            {/* TAB: EDUCATION & EXPERIENCE SPLIT */}
                             {activeTab === "education" && (
-                                <div className="space-y-8">
-                                    <div className="flex items-center justify-between mb-8 border-b border-white/10 pb-6">
-                                        <div>
-                                            <h3 className="text-2xl font-bold text-white">Education & Experience</h3>
-                                            <p className="text-gray-400 text-sm mt-1">Academic foundation and professional career.</p>
+                                <div className="space-y-16">
+                                    {/* Professional Experience Section */}
+                                    <div>
+                                        <div className="flex items-center justify-between mb-8 border-b border-white/10 pb-6">
+                                            <div>
+                                                <h3 className="text-2xl font-bold text-white">Professional Experience</h3>
+                                                <p className="text-gray-400 text-sm mt-1">Professional background and key roles.</p>
+                                            </div>
+                                            <Briefcase className="text-blue-500 opacity-20" size={48} />
                                         </div>
-                                        <Briefcase className="text-blue-500 opacity-20" size={48} />
+
+                                        <div className="grid gap-6">
+                                            {education.slice(2).map((item, index) => (
+                                                <motion.div
+                                                    key={index}
+                                                    initial={{ opacity: 0, x: 20 }}
+                                                    animate={{ opacity: 1, x: 0 }}
+                                                    transition={{ delay: index * 0.1 }}
+                                                    className="group relative flex items-start gap-6 p-6 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-white/20 transition-all overflow-hidden"
+                                                >
+                                                    <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                                                        <Briefcase size={80} />
+                                                    </div>
+
+                                                    <div className="relative w-16 h-16 flex-shrink-0 rounded-xl bg-white/10 overflow-hidden border border-white/10">
+                                                        <Image src={item.image} alt={item.org} fill className="object-cover grayscale group-hover:grayscale-0 transition-all" />
+                                                    </div>
+
+                                                    <div className="relative z-10 flex-1">
+                                                        <div className="flex flex-wrap justify-between items-start gap-2 mb-2">
+                                                            <div>
+                                                                <h4 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">{item.title}</h4>
+                                                                <div className="text-sm text-gray-400">{item.org}</div>
+                                                            </div>
+                                                            <span className="text-xs font-mono text-gray-500 border border-white/10 px-2 py-1 rounded">{item.date}</span>
+                                                        </div>
+                                                        <div className="inline-block px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-white/5 text-gray-400 rounded mb-3">
+                                                            {item.type}
+                                                        </div>
+                                                        <p className="text-sm text-gray-400 leading-relaxed max-w-2xl">
+                                                            {item.desc}
+                                                        </p>
+                                                    </div>
+                                                </motion.div>
+                                            ))}
+                                        </div>
                                     </div>
 
-                                    <div className="grid gap-6">
-                                        {education.map((item, index) => (
-                                            <motion.div
-                                                key={index}
-                                                initial={{ opacity: 0, x: 20 }}
-                                                animate={{ opacity: 1, x: 0 }}
-                                                transition={{ delay: index * 0.1 }}
-                                                className="group relative flex items-start gap-6 p-6 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-white/20 transition-all overflow-hidden"
-                                            >
-                                                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                                                    <Award size={80} />
-                                                </div>
+                                    {/* Education Section */}
+                                    <div>
+                                        <div className="flex items-center justify-between mb-8 border-b border-white/10 pb-6">
+                                            <div>
+                                                <h3 className="text-2xl font-bold text-white">Education</h3>
+                                                <p className="text-gray-400 text-sm mt-1">Academic foundation and qualifications.</p>
+                                            </div>
+                                            <GraduationCap className="text-blue-500 opacity-20" size={48} />
+                                        </div>
 
-                                                <div className="relative w-16 h-16 flex-shrink-0 rounded-xl bg-white/10 overflow-hidden border border-white/10">
-                                                    <Image src={item.image} alt={item.org} fill className="object-cover grayscale group-hover:grayscale-0 transition-all" />
-                                                </div>
+                                        <div className="grid gap-6">
+                                            {education.slice(0, 2).map((item, index) => (
+                                                <motion.div
+                                                    key={index}
+                                                    initial={{ opacity: 0, x: 20 }}
+                                                    animate={{ opacity: 1, x: 0 }}
+                                                    transition={{ delay: index * 0.1 }}
+                                                    className="group relative flex items-start gap-6 p-6 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-white/20 transition-all overflow-hidden"
+                                                >
+                                                    <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                                                        <GraduationCap size={80} />
+                                                    </div>
 
-                                                <div className="relative z-10 flex-1">
-                                                    <div className="flex flex-wrap justify-between items-start gap-2 mb-2">
-                                                        <div>
-                                                            <h4 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">{item.title}</h4>
-                                                            <div className="text-sm text-gray-400">{item.org}</div>
+                                                    <div className="relative w-16 h-16 flex-shrink-0 rounded-xl bg-white/10 overflow-hidden border border-white/10">
+                                                        <Image src={item.image} alt={item.org} fill className="object-cover grayscale group-hover:grayscale-0 transition-all" />
+                                                    </div>
+
+                                                    <div className="relative z-10 flex-1">
+                                                        <div className="flex flex-wrap justify-between items-start gap-2 mb-2">
+                                                            <div>
+                                                                <h4 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">{item.title}</h4>
+                                                                <div className="text-sm text-gray-400">{item.org}</div>
+                                                            </div>
+                                                            <span className="text-xs font-mono text-gray-500 border border-white/10 px-2 py-1 rounded">{item.date}</span>
                                                         </div>
-                                                        <span className="text-xs font-mono text-gray-500 border border-white/10 px-2 py-1 rounded">{item.date}</span>
+                                                        <div className="inline-block px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-white/5 text-gray-400 rounded mb-3">
+                                                            {item.type}
+                                                        </div>
+                                                        <p className="text-sm text-gray-400 leading-relaxed max-w-2xl">
+                                                            {item.desc}
+                                                        </p>
                                                     </div>
-                                                    <div className="inline-block px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-white/5 text-gray-400 rounded mb-3">
-                                                        {item.type}
-                                                    </div>
-                                                    <p className="text-sm text-gray-400 leading-relaxed max-w-2xl">
-                                                        {item.desc}
-                                                    </p>
-                                                </div>
-                                            </motion.div>
-                                        ))}
+                                                </motion.div>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
                             )}

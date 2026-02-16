@@ -8,33 +8,33 @@ export default function Expertise() {
     const competencies = [
         {
             id: "01",
-            icon: "gavel",
-            title: "SaMD QA/RA",
-            desc: "The Shield. MDR Article 15, ISO 13485, and PRRC Responsibilities. Engineering audit-ready documentation for CE Marking."
+            icon: "engineering",
+            title: "Engineering & Technical Guarantee (Hands-on)",
+            desc: "Holistic Approach (Generalist). I design and implement complex systems (SaMD, IoT, industrial infrastructure) with complete architectural control. Avoiding the 'AI-only' trap, I build software from the first line of code to ensure maintainability and control, ensuring technology serves the user, not the hype."
         },
         {
             id: "02",
-            icon: "psychology",
-            title: "AI Regulatory Auditing",
-            desc: "The Engine. Performance valuation of Agentic AI. Mapping LLM behaviors to safety thresholds and EU AI Act requirements."
+            icon: "fact_check",
+            title: "Quality & Standards (QA)",
+            desc: "Quality as a Technical Advantage. Quality Assurance is not an administrative burden, but the legal foundation of safety. I integrate ISO 13485 (Quality Systems) and IEC 62304 (Software Lifecycle) directly into the CI/CD pipeline, creating 'audit-ready' documentation for instant CE Marking readiness."
         },
         {
             id: "03",
-            icon: "policy",
-            title: "Institutional Policy",
-            desc: "The Bridge. Bridging technical engineering with EU policy frameworks (EYE/EU) to shape the future of sovereign engineering."
+            icon: "gavel",
+            title: "Regulatory Compliance & Infrastructure (RA)",
+            desc: "The Responsibility of Compliance (PRRC). I translate MDR (Art. 15) and the EU AI Act into strict engineering workflows. Treating the PRRC role as an active duty, I focus on Risk Management (ISO 14971) and Usability (IEC 62366). I design Sovereign Cloud architectures where Data Residency and GDPR privacy are shielded at the infrastructure level."
         },
         {
             id: "04",
-            icon: "payments",
-            title: "Tech Valuation",
-            desc: "The Asset. Assessing IP strength and technical maturity (TRL) for AI-driven MedTech assets and innovation grants."
+            icon: "policy",
+            title: "Policy & Strategic Roadmap",
+            desc: "The Strategic Bridge. I translate legislation into technical roadmaps. Through European Young Engineers (EYE), I draft technical briefings for MEPs, ensuring innovation aligns with European Digital Sovereignty and citizen safety strategies."
         },
         {
             id: "05",
-            icon: "cloud_done",
-            title: "Sovereign Cloud",
-            desc: "The Vault. Data residency and security design for 100% compliant, EU-based healthcare data mesh infrastructures."
+            icon: "payments",
+            title: "Tech Valuation & Asset Integrity",
+            desc: "Value Certification. I assess Technical Readiness Level (TRL) and IP strength for MedTech assets. As an Economic Certifier, I produce techno-economic studies that transform technical excellence into certified business value, securing investment and grant funding."
         }
     ];
 
@@ -130,7 +130,7 @@ export default function Expertise() {
                                     Ethos & Logos: The Bridge Engineer Philosophy
                                 </h3>
                                 <p className="text-slate-400 leading-relaxed">
-                                    Leveraging a <span className="text-white font-medium">CEID Integrated Master (Top 5%)</span> and specialized <span className="text-white font-medium">TEE Engineering License</span>, I translate neural weights into legal evidence. By mapping strict MDR and AI Act mandates into the CI/CD pipeline, I ensure that <span className="text-blue-400">Sovereign AI</span> is not just a vision, but a legally bulletproof clinical reality for European citizens.
+                                    Leveraging the <span className="text-white font-medium">Integrated Master (CEID)</span> and the <span className="text-white font-medium">Professional License (TEE)</span>, I translate technical parameters into legal evidence. My mission is to ensure that every system bearing my signature is lawful, safe, and technically flawless.
                                 </p>
                             </div>
                             <div className="flex-none">

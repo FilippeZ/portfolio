@@ -5,139 +5,162 @@ import { motion } from "framer-motion";
 import { Shield, Gavel, FileCheck, Landmark, ChartBar, ShieldAlert, Activity, Fingerprint, Building2, ArrowLeftRight, Zap, HardHat, Leaf, Briefcase, Factory, Satellite, GraduationCap, Plug, ClipboardCheck } from "lucide-react";
 
 export default function Authority() {
-    const rights = [
+    const groups = [
         {
-            title: "General Professional License",
-            role: "State-Authorized Technical Guarantor",
-            legal: "PD 99/2018 Art. 11 §1, Art. 2 §α,β",
-            desc: "Mandated engineer for systems 'critical to protection of life, health, and property'. Rights for Analysis, Design, and Supervision.",
-            icon: Shield,
+            title: "I. Institutional Foundation & Academic Authority",
+            description: "",
+            items: [
+                {
+                    title: "General Professional License",
+                    role: "State-Authorized Technical Guarantor",
+                    legal: "PD 99/2018 Art. 11 §1, Art. 2 §α,β",
+                    desc: "Mandated engineer for systems 'critical to protection of life, health, and property'. Rights for Analysis, Design, and Supervision.",
+                    icon: Shield,
+                },
+                {
+                    title: "Academic Mentor",
+                    role: "Research Authority",
+                    legal: "PD 99/2018 Art. 2 §κβ",
+                    desc: "Formal right to Education, Teaching, and Research in Technology and Engineering institutions.",
+                    icon: GraduationCap,
+                }
+            ]
         },
         {
-            title: "MDR & SaMD Authority",
-            role: "Regulatory Guardian",
-            legal: "PD 99/2018 Art. 11 §2ιζ, 2κ, Art. 2 §ιγ",
-            desc: "Development of biomedical systems and medical informatics. Quality Assurance and CE Marking compliance.",
-            icon: FileCheck,
+            title: "II. Regulatory Compliance & Quality",
+            description: "Priority on compliance and user safety.",
+            items: [
+                {
+                    title: "MDR & SaMD Authority",
+                    role: "Regulatory Guardian",
+                    legal: "PD 99/2018 Art. 11 §2ιζ, 2κ, Art. 2 §ιγ",
+                    desc: "Development of biomedical systems and medical informatics. Quality Assurance and CE Marking compliance.",
+                    icon: FileCheck,
+                },
+                {
+                    title: "Quality Assurance Architect",
+                    role: "ISO Systems Lead",
+                    legal: "PD 99/2018 Art. 2 §ιδ",
+                    desc: "Design, installation, certification, and inspection of Quality Management Systems (ISO 9001, 27001).",
+                    icon: ClipboardCheck,
+                },
+                {
+                    title: "Biomedical Systems Lead",
+                    role: "Clinical Systems Auditor",
+                    legal: "PD 99/2018 Art. 11 §2ιθ, 2κ",
+                    desc: "Development and installation studies for biomedical devices, systems, and medical informatics.",
+                    icon: Activity,
+                },
+                {
+                    title: "Safety Technician (Cat. A)",
+                    role: "Life Safety Guarantor",
+                    legal: "PD 99/2018 Art. 2 §ιστ, ιζ",
+                    desc: "Safety Technician services. Occupational Risk Assessment and Health & Safety Plan (SAY/FAY) drafting.",
+                    icon: ShieldAlert,
+                }
+            ]
         },
         {
-            title: "Judicial Expert Witness",
-            role: "Forensic Authority",
-            legal: "PD 99/2018 Art. 2 §ιθ",
-            desc: "Explicit right to Technical Expertise, Arbitration, and Mediation for judicial proceedings and liability disputes.",
-            icon: Gavel,
+            title: "III. Digital Governance & Trust",
+            description: "Data shielding and legal documentation.",
+            items: [
+                {
+                    title: "Cyber-Forensics & GDPR",
+                    role: "Legal Shield",
+                    legal: "PD 99/2018 Art. 11 §1στ, 2ια",
+                    desc: "Information security, data protection, privacy, and intellectual property rights studies.",
+                    icon: Fingerprint,
+                },
+                {
+                    title: "Judicial Expert Witness",
+                    role: "Forensic Authority",
+                    legal: "PD 99/2018 Art. 2 §ιθ",
+                    desc: "Explicit right to Technical Expertise, Arbitration, and Mediation for judicial proceedings and liability disputes.",
+                    icon: Gavel,
+                },
+                {
+                    title: "Portability Certification",
+                    role: "Interoperability Validator",
+                    legal: "PD 99/2018 Art. 11 §2ιβ, 2ιγ",
+                    desc: "Interoperability and connectivity studies. Certification of software portability specifications and SLAs.",
+                    icon: ArrowLeftRight,
+                }
+            ]
         },
         {
-            title: "Intangible Assets Valuer",
-            role: "Economic Certifier",
-            legal: "PD 99/2018 Art. 11 §2γ, Art. 2 §ι",
-            desc: "Management and valuation of technical facilities and equipment. Preparation of techno-economic studies.",
-            icon: Landmark,
+            title: "IV. Strategy & Financial Management",
+            description: "Bridge between engineering and institutional decisions.",
+            items: [
+                {
+                    title: "Investment Evaluator",
+                    role: "Financial Gatekeeper",
+                    legal: "PD 99/2018 Art. 2 §κγ",
+                    desc: "Management, monitoring, and evaluation of development programs and projects (ESPA/Horizon funding).",
+                    icon: ChartBar,
+                },
+                {
+                    title: "Public Works Lead",
+                    role: "National Tender Authority",
+                    legal: "PD 99/2018 Art. 2 §γ, Art. 11 §2ζ",
+                    desc: "Preparation of Tender Files and Technical Specifications for National Telecommunications & Network projects.",
+                    icon: Briefcase,
+                },
+                {
+                    title: "Intangible Assets Valuer",
+                    role: "Economic Certifier",
+                    legal: "PD 99/2018 Art. 11 §2γ, Art. 2 §ι",
+                    desc: "Management and valuation of technical facilities and equipment. Preparation of techno-economic studies.",
+                    icon: Landmark,
+                }
+            ]
         },
         {
-            title: "Investment Evaluator",
-            role: "Financial Gatekeeper",
-            legal: "PD 99/2018 Art. 2 §κγ",
-            desc: "Management, monitoring, and evaluation of development programs and projects (ESPA/Horizon funding).",
-            icon: ChartBar,
-        },
-        {
-            title: "Safety Technician (Cat. A)",
-            role: "Life Safety Guarantor",
-            legal: "PD 99/2018 Art. 2 §ιστ, ιζ",
-            desc: "Safety Technician services. Occupational Risk Assessment and Health & Safety Plan (SAY/FAY) drafting.",
-            icon: ShieldAlert,
-        },
-        {
-            title: "Biomedical Systems Lead",
-            role: "Clinical Systems Auditor",
-            legal: "PD 99/2018 Art. 11 §2ιθ, 2κ",
-            desc: "Development and installation studies for biomedical devices, systems, and medical informatics.",
-            icon: Activity,
-        },
-        {
-            title: "Cyber-Forensics & GDPR",
-            role: "Legal Shield",
-            legal: "PD 99/2018 Art. 11 §1στ, 2ια",
-            desc: "Information security, data protection, privacy, and intellectual property rights studies.",
-            icon: Fingerprint,
-        },
-        {
-            title: "Smart Infrastructure",
-            role: "Urban Architect",
-            legal: "PD 99/2018 Art. 11 §2θ, 2κδ",
-            desc: "Studies for Intelligent Transport Systems, Smart Infrastructure, and Intelligent Building Management.",
-            icon: Building2,
-        },
-        {
-            title: "Portability Certification",
-            role: "Interoperability Validator",
-            legal: "PD 99/2018 Art. 11 §2ιβ, 2ιγ",
-            desc: "Interoperability and connectivity studies. Certification of software portability specifications and SLAs.",
-            icon: ArrowLeftRight,
-        },
-        {
-            title: "Energy Guarantor",
-            role: "Sustainability Auditor",
-            legal: "PD 99/2018 Art. 11 §2κα, 2κβ",
-            desc: "Energy Audits/Inspections and Energy Performance studies for industrial and building systems.",
-            icon: Zap,
-        },
-        {
-            title: "Urban Legality & BMS",
-            role: "Building Inspector",
-            legal: "PD 99/2018 Art. 2 §δ, Art. 11 §2ε",
-            desc: "Inspection of technical works. Studies for building service networks and Building Management Systems (BMS).",
-            icon: HardHat,
-        },
-        {
-            title: "Environmental Impact",
-            role: "Eco-Strategist",
-            legal: "PD 99/2018 Art. 11 §2κστ",
-            desc: "Development of Environmental Studies and Environmental Impact Assessments (EIA).",
-            icon: Leaf,
-        },
-        {
-            title: "Public Works Lead",
-            role: "National Tender Authority",
-            legal: "PD 99/2018 Art. 2 §γ, Art. 11 §2ζ",
-            desc: "Preparation of Tender Files and Technical Specifications for National Telecommunications & Network projects.",
-            icon: Briefcase,
-        },
-        {
-            title: "Industrial Commander",
-            role: "Production Strategist",
-            legal: "PD 99/2018 Art. 2 §ζ, Art. 11 §2δ",
-            desc: "Production Management. Studies for Industrial Automation, Robotics, and Control Systems.",
-            icon: Factory,
-        },
-        {
-            title: "Satellite & Space",
-            role: "Orbital Systems Expert",
-            legal: "PD 99/2018 Art. 11 §2κε, 2θ",
-            desc: "Studies for Satellite and Space Systems, installations, and Remote Sensing applications.",
-            icon: Satellite,
-        },
-        {
-            title: "Academic Mentor",
-            role: "Research Authority",
-            legal: "PD 99/2018 Art. 2 §κβ",
-            desc: "Formal right to Education, Teaching, and Research in Technology and Engineering institutions.",
-            icon: GraduationCap,
-        },
-        {
-            title: "Low Voltage Authority",
-            role: "Electrical Inspector",
-            legal: "PD 99/2018 Art. 11 §2δ, 2στ",
-            desc: "Studies for Low Voltage Electrical Installations and Smart Grids / Intelligent Electrical Networks.",
-            icon: Plug,
-        },
-        {
-            title: "Quality Assurance Architect",
-            role: "ISO Systems Lead",
-            legal: "PD 99/2018 Art. 2 §ιδ",
-            desc: "Design, installation, certification, and inspection of Quality Management Systems (ISO 9001, 27001).",
-            icon: ClipboardCheck,
+            title: "V. Holistic Engineering & Infrastructure",
+            description: "Proof of flexibility in complex systems.",
+            items: [
+                {
+                    title: "Industrial Commander",
+                    role: "Production Strategist",
+                    legal: "PD 99/2018 Art. 2 §ζ, Art. 11 §2δ",
+                    desc: "Production Management. Studies for Industrial Automation, Robotics, and Control Systems.",
+                    icon: Factory,
+                },
+                {
+                    title: "Smart Infrastructure",
+                    role: "Urban Architect",
+                    legal: "PD 99/2018 Art. 11 §2θ, 2κδ",
+                    desc: "Studies for Intelligent Transport Systems, Smart Infrastructure, and Intelligent Building Management.",
+                    icon: Building2,
+                },
+                {
+                    title: "Urban Legality & BMS",
+                    role: "Building Inspector",
+                    legal: "PD 99/2018 Art. 2 §δ, Art. 11 §2ε",
+                    desc: "Inspection of technical works. Studies for building service networks and Building Management Systems (BMS).",
+                    icon: HardHat,
+                },
+                {
+                    title: "Low Voltage Authority",
+                    role: "Electrical Inspector",
+                    legal: "PD 99/2018 Art. 11 §2δ, 2στ",
+                    desc: "Studies for Low Voltage Electrical Installations and Smart Grids / Intelligent Electrical Networks.",
+                    icon: Plug,
+                },
+                {
+                    title: "Environmental Impact",
+                    role: "Eco-Strategist",
+                    legal: "PD 99/2018 Art. 11 §2κστ",
+                    desc: "Development of Environmental Studies and Environmental Impact Assessments (EIA).",
+                    icon: Leaf,
+                },
+                {
+                    title: "Energy Guarantor",
+                    role: "Sustainability Auditor",
+                    legal: "PD 99/2018 Art. 11 §2κα, 2κβ",
+                    desc: "Energy Audits/Inspections and Energy Performance studies for industrial and building systems.",
+                    icon: Zap,
+                }
+            ]
         }
     ];
 
@@ -192,33 +215,56 @@ export default function Authority() {
                     </motion.div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-20">
-                    {rights.map((item, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.05 }}
-                            className="p-8 bg-white/[0.02] border border-white/5 rounded-2xl hover:border-blue-500/30 transition-all group relative overflow-hidden flex flex-col h-full"
-                        >
-                            <div className="absolute top-0 right-0 p-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                                <span className="text-[10px] font-mono text-blue-500 bg-blue-500/10 px-2 py-1 rounded border border-blue-500/20">{item.legal}</span>
-                            </div>
+                <div className="space-y-16 mb-20">
+                    {groups.map((group, groupIndex) => (
+                        <div key={groupIndex} className="relative">
+                            <motion.div
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: groupIndex * 0.1 }}
+                                className="mb-8"
+                            >
+                                <h4 className="text-xl md:text-2xl font-bold text-white mb-2 pb-2 border-b border-white/10 inline-block">
+                                    {group.title}
+                                </h4>
+                                {group.description && (
+                                    <p className="text-blue-500/80 text-sm font-mono mt-1">
+                                        {group.description}
+                                    </p>
+                                )}
+                            </motion.div>
 
-                            <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                <item.icon className="text-blue-500" size={24} />
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
+                                {group.items.map((item, index) => (
+                                    <motion.div
+                                        key={index}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.5, delay: index * 0.05 }}
+                                        className="p-8 bg-white/[0.02] border border-white/5 rounded-2xl hover:border-blue-500/30 transition-all group relative overflow-hidden flex flex-col h-full"
+                                    >
+                                        <div className="absolute top-0 right-0 p-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                                            <span className="text-[10px] font-mono text-blue-500 bg-blue-500/10 px-2 py-1 rounded border border-blue-500/20">{item.legal}</span>
+                                        </div>
+
+                                        <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                            <item.icon className="text-blue-500" size={24} />
+                                        </div>
+                                        <h4 className="text-xs font-mono text-blue-400 uppercase tracking-wider mb-2">{item.role}</h4>
+                                        <h5 className="text-lg font-bold text-white mb-2">{item.title}</h5>
+                                        <div className="h-px w-8 bg-blue-500/30 mb-3 group-hover:w-full transition-all duration-500"></div>
+                                        <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-grow">{item.desc}</p>
+                                        <div className="mt-auto pt-4 border-t border-white/5 w-full">
+                                            <p className="text-[10px] text-gray-600 font-mono group-hover:text-blue-400/70 transition-colors truncate">
+                                                Legal Basis: {item.legal}
+                                            </p>
+                                        </div>
+                                    </motion.div>
+                                ))}
                             </div>
-                            <h4 className="text-xs font-mono text-blue-400 uppercase tracking-wider mb-2">{item.role}</h4>
-                            <h5 className="text-lg font-bold text-white mb-2">{item.title}</h5>
-                            <div className="h-px w-8 bg-blue-500/30 mb-3 group-hover:w-full transition-all duration-500"></div>
-                            <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-grow">{item.desc}</p>
-                            <div className="mt-auto pt-4 border-t border-white/5 w-full">
-                                <p className="text-[10px] text-gray-600 font-mono group-hover:text-blue-400/70 transition-colors truncate">
-                                    Legal Basis: {item.legal}
-                                </p>
-                            </div>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
 
