@@ -1,150 +1,625 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState, useRef } from "react";
+import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 
+/* ─── Types ─────────────────────────────────────────────────────────────── */
+
+type PillarKey = "engineering" | "regulatory" | "qa";
+type IntersectionKey = "eng_reg" | "eng_qa" | "qa_reg";
+type CoreKey = "core";
+type SelectionKey = PillarKey | IntersectionKey | CoreKey | null;
+
+interface ContentBlock {
+    label: string;
+    subtitle: string;
+    description: string;
+    highlights: string[];
+    color: string;
+    icon: string;
+}
+
+/* ─── Data ──────────────────────────────────────────────────────────────── */
+
+const pillars: Record<PillarKey, ContentBlock> = {
+    engineering: {
+        label: "Engineering & Product Development",
+        subtitle: "The Hands-on Architect",
+        description:
+            "Beyond traditional software, this pillar covers SaMD/SiMD development and advanced AI integration (Agentic AI & XAI). Full product-lifecycle control ensures every line of code serves a clinical purpose with production-grade readiness (TRL-9) — eliminating the risk of 'theoretical' innovation that can't scale.",
+        highlights: ["SaMD / SiMD Development", "Agentic AI & XAI", "Full Lifecycle Control", "TRL-9 Readiness", "IoT & Industrial Systems"],
+        color: "#3b82f6",
+        icon: "engineering",
+    },
+    regulatory: {
+        label: "Regulatory Strategy & Policy",
+        subtitle: "The Strategic Navigator",
+        description:
+            "Strategic navigation through the maze of global regulations — from Europe's MDR/IVDR to FDA frameworks and the EU AI Act. The role transforms legal constraints into competitive market advantages, charting policy for Digital Sovereignty where deep regulatory knowledge enables faster international market access.",
+        highlights: ["MDR / IVDR / EU AI Act", "FDA Frameworks", "Digital Sovereignty", "Market Access Strategy", "Policy Drafting (EYE → MEPs)"],
+        color: "#a855f7",
+        icon: "gavel",
+    },
+    qa: {
+        label: "Quality Assurance",
+        subtitle: "The Technical Auditor",
+        description:
+            "Quality is not bureaucratic overhead — it is the technical and legal bedrock of reliability. Through rigorous ISO 13485 and ISO 14971 standards integrated organically into CI/CD pipelines, QA becomes a legal guarantee. The institutional foundation via PD 99/2018 grants state-authorized power to audit and validate life-critical systems.",
+        highlights: ["ISO 13485 & ISO 14971", "CI/CD QA Integration", "PD 99/2018 State Authorization", "CE Marking Readiness", "Audit-Ready Documentation"],
+        color: "#22c55e",
+        icon: "verified_user",
+    },
+};
+
+const intersections: Record<IntersectionKey, ContentBlock> = {
+    eng_reg: {
+        label: "Compliant-by-Design Innovation",
+        subtitle: "Engineering + Regulatory",
+        description:
+            'This is where "Market Access" is born. Legislation translates directly into technical specifications (Requirements), ensuring the product is compliant by design — dramatically reducing redesign costs and accelerating time-to-market.',
+        highlights: ["Market Access", "Requirements from Legislation", "Cost Reduction"],
+        color: "#8b5cf6",
+        icon: "rocket_launch",
+    },
+    eng_qa: {
+        label: "Technically Validated Safety",
+        subtitle: "Engineering + QA",
+        description:
+            "This intersection defines the essential responsibility of the PRRC (Person Responsible for Regulatory Compliance). Technical knowledge validates safety in practice — as demonstrated through ZenithDx — transforming risk analysis into applied engineering.",
+        highlights: ["PRRC Responsibility", "ZenithDx Validation", "Applied Risk Analysis"],
+        color: "#06b6d4",
+        icon: "health_and_safety",
+    },
+    qa_reg: {
+        label: "The Institutional Shield",
+        subtitle: "QA + Regulatory",
+        description:
+            "This intersection delivers maximum institutional protection. It combines audit readiness with the legal force of the sign-off, creating an impenetrable firewall against legal liabilities and regulatory sanctions.",
+        highlights: ["Audit-Readiness", "Sign-off Legal Authority", "Liability Shield"],
+        color: "#ec4899",
+        icon: "shield",
+    },
+};
+
+const coreContent: ContentBlock = {
+    label: "THE SIGN-OFF TECHNICAL AUTHORITY",
+    subtitle: "Institutional Antigravity",
+    description:
+        'At the center lies "Institutional Antigravity" — the signature that carries the weight to unlock closed markets and dispel investor doubt. The TEE license, academic excellence, and international experience converge to deliver an indisputable guarantee.',
+    highlights: ["TEE Professional License", "Integrated Master (CEID)", "Global Institutional Guarantee"],
+    color: "#f59e0b",
+    icon: "workspace_premium",
+};
+
+/* ─── Component ─────────────────────────────────────────────────────────── */
+
 export default function Expertise() {
-    const competencies = [
-        {
-            id: "01",
-            icon: "engineering",
-            title: "Engineering & Technical Guarantee (Hands-on)",
-            desc: "Holistic Approach (Generalist). I design and implement complex systems (SaMD, IoT, industrial infrastructure) with complete architectural control. Avoiding the 'AI-only' trap, I build software from the first line of code to ensure maintainability and control, ensuring technology serves the user, not the hype."
-        },
-        {
-            id: "02",
-            icon: "fact_check",
-            title: "Quality & Standards (QA)",
-            desc: "Quality as a Technical Advantage. Quality Assurance is not an administrative burden, but the legal foundation of safety. I integrate ISO 13485 (Quality Systems) and IEC 62304 (Software Lifecycle) directly into the CI/CD pipeline, creating 'audit-ready' documentation for instant CE Marking readiness."
-        },
-        {
-            id: "03",
-            icon: "gavel",
-            title: "Regulatory Compliance & Infrastructure (RA)",
-            desc: "The Responsibility of Compliance (PRRC). I translate MDR (Art. 15) and the EU AI Act into strict engineering workflows. Treating the PRRC role as an active duty, I focus on Risk Management (ISO 14971) and Usability (IEC 62366). I design Sovereign Cloud architectures where Data Residency and GDPR privacy are shielded at the infrastructure level."
-        },
-        {
-            id: "04",
-            icon: "policy",
-            title: "Policy & Strategic Roadmap",
-            desc: "The Strategic Bridge. I translate legislation into technical roadmaps. Through European Young Engineers (EYE), I draft technical briefings for MEPs, ensuring innovation aligns with European Digital Sovereignty and citizen safety strategies."
-        },
-        {
-            id: "05",
-            icon: "payments",
-            title: "Tech Valuation & Asset Integrity",
-            desc: "Value Certification. I assess Technical Readiness Level (TRL) and IP strength for MedTech assets. As an Economic Certifier, I produce techno-economic studies that transform technical excellence into certified business value, securing investment and grant funding."
-        }
+    const [selected, setSelected] = useState<SelectionKey>(null);
+    const [hoveredZone, setHoveredZone] = useState<SelectionKey>(null);
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start end", "end start"],
+    });
+
+    const yBg = useTransform(scrollYProgress, [0, 1], [0, 80]);
+    const opacityBg = useTransform(scrollYProgress, [0, 0.15, 0.85, 1], [0, 1, 1, 0]);
+
+    const handleSelect = (key: SelectionKey) => {
+        setSelected((prev) => (prev === key ? null : key));
+    };
+
+    const getContent = (): ContentBlock | null => {
+        if (!selected) return null;
+        if (selected === "core") return coreContent;
+        if (selected in pillars) return pillars[selected as PillarKey];
+        if (selected in intersections) return intersections[selected as IntersectionKey];
+        return null;
+    };
+
+    const content = getContent();
+
+    /* ── SVG Geometry ─────────────────────────────────────────────── */
+    const svgW = 800;
+    const svgH = 680;
+    const cx = svgW / 2;        // 400
+    const cy = svgH / 2 - 20;   // 320
+    const r = 200;               // circle radius
+    const d = 130;               // center-to-center offset
+
+    // Triangle layout: Engineering (top-left), Regulatory (top-right), QA (bottom-center)
+    const eng = { x: cx - d * 0.866, y: cy - d * 0.5 };   // top-left
+    const reg = { x: cx + d * 0.866, y: cy - d * 0.5 };   // top-right
+    const qa = { x: cx, y: cy + d };           // bottom-center
+
+    // Intersection midpoints
+    const engReg = { x: (eng.x + reg.x) / 2, y: (eng.y + reg.y) / 2 - 20 };
+    const engQa = { x: (eng.x + qa.x) / 2 + 10, y: (eng.y + qa.y) / 2 + 10 };
+    const qaReg = { x: (qa.x + reg.x) / 2 - 10, y: (qa.y + reg.y) / 2 + 10 };
+
+    const circleData = [
+        { key: "engineering" as PillarKey, ...eng },
+        { key: "regulatory" as PillarKey, ...reg },
+        { key: "qa" as PillarKey, ...qa },
     ];
 
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1,
-                delayChildren: 0.2
-            }
-        }
-    };
-
-    const itemVariants = {
-        hidden: { opacity: 0, y: 30 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }
-        }
-    };
+    const intData = [
+        { key: "eng_reg" as IntersectionKey, ...engReg },
+        { key: "eng_qa" as IntersectionKey, ...engQa },
+        { key: "qa_reg" as IntersectionKey, ...qaReg },
+    ];
 
     return (
-        <section id="expertise" className="bg-surface-dark border-t border-white/10 py-20 lg:py-32 relative">
-            <div className="max-w-7xl mx-auto px-6">
-                {/* Section Header - Aristotle's Ethos/Logos */}
+        <section
+            id="expertise"
+            ref={containerRef}
+            className="relative bg-[#050505] border-t border-white/5 py-24 lg:py-36 overflow-hidden"
+        >
+            {/* Background */}
+            <motion.div
+                style={{ y: yBg, opacity: opacityBg }}
+                className="absolute inset-0 z-0 pointer-events-none"
+            >
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(120,119,198,0.08),transparent)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(34,197,94,0.04),transparent_50%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.04),transparent_50%)]" />
+            </motion.div>
+
+            <div className="max-w-7xl mx-auto px-6 relative z-10">
+
+                {/* ── Header ──────────────────────────────────────────── */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 24 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
-                    className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16"
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="text-center mb-16 max-w-4xl mx-auto"
                 >
-                    <div className="max-w-2xl">
-                        <div className="flex items-center gap-3 mb-4">
-                            <span className="h-px w-8 bg-primary"></span>
-                            <span className="font-mono text-primary text-sm uppercase tracking-wider">The Strategic Framework</span>
-                        </div>
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight">
-                            Bridging innovation with <br />
-                            <span className="text-slate-400">Institutional Legitimacy</span>
-                        </h2>
+                    <div className="flex items-center justify-center gap-3 mb-6">
+                        <div className="h-px w-12 bg-gradient-to-r from-transparent to-blue-500/60" />
+                        <span className="font-mono text-blue-400/80 text-xs uppercase tracking-[0.3em] font-medium">
+                            The Strategic Framework
+                        </span>
+                        <div className="h-px w-12 bg-gradient-to-l from-transparent to-blue-500/60" />
                     </div>
-                    <div className="hidden md:block">
-                        <span className="material-symbols-outlined text-6xl text-white/5 rotate-12">balance</span>
-                    </div>
+
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-6 leading-[1.1]">
+                        Bridging Innovation with{" "}
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-blue-100 to-blue-300">
+                            Institutional Legitimacy
+                        </span>
+                    </h2>
+
+                    <p className="text-slate-400 text-base md:text-lg leading-relaxed font-light">
+                        Three pillars converge into a{" "}
+                        <span className="text-white/90 font-medium">single institutional guarantee</span>.{" "}
+                        <span className="text-blue-400/70">Click any zone</span> to explore the strategic intersections.
+                    </p>
                 </motion.div>
 
-                {/* Grid Layout - Monroe's Motivated Sequence (Implicit) */}
+                {/* ── Venn Diagram ─────────────────────────────────────── */}
                 <motion.div
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-100px" }}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4"
+                    initial={{ opacity: 0, scale: 0.96 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    className="hidden md:flex justify-center mb-12"
                 >
-                    {competencies.map((item) => (
+                    <svg
+                        viewBox={`0 0 ${svgW} ${svgH}`}
+                        className="w-full max-w-[820px]"
+                    >
+                        <defs>
+                            {/* Circle gradients */}
+                            <radialGradient id="g-eng" cx="40%" cy="40%">
+                                <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.18" />
+                                <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.03" />
+                            </radialGradient>
+                            <radialGradient id="g-reg" cx="60%" cy="40%">
+                                <stop offset="0%" stopColor="#a855f7" stopOpacity="0.18" />
+                                <stop offset="100%" stopColor="#a855f7" stopOpacity="0.03" />
+                            </radialGradient>
+                            <radialGradient id="g-qa" cx="50%" cy="60%">
+                                <stop offset="0%" stopColor="#22c55e" stopOpacity="0.18" />
+                                <stop offset="100%" stopColor="#22c55e" stopOpacity="0.03" />
+                            </radialGradient>
+                            {/* Core glow */}
+                            <radialGradient id="g-core" cx="50%" cy="50%">
+                                <stop offset="0%" stopColor="#f59e0b" stopOpacity="0.25" />
+                                <stop offset="100%" stopColor="#f59e0b" stopOpacity="0" />
+                            </radialGradient>
+                            {/* Glow filter */}
+                            <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+                                <feGaussianBlur stdDeviation="8" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                            <filter id="glow-strong" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="16" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                        </defs>
+
+                        {/* ── Main Circles ── */}
+                        {circleData.map((c, i) => {
+                            const isSelected = selected === c.key;
+                            const isHovered = hoveredZone === c.key;
+                            const isDimmed = selected && selected !== c.key && !String(selected).includes(c.key);
+                            const active = isSelected || isHovered;
+                            const color = pillars[c.key].color;
+
+                            return (
+                                <g
+                                    key={c.key}
+                                    onClick={() => handleSelect(c.key)}
+                                    onMouseEnter={() => setHoveredZone(c.key)}
+                                    onMouseLeave={() => setHoveredZone(null)}
+                                    className="cursor-pointer"
+                                    style={{ opacity: isDimmed ? 0.25 : 1, transition: "opacity 0.4s ease" }}
+                                >
+                                    {/* Fill */}
+                                    <circle
+                                        cx={c.x} cy={c.y} r={r}
+                                        fill={`url(#g-${c.key === "engineering" ? "eng" : c.key === "regulatory" ? "reg" : "qa"})`}
+                                        style={{ transition: "all 0.4s ease" }}
+                                    />
+                                    {/* Stroke */}
+                                    <circle
+                                        cx={c.x} cy={c.y} r={r}
+                                        fill="none"
+                                        stroke={color}
+                                        strokeWidth={active ? 2 : 1}
+                                        strokeOpacity={active ? 0.7 : 0.25}
+                                        filter={active ? "url(#glow)" : undefined}
+                                        style={{ transition: "all 0.4s ease" }}
+                                    />
+
+                                    {/* Label */}
+                                    <foreignObject
+                                        x={c.x - 110}
+                                        y={c.y - (c.key === "qa" ? 110 : 90)}
+                                        width="220"
+                                        height="180"
+                                    >
+                                        <div className="flex flex-col items-center justify-center text-center h-full select-none">
+                                            <div
+                                                className="w-12 h-12 rounded-xl flex items-center justify-center mb-3 transition-all duration-400"
+                                                style={{
+                                                    backgroundColor: active ? `${color}20` : `${color}10`,
+                                                    border: `1px solid ${active ? color + "60" : color + "25"}`,
+                                                }}
+                                            >
+                                                <span
+                                                    className="material-symbols-outlined text-2xl"
+                                                    style={{ color: active ? color : color + "99" }}
+                                                >
+                                                    {pillars[c.key].icon}
+                                                </span>
+                                            </div>
+                                            <p
+                                                className="text-sm font-semibold leading-tight mb-1 transition-colors duration-300"
+                                                style={{ color: active ? "#fff" : "rgba(255,255,255,0.75)" }}
+                                            >
+                                                {pillars[c.key].label}
+                                            </p>
+                                            <p
+                                                className="text-[10px] uppercase tracking-wider font-mono transition-colors duration-300"
+                                                style={{ color: active ? color : "rgba(255,255,255,0.35)" }}
+                                            >
+                                                {pillars[c.key].subtitle}
+                                            </p>
+                                        </div>
+                                    </foreignObject>
+                                </g>
+                            );
+                        })}
+
+                        {/* ── Intersection Zones ── */}
+                        {intData.map((z) => {
+                            const isSelected = selected === z.key;
+                            const isHovered = hoveredZone === z.key;
+                            const isDimmed = selected && selected !== z.key;
+                            const active = isSelected || isHovered;
+                            const color = intersections[z.key].color;
+                            const shortLabel = intersections[z.key].subtitle; // e.g. "Engineering + QA"
+
+                            return (
+                                <g
+                                    key={z.key}
+                                    onClick={() => handleSelect(z.key)}
+                                    onMouseEnter={() => setHoveredZone(z.key)}
+                                    onMouseLeave={() => setHoveredZone(null)}
+                                    className="cursor-pointer"
+                                    style={{ opacity: isDimmed ? 0.15 : 1, transition: "opacity 0.4s ease" }}
+                                >
+                                    {/* Invisible hit area */}
+                                    <circle cx={z.x} cy={z.y} r={58} fill="transparent" />
+
+                                    {/* Outer glow ring (always visible) */}
+                                    <circle
+                                        cx={z.x} cy={z.y} r={active ? 46 : 38}
+                                        fill={`${color}${active ? "18" : "0a"}`}
+                                        stroke={color}
+                                        strokeWidth={active ? 2 : 1.5}
+                                        strokeOpacity={active ? 0.9 : 0.5}
+                                        filter={active ? "url(#glow)" : undefined}
+                                        style={{ transition: "all 0.35s ease" }}
+                                    />
+
+                                    {/* Icon + label */}
+                                    <foreignObject x={z.x - 50} y={z.y - 52} width="100" height="104">
+                                        <div className="w-full h-full flex flex-col items-center justify-center gap-1 select-none">
+                                            <span
+                                                className="material-symbols-outlined"
+                                                style={{
+                                                    fontSize: active ? "22px" : "18px",
+                                                    color: active ? color : `${color}cc`,
+                                                    transition: "all 0.3s ease",
+                                                    filter: active ? `drop-shadow(0 0 6px ${color}80)` : "none",
+                                                }}
+                                            >
+                                                {intersections[z.key].icon}
+                                            </span>
+                                            <span
+                                                style={{
+                                                    fontSize: "8px",
+                                                    color: active ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.45)",
+                                                    textAlign: "center",
+                                                    lineHeight: "1.2",
+                                                    fontFamily: "monospace",
+                                                    textTransform: "uppercase",
+                                                    letterSpacing: "0.05em",
+                                                    transition: "all 0.3s ease",
+                                                    maxWidth: "80px",
+                                                    display: "block",
+                                                }}
+                                            >
+                                                {shortLabel}
+                                            </span>
+                                        </div>
+                                    </foreignObject>
+                                </g>
+                            );
+                        })}
+
+                        {/* ── Core ── */}
+                        {(() => {
+                            const coreActive = selected === "core" || hoveredZone === "core";
+                            return (
+                                <g
+                                    onClick={() => handleSelect("core")}
+                                    onMouseEnter={() => setHoveredZone("core")}
+                                    onMouseLeave={() => setHoveredZone(null)}
+                                    className="cursor-pointer"
+                                    style={{ opacity: selected && selected !== "core" ? 0.2 : 1, transition: "opacity 0.4s ease" }}
+                                >
+                                    {/* Outer pulse ring 2 (largest) */}
+                                    <circle
+                                        cx={cx} cy={cy} r={coreActive ? 82 : 72}
+                                        fill="none"
+                                        stroke="#f59e0b"
+                                        strokeWidth="1"
+                                        strokeOpacity={coreActive ? 0.15 : 0.08}
+                                        strokeDasharray="3 6"
+                                        style={{ transition: "all 0.5s ease" }}
+                                    />
+                                    {/* Outer pulse ring 1 */}
+                                    <circle
+                                        cx={cx} cy={cy} r={coreActive ? 68 : 60}
+                                        fill="none"
+                                        stroke="#f59e0b"
+                                        strokeWidth="1"
+                                        strokeOpacity={coreActive ? 0.25 : 0.12}
+                                        style={{ transition: "all 0.5s ease" }}
+                                    />
+                                    {/* Main filled circle */}
+                                    <circle
+                                        cx={cx} cy={cy} r={coreActive ? 54 : 48}
+                                        fill={`rgba(245,158,11,${coreActive ? "0.18" : "0.08"})`}
+                                        stroke="#f59e0b"
+                                        strokeWidth={coreActive ? 2.5 : 1.5}
+                                        strokeOpacity={coreActive ? 1 : 0.5}
+                                        filter={coreActive ? "url(#glow-strong)" : "url(#glow)"}
+                                        style={{ transition: "all 0.4s ease" }}
+                                    />
+                                    {/* Icon + label */}
+                                    <foreignObject x={cx - 52} y={cy - 58} width="104" height="116">
+                                        <div className="w-full h-full flex flex-col items-center justify-center gap-1.5 select-none">
+                                            <span
+                                                className="material-symbols-outlined"
+                                                style={{
+                                                    fontSize: coreActive ? "34px" : "28px",
+                                                    color: coreActive ? "#f59e0b" : "rgba(245,158,11,0.7)",
+                                                    transition: "all 0.35s ease",
+                                                    filter: coreActive ? "drop-shadow(0 0 10px rgba(245,158,11,0.8))" : "none",
+                                                }}
+                                            >
+                                                workspace_premium
+                                            </span>
+                                            <span
+                                                style={{
+                                                    fontSize: "7px",
+                                                    color: coreActive ? "rgba(245,158,11,0.9)" : "rgba(245,158,11,0.45)",
+                                                    textAlign: "center",
+                                                    fontFamily: "monospace",
+                                                    textTransform: "uppercase",
+                                                    letterSpacing: "0.12em",
+                                                    lineHeight: "1.3",
+                                                    transition: "all 0.3s ease",
+                                                    display: "block",
+                                                    maxWidth: "90px",
+                                                }}
+                                            >
+                                                Sign-off<br />Authority
+                                            </span>
+                                        </div>
+                                    </foreignObject>
+                                </g>
+                            );
+                        })()}
+                    </svg>
+                </motion.div>
+
+                {/* ── Detail Panel ─────────────────────────────────────── */}
+                <AnimatePresence mode="wait">
+                    {content && (
                         <motion.div
-                            key={item.id}
-                            variants={itemVariants}
-                            className="group bg-background-dark border border-white/10 hover:border-primary/50 p-6 rounded transition-colors duration-300 relative overflow-hidden flex flex-col justify-between min-h-[260px]"
+                            key={selected}
+                            initial={{ opacity: 0, y: 20, scale: 0.97 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            exit={{ opacity: 0, y: -10, scale: 0.97 }}
+                            transition={{ duration: 0.35, ease: "easeOut" }}
+                            className="max-w-3xl mx-auto mb-16"
                         >
-                            <div className="absolute top-0 right-0 p-3 opacity-20 group-hover:opacity-100 transition-opacity">
-                                <span className="font-mono text-xs text-primary">{item.id}</span>
-                            </div>
-                            <div className="mb-6">
-                                <div className="w-12 h-12 rounded bg-surface-dark border border-white/10 flex items-center justify-center mb-4 group-hover:bg-primary/10 group-hover:border-primary/30 transition-colors text-white group-hover:text-primary">
-                                    <span className="material-symbols-outlined">{item.icon}</span>
+                            <div
+                                className="relative rounded-2xl border bg-[#0c0c0c] overflow-hidden"
+                                style={{ borderColor: `${content.color}30` }}
+                            >
+                                {/* Top accent line */}
+                                <div
+                                    className="absolute top-0 left-0 right-0 h-px"
+                                    style={{ background: `linear-gradient(90deg, transparent, ${content.color}60, transparent)` }}
+                                />
+
+                                <div className="p-8 md:p-10">
+                                    {/* Header */}
+                                    <div className="flex items-start justify-between gap-4 mb-6">
+                                        <div className="flex items-center gap-4">
+                                            <div
+                                                className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
+                                                style={{ backgroundColor: `${content.color}15`, border: `1px solid ${content.color}30` }}
+                                            >
+                                                <span
+                                                    className="material-symbols-outlined text-2xl"
+                                                    style={{ color: content.color }}
+                                                >
+                                                    {content.icon}
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <p
+                                                    className="text-xs font-mono uppercase tracking-widest mb-1"
+                                                    style={{ color: content.color }}
+                                                >
+                                                    {content.subtitle}
+                                                </p>
+                                                <h3 className="text-xl md:text-2xl font-bold text-white leading-tight">
+                                                    {content.label}
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <button
+                                            onClick={() => setSelected(null)}
+                                            className="text-white/30 hover:text-white/70 transition-colors flex-shrink-0 mt-1"
+                                        >
+                                            <span className="material-symbols-outlined text-xl">close</span>
+                                        </button>
+                                    </div>
+
+                                    {/* Description */}
+                                    <p className="text-slate-400 text-sm md:text-base leading-relaxed mb-6 border-l border-white/10 pl-4">
+                                        {content.description}
+                                    </p>
+
+                                    {/* Highlights */}
+                                    <div className="flex flex-wrap gap-2">
+                                        {content.highlights.map((h, i) => (
+                                            <motion.span
+                                                key={h}
+                                                initial={{ opacity: 0, scale: 0.9 }}
+                                                animate={{ opacity: 1, scale: 1 }}
+                                                transition={{ delay: i * 0.06 }}
+                                                className="px-3 py-1.5 text-xs font-medium rounded-lg border"
+                                                style={{
+                                                    color: content.color,
+                                                    borderColor: `${content.color}25`,
+                                                    backgroundColor: `${content.color}08`,
+                                                }}
+                                            >
+                                                {h}
+                                            </motion.span>
+                                        ))}
+                                    </div>
                                 </div>
-                                <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
-                                <p className="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
                             </div>
-                            <div className="w-full h-0.5 bg-white/5 group-hover:bg-primary/50 transition-colors mt-auto"></div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+
+                {/* ── Mobile Cards ─────────────────────────────────────── */}
+                <div className="md:hidden grid grid-cols-1 gap-4 mb-16">
+                    {Object.entries(pillars).map(([key, p], i) => (
+                        <motion.div
+                            key={key}
+                            initial={{ opacity: 0, y: 16 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: i * 0.1 }}
+                            onClick={() => handleSelect(key as PillarKey)}
+                            className="rounded-xl border border-white/8 bg-white/3 p-5 cursor-pointer active:scale-[0.98] transition-transform"
+                        >
+                            <div className="flex items-center gap-3 mb-2">
+                                <span className="material-symbols-outlined text-xl" style={{ color: p.color }}>{p.icon}</span>
+                                <span className="text-white font-semibold text-sm">{p.label}</span>
+                            </div>
+                            <p className="text-slate-500 text-xs uppercase tracking-wider font-mono">{p.subtitle}</p>
                         </motion.div>
                     ))}
-                </motion.div>
+                </div>
 
-                {/* Aristotle's Triangle: Pathos & Vision */}
+                {/* ── Ethos & Logos Footer ─────────────────────────────── */}
                 <motion.div
-                    initial={{ opacity: 0, y: 40 }}
+                    initial={{ opacity: 0, y: 32 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 1, delay: 0.4 }}
-                    className="mt-4 grid grid-cols-1 lg:grid-cols-3 gap-4"
+                    viewport={{ once: true, margin: "-40px" }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="max-w-4xl mx-auto"
                 >
-                    <div className="lg:col-span-3 bg-background-dark border border-white/10 p-8 rounded relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
-                        <div className="relative z-10 flex flex-col md:flex-row gap-8 items-start">
-                            <div className="flex-1">
-                                <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                                    <span className="material-symbols-outlined text-primary">verified_user</span>
-                                    Ethos & Logos: The Bridge Engineer Philosophy
-                                </h3>
-                                <p className="text-slate-400 leading-relaxed">
-                                    Leveraging the <span className="text-white font-medium">Integrated Master (CEID)</span> and the <span className="text-white font-medium">Professional License (TEE)</span>, I translate technical parameters into legal evidence. My mission is to ensure that every system bearing my signature is lawful, safe, and technically flawless.
+                    <div className="relative rounded-2xl border border-white/8 bg-[#0a0a0a] overflow-hidden">
+                        {/* Top line */}
+                        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
+                        {/* Bottom line */}
+                        <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/5 to-transparent" />
+
+                        <div className="p-8 md:p-12 flex flex-col md:flex-row gap-8 items-center">
+                            {/* Icon + Title */}
+                            <div className="flex-1 text-center md:text-left">
+                                <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
+                                    <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
+                                        <span className="material-symbols-outlined text-xl text-blue-400">verified_user</span>
+                                    </div>
+                                    <div>
+                                        <h3 className="text-lg font-bold text-white">Ethos & Logos</h3>
+                                        <p className="text-xs text-slate-500 italic font-serif">The Bridge Engineer Philosophy</p>
+                                    </div>
+                                </div>
+                                <p className="text-slate-400 text-sm md:text-base leading-relaxed font-light">
+                                    Leveraging the{" "}
+                                    <span className="text-white/90 font-medium">Integrated Master (CEID)</span> and the{" "}
+                                    <span className="text-white/90 font-medium">Professional License (TEE)</span>, I translate
+                                    technical parameters into legal evidence. My mission is to ensure that every system bearing
+                                    my signature is{" "}
+                                    <span className="text-blue-300 font-medium italic">lawful, safe, and technically flawless.</span>
                                 </p>
                             </div>
-                            <div className="flex-none">
+
+                            {/* CTA */}
+                            <div className="flex-shrink-0">
                                 <Link
                                     href="#contact"
-                                    className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-white transition-colors group"
+                                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black text-sm font-bold tracking-wide hover:bg-blue-50 transition-colors duration-200 group"
                                 >
                                     Discuss Regulatory Strategy
-                                    <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+                                    <span className="material-symbols-outlined text-base group-hover:translate-x-0.5 transition-transform">
+                                        arrow_right_alt
+                                    </span>
                                 </Link>
                             </div>
                         </div>
                     </div>
                 </motion.div>
+
             </div>
         </section>
     );
