@@ -2,7 +2,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { locales } from "@/data/locales";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -86,8 +85,6 @@ export default function Header() {
 
                 {/* CONNECT BUTTON & MOBILE TOGGLE */}
                 <div className="flex items-center gap-4">
-
-                    <LanguageSwitcher />
 
                     <motion.div
                         initial={{ opacity: 0, x: 20 }}

@@ -278,7 +278,7 @@ export const locales = {
             about: "About",
             portfolio: "Portfolio",
             testimonials: "Testimonials",
-            contact: "Contact",
+            contact: "Let's Talk",
         },
         hero: {
             status: "THE SIGN-OFF TECHNICAL AUTHORITY",
@@ -1263,9 +1263,9 @@ export const locales = {
             ]
         },
         nav: {
-            authority: "Αυθεντία",
+            authority: "Εξουσία",
             about: "Σχετικά",
-            portfolio: "Portfolio",
+            portfolio: "Χαρτοφυλάκιο",
             testimonials: "Συστάσεις",
             contact: "Επικοινωνία",
         },
