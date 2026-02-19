@@ -1,51 +1,36 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
-import { locales } from "@/data/locales";
+import { motion } from "framer-motion";
 
 export default function LanguageSwitcher() {
-    const { language, setLanguage } = useLanguage();
-    const t = locales[language];
-
-    const options = [
-        { id: "en", label: "EN" },
-        { id: "el", label: "GR" }
-    ] as const;
+    const { language, toggleLanguage } = useLanguage();
 
     return (
-        <div className="flex items-center gap-3">
-            <span className="hidden md:block text-[10px] font-mono uppercase tracking-[0.3em] text-white/40">
-                {t.controls.language}
-            </span>
-
-            <div className="relative flex p-1.5 bg-white/[0.03] border border-white/10 rounded-full backdrop-blur-xl shadow-2xl overflow-hidden cursor-pointer">
-                {options.map((opt) => (
-                    <button
-                        key={opt.id}
-                        onClick={() => setLanguage(opt.id)}
-                        className="relative px-6 py-2 outline-none tap-highlight-transparent group min-w-[60px]"
-                    >
-                        {language === opt.id && (
-                            <motion.div
-                                layoutId="active-language-pill"
-                                className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-blue-400 rounded-full shadow-[0_0_20px_rgba(37,99,235,0.4)] z-0"
-                                transition={{
-                                    type: "spring",
-                                    stiffness: 450,
-                                    damping: 35,
-                                    mass: 0.8
-                                }}
-                            />
-                        )}
-                        <span className={`relative z-10 text-[11px] font-bold font-mono tracking-[0.2em] transition-all duration-300 text-center block ${language === opt.id ? "text-white scale-110" : "text-white/40 group-hover:text-white/70"
-                            }`}>
-                            {opt.label}
-                        </span>
-                    </button>
-                ))}
+        <button
+            onClick={toggleLanguage}
+            className="group relative flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 hover:border-white/20 transition-colors overflow-hidden"
+            aria-label="Switch Language"
+        >
+            <div className="relative z-10 flex items-center gap-2">
+                <span className={`text-xs font-bold tracking-wider transition-colors duration-300 ${language === 'en' ? 'text-white' : 'text-gray-500'}`}>
+                    EN
+                </span>
+                <span className="w-px h-3 bg-white/20"></span>
+                <span className={`text-xs font-bold tracking-wider transition-colors duration-300 ${language === 'el' ? 'text-white' : 'text-gray-500'}`}>
+                    EL
+                </span>
             </div>
-        </div>
+
+            {/* Active Indicator Background */}
+            <motion.div
+                className="absolute inset-0 bg-white/5"
+                initial={false}
+                animate={{
+                    x: language === 'en' ? '-50%' : '50%',
+                    opacity: 0
+                }}
+            />
+        </button>
     );
 }
