@@ -3,6 +3,8 @@
 import React, { useState, useRef } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
+import { useLanguage } from "@/context/LanguageContext";
+import { locales } from "@/data/locales";
 
 /* ─── Types ─────────────────────────────────────────────────────────────── */
 
@@ -22,79 +24,32 @@ interface ContentBlock {
 
 /* ─── Data ──────────────────────────────────────────────────────────────── */
 
-const pillars: Record<PillarKey, ContentBlock> = {
-    engineering: {
-        label: "Engineering & Product Development",
-        subtitle: "The Hands-on Architect",
-        description:
-            "Beyond traditional software, this pillar covers SaMD/SiMD development and advanced AI integration (Agentic AI & XAI). Full product-lifecycle control ensures every line of code serves a clinical purpose with production-grade readiness (TRL-9) — eliminating the risk of 'theoretical' innovation that can't scale.",
-        highlights: ["SaMD / SiMD Development", "Agentic AI & XAI", "Full Lifecycle Control", "TRL-9 Readiness", "IoT & Industrial Systems"],
-        color: "#3b82f6",
-        icon: "engineering",
-    },
-    regulatory: {
-        label: "Regulatory Strategy & Policy",
-        subtitle: "The Strategic Navigator",
-        description:
-            "Strategic navigation through the maze of global regulations — from Europe's MDR/IVDR to FDA frameworks and the EU AI Act. The role transforms legal constraints into competitive market advantages, charting policy for Digital Sovereignty where deep regulatory knowledge enables faster international market access.",
-        highlights: ["MDR / IVDR / EU AI Act", "FDA Frameworks", "Digital Sovereignty", "Market Access Strategy", "Policy Drafting (EYE → MEPs)"],
-        color: "#a855f7",
-        icon: "gavel",
-    },
-    qa: {
-        label: "Quality Assurance",
-        subtitle: "The Technical Auditor",
-        description:
-            "Quality is not bureaucratic overhead — it is the technical and legal bedrock of reliability. Through rigorous ISO 13485 and ISO 14971 standards integrated organically into CI/CD pipelines, QA becomes a legal guarantee. The institutional foundation via PD 99/2018 grants state-authorized power to audit and validate life-critical systems.",
-        highlights: ["ISO 13485 & ISO 14971", "CI/CD QA Integration", "PD 99/2018 State Authorization", "CE Marking Readiness", "Audit-Ready Documentation"],
-        color: "#22c55e",
-        icon: "verified_user",
-    },
-};
 
-const intersections: Record<IntersectionKey, ContentBlock> = {
-    eng_reg: {
-        label: "Compliant-by-Design Innovation",
-        subtitle: "Engineering + Regulatory",
-        description:
-            'This is where "Market Access" is born. Legislation translates directly into technical specifications (Requirements), ensuring the product is compliant by design — dramatically reducing redesign costs and accelerating time-to-market.',
-        highlights: ["Market Access", "Requirements from Legislation", "Cost Reduction"],
-        color: "#8b5cf6",
-        icon: "rocket_launch",
-    },
-    eng_qa: {
-        label: "Technically Validated Safety",
-        subtitle: "Engineering + QA",
-        description:
-            "This intersection defines the essential responsibility of the PRRC (Person Responsible for Regulatory Compliance). Technical knowledge validates safety in practice — as demonstrated through ZenithDx — transforming risk analysis into applied engineering.",
-        highlights: ["PRRC Responsibility", "ZenithDx Validation", "Applied Risk Analysis"],
-        color: "#06b6d4",
-        icon: "health_and_safety",
-    },
-    qa_reg: {
-        label: "The Institutional Shield",
-        subtitle: "QA + Regulatory",
-        description:
-            "This intersection delivers maximum institutional protection. It combines audit readiness with the legal force of the sign-off, creating an impenetrable firewall against legal liabilities and regulatory sanctions.",
-        highlights: ["Audit-Readiness", "Sign-off Legal Authority", "Liability Shield"],
-        color: "#ec4899",
-        icon: "shield",
-    },
-};
-
-const coreContent: ContentBlock = {
-    label: "THE SIGN-OFF TECHNICAL AUTHORITY",
-    subtitle: "Institutional Antigravity",
-    description:
-        'At the center lies "Institutional Antigravity" — the signature that carries the weight to unlock closed markets and dispel investor doubt. The TEE license, academic excellence, and international experience converge to deliver an indisputable guarantee.',
-    highlights: ["TEE Professional License", "Integrated Master (CEID)", "Global Institutional Guarantee"],
-    color: "#f59e0b",
-    icon: "workspace_premium",
-};
 
 /* ─── Component ─────────────────────────────────────────────────────────── */
 
 export default function Expertise() {
+    const { language } = useLanguage();
+    const t = (locales as any)[language].expertise;
+
+    const pillars: Record<PillarKey, ContentBlock> = {
+        engineering: { ...t.pillars.engineering, color: "#3b82f6", icon: "engineering" },
+        regulatory: { ...t.pillars.regulatory, color: "#a855f7", icon: "gavel" },
+        qa: { ...t.pillars.qa, color: "#22c55e", icon: "verified_user" },
+    };
+
+    const intersections: Record<IntersectionKey, ContentBlock> = {
+        eng_reg: { ...t.intersections.eng_reg, color: "#8b5cf6", icon: "rocket_launch" },
+        eng_qa: { ...t.intersections.eng_qa, color: "#06b6d4", icon: "health_and_safety" },
+        qa_reg: { ...t.intersections.qa_reg, color: "#ec4899", icon: "shield" },
+    };
+
+    const coreContent: ContentBlock = {
+        ...t.core,
+        color: "#f59e0b",
+        icon: "workspace_premium",
+    };
+
     const [selected, setSelected] = useState<SelectionKey>(null);
     const [hoveredZone, setHoveredZone] = useState<SelectionKey>(null);
     const containerRef = useRef<HTMLDivElement>(null);
@@ -180,22 +135,23 @@ export default function Expertise() {
                     <div className="flex items-center justify-center gap-3 mb-6">
                         <div className="h-px w-12 bg-gradient-to-r from-transparent to-blue-500/60" />
                         <span className="font-mono text-blue-400/80 text-xs uppercase tracking-[0.3em] font-medium">
-                            The Strategic Framework
+                            {t.header.label}
                         </span>
                         <div className="h-px w-12 bg-gradient-to-l from-transparent to-blue-500/60" />
                     </div>
 
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-6 leading-[1.1]">
-                        Bridging Innovation with{" "}
+                        {t.header.title_prefix}{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-blue-100 to-blue-300">
-                            Institutional Legitimacy
+                            {t.header.title_highlight}
                         </span>
                     </h2>
 
                     <p className="text-slate-400 text-base md:text-lg leading-relaxed font-light">
-                        Three pillars converge into a{" "}
-                        <span className="text-white/90 font-medium">single institutional guarantee</span>.{" "}
-                        <span className="text-blue-400/70">Click any zone</span> to explore the strategic intersections.
+                        {t.header.description_prefix}{" "}
+                        <span className="text-white/90 font-medium">{t.header.description_highlight}</span>
+                        {t.header.description_suffix}{" "}
+                        <span className="text-blue-400/70">{t.header.click_text}</span>
                     </p>
                 </motion.div>
 
@@ -595,12 +551,12 @@ export default function Expertise() {
                                     </div>
                                 </div>
                                 <p className="text-slate-400 text-sm md:text-base leading-relaxed font-light">
-                                    Leveraging the{" "}
-                                    <span className="text-white/90 font-medium">Integrated Master (CEID)</span> and the{" "}
-                                    <span className="text-white/90 font-medium">Professional License (TEE)</span>, I translate
-                                    technical parameters into legal evidence. My mission is to ensure that every system bearing
-                                    my signature is{" "}
-                                    <span className="text-blue-300 font-medium italic">lawful, safe, and technically flawless.</span>
+                                    {t.footer.description_prefix}{" "}
+                                    <span className="text-white/90 font-medium">{t.footer.description_highlight_1}</span>
+                                    {" "}{t.footer.description_between}{" "}
+                                    <span className="text-white/90 font-medium">{t.footer.description_highlight_2}</span>
+                                    {t.footer.description_suffix}{" "}
+                                    <span className="text-blue-300 font-medium italic">{t.footer.description_highlight_3}</span>
                                 </p>
                             </div>
 
@@ -610,7 +566,7 @@ export default function Expertise() {
                                     href="#contact"
                                     className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black text-sm font-bold tracking-wide hover:bg-blue-50 transition-colors duration-200 group"
                                 >
-                                    Discuss Regulatory Strategy
+                                    {t.footer.cta}
                                     <span className="material-symbols-outlined text-base group-hover:translate-x-0.5 transition-transform">
                                         arrow_right_alt
                                     </span>
@@ -620,7 +576,7 @@ export default function Expertise() {
                     </div>
                 </motion.div>
 
-            </div>
-        </section>
+            </div >
+        </section >
     );
 }

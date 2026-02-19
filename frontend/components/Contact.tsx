@@ -1,29 +1,48 @@
 "use client";
+
 import React, { useState, useRef, useEffect } from "react";
-import Image from "next/image";
-import { motion, AnimatePresence, useScroll, useTransform, useSpring } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import {
+    Mail,
+    Phone,
+    MapPin,
+    ShieldCheck,
+    Radio,
+    Activity,
+    Lock,
+    Terminal,
+    Send,
+    ArrowRight,
+    Linkedin,
+    Github,
+    Twitter,
+    FileText,
+    ChevronRight
+} from "lucide-react";
+
+import { useLanguage } from "@/context/LanguageContext";
+import { locales } from "@/data/locales";
 
 export default function Contact() {
+    const { language } = useLanguage();
+    const t = locales[language].contactPage;
+
     const [formData, setFormData] = useState({
         name: "",
         email: "",
+        sector: "",
+        service: "",
         message: ""
     });
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
     const [focusedField, setFocusedField] = useState<string | null>(null);
-    const [mounted, setMounted] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
 
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start end", "end start"]
     });
 
-    const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
     const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -39,8 +58,7 @@ export default function Contact() {
 
             if (response.ok) {
                 setStatus("success");
-                setFormData({ name: "", email: "", message: "" });
-                // Reset status after a while
+                setFormData({ name: "", email: "", sector: "", service: "", message: "" });
                 setTimeout(() => setStatus("idle"), 6000);
             } else {
                 setStatus("error");
@@ -53,159 +71,113 @@ export default function Contact() {
         }
     };
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
-    };
-
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1,
-                delayChildren: 0.3
-            }
-        }
-    };
-
-    const itemVariants = {
-        hidden: { opacity: 0, scale: 0.95, y: 30 },
-        visible: {
-            opacity: 1,
-            scale: 1,
-            y: 0,
-            transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }
-        }
     };
 
     return (
         <section
             id="contact"
             ref={containerRef}
-            className="w-full py-24 lg:py-48 bg-[#030303] relative overflow-hidden"
+            className="w-full py-32 lg:py-48 bg-[#010101] relative overflow-hidden border-t border-white/5"
         >
-            {/* AMBIENT BACKGROUND SYSTEM */}
+            {/* COMMAND CENTER BACKGROUND SYSTEM */}
             <div className="absolute inset-0 z-0 pointer-events-none">
-                {/* Floating Beams */}
-                <motion.div
-                    animate={{
-                        opacity: [0.1, 0.3, 0.1],
-                        x: [0, 50, 0],
-                        y: [0, -30, 0]
-                    }}
-                    transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px]"
-                />
-                <motion.div
-                    animate={{
-                        opacity: [0.05, 0.2, 0.05],
-                        x: [0, -80, 0],
-                        y: [0, 60, 0]
-                    }}
-                    transition={{ duration: 20, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-                    className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-[150px]"
-                />
-
-                {/* Micro-Grid Overlay */}
-                <div className="absolute inset-0 bg-[url('/resources/img/grid.svg')] opacity-[0.02] mix-blend-overlay"></div>
-
-                {/* Top/Bottom Fade */}
-                <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#030303] to-transparent"></div>
-                <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#030303] to-transparent"></div>
+                <div className="absolute top-0 right-1/4 w-[700px] h-[700px] bg-blue-600/5 rounded-full blur-[150px]" />
+                <div className="absolute bottom-0 left-1/4 w-[700px] h-[700px] bg-indigo-600/5 rounded-full blur-[150px]" />
+                <div className="absolute inset-0 bg-[url('/resources/img/grid.svg')] opacity-[0.03] mix-blend-overlay" />
+                <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#010101] to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#010101] to-transparent" />
             </div>
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
-                {/* SECTION HEADER */}
+                {/* SECTION HEADER: MISSION INITIALIZATION */}
                 <motion.div
                     style={{ opacity }}
-                    className="flex flex-col items-center text-center mb-24 lg:mb-40"
+                    className="flex flex-col items-center text-center mb-32"
                 >
-                    <div className="flex items-center gap-4 mb-4">
-                        <div className="h-px w-8 bg-primary/50"></div>
-                        <span className="text-primary font-mono text-[10px] uppercase tracking-[0.5em]">System.Initialize(Contact)</span>
-                        <div className="h-px w-8 bg-primary/50"></div>
+                    <div className="flex items-center gap-4 mb-8">
+                        <div className="h-[1px] w-12 bg-blue-500/30"></div>
+                        <span className="text-blue-400 font-mono text-[10px] uppercase tracking-[0.5em] font-black">{t.system_init}</span>
+                        <div className="h-[1px] w-12 bg-blue-500/30"></div>
                     </div>
 
-                    <h2 className="text-6xl md:text-8xl lg:text-[10rem] font-black text-white leading-[0.85] tracking-tighter mb-8 group">
-                        <motion.span
-                            initial={{ y: 50, opacity: 0 }}
-                            whileInView={{ y: 0, opacity: 1 }}
-                            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                            className="block"
-                        >
-                            TALK TO
-                        </motion.span>
-                        <motion.span
-                            initial={{ y: 50, opacity: 0 }}
-                            whileInView={{ y: 0, opacity: 1 }}
-                            transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                            className="block bg-clip-text text-transparent bg-gradient-to-r from-white via-white/40 to-white/10"
-                        >
-                            THE CORE
-                        </motion.span>
+                    <h2 className="text-6xl md:text-8xl lg:text-9xl font-black text-white leading-none tracking-tighter mb-10">
+                        {t.title_1}<br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-white/40">
+                            {t.title_2}
+                        </span>
                     </h2>
 
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ delay: 0.5 }}
-                        className="max-w-2xl text-gray-500 text-lg md:text-xl font-medium leading-relaxed"
-                    >
-                        Whether you're looking to redefine AI regulation or build the next sovereign cloud,
-                        the transmission lines are open.
-                    </motion.p>
+                    <p className="max-w-2xl text-gray-500 text-xl font-light leading-relaxed">
+                        {t.description}
+                    </p>
                 </motion.div>
 
-                <motion.div
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-100px" }}
-                    className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8"
-                >
-                    {/* INFO BLOCK: GLASS CARDS */}
-                    <div className="lg:col-span-5 flex flex-col gap-6">
-                        <motion.div variants={itemVariants} className="grid grid-cols-1 gap-4 xl:grid-cols-2">
-                            <motion.a
-                                href="mailto:filippos.paraskevas.zygouris@gmail.com"
-                                className="group p-8 bg-white/[0.02] border border-white/5 rounded-[2rem] hover:bg-white/[0.04] hover:border-primary/50 transition-all overflow-hidden relative min-h-[180px] flex flex-col justify-center"
-                            >
-                                <div className="absolute -right-4 -top-4 w-32 h-32 bg-primary/10 rounded-full blur-2xl group-hover:scale-150 transition-transform"></div>
-                                <div className="relative z-10">
-                                    <div className="text-[10px] font-mono text-gray-500 uppercase tracking-widest mb-6 flex items-center gap-2">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
-                                        Signal Protocol
-                                    </div>
-                                    <div className="text-xl font-bold text-white mb-1">Email</div>
-                                    <div className="text-sm md:text-base text-gray-300 group-hover:text-primary transition-colors break-all">filippos.paraskevas.zygouris@gmail.com</div>
-                                </div>
-                            </motion.a>
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
 
-                            <motion.a
-                                href="tel:+306975922894"
-                                className="group p-8 bg-white/[0.02] border border-white/5 rounded-[2rem] hover:bg-white/[0.04] hover:border-secondary/50 transition-all overflow-hidden relative min-h-[180px] flex flex-col justify-center"
-                            >
-                                <div className="absolute -right-4 -top-4 w-32 h-32 bg-secondary/10 rounded-full blur-2xl group-hover:scale-150 transition-transform"></div>
-                                <div className="relative z-10">
-                                    <div className="text-[10px] font-mono text-gray-500 uppercase tracking-widest mb-6 flex items-center gap-2">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-                                        Secure Line
-                                    </div>
-                                    <div className="text-xl font-bold text-white mb-1">Phone</div>
-                                    <div className="text-sm md:text-base text-gray-300 group-hover:text-secondary transition-colors">+30 697 592 2894</div>
-                                </div>
-                            </motion.a>
-                        </motion.div>
+                    {/* LEFT PANEL: SIGNAL PROTOCOLS (Control Panel) */}
+                    <div className="lg:col-span-5 space-y-8">
 
-                        <motion.div variants={itemVariants} className="flex-grow p-8 bg-white/[0.02] border border-white/5 rounded-[2.5rem] relative overflow-hidden group">
-                            <div className="flex items-center justify-between mb-8">
-                                <div className="text-[10px] font-mono text-gray-500 uppercase tracking-widest">Tactical Coordinates</div>
-                                <div className="flex gap-1">
-                                    {[1, 2, 3].map(i => <div key={i} className="w-1 h-1 bg-primary rounded-full animate-pulse" style={{ animationDelay: `${i * 0.2}s` }}></div>)}
+                        {/* Dossier Card: Email */}
+                        <motion.a
+                            href="mailto:filippos.paraskevas.zygouris@gmail.com"
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="group block relative p-10 bg-white/[0.02] border border-white/5 rounded-3xl hover:bg-white/[0.04] hover:border-blue-500/30 transition-all duration-500 overflow-hidden"
+                        >
+                            <div className="absolute -right-8 -top-8 w-32 h-32 bg-blue-500/5 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
+                            <div className="relative z-10">
+                                <div className="flex items-center justify-between mb-8">
+                                    <div className="text-[10px] font-mono text-gray-600 uppercase tracking-widest flex items-center gap-2">
+                                        <Radio className="text-blue-500 animate-pulse" size={14} />
+                                        {t.email_protocol}
+                                    </div>
+                                    <div className="text-[10px] font-mono text-gray-800">PRTCL_SEC_A</div>
                                 </div>
+                                <h3 className="text-sm font-black text-gray-400 uppercase tracking-widest mb-2">{t.email_label}</h3>
+                                <p className="text-lg md:text-xl font-bold text-white group-hover:text-blue-400 transition-colors">filippos.paraskevas.zygouris@gmail.com</p>
+                            </div>
+                        </motion.a>
+
+                        {/* Dossier Card: Phone */}
+                        <motion.a
+                            href="tel:+306975922894"
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                            className="group block relative p-10 bg-white/[0.02] border border-white/5 rounded-3xl hover:bg-white/[0.04] hover:border-indigo-500/30 transition-all duration-500 overflow-hidden"
+                        >
+                            <div className="absolute -right-8 -top-8 w-32 h-32 bg-indigo-500/5 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
+                            <div className="relative z-10">
+                                <div className="flex items-center justify-between mb-8">
+                                    <div className="text-[10px] font-mono text-gray-600 uppercase tracking-widest flex items-center gap-2">
+                                        <Activity className="text-indigo-500 animate-pulse" size={14} />
+                                        {t.phone_protocol}
+                                    </div>
+                                    <div className="text-[10px] font-mono text-gray-800">PRTCL_SEC_B</div>
+                                </div>
+                                <h3 className="text-sm font-black text-gray-400 uppercase tracking-widest mb-2">{t.phone_label}</h3>
+                                <p className="text-lg md:text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">+30 697 592 2894</p>
+                            </div>
+                        </motion.a>
+
+                        {/* Tactical Coordinates Block */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                            className="p-10 bg-white/[0.02] border border-white/5 rounded-3xl group overflow-hidden"
+                        >
+                            <div className="flex items-center justify-between mb-8 pb-4 border-b border-white/5">
+                                <div className="text-[10px] font-mono text-gray-600 uppercase tracking-widest">{t.location_label}</div>
+                                <MapPin size={16} className="text-gray-800" />
                             </div>
 
-                            <div className="aspect-square w-full rounded-2xl overflow-hidden relative grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-1000">
+                            <div className="aspect-video w-full rounded-2xl overflow-hidden relative grayscale opacity-30 group-hover:opacity-70 group-hover:grayscale-0 transition-all duration-1000 border border-white/5">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.6789!2d22.435!3d38.905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDU0JzE4LjAiTiAyMsKwMjYnMDYuMCJF!5e0!3m2!1sen!2sgr!4v1234567890"
                                     width="100%"
@@ -214,148 +186,209 @@ export default function Contact() {
                                     allowFullScreen
                                     loading="lazy"
                                 />
-                                <div className="absolute inset-0 bg-primary/10 mix-blend-color pointer-events-none"></div>
-                                <div className="absolute bottom-4 left-4 bg-background-dark/90 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10 text-[10px] font-mono text-white tracking-widest">
-                                    LOC: LAMIA, HEADQUARTERS
+                                <div className="absolute inset-0 bg-blue-500/10 mix-blend-color pointer-events-none"></div>
+                                <div className="absolute bottom-4 left-4 bg-black/80 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10 text-[10px] font-mono text-white tracking-widest flex items-center gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
+                                    {t.location_text}
                                 </div>
                             </div>
                         </motion.div>
 
-                        <motion.div variants={itemVariants} className="flex gap-4">
-                            {["LINKEDIN", "GITHUB", "X / TWITTER"].map((social, i) => (
+                        {/* Social Matrix */}
+                        <div className="grid grid-cols-3 gap-3">
+                            {t.socials.map((social, i) => (
                                 <motion.a
-                                    key={social}
+                                    key={i}
                                     href="#"
-                                    whileHover={{ y: -5, backgroundColor: "rgba(255,255,255,0.05)" }}
-                                    className="flex-1 py-5 border border-white/5 bg-white/[0.01] rounded-2xl text-center text-[9px] font-mono tracking-[0.3em] text-gray-500 hover:text-white hover:border-white/20 transition-all"
+                                    whileHover={{ y: -3, backgroundColor: "rgba(255,255,255,0.03)" }}
+                                    className="p-4 border border-white/5 bg-white/[0.01] rounded-2xl text-center text-[8px] font-mono tracking-[0.2em] text-gray-700 hover:text-white transition-all uppercase"
                                 >
                                     {social}
                                 </motion.a>
                             ))}
-                        </motion.div>
+                        </div>
                     </div>
 
-                    {/* FORM BLOCK: IMMERSIVE INPUTS */}
+                    {/* RIGHT PANEL: TRANSMISSION PORTAL (Immersive Form) */}
                     <motion.div
-                        variants={itemVariants}
-                        className="lg:col-span-7"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="lg:col-span-7 relative h-full"
                     >
-                        <div className="h-full bg-white/[0.02] backdrop-blur-3xl border border-white/10 rounded-[3rem] p-8 md:p-16 relative flex flex-col shadow-2xl overflow-hidden">
-                            <div className="absolute -left-10 -bottom-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+                        {/* Technical Corners Decoration */}
+                        <div className="absolute -top-1 -left-1 w-12 h-12 border-t-2 border-l-2 border-blue-500/40 rounded-tl-[3rem] z-20 pointer-events-none" />
+                        <div className="absolute -bottom-1 -right-1 w-12 h-12 border-b-2 border-r-2 border-indigo-500/40 rounded-br-[3rem] z-20 pointer-events-none" />
+
+                        <div className="h-full bg-white/[0.02] backdrop-blur-3xl border border-white/10 rounded-[3rem] p-8 md:p-14 lg:p-20 relative flex flex-col shadow-2xl overflow-hidden">
+
+                            <div className="absolute top-0 right-0 p-8">
+                                <Terminal size={20} className="text-white/5" />
+                            </div>
 
                             <form onSubmit={handleSubmit} className="relative z-10 flex flex-col h-full space-y-12">
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                                {/* Row 1: Identity */}
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                                     <div className="space-y-4 group">
-                                        <label className={`text-[10px] font-mono uppercase tracking-[0.4em] transition-all duration-300 ${focusedField === 'name' ? 'text-primary translate-x-1' : 'text-gray-600'}`}>
-                                            Full Name
+                                        <label className={`text-[10px] font-mono uppercase tracking-[0.4em] transition-all duration-300 ${focusedField === 'name' ? 'text-blue-400 translate-x-1' : 'text-gray-600'}`}>
+                                            {t.form.name}
                                         </label>
-                                        <input
-                                            type="text"
-                                            name="name"
-                                            required
-                                            autoComplete="off"
-                                            placeholder="Enter your name"
-                                            onFocus={() => setFocusedField('name')}
-                                            onBlur={() => setFocusedField(null)}
-                                            value={formData.name}
-                                            onChange={handleChange}
-                                            className="w-full bg-transparent border-b border-white/5 py-4 text-xl font-bold text-white placeholder:text-gray-800 focus:outline-none focus:border-primary transition-all pr-10"
-                                        />
+                                        <div className="relative">
+                                            <input
+                                                type="text"
+                                                name="name"
+                                                required
+                                                placeholder={t.form.name_placeholder}
+                                                onFocus={() => setFocusedField('name')}
+                                                onBlur={() => setFocusedField(null)}
+                                                value={formData.name}
+                                                onChange={handleChange}
+                                                className="w-full bg-white/[0.01] border border-white/5 rounded-2xl px-6 py-4 text-lg font-bold text-white placeholder:text-gray-800 focus:outline-none focus:border-blue-500/50 focus:bg-blue-500/[0.01] transition-all"
+                                            />
+                                            {focusedField === 'name' && (
+                                                <motion.div layoutId="input-glow" className="absolute -inset-0.5 bg-blue-500/10 rounded-2xl blur-sm pointer-events-none" />
+                                            )}
+                                        </div>
                                     </div>
 
                                     <div className="space-y-4 group">
-                                        <label className={`text-[10px] font-mono uppercase tracking-[0.4em] transition-all duration-300 ${focusedField === 'email' ? 'text-secondary translate-x-1' : 'text-gray-600'}`}>
-                                            Email Address
+                                        <label className={`text-[10px] font-mono uppercase tracking-[0.4em] transition-all duration-300 ${focusedField === 'email' ? 'text-blue-400 translate-x-1' : 'text-gray-600'}`}>
+                                            {t.form.email}
                                         </label>
-                                        <input
-                                            type="email"
-                                            name="email"
-                                            required
-                                            autoComplete="off"
-                                            placeholder="Enter your email"
-                                            onFocus={() => setFocusedField('email')}
-                                            onBlur={() => setFocusedField(null)}
-                                            value={formData.email}
-                                            onChange={handleChange}
-                                            className="w-full bg-transparent border-b border-white/5 py-4 text-xl font-bold text-white placeholder:text-gray-800 focus:outline-none focus:border-secondary transition-all pr-10"
-                                        />
+                                        <div className="relative">
+                                            <input
+                                                type="email"
+                                                name="email"
+                                                required
+                                                placeholder={t.form.email_placeholder}
+                                                onFocus={() => setFocusedField('email')}
+                                                onBlur={() => setFocusedField(null)}
+                                                value={formData.email}
+                                                onChange={handleChange}
+                                                className="w-full bg-white/[0.01] border border-white/5 rounded-2xl px-6 py-4 text-lg font-bold text-white placeholder:text-gray-800 focus:outline-none focus:border-blue-500/50 focus:bg-blue-500/[0.01] transition-all"
+                                            />
+                                            {focusedField === 'email' && (
+                                                <motion.div layoutId="input-glow" className="absolute -inset-0.5 bg-blue-500/10 rounded-2xl blur-sm pointer-events-none" />
+                                            )}
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div className="space-y-4 group flex-grow">
-                                    <label className={`text-[10px] font-mono uppercase tracking-[0.4em] transition-all duration-300 ${focusedField === 'message' ? 'text-white translate-x-1' : 'text-gray-600'}`}>
-                                        Message
+                                {/* Row 2: Strategy */}
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                                    <div className="space-y-4 group">
+                                        <label className={`text-[10px] font-mono uppercase tracking-[0.4em] transition-all duration-300 ${focusedField === 'sector' ? 'text-indigo-400 translate-x-1' : 'text-gray-600'}`}>
+                                            {t.form.sector}
+                                        </label>
+                                        <select
+                                            name="sector"
+                                            required
+                                            onFocus={() => setFocusedField('sector')}
+                                            onBlur={() => setFocusedField(null)}
+                                            value={formData.sector}
+                                            onChange={handleChange}
+                                            className="w-full bg-white/[0.01] border border-white/5 rounded-2xl px-6 py-4 text-base font-bold text-white focus:outline-none focus:border-indigo-500/50 appearance-none cursor-pointer group-hover:bg-white/[0.03] transition-all"
+                                        >
+                                            <option value="" disabled className="text-gray-500 bg-[#050505]">{t.form.sector_placeholder}</option>
+                                            {t.sectors.map((s, i) => (
+                                                <option key={i} value={s} className="bg-[#0a0a0a] text-gray-300">{s}</option>
+                                            ))}
+                                        </select>
+                                    </div>
+
+                                    <div className="space-y-4 group">
+                                        <label className={`text-[10px] font-mono uppercase tracking-[0.4em] transition-all duration-300 ${focusedField === 'service' ? 'text-indigo-400 translate-x-1' : 'text-gray-600'}`}>
+                                            {t.form.service}
+                                        </label>
+                                        <select
+                                            name="service"
+                                            required
+                                            onFocus={() => setFocusedField('service')}
+                                            onBlur={() => setFocusedField(null)}
+                                            value={formData.service}
+                                            onChange={handleChange}
+                                            className="w-full bg-white/[0.01] border border-white/5 rounded-2xl px-6 py-4 text-base font-bold text-white focus:outline-none focus:border-indigo-500/50 appearance-none cursor-pointer group-hover:bg-white/[0.03] transition-all"
+                                        >
+                                            <option value="" disabled className="text-gray-500 bg-[#050505]">{t.form.service_placeholder}</option>
+                                            {t.services.map((s, i) => (
+                                                <option key={i} value={s} className="bg-[#0a0a0a] text-gray-300">{s}</option>
+                                            ))}
+                                        </select>
+                                    </div>
+                                </div>
+
+                                {/* Row 3: Transmission Content */}
+                                <div className="space-y-4 group">
+                                    <label className={`text-[10px] font-mono uppercase tracking-[0.4em] transition-all duration-300 ${focusedField === 'message' ? 'text-blue-500 translate-x-1' : 'text-gray-600'}`}>
+                                        {t.form.message}
                                     </label>
                                     <textarea
                                         name="message"
                                         required
-                                        rows={6}
-                                        placeholder="Enter your message"
+                                        rows={5}
+                                        placeholder={t.form.message_placeholder}
                                         onFocus={() => setFocusedField('message')}
                                         onBlur={() => setFocusedField(null)}
                                         value={formData.message}
                                         onChange={handleChange}
-                                        className="w-full bg-white/[0.01] border border-white/5 rounded-3xl p-8 text-lg font-medium text-white placeholder:text-gray-800 focus:outline-none focus:border-white/20 transition-all resize-none shadow-inner"
+                                        className="w-full bg-white/[0.01] border border-white/5 rounded-3xl p-8 text-lg font-medium text-white placeholder:text-gray-800 focus:outline-none focus:border-blue-500/30 transition-all resize-none shadow-inner"
                                     />
                                 </div>
 
-                                <button
-                                    type="submit"
-                                    disabled={status !== 'idle'}
-                                    className="group relative w-full overflow-hidden rounded-[2rem] py-8 bg-white text-black font-black text-xs tracking-[0.5em] uppercase transition-all hover:scale-[1.01] active:scale-[0.98] disabled:opacity-50"
-                                >
-                                    <motion.div
-                                        className="relative z-10 flex items-center justify-center gap-6"
-                                        animate={status === 'loading' ? { opacity: [1, 0.5, 1], transition: { repeat: Infinity } } : {}}
+                                {/* Submission & Disclaimer */}
+                                <div className="pt-4">
+                                    <button
+                                        type="submit"
+                                        disabled={status !== 'idle'}
+                                        className="group relative w-full overflow-hidden rounded-full py-8 bg-blue-500 text-white font-black text-[10px] tracking-[0.4em] uppercase transition-all hover:scale-[1.01] active:scale-[0.98] disabled:opacity-50 mb-10 shadow-2xl shadow-blue-500/20"
                                     >
-                                        <AnimatePresence mode="wait">
-                                            {status === 'idle' && (
-                                                <motion.div key="idle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex items-center gap-4">
-                                                    INITIALIZE TRANSMISSION
-                                                    <svg className="w-4 h-4 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                                    </svg>
-                                                </motion.div>
-                                            )}
-                                            {status === 'loading' && (
-                                                <motion.div key="loading" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex items-center gap-4">
-                                                    <div className="w-1.5 h-1.5 bg-black rounded-full animate-bounce"></div>
-                                                    TRANSMITTING SIGNAL...
-                                                </motion.div>
-                                            )}
-                                            {status === 'success' && (
-                                                <motion.div key="success" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="flex items-center gap-4 text-green-600">
-                                                    SIGNAL DELIVERED
-                                                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                                                    </svg>
-                                                </motion.div>
-                                            )}
-                                            {status === 'error' && (
-                                                <motion.div key="error" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="flex items-center gap-4 text-red-600">
-                                                    RETRY TRANSMISSION
-                                                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
-                                                    </svg>
-                                                </motion.div>
-                                            )}
-                                        </AnimatePresence>
-                                    </motion.div>
+                                        <div className="relative z-10 flex items-center justify-center gap-4">
+                                            <AnimatePresence mode="wait">
+                                                {status === 'idle' && (
+                                                    <motion.div key="idle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex items-center gap-3">
+                                                        {t.form.submit_idle}
+                                                        <Send size={14} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                                    </motion.div>
+                                                )}
+                                                {status === 'loading' && (
+                                                    <motion.div key="loading" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex items-center gap-4">
+                                                        <Activity className="animate-pulse" size={16} />
+                                                        {t.form.submit_loading}
+                                                    </motion.div>
+                                                )}
+                                                {status === 'success' && (
+                                                    <motion.div key="success" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="flex items-center gap-3 text-white">
+                                                        <ShieldCheck size={20} />
+                                                        {t.form.submit_success}
+                                                    </motion.div>
+                                                )}
+                                            </AnimatePresence>
+                                        </div>
 
-                                    {/* Laser Scan (Loading Animation) */}
-                                    {status === 'loading' && (
+                                        {/* Scanning Line Animation */}
                                         <motion.div
-                                            initial={{ x: "-100%" }}
-                                            animate={{ x: "100%" }}
-                                            transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
-                                            className="absolute inset-0 bg-primary/20"
+                                            initial={{ top: "-100%" }}
+                                            animate={{ top: "100%" }}
+                                            transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                                            className="absolute left-0 w-full h-[1px] bg-white opacity-20 pointer-events-none"
                                         />
-                                    )}
-                                </button>
+                                    </button>
+
+                                    <div className="px-6 md:px-12">
+                                        <div className="flex items-center gap-3 mb-4 opacity-30 justify-center">
+                                            <div className="h-px flex-grow bg-white/20" />
+                                            <Lock size={12} className="text-gray-500" />
+                                            <div className="h-px flex-grow bg-white/20" />
+                                        </div>
+                                        <p className="text-gray-600 text-xs text-center font-medium italic leading-relaxed">
+                                            {t.disclaimer}
+                                        </p>
+                                    </div>
+                                </div>
                             </form>
                         </div>
                     </motion.div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

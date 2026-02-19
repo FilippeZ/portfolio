@@ -3,180 +3,30 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Shield, Gavel, FileCheck, Landmark, ChartBar, ShieldAlert, Activity, Fingerprint, Building2, ArrowLeftRight, Zap, HardHat, Leaf, Briefcase, Factory, Satellite, GraduationCap, Plug, ClipboardCheck } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
+import { locales } from "@/data/locales";
 
 export default function Authority() {
-    const groups = [
-        {
-            title: "I. Institutional Foundation & Academic Authority",
-            description: "",
-            items: [
-                {
-                    title: "General Professional License",
-                    role: "State-Authorized Technical Guarantor",
-                    legal: "PD 99/2018 Art. 11 §1, Art. 2 §α,β",
-                    desc: "Mandated engineer for systems 'critical to protection of life, health, and property'. Rights for Analysis, Design, and Supervision.",
-                    icon: Shield,
-                },
-                {
-                    title: "Academic Mentor",
-                    role: "Research Authority",
-                    legal: "PD 99/2018 Art. 2 §κβ",
-                    desc: "Formal right to Education, Teaching, and Research in Technology and Engineering institutions.",
-                    icon: GraduationCap,
-                }
-            ]
-        },
-        {
-            title: "II. Regulatory Compliance & Quality",
-            description: "Priority on compliance and user safety.",
-            items: [
-                {
-                    title: "MDR & SaMD Authority",
-                    role: "Regulatory Guardian",
-                    legal: "PD 99/2018 Art. 11 §2ιζ, 2κ, Art. 2 §ιγ",
-                    desc: "Development of biomedical systems and medical informatics. Quality Assurance and CE Marking compliance.",
-                    icon: FileCheck,
-                },
-                {
-                    title: "Quality Assurance Architect",
-                    role: "ISO Systems Lead",
-                    legal: "PD 99/2018 Art. 2 §ιδ",
-                    desc: "Design, installation, certification, and inspection of Quality Management Systems (ISO 9001, 27001).",
-                    icon: ClipboardCheck,
-                },
-                {
-                    title: "Biomedical Systems Lead",
-                    role: "Clinical Systems Auditor",
-                    legal: "PD 99/2018 Art. 11 §2ιθ, 2κ",
-                    desc: "Development and installation studies for biomedical devices, systems, and medical informatics.",
-                    icon: Activity,
-                },
-                {
-                    title: "Safety Technician (Cat. A)",
-                    role: "Life Safety Guarantor",
-                    legal: "PD 99/2018 Art. 2 §ιστ, ιζ",
-                    desc: "Safety Technician services. Occupational Risk Assessment and Health & Safety Plan (SAY/FAY) drafting.",
-                    icon: ShieldAlert,
-                }
-            ]
-        },
-        {
-            title: "III. Digital Governance & Trust",
-            description: "Data shielding and legal documentation.",
-            items: [
-                {
-                    title: "Cyber-Forensics & GDPR",
-                    role: "Legal Shield",
-                    legal: "PD 99/2018 Art. 11 §1στ, 2ια",
-                    desc: "Information security, data protection, privacy, and intellectual property rights studies.",
-                    icon: Fingerprint,
-                },
-                {
-                    title: "Judicial Expert Witness",
-                    role: "Forensic Authority",
-                    legal: "PD 99/2018 Art. 2 §ιθ",
-                    desc: "Explicit right to Technical Expertise, Arbitration, and Mediation for judicial proceedings and liability disputes.",
-                    icon: Gavel,
-                },
-                {
-                    title: "Portability Certification",
-                    role: "Interoperability Validator",
-                    legal: "PD 99/2018 Art. 11 §2ιβ, 2ιγ",
-                    desc: "Interoperability and connectivity studies. Certification of software portability specifications and SLAs.",
-                    icon: ArrowLeftRight,
-                }
-            ]
-        },
-        {
-            title: "IV. Strategy & Financial Management",
-            description: "Bridge between engineering and institutional decisions.",
-            items: [
-                {
-                    title: "Investment Evaluator",
-                    role: "Financial Gatekeeper",
-                    legal: "PD 99/2018 Art. 2 §κγ",
-                    desc: "Management, monitoring, and evaluation of development programs and projects (ESPA/Horizon funding).",
-                    icon: ChartBar,
-                },
-                {
-                    title: "Public Works Lead",
-                    role: "National Tender Authority",
-                    legal: "PD 99/2018 Art. 2 §γ, Art. 11 §2ζ",
-                    desc: "Preparation of Tender Files and Technical Specifications for National Telecommunications & Network projects.",
-                    icon: Briefcase,
-                },
-                {
-                    title: "Intangible Assets Valuer",
-                    role: "Economic Certifier",
-                    legal: "PD 99/2018 Art. 11 §2γ, Art. 2 §ι",
-                    desc: "Management and valuation of technical facilities and equipment. Preparation of techno-economic studies.",
-                    icon: Landmark,
-                }
-            ]
-        },
-        {
-            title: "V. Holistic Engineering & Infrastructure",
-            description: "Proof of flexibility in complex systems.",
-            items: [
-                {
-                    title: "Industrial Commander",
-                    role: "Production Strategist",
-                    legal: "PD 99/2018 Art. 2 §ζ, Art. 11 §2δ",
-                    desc: "Production Management. Studies for Industrial Automation, Robotics, and Control Systems.",
-                    icon: Factory,
-                },
-                {
-                    title: "Smart Infrastructure",
-                    role: "Urban Architect",
-                    legal: "PD 99/2018 Art. 11 §2θ, 2κδ",
-                    desc: "Studies for Intelligent Transport Systems, Smart Infrastructure, and Intelligent Building Management.",
-                    icon: Building2,
-                },
-                {
-                    title: "Urban Legality & BMS",
-                    role: "Building Inspector",
-                    legal: "PD 99/2018 Art. 2 §δ, Art. 11 §2ε",
-                    desc: "Inspection of technical works. Studies for building service networks and Building Management Systems (BMS).",
-                    icon: HardHat,
-                },
-                {
-                    title: "Low Voltage Authority",
-                    role: "Electrical Inspector",
-                    legal: "PD 99/2018 Art. 11 §2δ, 2στ",
-                    desc: "Studies for Low Voltage Electrical Installations and Smart Grids / Intelligent Electrical Networks.",
-                    icon: Plug,
-                },
-                {
-                    title: "Environmental Impact",
-                    role: "Eco-Strategist",
-                    legal: "PD 99/2018 Art. 11 §2κστ",
-                    desc: "Development of Environmental Studies and Environmental Impact Assessments (EIA).",
-                    icon: Leaf,
-                },
-                {
-                    title: "Energy Guarantor",
-                    role: "Sustainability Auditor",
-                    legal: "PD 99/2018 Art. 11 §2κα, 2κβ",
-                    desc: "Energy Audits/Inspections and Energy Performance studies for industrial and building systems.",
-                    icon: Zap,
-                }
-            ]
-        }
+    const { language } = useLanguage();
+    const t = locales[language].authority;
+
+    const groupIcons = [
+        [Shield, GraduationCap],
+        [FileCheck, ClipboardCheck, Activity, ShieldAlert],
+        [Fingerprint, Gavel, ArrowLeftRight],
+        [ChartBar, Briefcase, Landmark],
+        [Factory, Building2, HardHat, Plug, Leaf, Zap]
     ];
 
-    const registries = [
-        "Technical Chamber (TEE)",
-        "Registry of Court Experts",
-        "EUDAMED (MDR - PRRC)",
-        "Certified Evaluators (EMPA)",
-        "Safety Technician (Cat. A)",
-        "Building & Energy Inspectors",
-        "Public Works (MH.M.D. Cat. 9/27)",
-        "Valuers of Intangible Assets",
-        "EU Transparency Register",
-        "IRCA Lead Auditor",
-        "EPSO CAST Permanent (FG IV)",
-    ];
+    const groups = t.groups.map((group, groupIndex) => ({
+        ...group,
+        items: group.items.map((item, itemIndex) => ({
+            ...item,
+            icon: groupIcons[groupIndex]?.[itemIndex] || Shield // Fallback icon
+        }))
+    }));
+
+
 
     const container = {
         hidden: { opacity: 0 },
@@ -205,12 +55,10 @@ export default function Authority() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h2 className="text-sm font-mono text-blue-500 uppercase tracking-[0.3em] mb-4">Institutional Antigravity</h2>
-                        <h3 className="text-3xl md:text-5xl font-black text-white mb-6">State-Authorized <br /> <span className="text-gray-500">Technical Guarantor.</span></h3>
+                        <h2 className="text-sm font-mono text-blue-500 uppercase tracking-[0.3em] mb-4">{t.label}</h2>
+                        <h3 className="text-3xl md:text-5xl font-black text-white mb-6 uppercase">{t.title}</h3>
                         <p className="max-w-3xl mx-auto text-gray-400 text-lg font-light leading-relaxed">
-                            As a Chartered Engineer (TEE), my signature is not a technical formality; it is a legal instrument of accountability.
-                            I institutionally guarantee the integrity of systems that protect human life and digital assets,
-                            transforming code into a certified Technical Work under the authority of the State.
+                            {t.description}
                         </p>
                     </motion.div>
                 </div>
@@ -258,7 +106,7 @@ export default function Authority() {
                                         <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-grow">{item.desc}</p>
                                         <div className="mt-auto pt-4 border-t border-white/5 w-full">
                                             <p className="text-[10px] text-gray-600 font-mono group-hover:text-blue-400/70 transition-colors truncate">
-                                                Legal Basis: {item.legal}
+                                                {t.legal_basis}: {item.legal}
                                             </p>
                                         </div>
                                     </motion.div>
@@ -280,7 +128,7 @@ export default function Authority() {
                     </div>
 
                     <h4 className="text-center text-sm font-mono text-blue-500/80 uppercase tracking-widest mb-10">
-                        Official State Registries & Certifications
+                        {t.registries_title}
                     </h4>
 
                     <motion.div
@@ -290,7 +138,7 @@ export default function Authority() {
                         viewport={{ once: true }}
                         className="flex flex-wrap justify-center gap-4"
                     >
-                        {registries.map((registry, index) => (
+                        {t.registries.map((registry, index) => (
                             <motion.div
                                 key={index}
                                 variants={itemAnimation}

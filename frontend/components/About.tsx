@@ -2,10 +2,13 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { skills, experience, education, softSkills } from "../data/content";
 import { Briefcase, Award, Wrench, ChevronRight, Activity, Zap, Shield, Globe, Lock, Cpu, Server, Radio, Users, GraduationCap } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
+import { locales } from "@/data/locales";
 
 export default function About() {
+    const { language } = useLanguage();
+    const t = locales[language].about;
     const [activeTab, setActiveTab] = useState<"skills" | "experience" | "education">("skills");
 
     const tabVariants = {
@@ -161,6 +164,12 @@ export default function About() {
         }
     ];
 
+    const localizedArsenal = technicalArsenal.map((cat, i) => ({
+        ...cat,
+        category: t.technical_categories[i]?.category || cat.category,
+        focus: t.technical_categories[i]?.focus || cat.focus
+    }));
+
     return (
         <section id="about" className="py-24 lg:py-32 bg-[#050505] text-white relative overflow-hidden">
             {/* Background Atmosphere */}
@@ -179,18 +188,18 @@ export default function About() {
                     >
                         <span className="flex items-center gap-2 text-blue-500 font-mono text-xs uppercase tracking-[0.2em] mb-4">
                             <span className="w-8 h-[1px] bg-blue-500"></span>
-                            My Professional Journey
+                            {t.subtitle}
                         </span>
                         <h2 className="text-4xl lg:text-5xl font-black mb-8 leading-tight">
-                            Beyond the<br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Code.</span>
+                            {t.title_prefix}<br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">{t.title_gradient}</span>
                         </h2>
 
                         <nav className="flex flex-col gap-3 w-full max-w-sm">
                             {[
-                                { id: "skills", label: "Skills & Tools", icon: Wrench, desc: "Technical Arsenal" },
-                                { id: "experience", label: "Certifications & Events", icon: Award, desc: "Continuous Learning" },
-                                { id: "education", label: "Education & Experience", icon: Briefcase, desc: "Professional Background" },
+                                { id: "skills", label: t.tabs.skills.label, icon: Wrench, desc: t.tabs.skills.desc },
+                                { id: "experience", label: t.tabs.experience.label, icon: Award, desc: t.tabs.experience.desc },
+                                { id: "education", label: t.tabs.education.label, icon: Briefcase, desc: t.tabs.education.desc },
                             ].map((tab) => (
                                 <button
                                     key={tab.id}
@@ -220,7 +229,7 @@ export default function About() {
                         {/* Decoration */}
                         <div className="mt-12 p-6 rounded-2xl bg-gradient-to-br from-white/5 to-transparent border border-white/5 backdrop-blur-sm hidden lg:block">
                             <p className="text-gray-400 text-sm leading-relaxed italic">
-                                "Obsessed with quality, driven by innovation, and grounded in engineering principles."
+                                &quot;{t.quote}&quot;
                             </p>
                         </div>
                     </motion.div>
@@ -242,15 +251,15 @@ export default function About() {
                                 <div className="space-y-12">
                                     <div className="flex items-center justify-between mb-8 border-b border-white/10 pb-6">
                                         <div>
-                                            <h3 className="text-2xl font-bold text-white">Technical Arsenal</h3>
-                                            <p className="text-gray-400 text-sm mt-1">Tools forming my digital craft.</p>
+                                            <h3 className="text-2xl font-bold text-white">{t.technical_arsenal.title}</h3>
+                                            <p className="text-gray-400 text-sm mt-1">{t.technical_arsenal.subtitle}</p>
                                         </div>
                                         <Wrench className="text-blue-500 opacity-20" size={48} />
                                     </div>
 
                                     {/* Categories Animation Wrapper */}
                                     <div className="space-y-12">
-                                        {technicalArsenal.map((category, i) => (
+                                        {localizedArsenal.map((category, i) => (
                                             <motion.div
                                                 key={i}
                                                 initial={{ opacity: 0, y: 30 }}
@@ -305,10 +314,10 @@ export default function About() {
                                     <div className="mt-20 pt-10 border-t border-white/10">
                                         <h4 className="flex items-center gap-3 text-lg font-bold text-white mb-8">
                                             <span className="w-8 h-[2px] bg-blue-500"></span>
-                                            Soft Skills & Methodologies
+                                            {t.soft_skills.title}
                                         </h4>
                                         <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-3 pl-11">
-                                            {softSkills.map((skill, i) => (
+                                            {t.soft_skills_list.map((skill: any, i: number) => (
                                                 <motion.div
                                                     key={skill.name}
                                                     initial={{ opacity: 0, scale: 0.9 }}
@@ -338,8 +347,8 @@ export default function About() {
                                 <div className="space-y-8">
                                     <div className="flex items-center justify-between mb-8 border-b border-white/10 pb-6">
                                         <div>
-                                            <h3 className="text-2xl font-bold text-white">Certifications & Events</h3>
-                                            <p className="text-gray-400 text-sm mt-1">Continuous professional development milestones.</p>
+                                            <h3 className="text-2xl font-bold text-white">{t.certifications.title}</h3>
+                                            <p className="text-gray-400 text-sm mt-1">{t.certifications.subtitle}</p>
                                         </div>
                                         <Award className="text-blue-500 opacity-20" size={48} />
                                     </div>
@@ -348,7 +357,7 @@ export default function About() {
                                         {/* Timeline Line */}
                                         <div className="absolute left-[3px] md:left-[50%] top-0 bottom-0 w-[1px] bg-gradient-to-b from-blue-500 via-white/10 to-transparent"></div>
 
-                                        {experience.map((item, index) => (
+                                        {t.certifications_list.map((item: any, index: number) => (
                                             <motion.div
                                                 key={index}
                                                 initial={{ opacity: 0, y: 30 }}
@@ -378,8 +387,8 @@ export default function About() {
                                                                     alt={item.title}
                                                                     fill
                                                                     className={`group-hover:scale-105 transition-transform duration-700 ${["Certification", "Certificate", "Credential", "Ambassador", "Lead Engineer", "Policy Advisor", "Internship"].some(t => item.type.includes(t))
-                                                                            ? "object-contain p-4"
-                                                                            : "object-cover object-top"
+                                                                        ? "object-contain p-4"
+                                                                        : "object-cover object-top"
                                                                         }`}
                                                                 />
                                                             </div>
@@ -407,14 +416,14 @@ export default function About() {
                                     <div>
                                         <div className="flex items-center justify-between mb-8 border-b border-white/10 pb-6">
                                             <div>
-                                                <h3 className="text-2xl font-bold text-white">Professional Experience</h3>
-                                                <p className="text-gray-400 text-sm mt-1">Professional background and key roles.</p>
+                                                <h3 className="text-2xl font-bold text-white">{t.education_experience.title_exp}</h3>
+                                                <p className="text-gray-400 text-sm mt-1">{t.education_experience.subtitle_exp}</p>
                                             </div>
                                             <Briefcase className="text-blue-500 opacity-20" size={48} />
                                         </div>
 
                                         <div className="grid gap-6">
-                                            {education.slice(2).map((item, index) => (
+                                            {t.experience_list.map((item: any, index: number) => (
                                                 <motion.div
                                                     key={index}
                                                     initial={{ opacity: 0, x: 20 }}
@@ -454,14 +463,14 @@ export default function About() {
                                     <div>
                                         <div className="flex items-center justify-between mb-8 border-b border-white/10 pb-6">
                                             <div>
-                                                <h3 className="text-2xl font-bold text-white">Education</h3>
-                                                <p className="text-gray-400 text-sm mt-1">Academic foundation and qualifications.</p>
+                                                <h3 className="text-2xl font-bold text-white">{t.education_experience.title_edu}</h3>
+                                                <p className="text-gray-400 text-sm mt-1">{t.education_experience.subtitle_edu}</p>
                                             </div>
                                             <GraduationCap className="text-blue-500 opacity-20" size={48} />
                                         </div>
 
                                         <div className="grid gap-6">
-                                            {education.slice(0, 2).map((item, index) => (
+                                            {t.education_list.map((item: any, index: number) => (
                                                 <motion.div
                                                     key={index}
                                                     initial={{ opacity: 0, x: 20 }}

@@ -1,8 +1,10 @@
 "use client";
-import React from "react";
+import React, { useMemo } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { testimonials } from "../data/content";
+import { useLanguage } from "../context/LanguageContext";
+import { locales } from "../data/locales";
 
 // Swiper imports
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,6 +16,21 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export default function Testimonials() {
+    const { language } = useLanguage();
+    const t = locales[language].testimonials;
+
+    // Merge content with locales
+    const mergedTestimonials = useMemo(() => {
+        return testimonials.map((testimonial, index) => {
+            const localized = t.list[index];
+            return {
+                ...testimonial,
+                role: localized?.role || testimonial.role,
+                content: localized?.content || testimonial.content
+            };
+        });
+    }, [language, t.list]);
+
     return (
         <section id="testimonials" className="py-16 md:py-24 bg-background-dark relative z-10 overflow-hidden">
             {/* Background Decorative Elements */}
@@ -32,10 +49,10 @@ export default function Testimonials() {
                     className="text-center mb-20"
                 >
                     <span className="text-primary font-mono text-sm uppercase tracking-widest mb-3 block">
-                        Endorsements
+                        {t.subtitle}
                     </span>
                     <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-                        Trusted by Leaders & Innovators
+                        {t.title}
                     </h2>
                     <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
                 </motion.div>
@@ -60,7 +77,7 @@ export default function Testimonials() {
                         loop={true}
                         className="testimonials-swiper py-4 md:py-10"
                     >
-                        {testimonials.map((testimonial, index) => (
+                        {mergedTestimonials.map((testimonial, index) => (
                             <SwiperSlide key={index} className="h-auto">
                                 <div className="bg-surface-light/5 backdrop-blur-xl border border-white/10 p-6 md:p-8 rounded-2xl md:rounded-3xl relative h-full flex flex-col hover:border-primary/30 transition-all duration-300 group hover:md:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10">
                                     {/* Verified Badge */}

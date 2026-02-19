@@ -9,6 +9,7 @@ export const projects = [
         client: "Emergency Departments",
         tools: ["ISO 14971", "IEC 62304", "LangGraph", "XAI", "MDR Compliance", "Agentic AI", "Clinical Risk", "Audit Trails"],
         link: "https://zenithdx-data.com",
+        caseStudyUrl: "/case-studies/zenithdx",
         gallery: ["/resources/img/portfolios/web/1.jpg", "/resources/img/portfolios/zenith/z1.jpg", "/resources/img/portfolios/zenith/z2.jpg"],
         image: "/resources/img/portfolios/web/1.jpg"
     },
@@ -99,6 +100,7 @@ export const projects = [
         date: "2025",
         tools: ["LangGraph", "Llama 3.2", "NVIDIA DGX", "XAI", "ReAct", "RAG", "HITL"],
         link: "https://zenithdx.ai",
+        caseStudyUrl: "/case-studies/zenithdx",
         gallery: ["/resources/img/portfolios/logo/1.jpg"],
         image: "/resources/img/portfolios/logo/1.jpg"
     },
@@ -143,6 +145,7 @@ export const projects = [
         date: "2025",
         tools: ["Jira", "Agile", "MDR Strategy", "XAI", "Stakeholder Management", "Acceptance Score"],
         link: "https://zenithdx-pm.com",
+        caseStudyUrl: "/case-studies/zenithdx",
         gallery: ["/resources/img/portfolios/app/2.jpeg"],
         image: "/resources/img/portfolios/app/2.jpeg"
     },
@@ -264,6 +267,7 @@ export const projects = [
         date: "2025",
         tools: ["ISO 14971", "IEC 62304", "Compliance Roadmap", "Governance-by-Design"],
         link: "https://zenithdx-gov.com",
+        caseStudyUrl: "/case-studies/zenithdx",
         gallery: ["/resources/img/portfolios/icon/9.jpg"],
         image: "/resources/img/portfolios/icon/9.jpg"
     },
@@ -286,6 +290,7 @@ export const projects = [
         date: "2024",
         tools: ["Azure Arc", "NVIDIA DGX", "Hybrid Cloud", "Performance Efficiency"],
         link: "https://zencloud.ai",
+        caseStudyUrl: "/case-studies/zenithdx",
         gallery: ["/resources/img/portfolios/card/15.jpg"],
         image: "/resources/img/portfolios/card/15.jpg"
     },

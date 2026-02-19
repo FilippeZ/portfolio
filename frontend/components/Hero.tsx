@@ -4,9 +4,14 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform, useSpring, useMotionValue } from "framer-motion";
-import { Download, ArrowRight, ExternalLink, ShieldCheck, Clock } from "lucide-react";
+import { Download, ArrowRight, ExternalLink, ShieldCheck, Clock, GraduationCap, Award, CheckCircle } from "lucide-react";
+
+import { useLanguage } from "@/context/LanguageContext";
+import { locales } from "@/data/locales";
 
 export default function Hero() {
+    const { language } = useLanguage();
+    const t = locales[language].hero;
     const containerRef = useRef<HTMLDivElement>(null);
     const { scrollY } = useScroll();
 
@@ -34,6 +39,16 @@ export default function Hero() {
 
     const imageX = useTransform(springX, [-0.5, 0.5], [-20, 20]);
     const imageY = useTransform(springY, [-0.5, 0.5], [-20, 20]);
+
+    const renderTextWithHighlights = (text: string) => {
+        const parts = text.split("##");
+        return parts.map((part, index) => {
+            if (index % 2 === 1) {
+                return <span key={index} className="text-white font-medium">{part}</span>;
+            }
+            return part;
+        });
+    };
 
     return (
         <section
@@ -63,7 +78,7 @@ export default function Hero() {
                     className="absolute inset-0 flex items-center justify-center pointer-events-none z-0"
                 >
                     <h2 className="text-[18vw] font-black text-white/[0.03] whitespace-nowrap leading-none select-none">
-                        ENGINEERED AI
+                        {t.background_text}
                     </h2>
                 </motion.div>
 
@@ -80,7 +95,7 @@ export default function Hero() {
                             transition={{ duration: 0.1 }}
                             className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter leading-[1.0] text-white"
                         >
-                            {["THE", "SIGN-OFF", "TECHNICAL", "AUTHORITY"].map((word, i) => (
+                            {t.status.split(" ").map((word, i, arr) => (
                                 <span key={i} className="inline-block overflow-hidden h-[1.15em] mr-[0.2em] last:mr-0">
                                     <motion.span
                                         initial={{ y: "100%" }}
@@ -92,7 +107,7 @@ export default function Hero() {
                                         }}
                                         className="block"
                                     >
-                                        {word === "AUTHORITY" ? (
+                                        {i === arr.length - 1 ? (
                                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">
                                                 {word}
                                             </span>
@@ -114,19 +129,19 @@ export default function Hero() {
                     >
                         <div className="space-y-4">
                             <h2 className="text-2xl md:text-3xl font-light text-gray-300">
-                                Filippos P. Zygouris <span className="text-blue-500 font-mono text-xl block sm:inline mt-2 sm:mt-0">(M.Eng. | Licensed TEE Engineer)</span>
+                                {t.role_name} <span className="text-blue-500 font-mono text-xl block sm:inline mt-2 sm:mt-0">{t.role_title}</span>
                             </h2>
                             <p className="text-xl md:text-2xl font-medium text-white italic border-l-4 border-blue-500 pl-6 py-2">
-                                "My signature transforms code into a certified Technical Work. I institutionally guarantee the safety, quality, and compliance of technology with the law."
+                                &quot;{t.quote}&quot;
                             </p>
                         </div>
 
                         <div className="space-y-4 text-gray-400 leading-relaxed font-light">
                             <p className="text-lg md:text-xl">
-                                In high-risk markets, innovation without documentation is just a risk. Companies need <span className="text-white font-medium">Generalist Engineers</span> who get their hands dirty with development (Engineering), but take full responsibility for Quality Assurance (QA), Regulatory Affairs (RA), and Policy.
+                                {renderTextWithHighlights(t.description_1)}
                             </p>
                             <p className="text-lg md:text-xl border-l-2 border-white/10 pl-6">
-                                I bridge that gap. As a <span className="text-white font-medium">Chartered Engineer</span>, I don't just verify code; I ensure the product is technically sound, quality-tested, and fully compliant with the strictest frameworks (MDR/FDA, EU AI Act, GDPR). My mission is to transform regulatory requirements into a <span className="text-blue-400 font-medium">technical advantage</span>, always prioritizing user safety.
+                                {renderTextWithHighlights(t.description_2)}
                             </p>
                         </div>
                     </motion.div>
@@ -143,14 +158,14 @@ export default function Hero() {
                             className="group relative px-8 py-4 bg-white text-black font-bold text-sm tracking-widest uppercase rounded hover:scale-105 transition-transform flex items-center gap-2"
                         >
                             <span className="relative z-10 flex items-center gap-2">
-                                Regulatory Consultation <ShieldCheck size={18} />
+                                {t.cta_primary} <ShieldCheck size={18} />
                             </span>
                         </Link>
                         <Link
                             href="#portfolio"
                             className="group px-8 py-4 border border-white/20 text-white font-bold text-sm tracking-widest uppercase rounded hover:bg-white/5 transition-all flex items-center gap-2"
                         >
-                            Technical Authority <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                            {t.cta_secondary} <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                         </Link>
                     </motion.div>
 
@@ -159,21 +174,28 @@ export default function Hero() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1, delay: 1 }}
-                        className="flex items-center gap-10 mt-6 pt-8 border-t border-white/5 w-full max-w-md"
+                        className="flex flex-wrap items-center gap-x-10 gap-y-6 mt-6 pt-8 border-t border-white/5 w-full"
                     >
                         <div className="flex flex-col gap-1">
                             <div className="flex items-center gap-2 text-white">
-                                <Clock size={16} className="text-blue-500" />
-                                <span className="text-2xl font-bold">5+</span>
+                                <GraduationCap size={16} className="text-blue-500" />
+                                <span className="text-xl font-bold">{t.stats_level7}</span>
                             </div>
-                            <span className="text-[10px] text-gray-500 uppercase tracking-wider">Years Exp</span>
+                            <span className="text-[10px] text-gray-500 uppercase tracking-wider">{t.stats_integrated}</span>
                         </div>
                         <div className="flex flex-col gap-1">
                             <div className="flex items-center gap-2 text-white">
-                                <ShieldCheck size={16} className="text-blue-500" />
-                                <span className="text-2xl font-bold">100%</span>
+                                <Award size={16} className="text-blue-500" />
+                                <span className="text-xl font-bold">{t.stats_tee}</span>
                             </div>
-                            <span className="text-[10px] text-gray-500 uppercase tracking-wider">Compliance</span>
+                            <span className="text-[10px] text-gray-500 uppercase tracking-wider">{t.stats_licensed}</span>
+                        </div>
+                        <div className="flex flex-col gap-1">
+                            <div className="flex items-center gap-2 text-white">
+                                <CheckCircle size={16} className="text-blue-500" />
+                                <span className="text-xl font-bold">100%</span>
+                            </div>
+                            <span className="text-[10px] text-gray-500 uppercase tracking-wider">{t.stats_readiness}</span>
                         </div>
                     </motion.div>
                 </div>
@@ -221,7 +243,7 @@ export default function Hero() {
                 transition={{ delay: 1.5, duration: 1 }}
                 className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500"
             >
-                <span className="text-[10px] uppercase tracking-[0.2em] font-mono">Scroll to explore</span>
+                <span className="text-[10px] uppercase tracking-[0.2em] font-mono">{t.scroll_text}</span>
                 <div className="w-px h-12 bg-gradient-to-b from-blue-500 to-transparent"></div>
             </motion.div>
         </section>

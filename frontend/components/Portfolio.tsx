@@ -1,26 +1,63 @@
 "use client";
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { projects } from "../data/content";
 import { ExternalLink, ArrowRight, X, Maximize2 } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext";
+import { locales } from "../data/locales";
 
 export default function Portfolio() {
-    const [activeFilter, setActiveFilter] = useState("All Projects");
-    const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
+    const { language } = useLanguage();
+    const t = locales[language].portfolio;
+
+    // Merge content with locales
+    const mergedProjects = useMemo(() => {
+        return projects.map((p) => {
+            // @ts-ignore - Index signature for projects maps to specific keys in locales
+            const localized = t.projects[p.id];
+            return {
+                ...p,
+                title: localized?.title || p.title,
+                category: localized?.category || p.category,
+                brief: localized?.brief || p.brief
+            };
+        });
+    }, [language, t.projects]);
+
+    const [activeFilter, setActiveFilter] = useState(t.filter_all);
+    const [selectedProject, setSelectedProject] = useState<typeof mergedProjects[0] | null>(null);
+
+    // Reset filter when language changes or initialize correctly
+    useEffect(() => {
+        setActiveFilter(t.filter_all);
+    }, [language, t.filter_all]);
 
     // Get unique categories
     const categories = useMemo(() => {
-        const cats = new Set(projects.map((p) => p.category));
-        return ["All Projects", ...Array.from(cats)];
-    }, []);
+        const cats = new Set(mergedProjects.map((p) => p.category));
+        return [t.filter_all, ...Array.from(cats)];
+    }, [mergedProjects, t.filter_all]);
 
     // Filter projects
     const filteredProjects = useMemo(() => {
-        if (activeFilter === "All Projects") return projects;
-        return projects.filter((p) => p.category === activeFilter);
-    }, [activeFilter]);
+        if (activeFilter === t.filter_all) return mergedProjects;
+        return mergedProjects.filter((p) => p.category === activeFilter);
+    }, [activeFilter, mergedProjects, t.filter_all]);
+
+    // Deep Linking Logic
+    const searchParams = useSearchParams();
+    useEffect(() => {
+        const projectId = searchParams.get("project");
+        if (projectId) {
+            const project = mergedProjects.find(p => p.id === projectId);
+            if (project) {
+                setSelectedProject(project);
+            }
+        }
+    }, [searchParams, mergedProjects]);
 
     return (
         <section id="portfolio" className="py-24 lg:py-32 bg-[#050505] relative overflow-hidden">
@@ -39,12 +76,12 @@ export default function Portfolio() {
                     <div>
                         <span className="text-blue-500 font-mono text-xs uppercase tracking-[0.2em] mb-4 block flex items-center gap-2">
                             <span className="w-8 h-[1px] bg-blue-500"></span>
-                            Selected Works
+                            {t.subtitle}
                         </span>
                         <h2 className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tight">
-                            Featured <br />
+                            {t.title_prefix} <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-400 to-gray-600">
-                                Projects.
+                                {t.title_highlight}
                             </span>
                         </h2>
                     </div>
@@ -56,8 +93,8 @@ export default function Portfolio() {
                                 key={category}
                                 onClick={() => setActiveFilter(category)}
                                 className={`px-5 py-2.5 rounded-full text-xs font-mono uppercase tracking-wider transition-all duration-300 border backdrop-blur-sm ${activeFilter === category
-                                        ? "bg-blue-600/10 border-blue-500 text-blue-400 shadow-[0_0_20px_rgba(37,99,235,0.2)]"
-                                        : "bg-white/5 border-white/5 text-gray-400 hover:text-white hover:bg-white/10 hover:border-white/10"
+                                    ? "bg-blue-600/10 border-blue-500 text-blue-400 shadow-[0_0_20px_rgba(37,99,235,0.2)]"
+                                    : "bg-white/5 border-white/5 text-gray-400 hover:text-white hover:bg-white/10 hover:border-white/10"
                                     }`}
                             >
                                 {category}
@@ -228,13 +265,17 @@ export default function Portfolio() {
                                     </div>
 
                                     <div className="flex flex-col sm:flex-row gap-4 mt-12 pt-8 border-t border-white/5">
-                                        <Link
-                                            href={`/projects/${selectedProject.id}`}
-                                            className="flex-1 bg-white text-black hover:bg-gray-200 text-center font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-white/20 hover:-translate-y-1 flex items-center justify-center gap-2 group"
-                                        >
-                                            In-Depth Case Study
-                                            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                                        </Link>
+                                        {/* @ts-ignore */}
+                                        {selectedProject.caseStudyUrl && (
+                                            <Link
+                                                // @ts-ignore
+                                                href={selectedProject.caseStudyUrl}
+                                                className="flex-1 bg-white text-black hover:bg-gray-200 text-center font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-white/20 hover:-translate-y-1 flex items-center justify-center gap-2 group"
+                                            >
+                                                In-Depth Case Study
+                                                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                                            </Link>
+                                        )}
                                         {selectedProject.link !== "#" && (
                                             <a
                                                 href={selectedProject.link}

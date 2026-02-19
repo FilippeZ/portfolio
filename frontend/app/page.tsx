@@ -1,12 +1,16 @@
+import React from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import StrategicValue from "@/components/StrategicValue";
 import Expertise from "@/components/Expertise";
 import Authority from "@/components/Authority";
+import HighValueMenu from "@/components/HighValueMenu";
 import About from "@/components/About";
 import Portfolio from "@/components/Portfolio";
 import Testimonials from "@/components/Testimonials";
 import Evolution from "@/components/Evolution";
 import Contact from "@/components/Contact";
+import StrategicSectors from "@/components/StrategicSectors";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -15,12 +19,17 @@ export default function Home() {
             <Header />
             <main className="flex-grow flex flex-col items-center w-full">
                 <Hero />
+                <StrategicValue />
                 <Expertise />
                 <Authority />
+                <HighValueMenu />
                 <About />
-                <Portfolio />
+                <React.Suspense fallback={<div>Loading Portfolio...</div>}>
+                    <Portfolio />
+                </React.Suspense>
                 <Testimonials />
                 <Evolution />
+                <StrategicSectors />
                 <Contact />
             </main>
             <Footer />
