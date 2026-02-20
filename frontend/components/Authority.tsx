@@ -74,7 +74,7 @@ export default function Authority() {
                         <div className="relative max-w-4xl mx-auto flex items-start text-left">
                             <div className="w-1 bg-gradient-to-b from-blue-500 to-transparent rounded-full mr-6 opacity-80 mt-2 h-[80%]"></div>
                             <p className="text-gray-300 text-lg md:text-xl font-light leading-relaxed opacity-90">
-                                "{t.description}"
+                                &quot;{t.description}&quot;
                             </p>
                         </div>
                     </motion.div>
@@ -100,7 +100,7 @@ export default function Authority() {
                                     </h4>
                                     {group.description && (
                                         <p className="text-blue-400/80 text-sm md:text-base font-mono mt-4 uppercase tracking-[0.2em]">
-                                            // {group.description}
+                                            {group.description}
                                         </p>
                                     )}
                                 </div>
