@@ -79,7 +79,7 @@ export default function Contact() {
         <section
             id="contact"
             ref={containerRef}
-            className="w-full py-32 lg:py-48 bg-[#010101] relative overflow-hidden border-t border-white/5"
+            className="w-full py-32 lg:py-48 relative overflow-hidden"
         >
             {/* COMMAND CENTER BACKGROUND SYSTEM */}
             <div className="absolute inset-0 z-0 pointer-events-none">

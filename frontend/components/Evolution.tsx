@@ -19,7 +19,7 @@ export default function Evolution() {
     ];
 
     return (
-        <section id="evolution" className="py-24 bg-[#050505] relative">
+        <section id="evolution" className="py-24 relative">
             <div className="max-w-7xl mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, x: -20 }}

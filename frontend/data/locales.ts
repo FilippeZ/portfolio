@@ -264,7 +264,7 @@ export const locales = {
                     type: "High School"
                 },
                 {
-                    title: "Integrated Master in Computer Engineering & Informatics (CEID)",
+                    title: "Integrated Master (M.Eng.) | Top 5% of Class (CEID)",
                     org: "University of Patras, Greece",
                     date: "Oct 2020 – Oct 2025",
                     desc: "I completed my studies in the Top 5% of my class with a GPA of 8.05/10. I demonstrated absolute mastery (10/10) in a wide range of critical fields, including Software Quality Assurance, Artificial Intelligence, Multidimensional Data, and Bioinformatics. My Master’s Thesis (ZenithDx), which received a perfect 10/10, was the pinnacle of my academic career. I developed an Agentic AI medical system (CDSS) with 96.28% accuracy, integrating rigorous industrial standards (ISO 14971, IEC 62304) and setting the stage for my specialization in regulatory compliance.",
@@ -284,9 +284,16 @@ export const locales = {
             status: "THE SIGN-OFF TECHNICAL AUTHORITY",
             role_name: "Filippos P. Zygouris",
             role_title: "(Dipl. Eng. | Licensed TEE Engineer)",
+            subtitle: "Deep Engineering Background (CEID) meets Institutional Accountability.",
             quote: "My signature transforms a project into a certified Technical Work. I provide the institutional guarantee that innovation aligns with the law, safety, and quality.",
             description_1: "In high-risk markets, innovation without documentation is simply a ##liability##. Companies no longer need just 'coders'; they need ##Sovereign Healthcare Architects##. Engineers who 'get their hands dirty' with Deep Engineering, but take full institutional responsibility for Quality Assurance (QA) and Regulatory Compliance.",
             description_2: "I am the bridge between these two worlds. As a ##Chartered Engineer##, I don't just verify code; I ensure the product is technically sound, certified, and fully aligned with the strictest frameworks (MDR/IVDR, EU AI Act, GDPR). My mission is to transform regulatory constraints into a ##technical competitive advantage##, guaranteeing the end-user's safety.",
+            signature: {
+                label: "Verified Digital Integrity",
+                status: "SIGNED_&_VERIFIED",
+                hash: "0x8f9...a2c_auth",
+                timestamp: "2024_Q4_v.0.8"
+            },
             cta_primary: "Regulatory Consultation",
             cta_secondary: "Technical Authority",
             stats_level7: "Level 7",
@@ -371,55 +378,79 @@ export const locales = {
             }
         },
         highValueMenu: {
-            label: "Service Portfolio",
-            title_prefix: "High-Value",
-            title_gradient: "Service Menu.",
-            description: "Bridges technical superiority with state-authorized institutional power. Each service is designed to eliminate high-stakes investment risk through engineering authority.",
+            label: "Professional Portfolio",
+            title_prefix: "Strategic Value",
+            title_gradient: "Proposition.",
+            description: "Bridging technical superiority with state-authorized institutional power. Each service is designed to eliminate high-stakes investment risk through engineering authority.",
             advantage_label: "The Strategic Advantage",
             services: [
                 {
-                    tag: "The Legal Shield",
-                    title: "Fractional PRRC & Strategic Regulatory Partner",
-                    description: "The 'Fractional PRRC' service offers SaMD startups and scaleups the ability to ensure institutional legitimacy under MDR Article 15 without the burden of a permanent executive hire. My TEE license and Integrated Master (Level 7) provide the necessary 'Sign-off Authority' and legal liability coverage for product safety.",
-                    advantage: "Reduces executive liability, accelerates market entry, and ensures engineering-level compliance for every line of code.",
+                    tag: "01",
+                    title: "The Legal Shield",
+                    subtitle: "The Ultimate Guarantor | (TEE Licensed Engineer | Integrated Master CEID)",
+                    description: "The most critical service provided is Liability Absorption. In high-risk markets, leadership carries the weight of civil and criminal liability for every technical or regulatory failure. This seal acts as an institutional 'shield' that protects executive leadership and investors. I don't just sign off; I implement automated validation gates in CI/CD, transferring full responsibility to a state-authorized Engineer.",
+                    advantage: "Covers every operational level—from physical structural and electrical safety to clinical AI validity—guaranteeing the Institutional Integrity of the entire organization.",
                     linkText: "View Governance Framework"
                 },
                 {
-                    tag: "The Institutional Navigator",
-                    title: "Sovereign Systems & Policy Architect",
-                    description: "Translating the complex EU AI Act into tangible technical specifications (Policy-to-Architecture). Leveraging strategic experience from Microsoft's European Digital Commitment, I design Sovereign Cloud infrastructures ensuring 100% Data Residency and Privacy-by-Design.",
-                    advantage: "Transforms regulatory mandates into a competitive 'Digital Fortress', protecting investments from shifting EU policy landscapes.",
-                    linkText: "View Sovereign Architecture"
+                    tag: "02",
+                    title: "The Deep-Tech Auditor",
+                    subtitle: "The Technical Engine Behind the Authority",
+                    description: "Authority grounded in a background as a Computer Engineer & Scientist. Beyond performing audits, this involves designing and building TRL-9 systems: Agentic AI, LangGraph orchestration, and Federated Learning on cutting-edge infrastructure (NVIDIA DGX, Azure, Sovereign Clouds).",
+                    advantage: "Ensures that solutions are not only compliant but technically superior and scientifically robust, from the silicon level to algorithmic bias mitigation.",
+                    linkText: "View Agentic Co-Pilot"
                 },
                 {
-                    tag: "The Implementation Architect",
-                    title: "AI Engineer & Solution Architect: Quality & Standards",
-                    description: "Focusing on the technical injection of international standards (ISO/IEC) into production code. Implementing IEC 62304/82304 and advanced techniques like Federated Learning (DermaGnosis model) to build TRL-9 systems that are both innovative and fully auditable.",
-                    advantage: "Guarantees that AI systems operate with clinical-grade safety, privacy, and performance in critical environments.",
-                    linkText: "View Clinical AI System"
+                    tag: "03",
+                    title: "The Institutional Navigator",
+                    subtitle: "Fractional PRRC & SaMD Signatory | (MDR Article 15)",
+                    description: "In an environment of exhaustive scrutiny for SaMD and High-Risk AI, the role of Fractional PRRC is a legal necessity. As the authorized technical authority, full institutional responsibility is assumed for product compliance with MDR and the EU AI Act.",
+                    advantage: "This signature serves as the 'gold passport' for market entry, legally shielding innovation against audit mechanisms and accelerating CE marking.",
+                    linkText: "View Regulatory Architecture"
                 },
                 {
-                    tag: "The Deep-Tech Auditor",
-                    title: "AI Validation, XAI & Stress Testing Consultant",
-                    description: "Pre-Audit AI Assessment services: conducting rigorous checks for Bias, Security, and Hallucinations before Notified Body inspections. Utilizing ZenithDx methodologies and AI Security expertise (OWASP/PwC) for Quantitative V&V and Usability Engineering (IEC 62366).",
-                    advantage: "Converts subjective 'quality' into auditable technical evidence, resolving critical flaws before they impact certification or reputation.",
-                    linkText: "View XAI Audit Methodology"
+                    tag: "04",
+                    title: "The Safety Authority",
+                    subtitle: "Physical Space Permits & Licensing Guarantor | (PD 99/2018)",
+                    description: "Leveraging the full professional rights of a Licensed Engineer, a single official signature is provided for the holistic legality of physical infrastructure (clinics, labs, data centers). This ranges from architectural layout design and operating licenses to fire safety and electrical installations.",
+                    advantage: "A single technical seal covers both the hardware and software layers of an investment, streamlining the compliance process.",
+                    linkText: "View Infrastructure Standards"
                 },
                 {
-                    tag: "The Business Bridge",
-                    title: "Technical AI Product Manager",
-                    description: "The critical link between Engineering and Executive Leadership. I translate the 'Regulatory Maze' into JIRA Tickets, Domain Modeling, and Product Roadmaps, leveraging Microsoft AI PM certification and European Commission experience.",
-                    advantage: "Ensures innovation remains safe, compliant, and perfectly aligned with strategic market goals through the entire product lifecycle.",
-                    linkText: "View Product Roadmaps"
+                    tag: "05",
+                    title: "The Strategic Navigator",
+                    subtitle: "EU AI Act & Digital Sovereignty Architect",
+                    description: "Navigating complex European regulatory frameworks to offer true Digital Sovereignty. EU AI Act mandates are translated into specific Policy-to-Architecture roadmaps, ensuring systems meet transparency, explainability (XAI), and data residency requirements.",
+                    advantage: "Transforms regulatory pressure into a competitive 'Digital Fortress', protecting investments from political volatility.",
+                    linkText: "View Policy Framework"
+                },
+                {
+                    tag: "06",
+                    title: "The Quality Architect",
+                    subtitle: "Built-in Engineering Standards & Compliance-by-Design",
+                    description: "Quality isn't a bureaucratic checkbox—it's the basis of algorithmic integrity. International standards (ISO 13485, IEC 62304/82304, ISO 14971) are integrated directly into source code and CI/CD flows as a core architectural requirement.",
+                    advantage: "Dramatically reduces certification times and redesign costs, delivering products engineered to withstand strenuous clinical or technical challenges.",
+                    linkText: "View Compliance Architecture"
                 }
             ],
+            hexagonal_strategy: {
+                title: "The Hexagonal Strategy for Liability Absorption",
+                summary: "This model removes the barriers between deep engineering and institutional power. While the market is often fragmented into developers removed from legislative constraints and legal professionals disconnected from algorithmic logic, this approach constitutes a single point of convergence. Combining Engineering and Tech (Integrated Master & AI) with Quality and Regulatory frameworks (ISO standards & MDR) results in systems that are certifiable by design.",
+                economic_value: "Functionally, this synthesis provides Institutional Anti-gravity. True value lies in Institutional Integrity—providing Full-Stack Compliance from the code level (IEC 62304) to the state seal and strategic policy alignment (EU AI Act).",
+                money_maker_title: "Core Pillars of Authority:",
+                points: [
+                    { label: "Engineering + Tech:", text: "Demonstrated capacity to architect complex systems." },
+                    { label: "Quality + Regulatory:", text: "Proven capability to ensure legal and standards compliance." },
+                    { label: "Policy + TEE:", text: "The state-granted authority to institutionally certify the final product." }
+                ]
+            },
             closing: {
-                quote_prefix: "I don't offer generic IT solutions; I solve the problem of",
+                quote_prefix: "Solving the core challenges of",
                 quote_highlight_1: "Institutional Liability",
                 quote_mid: "and",
                 quote_highlight_2: "Innovation Risk",
                 quote_suffix: ".",
-                button: "Strategic Evolution",
+                button: "Secure Authority Protocol Alpha",
                 tag: "Chartered Status Active"
             }
         },
@@ -447,7 +478,7 @@ export const locales = {
                     title: "I. Institutional Foundation & Academic Authority",
                     description: "",
                     items: [
-                        { title: "General Professional License", role: "State-Authorized Technical Guarantor", legal: "PD 99/2018 Art. 11 §1, Art. 2 §α,β", desc: "Mandated engineer for systems 'critical to protection of life, health, and property'. Rights for Analysis, Design, and Supervision." },
+                        { title: "General Professional License", role: "State-Authorized Technical Guarantor", legal: "PD 99/2018 Art. 11 §1, Art. 2 §α,β", desc: "Mandated engineer for systems 'critical to protection of life, health, and property'. Includes full rights for Secure Cloud Architecture & Production Deployments." },
                         { title: "Academic Mentor", role: "Research Authority", legal: "PD 99/2018 Art. 2 §κβ", desc: "Formal right to Education, Teaching, and Research in Technology and Engineering institutions." }
                     ]
                 },
@@ -546,6 +577,33 @@ export const locales = {
         strategicValue: {
             title_prefix: "Why this model guarantees",
             title_highlight: "high economic value?",
+            formula: {
+                numerator: "Technical Innovation × Regulatory Safety",
+                numerator_tooltip: "Optimized via Deep Engineering",
+                denominator: "Time to Market",
+                denominator_tooltip: "Minimized via Compliance-by-Design",
+                caption: "I optimize the numerator through Deep Engineering and minimize the denominator through Compliance-by-Design."
+            },
+            liabilityMatrix: {
+                title: "Liability Absorption: The Real Difference",
+                standardDev: {
+                    title: "Standard Developer",
+                    desc: "Writes code, pushes to production. Liability stays entirely with the company."
+                },
+                technicalAuthority: {
+                    title: "Technical Authority (Filippos)",
+                    desc: "Writes code, validates via ISO/IEC, signs off as Licensed TEE Engineer. Liability is institutionally mitigated."
+                },
+                comparisonTable: {
+                    headers: ["Feature", "Standard Developer", "Technical Authority (Filippos)"],
+                    rows: [
+                        { label: "Output", val1: "Code Push", val2: "Certified Technical Work" },
+                        { label: "Framework", val1: "Best Practices", val2: "ISO/IEC + PD 99/2018" },
+                        { label: "Liability", val1: "100%", val2: "20%", sub1: "Corporate Risk", sub2: "Institutional Mitigation" },
+                        { label: "Signature", val1: "None", val2: "State-Authorized Seal" }
+                    ]
+                }
+            },
             risk_alert: {
                 execution_gap: "There is a dangerous execution gap in high-tech industries.",
                 lawyers: "Lawyers understand the code of law but cannot audit a RAG pipeline.",
@@ -620,7 +678,7 @@ export const locales = {
                 "zenithdx-ai": {
                     title: "ZenithDx – High-Performance Agentic Clinical Co-Pilot",
                     category: "Regulatory Architecture (SaMD)",
-                    brief: "I architected ZenithDx, a high-performance agentic AI system deployed on NVIDIA DGX infrastructure. This project wasn't just about building an LLM; it was about engineering a system that survives clinical scrutiny. I implemented robust XAI mechanisms and iterative ReAct loops to ensure all clinical reports are interpretable and auditable, effectively 'validating' the future of clinical AI deployment for high-stakes environments."
+                    brief: "I architected ZenithDx, a high-performance agentic AI system deployed on NVIDIA DGX infrastructure. This project wasn't just about building an LLM; it was about engineering a system that survives clinical scrutiny. I implemented robust XAI mechanisms and iterative ReAct loops to ensure all clinical reports are interpretable and auditable, effectively 'validating' the future of clinical AI deployment for high-stakes environments.\n\n**The Engineering Challenge**: Achieving 96.28% accuracy while maintaining EU AI Act Article 12 traceability. Engineered a LangGraph-orchestrated ReAct loop with over 90% Unit Testing coverage, proving that Deep Tech can be both innovative and compliance-native."
                 },
                 "wgan-telco": {
                     title: "WGAN-GP Architecture for Privacy-Preserving Synthetic Traffic",
@@ -868,35 +926,36 @@ export const locales = {
             },
             disclaimer: "\"As a Licensed Engineer and member of the TEE, I ensure the institutional compliance and technical integrity of digital health infrastructures, shielding your organization against the requirements of European regulations.\"",
             sectors: [
-                "AI-First SaMD & MedTech Startups/Scaleups",
-                "Specialized AI Regulatory & Deep-Tech Consultancies",
-                "Hyperscale Cloud Providers & Sovereign Infrastructure",
-                "Notified Bodies (NBs) & Accredited Audit Organizations",
-                "Global Pharma & Enterprise Life Sciences",
-                "Public Policy Units & RaaS Providers",
-                "Technical Strategy Advisor (Ministry Level)",
-                "Expert Assessor (ESYD / National Accreditation)",
-                "Fractional PRRC for University Clinics & Spin-offs",
-                "RRF Project Compliance Advisor (Recovery Fund)",
+                "MedTech & SaMD (Software as a Medical Device)",
+                "Pharmaceuticals & Clinical Research",
+                "Cloud & Sovereign Infrastructure",
+                "Industrial AI & Smart Manufacturing",
+                "RegTech & Technical Consultancies",
+                "Ministries of Health & Digital Governance",
+                "University Spin-offs & Research Labs",
+                "Judicial, IP & Financial Authorities",
+                "Smart Cities & IoT Infrastructure",
+                "European Commission & Policy Task Forces",
                 "Other"
             ],
             services: [
-                "Fractional PRRC & Strategic Regulatory Partner",
-                "Sovereign Systems & Policy Architect",
-                "AI Engineer & Solution Architect",
-                "AI Validation, XAI & Stress Testing",
-                "Technical AI Product Manager",
-                "Other / General Inquiry"
+                "The Legal Shield",
+                "The Institutional Navigator",
+                "The Safety Authority",
+                "The Strategic Navigator",
+                "The Quality Architect",
+                "The Deep-Tech Auditor",
+                "Ecosystem Entry: Technical Audit for Startups"
             ]
         },
         strategicSectors: {
             subtitle: "Collaboration & Hiring",
-            title: "The 10 Strategic",
-            titleHighlight: "Sectors of Engagement.",
+            title: "The 10 Domains of",
+            titleHighlight: "Authority.",
             description: "Select the category that best describes your organization to uncover specialized strategy, engineering, and regulatory compliance services.",
-            privateSectorTitle: "Private Sector",
-            privateSectorSubtitle: "(Corporate & Innovation)",
-            publicSectorTitle: "Public Sector",
+            privateSectorTitle: "I. Private Sector",
+            privateSectorSubtitle: "(High-Stakes Innovation)",
+            publicSectorTitle: "II. Public Sector",
             publicSectorSubtitle: "(Institutional Strategy)",
             professionalLicensure: {
                 badge: "Professional Licensure",
@@ -917,73 +976,83 @@ export const locales = {
             sectors: [
                 {
                     id: 1,
-                    title: "AI-First SaMD & MedTech Startups/Scaleups",
-                    focus: "Organizations developing Software as a Medical Device (SaMD) with AI at the core (e.g., CDSS, diagnostic imaging).",
-                    service: "Fractional PRRC & Technical AI Product Manager",
-                    value: "Ensuring your innovation overcomes Notified Body hurdles without delays, building a 'Compliant-by-Design' strategy from day one."
+                    title: "MedTech & SaMD (Software as a Medical Device)",
+                    focus: "Medical Software Startups and Scale-ups (Class IIa/IIb/III).",
+                    service: "Fractional PRRC & MDR Signatory",
+                    value: "You assume the institutional role of 'Person Responsible for Regulatory Compliance' (Article 15 MDR). Translating the risk of an AI diagnosis into an approved medical product, signing off on the compliance of your Agentic AI architecture (IEC 62304) and risk management (ISO 14971).",
+                    image: "/resources/img/sectors/medtech.png"
                 },
                 {
                     id: 2,
-                    title: "Specialized AI Regulatory & Deep-Tech Consultancies",
-                    focus: "High-end boutique firms specializing in validation strategy and medical software compliance.",
-                    service: "AI Validation, XAI & Stress Testing Consultant",
-                    value: "Providing the necessary 'Technical Audit' to document safety, transparency (Explainability), and robustness of your algorithms."
+                    title: "Pharmaceuticals & Clinical Research",
+                    focus: "Multinational Pharmaceuticals and CROs (Clinical Research Organizations).",
+                    service: "Quality Assurance Architect & GxP Validator",
+                    value: "Ensuring AI-driven clinical tools are 'Audit-Ready'. Embedding Compliance-by-Design into their CI/CD pipelines, ensuring the processing of sensitive health data (GDPR Art. 9) and Digital Therapeutics (DTx) meet the strictest international standards.",
+                    image: "/resources/img/sectors/pharma.jpg"
                 },
                 {
                     id: 3,
-                    title: "Hyperscale Cloud Providers & Sovereign Infrastructure",
-                    focus: "Healthcare divisions of tech giants (Microsoft, AWS, Google) or Sovereign Cloud infrastructure providers in Europe.",
-                    service: "Sovereign Systems & Policy Architect",
-                    value: "Designing ecosystems that balance high AI performance with absolute digital sovereignty and 100% Data Residency."
+                    title: "Cloud & Sovereign Infrastructure",
+                    focus: "Hyperscale Providers (Azure, AWS) and Local Data Centers.",
+                    service: "Sovereign Infrastructure Lead (Physical & Digital)",
+                    value: "The 'dual signature'. As a Licensed TEE Engineer, you sign off on the physical security/licensing of facilities (Building Permits, BMS), while architecting 'Sovereign Landing Zones' aligned with the EU AI Act and Data Residency requirements.",
+                    image: "/resources/img/sectors/cloud.png"
                 },
                 {
                     id: 4,
-                    title: "Notified Bodies (NBs) & Accredited Audit Organizations",
-                    focus: "Official certification bodies (e.g., TÜV SÜD, BSI, SGS) and specialized 'Software Centers of Excellence'.",
-                    service: "Lead Technical Auditor (AI & Software focus)",
-                    value: "As a Licensed Engineer (TEE), conducting strict technical audits based on IEC 62304 and ISO 13485 standards for mission-critical software."
+                    title: "Industrial AI & Smart Manufacturing",
+                    focus: "Industrial groups and Logistics (e.g., F.H.L. Kiriakidis Group context).",
+                    service: "Industrial Automation & Safety Technician (Cat. A)",
+                    value: "Applying Anomaly Detection and Process Validation in heavy industry. Your signature guarantees that production optimization algorithms do not violate safety protocols and environmental impact assessments (EIA), preventing costly bottlenecks.",
+                    image: "/resources/img/sectors/industrial.jpg"
                 },
                 {
                     id: 5,
-                    title: "Global Pharma & Enterprise Life Sciences",
-                    focus: "Multinational pharmaceutical companies developing Digital Therapeutics (DTx) or AI tools for clinical trials.",
-                    service: "AI Solution Architect: Quality & Standards Implementation",
-                    value: "Integrating technical rigor and global quality standards into large-scale AI infrastructures, ensuring Continuous Compliance."
+                    title: "RegTech & Technical Consultancies",
+                    focus: "Companies developing Compliance Software and Big-4 Consultancies.",
+                    service: "Deep-Tech Auditor & XAI Expert",
+                    value: "Acting as the 'Technical Guarantor' (Auditor's Auditor). Providing necessary Technical Proof via Explainable AI (SHAP, Captum) to demonstrate to Notified Bodies that the system is transparent, unbiased, and safe.",
+                    image: "/resources/img/sectors/regtech.png"
                 },
                 {
                     id: 6,
-                    title: "Public Policy Units & RaaS Providers",
-                    focus: "Institutional bodies (EU AI Office, EC) or Tech companies developing Compliance automation software.",
-                    service: "Sovereign Systems & Policy Architect",
-                    value: "Translating legislative directions into technical specs and automated workflows, guiding future policy for AI in Health."
+                    title: "Ministries of Health & Digital Governance",
+                    focus: "National Bodies and Ministries.",
+                    service: "Sovereign Systems & Public Policy Advisor",
+                    value: "Translating European directives into technical specs for national projects (e.g., IDIKA, Electronic Health Record). Ensuring public AI investments are institutionally shielded, avoiding legal entanglements and funding losses.",
+                    image: "/resources/img/sectors/digital-gov.png"
                 },
                 {
                     id: 7,
-                    title: "Technical Strategy Advisor (Ministry Level)",
-                    context: "Ministry of Digital Governance, Ministry of Health.",
-                    role: "Sovereign Systems & Policy Architect",
-                    advantage: "Designing technical specs for national systems (e.g., National EHR) with embedded AI, ensuring EU AI Act alignment before tenders begin."
+                    title: "University Spin-offs & Research Labs",
+                    focus: "University Institutions and Research Centers.",
+                    service: "Institutional Bridge: From Lab to Market",
+                    value: "The 'ZenithDx Model'. Providing the institutional coverage (TEE License) needed for a research team to turn a publication into a legal, licensed product or spin-off, signing off on the legality of laboratory spaces and software.",
+                    image: "/resources/img/sectors/university.jpg"
                 },
                 {
                     id: 8,
-                    title: "Expert Assessor (ESYD / National Accreditation)",
-                    context: "Accreditation of bodies and laboratories.",
-                    role: "Lead Technical Auditor (AI & Software focus)",
-                    advantage: "TEE license creates essential validity for assessing labs certifying AI systems, transforming technical knowledge into a state guarantee."
+                    title: "Judicial, IP & Financial Authorities",
+                    focus: "Courts, National Accreditation Bodies (ESYD), Patent Offices (e.g., OBI, EPO), M&A Advisors, and Tax Authorities (e.g., AADE).",
+                    service: "AI Intangible Asset Valuator & Deep-Tech IP Assessor",
+                    value: "Acting as the official state-certified appraiser and technical bridge for digital assets and intellectual property. Your signature provides the definitive technical and financial valuation of AI models, datasets, and proprietary software during Mergers & Acquisitions (M&As), bankruptcies, or tax audits, translating deep-tech architectures into tangible corporate value. Simultaneously, you validate the novelty and non-obviousness of AI systems for patent applications, providing expert technical arbitration in judicial disputes regarding IP theft, algorithmic plagiarism, and patent infringement.",
+                    image: "/resources/img/sectors/ai-valuator.jpeg"
                 },
                 {
                     id: 9,
-                    title: "Fractional PRRC for University Clinics & Spin-offs",
-                    context: "NHS Hospitals, Research Centers, Universities.",
-                    role: "Fractional PRRC",
-                    advantage: "Legally shielding hospital administrations developing their own AI tools, providing institutional coverage for use on real patients."
+                    title: "Smart Cities & IoT Infrastructure",
+                    focus: "Municipalities and Transport Agencies (e.g., DeafNav context).",
+                    service: "Urban Architect & Interoperability Validator",
+                    value: "Designing smart infrastructures adhering to WCAG accessibility standards and Smart Building Management (BMS) specs. Signing off on network integrity and SLA compatibility in public telecom projects.",
+                    image: "/resources/img/sectors/iot.jpg"
                 },
                 {
                     id: 10,
-                    title: "RRF Project Compliance Advisor (Recovery Fund)",
-                    context: "Information Society, IDIKA.",
-                    role: "Technical AI Product Manager",
-                    advantage: "Acting as the 'control bridge' between state and contractors, ensuring IT deliverables compliant with MDR and AI Act to prevent funding losses."
+                    title: "European Commission & Policy Task Forces",
+                    focus: "European Organizations (EYE, European Parliament briefings).",
+                    service: "Sovereign AI Strategist & Policy Task Force Lead",
+                    value: "Shaping the future of legislation. Drafting Position Papers for the EU AI Act, ensuring European innovation remains Sovereign and technically feasible, bridging the gap between MEPs and Engineering reality.",
+                    image: "/resources/img/sectors/eu.jpg"
                 }
             ]
         }
@@ -1253,7 +1322,7 @@ export const locales = {
                     type: "Λύκειο"
                 },
                 {
-                    title: "Integrated Master (Δίπλωμα Μηχανικού) Μηχανικών Η/Υ & Πληροφορικής (CEID)",
+                    title: "Integrated Master (M.Eng.) | Κορυφαίο 5% της Τάξης (CEID)",
                     org: "Πανεπιστήμιο Πατρών, Ελλάδα",
                     date: "Οκτ 2020 – Οκτ 2025",
                     desc: "Ολοκλήρωσα τις σπουδές μου στο Κορυφαίο 5% της τάξης μου με Μ.Ο. 8.05/10. Επέδειξα απόλυτη κυριαρχία (10/10) σε ένα ευρύ φάσμα κρίσιμων πεδίων, συμπεριλαμβανομένης της Διασφάλισης Ποιότητας Λογισμικού, της Τεχνητής Νοημοσύνης, των Πολυδιάστατων Δεδομένων και της Βιοπληροφορικής. Η Διπλωματική μου Εργασία (ZenithDx), η οποία έλαβε άριστα 10/10, ήταν το αποκορύφωμα της ακαδημαϊκής μου καριέρας. Ανέπτυξα ένα ιατρικό σύστημα Agentic AI (CDSS) με ακρίβεια 96.28%, ενσωματώνοντας αυστηρά βιομηχανικά πρότυπα (ISO 14971, IEC 62304) και θέτοντας τις βάσεις για την εξειδίκευσή μου στην κανονιστική συμμόρφωση.",
@@ -1273,9 +1342,16 @@ export const locales = {
             status: "Η ΥΠΟΓΡΑΦΟΥΣΑ ΤΕΧΝΙΚΗ ΑΥΘΕΝΤΙΑ",
             role_name: "Φίλιππος Π. Ζυγούρης",
             role_title: "(Διπλ. Μηχανικός | Αδειούχος Μηχανικός ΤΕΕ)",
+            subtitle: "Το Βαθύ Μηχανικό Υπόβαθρο (Μηχανικός Η/Υ & Πληροφορικής) συναντά τη Θεσμική Υπευθυνότητα.",
             quote: "Η υπογραφή μου μετατρέπει ένα έργο σε πιστοποιημένο Τεχνικό Έργο. Παρέχω τη θεσμική εγγύηση ότι η καινοτομία συμβαδίζει με τον νόμο, την ασφάλεια και την ποιότητα.",
             description_1: "Σε αγορές υψηλού κινδύνου, η καινοτομία χωρίς τεκμηρίωση είναι απλώς ##ευθύνη##. Οι εταιρείες δεν χρειάζονται πλέον απλώς 'προγραμματιστές', χρειάζονται ##Αρχιτέκτονες Κυρίαρχης Υγείας##. Μηχανικούς που ασχολούνται με τη Βαθιά Μηχανική, αλλά αναλαμβάνουν πλήρη θεσμική ευθύνη για τη Διασφάλιση Ποιότητας (QA) και την Κανονιστική Συμμόρφωση.",
             description_2: "Είμαι η γέφυρα μεταξύ αυτών των δύο κόσμων. Ως ##Διπλωματούχος Μηχανικός##, δεν επαληθεύω απλώς κώδικα· διασφαλίζω ότι το προϊόν είναι τεχνικά άρτιο, πιστοποιημένο και πλήρως ευθυγραμμισμένο με τα αυστηρότερα πλαίσια (MDR/IVDR, EU AI Act, GDPR). Η αποστολή μου είναι να μετατρέψω τους κανονιστικούς περιορισμούς σε ##τεχνικό ανταγωνιστικό πλεονέκτημα##, εγγυώμαι την ασφάλεια του τελικού χρήστη.",
+            signature: {
+                label: "Ψηφιακή Επαλήθευση",
+                status: "ΥΠΟΓΕΓΡΑΜΜΕΝΟ",
+                hash: "0x8f9...a2c_auth",
+                timestamp: "2024_Q4_v.0.8"
+            },
             cta_primary: "Ρυθμιστική Συμβουλευτική",
             cta_secondary: "Τεχνική Αυθεντία",
             stats_level7: "Επίπεδο 7",
@@ -1383,7 +1459,7 @@ export const locales = {
                     title: "I. Θεσμική Θεμελίωση & Ακαδημαϊκή Αυθεντία",
                     description: "",
                     items: [
-                        { title: "Γενική Επαγγελματική Άδεια", role: "Κρατικά Εξουσιοδοτημένος Τεχνικός Εγγυητής", legal: "ΠΔ 99/2018 Άρθ. 11 §1, Άρθ. 2 §α,β", desc: "Εντεταλμένος μηχανικός για συστήματα 'κρίσιμα για την προστασία της ζωής, της υγείας και της περιουσίας'. Δικαιώματα για Ανάλυση, Σχεδιασμό και Επίβλεψη." },
+                        { title: "Γενική Επαγγελματική Άδεια", role: "Κρατικά Εξουσιοδοτημένος Τεχνικός Εγγυητής", legal: "ΠΔ 99/2018 Άρθ. 11 §1, Άρθ. 2 §α,β", desc: "Εντεταλμένος μηχανικός για συστήματα 'κρίσιμα για την προστασία της ζωής, της υγείας και της περιουσίας'. Πλήρη δικαιώματα για Ασφαλή Αρχιτεκτονική Cloud και Παραγωγικές Αναπτύξεις." },
                         { title: "Ακαδημαϊκός Μέντορας", role: "Ερευνητική Αυθεντία", legal: "ΠΔ 99/2018 Άρθ. 2 §κβ", desc: "Επίσημο δικαίωμα στην Εκπαίδευση, Διδασκαλία και Έρευνα σε Τεχνολογικά και Πολυτεχνικά ιδρύματα." }
                     ]
                 },
@@ -1480,61 +1556,112 @@ export const locales = {
             ]
         },
         highValueMenu: {
-            label: "Χαρτοφυλάκιο Υπηρεσιών",
-            title_prefix: "Μενού Υπηρεσιών",
-            title_gradient: "Υψηλής Αξίας.",
-            description: "Γεφυρώνει την τεχνική υπεροχή με την κρατικά εξουσιοδοτημένη θεσμική ισχύ. Κάθε υπηρεσία είναι σχεδιασμένη για να εξαλείφει τον επενδυτικό κίνδυνο υψηλού διακυβεύματος μέσω της μηχανικής αυθεντίας.",
+            label: "Επαγγελματικό Χαρτοφυλάκιο",
+            title_prefix: "Στρατηγική",
+            title_gradient: "Αξία.",
+            description: "Γεφυρώνοντας την τεχνική υπεροχή με την κρατικά εξουσιοδοτημένη θεσμική ισχύ. Κάθε υπηρεσία είναι σχεδιασμένη για να εξαλείφει τον επενδυτικό κίνδυνο υψηλού διακυβεύματος μέσω της μηχανικής εξουσίας.",
             advantage_label: "Το Στρατηγικό Πλεονέκτημα",
             services: [
                 {
-                    tag: "Η Νομική Ασπίδα",
-                    title: "Fractional PRRC & Στρατηγικός Ρυθμιστικός Συνεργάτης",
-                    description: "Η υπηρεσία 'Fractional PRRC' προσφέρει σε startups και scaleups SaMD τη δυνατότητα διασφάλισης θεσμικής νομιμότητας βάσει του Άρθρου 15 του MDR χωρίς το βάρος μιας μόνιμης εκτελεστικής πρόσληψης. Η άδεια ΤΕΕ και το Integrated Master (Επίπεδο 7) παρέχουν την απαραίτητη 'Αρχή Υπογραφής' και κάλυψη νομικής ευθύνης για την ασφάλεια του προϊόντος.",
-                    advantage: "Μειώνει την εκτελεστική ευθύνη, επιταχύνει την είσοδο στην αγορά και διασφαλίζει συμμόρφωση μηχανικού επιπέδου για κάθε γραμμή κώδικα.",
+                    tag: "01",
+                    title: "The Legal Shield",
+                    subtitle: "Ο Απόλυτος Εγγυητής | (Διπλ. Μηχανικός ΤΕΕ | Integrated Master CEID)",
+                    description: "Η κρισιμότερη παρεχόμενη υπηρεσία είναι η Απορρόφηση Ευθύνης (Liability Absorption). Σε αγορές υψηλού ρίσκου, η ηγεσία φέρει το βάρος αστικής και ποινικής ευθύνης για κάθε τεχνική ή κανονιστική αποτυχία. Η σφραγίδα αυτή λειτουργεί ως θεσμική «ασπίδα» που προστατεύει την εκτελεστική ηγεσία και τους επενδυτές. Δεν υπογράφω απλώς· υλοποιώ αυτοματοποιημένες πύλες επικύρωσης (validation gates) στο CI/CD, μεταφέροντας την πλήρη ευθύνη σε έναν κρατικά εξουσιοδοτημένο Μηχανικό.",
+                    advantage: "Καλύπτει κάθε λειτουργικό επίπεδο—από τη στατική και ηλεκτρολογική ασφάλεια μέχρι την κλινική εγκυρότητα του AI—εγγυώμενη τη Θεσμική Ακεραιότητα ολόκληρου του οργανισμού.",
                     linkText: "Προβολή Πλαισίου Διακυβέρνησης"
                 },
                 {
-                    tag: "Ο Θεσμικός Πλοηγός",
-                    title: "Αρχιτέκτονας Κυρίαρχων Συστημάτων & Πολιτικής",
-                    description: "Μετάφραση του πολύπλοκου EU AI Act σε απτές τεχνικές προδιαγραφές (Πολιτική-σε-Αρχιτεκτονική). Αξιοποιώντας στρατηγική εμπειρία από την European Digital Commitment της Microsoft, σχεδιάζω υποδομές Κυρίαρχου Νέφους διασφαλίζοντας 100% Εντοπιότητα Δεδομένων και Privacy-by-Design.",
-                    advantage: "Μετατρέπει τις ρυθμιστικές εντολές σε ανταγωνιστικό 'Ψηφιακό Οχυρό', προστατεύοντας τις επενδύσεις από μεταβαλλόμενα τοπία πολιτικής της ΕΕ.",
-                    linkText: "Προβολή Κυρίαρχης Αρχιτεκτονικής"
+                    tag: "02",
+                    title: "The Deep-Tech Auditor",
+                    subtitle: "Η Τεχνική Μηχανή Πίσω από την Αυθεντία",
+                    description: "Εξουσία που θεμελιώνεται στο υπόβαθρο του Μηχανικού Η/Υ & Πληροφορικής. Πέρα από τη διενέργεια ελέγχων, ο σχεδιασμός και η κατασκευή συστημάτων TRL-9 (Agentic AI, LangGraph orchestration, Federated Learning) σε υποδομές αιχμής (NVIDIA DGX, Azure, Sovereign Clouds) αποτελεί κεντρικό πυλώνα.",
+                    advantage: "Διασφαλίζει ότι οι λύσεις δεν είναι μόνο συμβατές αλλά τεχνικά ανώτερες και επιστημονικά στιβαρές, από το επίπεδο του πυριτίου μέχρι τον μετριασμό του αλγοριθμικού bias.",
+                    linkText: "Προβολή Agentic Co-Pilot"
                 },
                 {
-                    tag: "Ο Αρχιτέκτονας Υλοποίησης",
-                    title: "Μηχανικός AI & Αρχιτέκτονας Λύσεων: Ποιότητα & Πρότυπα",
-                    description: "Εστίαση στην τεχνική έγχυση διεθνών προτύπων (ISO/IEC) στον κώδικα παραγωγής. Υλοποίηση IEC 62304/82304 και προηγμένων τεχνικών όπως η Ομοσπονδιακή Μάθηση (μοντέλο DermaGnosis) για την κατασκευή συστημάτων TRL-9 που είναι και καινοτόμα και πλήρως ελέγξιμα.",
-                    advantage: "Εγγυάται ότι τα συστήματα AI λειτουργούν με κλινική ασφάλεια, ιδιωτικότητα και απόδοση σε κρίσιμα περιβάλλοντα.",
-                    linkText: "Προβολή Κλινικού Συστήματος AI"
+                    tag: "03",
+                    title: "The Institutional Navigator",
+                    subtitle: "Fractional PRRC & Υπογράφων SaMD | (MDR Article 15)",
+                    description: "Σε ένα περιβάλλον εξαντλητικού ελέγχου για το SaMD και το High-Risk AI, ο ρόλος του Fractional PRRC είναι νομική αναγκαιότητα. Ως η εξουσιοδοτημένη τεχνική αρχή, αναλαμβάνεται η πλήρης θεσμική ευθύνη για τη συμμόρφωση των προϊόντων με το MDR και το EU AI Act.",
+                    advantage: "Η υπογραφή αυτή λειτουργεί ως «χρυσό διαβατήριο» για την είσοδο στην αγορά, θωρακίζοντας νομικά την καινοτομία έναντι κάθε ελεγκτικού μηχανισμού και επιταχύνοντας τη σήμανση CE.",
+                    linkText: "Προβολή Ρυθμιστικής Αρχιτεκτονικής"
                 },
                 {
-                    tag: "Ο Ελεγκτής Deep-Tech",
-                    title: "Σύμβουλος Επικύρωσης AI, XAI & Stress Testing",
-                    description: "Υπηρεσίες Προ-Ελέγχου Αξιολόγησης AI: διεξαγωγή αυστηρών ελέγχων για Μεροληψία, Ασφάλεια και Παραισθήσεις πριν από επιθεωρήσεις Κοινοποιημένων Οργανισμών. Αξιοποίηση μεθοδολογιών ZenithDx και εμπειρογνωμοσύνης Ασφάλειας AI (OWASP/PwC) για Ποσοτική V&V και Μηχανική Χρηστικότητας (IEC 62366).",
-                    advantage: "Μετατρέπει την υποκειμενική 'ποιότητα' σε ελέγξιμα τεχνικά στοιχεία, επιλύοντας κρίσιμα ελαττώματα πριν επηρεάσουν την πιστοποίηση ή τη φήμη.",
-                    linkText: "Προβολή Μεθοδολογίας Ελέγχου XAI"
+                    tag: "04",
+                    title: "The Safety Authority",
+                    subtitle: "Εγγυητής Αδειών & Πιστοποιήσεων Φυσικού Χώρου | (ΠΔ 99/2018)",
+                    description: "Αξιοποιώντας τα πλήρη επαγγελματικά δικαιώματα ενός Αδειούχου Μηχανικού, παρέχεται ενιαία επίσημη υπογραφή για την ολιστική νομιμότητα της φυσικής υποδομής (κλινικές, εργαστήρια, data centers). Αυτό περιλαμβάνει από τον αρχιτεκτονικό σχεδιασμό και τις άδειες λειτουργίας μέχρι την πυρασφάλεια και τις ηλεκτρολογικές εγκαταστάσεις.",
+                    advantage: "Μια ενιαία τεχνική σφραγίδα καλύπτει τόσο το hardware όσο και το software της επένδυσης, απλοποιώντας τη διαδικασία συμμόρφωσης.",
+                    linkText: "Προβολή Προτύπων Υποδομής"
                 },
                 {
-                    tag: "Η Επιχειρηματική Γέφυρα",
-                    title: "Τεχνικός Product Manager AI",
-                    description: "Ο κρίσιμος σύνδεσμος μεταξύ Μηχανικής και Εκτελεστικής Ηγεσίας. Μεταφράζω τον 'Ρυθμιστικό Λαβύρινθο' σε JIRA Tickets, Μοντελοποίηση Τομέα και Product Roadmaps, αξιοποιώντας πιστοποίηση Microsoft AI PM και εμπειρία από την Ευρωπαϊκή Επιτροπή.",
-                    advantage: "Διασφαλίζει ότι η καινοτομία παραμένει ασφαλής, συμβατή και απόλυτα ευθυγραμμισμένη με τους στρατηγικούς στόχους της αγοράς σε όλο τον κύκλο ζωής του προϊόντος.",
-                    linkText: "Προβολή Product Roadmaps"
+                    tag: "05",
+                    title: "The Strategic Navigator",
+                    subtitle: "EU AI Act & Αρχιτέκτων Ψηφιακής Κυριαρχίας",
+                    description: "Πλοήγηση σε πολύπλοκα ευρωπαϊκά κανονιστικά πλαίσια για την παροχή πραγματικής Ψηφιακής Κυριαρχίας. Οι εντολές του EU AI Act μεταφράζονται σε συγκεκριμένα roadmaps Αρχιτεκτονικής-Πολιτικής, διασφαλίζοντας ότι τα συστήματα πληρούν τις απαιτήσεις διαφάνειας, εξηγησιμότητας (XAI) και εντοπιότητας δεδομένων.",
+                    advantage: "Μετατρέπει την κανονιστική πίεση σε ένα ανταγωνιστικό «Ψηφιακό Οχυρό», προστατεύοντας τις επενδύσεις από την πολιτική μεταβλητότητα.",
+                    linkText: "Προβολή Πλαισίου Πολιτικής"
+                },
+                {
+                    tag: "06",
+                    title: "The Quality Architect",
+                    subtitle: "Built-in Engineering Standards & Compliance-by-Design",
+                    description: "Η ποιότητα δεν είναι ένα γραφειοκρατικό checkbox—είναι η βάση της αλγοριθμικής ακεραιότητας. Διεθνή πρότυπα (ISO 13485, IEC 62304/82304, ISO 14971) ενσωματώνονται απευθείας στον πηγαίο κώδικα και στις CI/CD ροές ως βασική αρχιτεκτονική απαίτηση.",
+                    advantage: "Μειώνει δραματικά τους χρόνους πιστοποίησης και το κόστος επανασχεδιασμού, παραδίδοντας προϊόντα σχεδιασμένα να αντέχουν σε αυστηρές κλινικές ή τεχνικές προκλήσεις.",
+                    linkText: "Προβολή Αρχιτεκτονικής Συμμόρφωσης"
                 }
             ],
+            hexagonal_strategy: {
+                title: "Η Εξαγωνική Στρατηγική για την Απορρόφηση Ευθύνης",
+                summary: "Αυτό το μοντέλο καταργεί τα στεγανά μεταξύ της βαθιάς μηχανικής και της θεσμικής εξουσίας. Ενώ η αγορά είναι συχνά κατακερματισμένη σε προγραμματιστές που αγνοούν τις νομικές επιταγές και νομικούς που αδυνατούν να κατανοήσουν την αλγοριθμική λογική, αυτή η προσέγγιση αποτελεί ένα ενιαίο σημείο σύγκλισης. Συνδυάζοντας το Engineering και το Tech (Integrated Master & AI) με τα πλαίσια Quality και Regulatory (ISO standards & MDR), δημιουργούνται συστήματα που είναι by-design πιστοποιήσιμα.",
+                economic_value: "Λειτουργικά, η σύνθεση αυτή παρέχει Θεσμική Αντιβαρύτητα (Institutional Anti-gravity). Η πραγματική αξία εδράζεται στο Institutional Integrity—την παροχή Full-Stack Compliance από το επίπεδο του κώδικα (IEC 62304) μέχρι την κρατική σφραγίδα και τη στρατηγική ευθυγράμμιση (EU AI Act).",
+                money_maker_title: "Βασικοί Πυλώνες Αυθεντίας:",
+                points: [
+                    { label: "Engineering + Tech:", text: "Αποδεδειγμένη ικανότητα αρχιτεκτονικού σχεδιασμού πολύπλοκων συστημάτων." },
+                    { label: "Quality + Regulatory:", text: "Επιβεβαιωμένη δυνατότητα διασφάλισης της νομικής και κανονιστικής συμμόρφωσης." },
+                    { label: "Policy + TEE:", text: "Η κρατικά παραχωρημένη εξουσία για τη θεσμική πιστοποίηση του τελικού προϊόντος." }
+                ]
+            },
             closing: {
-                quote_prefix: "Δεν προσφέρω γενικές λύσεις IT. Επιλύω το πρόβλημα της",
+                quote_prefix: "Επίλυση των κεντρικών προκλήσεων της",
                 quote_highlight_1: "Θεσμικής Ευθύνης",
                 quote_mid: "και του",
                 quote_highlight_2: "Κινδύνου Καινοτομίας",
                 quote_suffix: ".",
-                button: "Στρατηγική Εξέλιξη",
+                button: "Secure Authority Protocol Alpha",
                 tag: "Καθεστώς Chartered Ενεργό"
             }
         },
         strategicValue: {
             title_prefix: "Γιατί αυτό το μοντέλο εγγυάται",
             title_highlight: "υψηλή οικονομική αξία;",
+            formula: {
+                numerator: "Τεχνική Καινοτομία × Ρυθμιστική Ασφάλεια",
+                numerator_tooltip: "Βελτιστοποίηση μέσω Deep Engineering",
+                denominator: "Χρόνος στην Αγορά",
+                denominator_tooltip: "Ελαχιστοποίηση μέσω Compliance-by-Design",
+                caption: "Βελτιστοποιώ τον αριθμητή μέσω Βαθιάς Μηχανικής (Deep Engineering) και ελαχιστοποιώ τον παρανομαστή μέσω της Συμμόρφωσης-εκ-Σχεδιασμού (Compliance-by-Design)."
+            },
+            liabilityMatrix: {
+                title: "Απορρόφηση Ευθύνης: Η Πραγματική Διαφορά",
+                standardDev: {
+                    title: "Τυπικός Προγραμματιστής",
+                    desc: "Γράφει κώδικα, ανεβάζει στην παραγωγή. Η νομική ευθύνη παραμένει πλήρως στην εταιρεία."
+                },
+                technicalAuthority: {
+                    title: "Τεχνική Αυθεντία (Φίλιππος)",
+                    desc: "Γράφει κώδικα, επικυρώνει μέσω ISO/IEC, υπογράφει ως Αδειούχος Μηχανικός ΤΕΕ. Η ευθύνη μετριάζεται θεσμικά."
+                },
+                comparisonTable: {
+                    headers: ["Χαρακτηριστικό", "Τυπικός Προγραμματιστής", "Τεχνική Αυθεντία (Φίλιππος)"],
+                    rows: [
+                        { label: "Αποτέλεσμα", val1: "Code Push", val2: "Πιστοποιημένο Τεχνικό Έργο" },
+                        { label: "Πλαίσιο", val1: "Best Practices", val2: "ISO/IEC + ΠΔ 99/2018" },
+                        { label: "Ευθύνη", val1: "100%", val2: "20%", sub1: "Εταιρικό Ρίσκο", sub2: "Θεσμικός Μετριασμός" },
+                        { label: "Υπογραφή", val1: "Καμία", val2: "Κρατική Σφραγίδα Μηχανικού" }
+                    ]
+                }
+            },
             risk_alert: {
                 execution_gap: "Υπάρχει ένα επικίνδυνο κενό εκτέλεσης στις βιομηχανίες υψηλής τεχνολογίας.",
                 lawyers: "Οι νομικοί κατανοούν τον κώδικα δικαίου αλλά δεν μπορούν να ελέγξουν έναν αγωγό RAG.",
@@ -1652,7 +1779,7 @@ export const locales = {
                 "zenithdx-ai": {
                     title: "ZenithDx – Κλινικός Συγκυβερνήτης Agentic AI Υψηλής Απόδοσης",
                     category: "Κανονιστική Αρχιτεκτονική (SaMD)",
-                    brief: "Αρχιτεκτόνησα το ZenithDx, ένα σύστημα Agentic AI υψηλής απόδοσης που αναπτύχθηκε σε υποδομή NVIDIA DGX. Αυτό το έργο δεν αφορούσε απλώς την κατασκευή ενός LLM· αφορούσε τη μηχανική ενός συστήματος που επιβιώνει από κλινικό έλεγχο. Εφάρμοσα ισχυρούς μηχανισμούς XAI και επαναληπτικούς βρόχους ReAct για να διασφαλίσω ότι όλες οι κλινικές αναφορές είναι ερμηνεύσιμες και ελέγξιμες, ουσιαστικά 'επικυρώνοντας' το μέλλον της ανάπτυξης κλινικής AI για περιβάλλοντα υψηλού διακυβεύματος."
+                    brief: "Αρχιτεκτόνησα το ZenithDx, ένα σύστημα Agentic AI υψηλής απόδοσης που αναπτύχθηκε σε υποδομή NVIDIA DGX. Αυτό το έργο δεν αφορούσε απλώς την κατασκευή ενός LLM· αφορούσε τη μηχανική ενός συστήματος που επιβιώνει από κλινικό έλεγχο. Εφάρμοσα ισχυρούς μηχανισμούς XAI και επαναληπτικούς βρόχους ReAct για να διασφαλίσω ότι όλες οι κλινικές αναφορές είναι ερμηνεύσιμες και ελέγξιμες, ουσιαστικά 'επικυρώνοντας' το μέλλον της ανάπτυξης κλινικής AI για περιβάλλοντα υψηλού διακυβεύματος.\n\n**The Engineering Challenge**: Επίτευξη ακρίβειας 96.28% διατηρώντας παράλληλα την ιχνηλασιμότητα του Άρθρου 12 του EU AI Act. Κατασκεύασα έναν βρόχο ReAct ενορχηστρωμένο με LangGraph με πάνω από 90% κάλυψη Unit Testing, αποδεικνύοντας ότι η Deep Tech μπορεί να είναι ταυτόχρονα καινοτόμα και εγγενώς συμβατή (compliance-native)."
                 },
                 "wgan-telco": {
                     title: "Αρχιτεκτονική WGAN-GP για Συνθετική Κίνηση με Προστασία Ιδιωτικότητας",
@@ -1857,35 +1984,36 @@ export const locales = {
             },
             disclaimer: "\"Ως Διπλωματούχος Μηχανικός και μέλος του ΤΕΕ, διασφαλίζω τη θεσμική συμμόρφωση και την τεχνική ακεραιότητα των υποδομών ψηφιακής υγείας, θωρακίζοντας τον οργανισμό σας έναντι των απαιτήσεων των ευρωπαϊκών κανονισμών.\"",
             sectors: [
-                "Startups/Scaleups SaMD & MedTech με επίκεντρο την AI",
-                "Εξειδικευμένες Συμβουλευτικές Ρυθμιστικής & Deep-Tech AI",
-                "Πάροχοι Hyperscale Cloud & Κυρίαρχες Υποδομές",
-                "Κοινοποιημένοι Οργανισμοί (NBs) & Διαπιστευμένοι Φορείς Ελέγχου",
-                "Παγκόσμια Φαρμακοβιομηχανία & Enterprise Life Sciences",
-                "Μονάδες Δημόσιας Πολιτικής & Πάροχοι RaaS",
-                "Τεχνικός Σύμβουλος Στρατηγικής (Επίπεδο Υπουργείου)",
-                "Ειδικός Αξιολογητής (ΕΣΥΔ / Εθνική Διαπίστευση)",
-                "Fractional PRRC για Πανεπιστημιακές Κλινικές & Spin-offs",
-                "Σύμβουλος Συμμόρφωσης Έργων RRF (Ταμείο Ανάκαμψης)",
+                "MedTech & SaMD (Software as a Medical Device)",
+                "Pharmaceuticals & Clinical Research",
+                "Cloud & Sovereign Infrastructure",
+                "Industrial AI & Smart Manufacturing",
+                "RegTech & Technical Consultancies",
+                "Ministries of Health & Digital Governance",
+                "University Spin-offs & Research Labs",
+                "Judicial, IP & Financial Authorities",
+                "Smart Cities & IoT Infrastructure",
+                "European Commission & Policy Task Forces",
                 "Άλλο"
             ],
             services: [
-                "Fractional PRRC & Στρατηγικός Ρυθμιστικός Συνεργάτης",
-                "Αρχιτέκτονας Κυρίαρχων Συστημάτων & Πολιτικής",
-                "Μηχανικός AI & Αρχιτέκτονας Λύσεων",
-                "Επικύρωση AI, XAI & Stress Testing",
-                "Τεχνικός Product Manager AI",
-                "Άλλο / Γενική Ερώτηση"
+                "The Legal Shield",
+                "The Institutional Navigator",
+                "The Safety Authority",
+                "The Strategic Navigator",
+                "The Quality Architect",
+                "The Deep-Tech Auditor",
+                "Ecosystem Entry: Τεχνικός Έλεγχος για Startups"
             ]
         },
         strategicSectors: {
             subtitle: "Συνεργασία & Προσλήψεις",
-            title: "Οι 10 Στρατηγικοί",
-            titleHighlight: "Τομείς Δέσμευσης.",
+            title: "Οι 10 Τομείς",
+            titleHighlight: "Αυθεντίας.",
             description: "Επιλέξτε την κατηγορία που περιγράφει καλύτερα τον οργανισμό σας για να ανακαλύψετε εξειδικευμένες υπηρεσίες στρατηγικής, μηχανικής και κανονιστικής συμμόρφωσης.",
-            privateSectorTitle: "Ιδιωτικός Τομέας",
-            privateSectorSubtitle: "(Εταιρικός & Καινοτομία)",
-            publicSectorTitle: "Δημόσιος Τομέας",
+            privateSectorTitle: "I. Ιδιωτικός Τομέας",
+            privateSectorSubtitle: "(High-Stakes Innovation)",
+            publicSectorTitle: "II. Δημόσιος Τομέας",
             publicSectorSubtitle: "(Θεσμική Στρατηγική)",
             professionalLicensure: {
                 badge: "Επαγγελματική Άδεια",
@@ -1906,73 +2034,83 @@ export const locales = {
             sectors: [
                 {
                     id: 1,
-                    title: "AI-First SaMD & MedTech Startups/Scaleups",
-                    focus: "Οργανισμοί που αναπτύσσουν Λογισμικό ως Ιατροτεχνολογικό Προϊόν (SaMD) με πυρήνα την Τεχνητή Νοημοσύνη (π.χ. CDSS, διαγνωστική απεικόνιση).",
-                    service: "Fractional PRRC & Technical AI Product Manager",
-                    value: "Διασφάλιση ότι η καινοτομία σας ξεπερνά τα εμπόδια των Κοινοποιημένων Οργανισμών χωρίς καθυστερήσεις, χτίζοντας στρατηγική 'Compliant-by-Design' από την πρώτη μέρα."
+                    title: "MedTech & SaMD (Software as a Medical Device)",
+                    focus: "Startups και Scale-ups ιατρικού λογισμικού (Class IIa/IIb/III).",
+                    service: "Fractional PRRC & MDR Signatory",
+                    value: "Αναλαμβάνεις τον θεσμικό ρόλο του 'Person Responsible for Regulatory Compliance' (Άρθρο 15 MDR). Μετατρέπεις το ρίσκο μιας AI διάγνωσης σε εγκεκριμένο ιατρικό προϊόν, υπογράφοντας για τη συμμόρφωση της Agentic AI αρχιτεκτονικής σας (IEC 62304) και τη διαχείριση κινδύνου (ISO 14971).",
+                    image: "/resources/img/sectors/medtech.png"
                 },
                 {
                     id: 2,
-                    title: "Εξειδικευμένες Συμβουλευτικές AI & Deep-Tech",
-                    focus: "Μπουτίκ εταιρείες υψηλού επιπέδου που ειδικεύονται στη στρατηγική επικύρωσης και τη συμμόρφωση ιατρικού λογισμικού.",
-                    service: "Σύμβουλος AI Validation, XAI & Stress Testing",
-                    value: "Παροχή του απαραίτητου 'Τεχνικού Ελέγχου' για την τεκμηρίωση της ασφάλειας, της διαφάνειας (Εξηγησιμότητα) και της robust λειτουργίας των αλγορίθμων σας."
+                    title: "Pharmaceuticals & Clinical Research",
+                    focus: "Πολυεθνικές Φαρμακευτικές και CROs (Clinical Research Organizations).",
+                    service: "Quality Assurance Architect & GxP Validator",
+                    value: "Διασφαλίζεις ότι τα AI-driven κλινικά εργαλεία είναι 'Audit-Ready'. Ενσωματώνεις το Compliance-by-Design στις CI/CD ροές τους, εξασφαλίζοντας ότι η επεξεργασία ευαίσθητων δεδομένων υγείας (GDPR Art. 9) και τα ψηφιακά θεραπευτικά (DTx) πληρούν τα αυστηρότερα διεθνή πρότυπα.",
+                    image: "/resources/img/sectors/pharma.jpg"
                 },
                 {
                     id: 3,
-                    title: "Πάροχοι Hyperscale Cloud & Κυρίαρχες Υποδομές",
-                    focus: "Τμήματα υγείας τεχνολογικών κολοσσών (Microsoft, AWS, Google) ή πάροχοι Sovereign Cloud υποδομών στην Ευρώπη.",
-                    service: "Αρχιτέκτονας Κυρίαρχων Συστημάτων & Πολιτικής",
-                    value: "Σχεδιασμός οικοσυστημάτων που εξισορροπούν την υψηλή απόδοση AI με την απόλυτη ψηφιακή κυριαρχία και 100% Data Residency."
+                    title: "Cloud & Sovereign Infrastructure",
+                    focus: "Hyperscale Providers (Azure, AWS) και Τοπικά Data Centers.",
+                    service: "Sovereign Infrastructure Lead (Physical & Digital)",
+                    value: "Η 'διπλή υπογραφή'. Ως αδειούχος Μηχανικός ΤΕΕ, υπογράφεις για τη φυσική ασφάλεια/αδειοδότηση των εγκαταστάσεων (Building Permits, BMS), ενώ ταυτόχρονα αρχιτεκτονείς 'Sovereign Landing Zones' που ευθυγραμμίζονται με το EU AI Act και τις απαιτήσεις Data Residency.",
+                    image: "/resources/img/sectors/cloud.png"
                 },
                 {
                     id: 4,
-                    title: "Κοινοποιημένοι Οργανισμοί & Φορείς Πιστοποίησης",
-                    focus: "Επίσημοι φορείς πιστοποίησης (π.χ. TÜV SÜD, BSI, SGS) και εξειδικευμένα 'Κέντρα Αριστείας Λογισμικού'.",
-                    service: "Lead Technical Auditor (AI & Software focus)",
-                    value: "Ως Διπλωματούχος Μηχανικός (ΤΕΕ), διεξαγωγή αυστηρών τεχνικών ελέγχων βάσει των προτύπων IEC 62304 και ISO 13485 για κρίσιμα λογισμικά."
+                    title: "Industrial AI & Smart Manufacturing",
+                    focus: "Βιομηχανικοί όμιλοι και Logistics (π.χ. F.H.L. Kiriakidis Group context).",
+                    service: "Industrial Automation & Safety Technician (Cat. A)",
+                    value: "Εφαρμόζεις Anomaly Detection και Process Validation σε βαριά βιομηχανία. Η υπογραφή σου εγγυάται ότι οι αλγόριθμοι βελτιστοποίησης παραγωγής δεν παραβιάζουν τα πρωτόκολλα ασφαλείας και τις περιβαλλοντικές μελέτες (EIA), αποτρέποντας δαπανηρά bottlenecks.",
+                    image: "/resources/img/sectors/industrial.jpg"
                 },
                 {
                     id: 5,
-                    title: "Πολυεθνικές Φαρμακευτικές & Life Sciences",
-                    focus: "Πολυεθνικές φαρμακευτικές εταιρείες που αναπτύσσουν Ψηφιακές Θεραπείες (DTx) ή εργαλεία AI για κλινικές δοκιμές.",
-                    service: "AI Solution Architect: Ποιότητα & Εφαρμογή Προτύπων",
-                    value: "Ενσωμάτωση τεχνικής αυστηρότητας και παγκόσμιων προτύπων ποιότητας σε μεγάλες υποδομές AI, διασφαλίζοντας Συνεχή Συμμόρφωση."
+                    title: "RegTech & Technical Consultancies",
+                    focus: "Εταιρείες που αναπτύσσουν Compliance Software και Big-4 Consultancies.",
+                    service: "Deep-Tech Auditor & XAI Expert",
+                    value: "Λειτουργείς ως ο 'Τεχνικός Εγγυητής' (Auditor's Auditor). Παρέχεις το απαραίτητο τεχνικό πειστήριο (Technical Proof) μέσω Explainable AI (SHAP, Captum) που αποδεικνύει στους Notified Bodies ότι το σύστημα είναι διαφανές, αμερόληπτο και ασφαλές.",
+                    image: "/resources/img/sectors/regtech.png"
                 },
                 {
                     id: 6,
-                    title: "Μονάδες Δημόσιας Πολιτικής & Πάροχοι RaaS",
-                    focus: "Θεσμικά όργανα (EU AI Office, EC) ή εταιρείες τεχνολογίας που αναπτύσσουν λογισμικό αυτοματοποίησης συμμόρφωσης.",
-                    service: "Αρχιτέκτονας Κυρίαρχων Συστημάτων & Πολιτικής",
-                    value: "Μετάφραση νομοθετικών κατευθύνσεων σε τεχνικές προδιαγραφές και αυτοματοποιημένες ροές εργασίας, καθοδηγώντας τη μελλοντική πολιτική για την Τεχνητή Νοημοσύνη στην Υγεία."
+                    title: "Ministries of Health & Digital Governance",
+                    focus: "Εθνικοί Φορείς και Υπουργεία.",
+                    service: "Sovereign Systems & Public Policy Advisor",
+                    value: "Μεταφράζεις τις Ευρωπαϊκές οδηγίες σε τεχνικές προδιαγραφές για εθνικά έργα (π.χ. ΗΔΙΚΑ, Ηλεκτρονικός Φάκελος). Διασφαλίζεις ότι οι δημόσιες επενδύσεις σε AI είναι θεσμικά θωρακισμένες, αποφεύγοντας νομικές εμπλοκές και απώλεια κονδυλίων.",
+                    image: "/resources/img/sectors/digital-gov.png"
                 },
                 {
                     id: 7,
-                    title: "Τεχνικός Σύμβουλος Στρατηγικής (Επίπεδο Υπουργείου)",
-                    context: "Υπουργείο Ψηφιακής Διακυβέρνησης, Υπουργείο Υγείας.",
-                    role: "Αρχιτέκτονας Κυρίαρχων Συστημάτων & Πολιτικής",
-                    advantage: "Σχεδιασμός τεχνικών προδιαγραφών για εθνικά συστήματα (π.χ. Εθνικό EHR) με ενσωματωμένη Τεχνητή Νοημοσύνη, διασφαλίζοντας ευθυγράμμιση με το EU AI Act πριν την έναρξη των διαγωνισμών."
+                    title: "University Spin-offs & Research Labs",
+                    focus: "Πανεπιστημιακά Ιδρύματα και Ερευνητικά Κέντρα.",
+                    service: "Institutional Bridge: From Lab to Market",
+                    value: "Το 'ZenithDx Model'. Παρέχεις τη θεσμική κάλυψη (TEE License) που χρειάζεται μια ερευνητική ομάδα για να μετατρέψει μια δημοσίευση σε νόμιμο, αδειοδοτημένο προϊόν ή spin-off, υπογράφοντας για τη νομιμότητα των εργαστηριακών χώρων και του λογισμικού.",
+                    image: "/resources/img/sectors/university.jpg"
                 },
                 {
                     id: 8,
-                    title: "Εμπειρογνώμονας Αξιολογητής (ΕΣΥΔ / Εθνική Διαπίστευση)",
-                    context: "Διαπίστευση φορέων και εργαστηρίων.",
-                    role: "Lead Technical Auditor (AI & Software focus)",
-                    advantage: "Η άδεια ΤΕΕ δημιουργεί ουσιαστική εγκυρότητα για την αξιολόγηση εργαστηρίων που πιστοποιούν συστήματα AI, μετατρέποντας την τεχνική γνώση σε κρατική εγγύηση."
+                    title: "Judicial, IP & Financial Authorities",
+                    focus: "Δικαστήρια, Εθνικοί Φορείς Διαπίστευσης (ΕΣΥΔ), Γραφεία Διπλωμάτων Ευρεσιτεχνίας (π.χ. ΟΒΙ, EPO), Σύμβουλοι Εξαγορών & Συγχωνεύσεων (M&A) και Φορολογικές Αρχές (π.χ. ΑΑΔΕ).",
+                    service: "Πραγματογνώμονας Άυλων Ψηφιακών Αγαθών & Ελεγκτής Πνευματικής Ιδιοκτησίας (AI & Deep-Tech)",
+                    value: "Ενεργώντας ως ο επίσημος, πιστοποιημένος από το κράτος εκτιμητής και τεχνικός σύνδεσμος για ψηφιακά περιουσιακά στοιχεία και πνευματική ιδιοκτησία. Η υπογραφή σου παρέχει την οριστική τεχνική και οικονομική αποτίμηση (valuation) μοντέλων AI, συνόλων δεδομένων και ιδιόκτητου λογισμικού κατά τη διάρκεια Συγχωνεύσεων & Εξαγορών (M&As), πτωχεύσεων ή φορολογικών ελέγχων, μεταφράζοντας deep-tech αρχιτεκτονικές σε απτή εταιρική αξία. Παράλληλα, επικυρώνεις την καινοτομία (novelty) και το μη προφανές (non-obviousness) συστημάτων AI για αιτήσεις διπλωμάτων ευρεσιτεχνίας (patents), παρέχοντας εξειδικευμένη τεχνική διαιτησία σε δικαστικές διαμάχες σχετικά με κλοπή πνευματικής ιδιοκτησίας, αλγοριθμική λογοκλοπή και παραβίαση ευρεσιτεχνιών.",
+                    image: "/resources/img/sectors/ai-valuator.jpeg"
                 },
                 {
                     id: 9,
-                    title: "Fractional PRRC για Πανεπιστημιακές Κλινικές & Spin-offs",
-                    context: "Νοσοκομεία ΕΣΥ, Ερευνητικά Κέντρα, Πανεπιστήμια.",
-                    role: "Fractional PRRC",
-                    advantage: "Νομική θωράκιση διοικήσεων νοσοκομείων που αναπτύσσουν δικά τους εργαλεία AI, παρέχοντας θεσμική κάλυψη για χρήση σε πραγματικούς ασθενείς."
+                    title: "Smart Cities & IoT Infrastructure",
+                    focus: "Δήμοι και Φορείς Μεταφορών (π.χ. DeafNav context).",
+                    service: "Urban Architect & Interoperability Validator",
+                    value: "Σχεδιασμός έξυπνων υποδομών που τηρούν τα WCAG πρότυπα προσβασιμότητας και τις προδιαγραφές Smart Building Management (BMS). Υπογράφεις για την ακεραιότητα των δικτύων και τη συμβατότητα των SLAs σε δημόσια έργα τηλεπικοινωνιών.",
+                    image: "/resources/img/sectors/iot.jpg"
                 },
                 {
                     id: 10,
-                    title: "Σύμβουλος Συμμόρφωσης Έργων ΤΑΑ (Ταμείο Ανάκαμψης)",
-                    context: "Κοινωνία της Πληροφορίας, ΗΔΙΚΑ.",
-                    role: "Technical AI Product Manager",
-                    advantage: "Ως 'γέφυρα ελέγχου' μεταξύ κράτους και αναδόχων, διασφαλίζοντας ότι τα παραδοτέα IT συμμορφώνονται με το MDR και το AI Act για την αποφυγή απώλειας χρηματοδότησης."
+                    title: "European Commission & Policy Task Forces",
+                    focus: "Ευρωπαϊκοί Οργανισμοί (EYE, European Parliament briefings).",
+                    service: "Sovereign AI Strategist & Policy Task Force Lead",
+                    value: "Διαμορφώνεις το μέλλον της νομοθεσίας. Drafting Position Papers για το EU AI Act, διασφαλίζοντας ότι η Ευρωπαϊκή καινοτομία παραμένει κυρίαρχη (Sovereign) και τεχνικά εφικτή, γεφυρώνοντας το κενό μεταξύ MEPs και Engineering reality.",
+                    image: "/resources/img/sectors/eu.jpg"
                 }
             ]
         }

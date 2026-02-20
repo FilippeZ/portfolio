@@ -171,7 +171,7 @@ export default function About() {
     }));
 
     return (
-        <section id="about" className="py-24 lg:py-32 bg-[#050505] text-white relative overflow-hidden">
+        <section id="about" className="py-24 lg:py-32 text-white relative overflow-hidden">
             {/* Background Atmosphere */}
             <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-blue-900/10 to-transparent pointer-events-none"></div>
             <div className="absolute -left-[20%] top-[20%] w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-[120px] pointer-events-none"></div>
@@ -489,7 +489,15 @@ export default function About() {
                                                     <div className="relative z-10 flex-1">
                                                         <div className="flex flex-wrap justify-between items-start gap-2 mb-2">
                                                             <div>
-                                                                <h4 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">{item.title}</h4>
+                                                                <h4 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors flex flex-wrap items-center gap-2">
+                                                                    <span>{item.title.split('|')[0]}</span>
+                                                                    {item.title.includes('|') && (
+                                                                        <span className="px-2 py-0.5 bg-yellow-500/10 text-yellow-500 text-[10px] uppercase tracking-wider rounded-full border border-yellow-500/20 whitespace-nowrap flex items-center gap-1">
+                                                                            <Award size={10} />
+                                                                            {item.title.split('|')[1].trim()}
+                                                                        </span>
+                                                                    )}
+                                                                </h4>
                                                                 <div className="text-sm text-gray-400">{item.org}</div>
                                                             </div>
                                                             <span className="text-xs font-mono text-gray-500 border border-white/10 px-2 py-1 rounded">{item.date}</span>

@@ -9,6 +9,18 @@ import { ExternalLink, ArrowRight, X, Maximize2 } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import { locales } from "../data/locales";
 
+// Helper to render bold text and paragraphs
+const renderFormattedText = (text: string) => {
+    if (!text) return null;
+    return text.split('\n\n').map((paragraph, i) => (
+        <p key={i} className="mb-4 last:mb-0">
+            {paragraph.split(/\*\*(.*?)\*\*/g).map((part, j) =>
+                j % 2 === 1 ? <strong key={j} className="text-white font-bold">{part}</strong> : part
+            )}
+        </p>
+    ));
+};
+
 export default function Portfolio() {
     const { language } = useLanguage();
     const t = locales[language].portfolio;
@@ -60,7 +72,7 @@ export default function Portfolio() {
     }, [searchParams, mergedProjects]);
 
     return (
-        <section id="portfolio" className="py-24 lg:py-32 bg-[#050505] relative overflow-hidden">
+        <section id="portfolio" className="py-24 lg:py-32 relative overflow-hidden">
             {/* Background Atmosphere */}
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[120px] pointer-events-none opacity-50"></div>
             <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-purple-900/10 rounded-full blur-[100px] pointer-events-none opacity-30"></div>
@@ -152,7 +164,7 @@ export default function Portfolio() {
                                         {project.title}
                                     </h3>
                                     <p className="text-gray-400 text-sm line-clamp-3 mb-6 leading-relaxed">
-                                        {project.brief}
+                                        {project.brief.replace(/\*\*/g, '').replace(/\n\n/g, ' ')}
                                     </p>
 
                                     <div className="mt-auto pt-6 border-t border-white/5 flex flex-wrap gap-2">
@@ -244,9 +256,9 @@ export default function Portfolio() {
                                                 <div className="w-1 h-1 bg-blue-500 rounded-full"></div>
                                                 Project Overview
                                             </h4>
-                                            <p className="text-gray-300 leading-relaxed text-base/7 md:text-lg/8 font-light">
-                                                {selectedProject.brief}
-                                            </p>
+                                            <div className="text-gray-300 leading-relaxed text-base/7 md:text-lg/8 font-light">
+                                                {renderFormattedText(selectedProject.brief)}
+                                            </div>
                                         </div>
 
                                         <div>

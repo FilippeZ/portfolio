@@ -2,6 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { locales } from "@/data/locales";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -49,43 +50,52 @@ export default function Header() {
 
     return (
         <header
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-[#030303]/80 backdrop-blur-md border-b border-white/5 py-2" : "bg-transparent py-6"
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? "bg-[#030303]/70 backdrop-blur-xl border-b border-white/5 py-4 shadow-[0_4px_30px_rgba(0,0,0,0.5)]" : "bg-transparent py-8"
                 }`}
         >
             <div className="max-w-[1400px] mx-auto px-6 flex items-center justify-between">
                 {/* LOGO */}
                 <Link href="/" className="flex items-center gap-4 group relative z-50">
-                    <div className="relative w-14 h-14 flex items-center justify-center transition-all duration-500">
+                    <div className="relative w-12 h-12 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
+                        <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         <Image
                             src="/resources/img/home_logo_bg_hero.png"
                             alt="Filippos Zygouris Logo"
                             fill
-                            className="object-contain opacity-100 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-500"
+                            className="object-contain drop-shadow-md group-hover:drop-shadow-[0_0_15px_rgba(59,130,246,0.6)] transition-all duration-500 relative z-10"
                         />
                     </div>
-                    <h1 className="text-base font-bold tracking-tight text-white uppercase group-hover:text-primary transition-colors">
-                        FILIPPOS P. ZYGOURIS
-                    </h1>
+                    <div className="flex flex-col">
+                        <h1 className="text-sm md:text-base font-black tracking-widest text-white uppercase group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-cyan-300 transition-all duration-300">
+                            FILIPPOS P. ZYGOURIS
+                        </h1>
+                        <span className="text-[9px] text-blue-500/80 font-mono tracking-[0.3em] uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -translate-y-2 group-hover:translate-y-0">Technical Authority</span>
+                    </div>
                 </Link>
 
                 {/* DESKTOP NAVIGATION */}
-                <nav className="hidden md:flex items-center gap-2 bg-white/5 p-1.5 rounded-full border border-white/5 backdrop-blur-sm">
+                <nav className="hidden md:flex items-center gap-1 bg-[#0a0f1c]/50 p-1.5 rounded-full border border-white/5 backdrop-blur-md shadow-[0_0_20px_rgba(59,130,246,0.05)]">
                     {navLinks.map((link) => (
                         <MagneticLink key={link.name}>
                             <a
                                 href={link.href}
                                 onClick={(e) => handleScroll(e, link.href)}
-                                className={`relative px-5 py-2.5 text-xs font-mono uppercase tracking-wide transition-colors rounded-full ${pathname === link.href ? "text-black bg-white" : "text-gray-400 hover:text-white hover:bg-white/5"}`}
+                                className={`relative px-6 py-2.5 text-xs font-bold uppercase tracking-widest transition-all duration-300 rounded-full group overflow-hidden ${pathname === link.href ? "text-white" : "text-gray-400 hover:text-white"}`}
                             >
-                                {link.name}
+                                <span className="relative z-10">{link.name}</span>
+                                {pathname === link.href ? (
+                                    <div className="absolute inset-0 bg-white/10 rounded-full border border-white/10 z-0"></div>
+                                ) : (
+                                    <div className="absolute inset-0 bg-blue-500/10 rounded-full opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 transition-all duration-300 z-0"></div>
+                                )}
                             </a>
                         </MagneticLink>
                     ))}
                 </nav>
 
                 {/* CONNECT BUTTON & MOBILE TOGGLE */}
-                <div className="flex items-center gap-4">
-
+                <div className="flex items-center gap-6">
+                    <LanguageSwitcher />
                     <motion.div
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
@@ -95,10 +105,10 @@ export default function Header() {
                         <a
                             href="/#contact"
                             onClick={(e) => handleScroll(e, "/#contact")}
-                            className="group relative px-8 py-3 rounded-full bg-white text-black font-bold text-xs tracking-widest uppercase overflow-hidden transition-transform hover:scale-105"
+                            className="group relative px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-blue-400 text-white font-black text-xs tracking-[0.2em] uppercase overflow-hidden hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all duration-300 flex items-center justify-center"
                         >
-                            <span className="relative z-10 group-hover:text-white transition-colors duration-300">{t.nav.contact}</span>
-                            <div className="absolute inset-0 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                            <span className="relative z-10 group-hover:scale-105 transition-transform duration-300">{t.nav.contact}</span>
+                            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </a>
                     </motion.div>
 
@@ -122,21 +132,24 @@ export default function Header() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: "-100%" }}
                         transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                        className="fixed inset-0 z-40 bg-[#030303] flex items-center justify-center md:hidden"
+                        className="fixed inset-0 z-40 bg-[#030303]/95 backdrop-blur-2xl flex flex-col items-center justify-center md:hidden"
                     >
-                        <div className="absolute inset-0 bg-[url('/resources/img/grid.svg')] opacity-[0.05]"></div>
-                        <nav className="flex flex-col items-center gap-8 relative z-10">
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_70%)]"></div>
+                        <div className="absolute inset-0 bg-[url('/resources/img/grid.svg')] opacity-[0.03]"></div>
+
+                        <nav className="flex flex-col items-center gap-8 relative z-10 w-full px-6">
                             {navLinks.map((link, i) => (
                                 <motion.div
                                     key={link.name}
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.1 + i * 0.1 }}
+                                    className="w-full text-center border-b border-white/5 pb-4"
                                 >
                                     <Link
                                         href={link.href}
                                         onClick={() => setMobileMenuOpen(false)}
-                                        className="text-4xl font-black text-white uppercase tracking-tighter hover:text-primary transition-colors"
+                                        className="text-3xl font-black text-white/90 uppercase tracking-widest hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-blue-400 hover:to-cyan-300 transition-all duration-300"
                                     >
                                         {link.name}
                                     </Link>
@@ -147,9 +160,15 @@ export default function Header() {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.5 }}
-                                className="mt-8"
+                                className="mt-8 w-full"
                             >
-
+                                <a
+                                    href="/#contact"
+                                    onClick={(e) => handleScroll(e, "/#contact")}
+                                    className="w-full relative px-8 py-5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-black text-sm tracking-[0.2em] uppercase overflow-hidden shadow-[0_0_30px_rgba(59,130,246,0.2)] flex items-center justify-center"
+                                >
+                                    {t.nav.contact}
+                                </a>
                             </motion.div>
                         </nav>
                     </motion.div>

@@ -8,12 +8,20 @@ import { Download, ArrowRight, ExternalLink, ShieldCheck, Clock, GraduationCap, 
 
 import { useLanguage } from "@/context/LanguageContext";
 import { locales } from "@/data/locales";
+import { DigitalSignature } from "@/components/DigitalSignature";
 
 export default function Hero() {
     const { language } = useLanguage();
     const t = locales[language].hero;
     const containerRef = useRef<HTMLDivElement>(null);
-    const { scrollY } = useScroll();
+    const { scrollY, scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start start", "end start"]
+    });
+
+    // Digital Signature Animation Variables
+    const pathLength = useTransform(scrollYProgress, [0, 0.4], [0, 1]);
+    const signatureOpacity = useTransform(scrollYProgress, [0, 0.1, 0.4, 0.5], [1, 1, 1, 0]);
 
     // Scroll-based parallax for various elements
     const y1 = useTransform(scrollY, [0, 500], [0, 200]);
@@ -54,7 +62,7 @@ export default function Hero() {
         <section
             ref={containerRef}
             onMouseMove={handleMouseMove}
-            className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#050505] text-white pt-32 pb-20 lg:pt-40 lg:pb-32"
+            className="relative min-h-screen w-full flex items-center justify-center overflow-hidden text-white pt-32 pb-20 lg:pt-40 lg:pb-32"
         >
             {/* 1. LAYER: DYNAMIC BACKGROUND */}
             <div className="absolute inset-0 z-0">
@@ -127,24 +135,53 @@ export default function Hero() {
                         transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
                         className="max-w-3xl space-y-6"
                     >
-                        <div className="space-y-4">
+                        <div className="space-y-4 relative">
                             <h2 className="text-2xl md:text-3xl font-light text-gray-300">
                                 {t.role_name} <span className="text-blue-500 font-mono text-xl block sm:inline mt-2 sm:mt-0">{t.role_title}</span>
                             </h2>
-                            <p className="text-xl md:text-2xl font-medium text-white italic border-l-4 border-blue-500 pl-6 py-2">
-                                &quot;{t.quote}&quot;
-                            </p>
+
+                            {/* DIGITAL SIGNATURE & VERIFICATION - Side-by-Side Professional Layout */}
+                            <div className="flex flex-col md:flex-row items-start md:items-end gap-6 mt-4">
+                                <div className="relative h-28 w-full max-w-sm">
+                                    <DigitalSignature scrollYProgress={scrollYProgress} />
+                                </div>
+
+                                <motion.div
+                                    style={{ opacity: signatureOpacity }}
+                                    className="flex flex-col gap-1 font-mono text-[9px] tracking-[0.15em] text-blue-400/70 border-l border-blue-500/20 pl-4 py-1"
+                                >
+                                    <div className="flex items-center gap-2">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
+                                        <span className="font-bold text-gray-300">Verified Digital Integrity</span>
+                                    </div>
+                                    <div className="space-y-0.5">
+                                        <div className="flex items-center gap-1.5">
+                                            <span className="opacity-50">AUTH_HASH:</span>
+                                            <span className="text-blue-300/60 lowercase">0x8f9...a2c_auth</span>
+                                        </div>
+                                        <div className="flex items-center gap-1.5">
+                                            <span className="text-emerald-500/90 font-black tracking-widest uppercase">SIGNED_&_VERIFIED</span>
+                                            <ShieldCheck size={10} className="text-emerald-500/50" />
+                                        </div>
+                                    </div>
+                                    <span className="text-[7px] opacity-40 mt-1">PROTOCOL_AUTH_STAMP: 2024_Q4_v.0.8</span>
+                                </motion.div>
+                            </div>
                         </div>
 
-                        <div className="space-y-4 text-gray-400 leading-relaxed font-light">
-                            <p className="text-lg md:text-xl">
-                                {renderTextWithHighlights(t.description_1)}
-                            </p>
-                            <p className="text-lg md:text-xl border-l-2 border-white/10 pl-6">
-                                {renderTextWithHighlights(t.description_2)}
-                            </p>
-                        </div>
+                        <p className="text-xl md:text-2xl font-medium text-white italic border-l-4 border-blue-500 pl-6 py-2">
+                            &quot;{t.quote}&quot;
+                        </p>
                     </motion.div>
+
+                    <div className="space-y-4 text-gray-400 leading-relaxed font-light">
+                        <p className="text-lg md:text-xl">
+                            {renderTextWithHighlights(t.description_1)}
+                        </p>
+                        <p className="text-lg md:text-xl border-l-2 border-white/10 pl-6">
+                            {renderTextWithHighlights(t.description_2)}
+                        </p>
+                    </div>
 
                     {/* CTAs */}
                     <motion.div
@@ -229,7 +266,8 @@ export default function Hero() {
                 animate={{
                     y: [0, -20, 0],
                     rotate: [0, 5, 0]
-                }}
+                }
+                }
                 transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute top-1/4 right-[10%] opacity-20 hidden lg:block"
             >
