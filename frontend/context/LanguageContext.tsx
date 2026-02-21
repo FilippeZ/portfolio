@@ -33,8 +33,14 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
         handleSetLanguage(language === "en" ? "el" : "en");
     };
 
+    const contextValue = React.useMemo(() => ({
+        language,
+        setLanguage: handleSetLanguage,
+        toggleLanguage
+    }), [language]);
+
     return (
-        <LanguageContext.Provider value={{ language, setLanguage: handleSetLanguage, toggleLanguage }}>
+        <LanguageContext.Provider value={contextValue}>
             {children}
         </LanguageContext.Provider>
     );

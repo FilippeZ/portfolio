@@ -785,6 +785,10 @@ export const locales = {
                     category: "AI Governance & Policy",
                     brief: "Architected an automated pipeline for monitoring bias and policy drift in clinical AI agents. I implemented technical audit trails to ensure that model outputs remain within defined ethical boundaries, providing the high-authority evidence needed for institutional sign-off on high-risk clinical deployments."
                 }
+            },
+            buttons: {
+                liveProject: "Live Project",
+                caseStudy: "In-Depth Case Study"
             }
         },
         testimonials: {
@@ -1886,6 +1890,10 @@ export const locales = {
                     category: "Διακυβέρνηση & Πολιτική AI",
                     brief: "Αρχιτεκτόνησα έναν αυτοματοποιημένο αγωγό για την παρακολούθηση μεροληψίας και μετατόπισης πολιτικής σε πράκτορες κλινικής AI. Εφάρμοσα τεχνικά ίχνη ελέγχου για να διασφαλίσω ότι οι έξοδοι του μοντέλου παραμένουν εντός καθορισμένων ηθικών ορίων, παρέχοντας τα αποδεικτικά στοιχεία υψηλής εξουσίας που απαιτούνται για τη θεσμική έγκριση σε κλινικές αναπτύξεις υψηλού κινδύνου."
                 }
+            },
+            buttons: {
+                liveProject: "Live Project",
+                caseStudy: "Εκτενής Παρουσίαση Έργου"
             }
         },
         testimonials: {

@@ -2,19 +2,8 @@
 
 import { motion, MotionValue, useTransform } from "framer-motion";
 
-interface DigitalSignatureProps {
-    scrollYProgress: MotionValue<number>;
-}
-
-export const DigitalSignature = ({ scrollYProgress }: DigitalSignatureProps) => {
-    // Mask reveal: 0% to 45% scroll -> clip rect width 0 to 210
-    const clipWidth = useTransform(scrollYProgress, [0.02, 0.45], [0, 210]);
-    // Sweep line draws slightly ahead of the mask
-    const sweepPathLength = useTransform(scrollYProgress, [0, 0.48], [0, 1]);
-    // Pen tip X position tracks the leading edge
-    const penTipX = useTransform(scrollYProgress, [0.02, 0.45], [0, 210]);
-    // Pen tip opacity: visible during writing, fades after
-    const penTipOpacity = useTransform(scrollYProgress, [0, 0.03, 0.42, 0.48], [0, 1, 1, 0]);
+export const DigitalSignature = () => {
+    const transition = { duration: 3, ease: [0.43, 0.13, 0.23, 0.96] as any, delay: 0.8 };
 
     return (
         <svg
@@ -25,7 +14,12 @@ export const DigitalSignature = ({ scrollYProgress }: DigitalSignatureProps) => 
             <defs>
                 {/* Animated clip mask for left-to-right reveal */}
                 <clipPath id="signatureRevealMask">
-                    <motion.rect x="0" y="85" height="70" style={{ width: clipWidth }} />
+                    <motion.rect
+                        x="0" y="85" height="70"
+                        initial={{ width: 0 }}
+                        animate={{ width: 210 }}
+                        transition={transition}
+                    />
                 </clipPath>
                 {/* Pen tip glow gradient */}
                 <radialGradient id="penGlow" cx="50%" cy="50%" r="50%">
@@ -35,14 +29,15 @@ export const DigitalSignature = ({ scrollYProgress }: DigitalSignatureProps) => 
                 </radialGradient>
             </defs>
 
-            {/* Sweep Guide Line - draws slightly ahead of the mask */}
             <motion.path
                 d="M0,120 Q52,128 105,120 Q157,112 210,120"
                 fill="none"
                 stroke="rgba(59,130,246,0.25)"
                 strokeWidth="0.6"
                 strokeLinecap="round"
-                style={{ pathLength: sweepPathLength }}
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: 1 }}
+                transition={{ ...transition, duration: 2.8, delay: 0.7 }}
             />
 
             {/* Glowing Pen Tip - tracks the leading edge */}
@@ -50,7 +45,12 @@ export const DigitalSignature = ({ scrollYProgress }: DigitalSignatureProps) => 
                 r="4"
                 cy="120"
                 fill="url(#penGlow)"
-                style={{ cx: penTipX, opacity: penTipOpacity }}
+                initial={{ cx: 0, opacity: 0 }}
+                animate={{ cx: 210, opacity: [0, 1, 1, 0] }}
+                transition={{
+                    cx: transition,
+                    opacity: { duration: 3.2, times: [0, 0.1, 0.9, 1], delay: 0.8 }
+                }}
             />
 
             {/* Signature revealed by the animated mask */}
@@ -73,7 +73,9 @@ export const DigitalSignature = ({ scrollYProgress }: DigitalSignatureProps) => 
                 stroke="rgba(59,130,246,0.35)"
                 strokeWidth="0.5"
                 strokeLinecap="round"
-                style={{ pathLength: sweepPathLength }}
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: 1 }}
+                transition={{ ...transition, duration: 2, delay: 0.5 }}
             />
 
             {/* Professional Exit Flourish - right side */}
@@ -83,7 +85,9 @@ export const DigitalSignature = ({ scrollYProgress }: DigitalSignatureProps) => 
                 stroke="rgba(59,130,246,0.35)"
                 strokeWidth="0.5"
                 strokeLinecap="round"
-                style={{ pathLength: sweepPathLength }}
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: 1 }}
+                transition={{ ...transition, duration: 2, delay: 2.5 }}
             />
         </svg>
     );

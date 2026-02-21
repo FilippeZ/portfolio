@@ -44,7 +44,7 @@ export const projects = [
         brief: "I architected a robust relational database management system where the focus was 'Data Integrity as a Service'. Beyond modeling, I engineered a logic layer using MySQL Stored Procedures and Triggers to enforce rigid integrity constraints and business rules directly at the source. This architecture ensures that all operational data is verifiable and audit-ready, providing a foundational toolset for high-stakes reservation systems where data failure is not an option.",
         date: "2024",
         tools: ["MySQL", "Java Swing", "JDBC", "Stored Procedures", "Triggers", "ERD", "Normalization", "ETL", "Data Integrity", "Constraints"],
-        link: "https://traveldb.app",
+        link: "https://github.com/FilippeZ/digital-blueprint-travel-agency-rdbms",
         gallery: ["/resources/img/portfolios/web/5.jpg"],
         image: "/resources/img/portfolios/web/5.jpg"
     },
@@ -55,7 +55,7 @@ export const projects = [
         brief: "Architected a high-integrity data analysis pipeline to validate commercial impacts for global transport strategies. I implemented a robust ETL process using Python (Pandas) that didn't just transform data, but 'scrubbed' it to ensure accuracy for BI reporting. This project demonstrated the ability to deliver actionable, high-authority insights from heterogeneous data sources, providing stakeholders with validated evidence to optimize supply chain resilience.",
         date: "2023",
         tools: ["Python", "Pandas", "NumPy", "MySQL", "Matplotlib", "ETL", "Data Cleaning", "Validation"],
-        link: "https://covid-etl.io",
+        link: "https://github.com/FilippeZ/trade-analytics",
         gallery: ["/resources/img/portfolios/web/3.jpeg"],
         image: "/resources/img/portfolios/web/3.jpeg"
     },
@@ -77,7 +77,7 @@ export const projects = [
         brief: "Executed a practical Proof of Concept to define the optimal search strategy for complex spatial and clinical data. I architected and benchmarked multidimensional solution designs (K-D Trees, Octrees) and implemented ANN solutions using Locality-Sensitive Hashing. The final strategic recommendation provided a validated roadmap for high-performance querying that balances speed with memory footprints for enterprise-scale clinical environments.",
         date: "2024",
         tools: ["Python", "NumPy", "LSH", "MinHash", "K-D Tree", "Benchmarking", "Profiling"],
-        link: "https://indexing-poc.com",
+        link: "https://github.com/FilippeZ/multidimensional-spatial-indexing-lsh",
         gallery: ["/resources/img/portfolios/web/6.jpg"],
         image: "/resources/img/portfolios/web/6.jpg"
     },
@@ -111,7 +111,7 @@ export const projects = [
         brief: "Designed a secure, data-centric solution for generating realistic synthetic time-series data for 5G traffic. By implementing WGAN-GP, I enabled the generation of high-fidelity data that satisfies privacy constraints, allowing for the simulation and validation of 5G network performance without compromising real-user data integrity.",
         date: "2024",
         tools: ["PyTorch", "WGAN-GP", "Synthetic Data", "Privacy", "5G"],
-        link: "https://wgan-telco.ai",
+        link: "https://github.com/FilippeZ/synthetic-data-generation-with-gans",
         gallery: ["/resources/img/portfolios/logo/3.png"],
         image: "/resources/img/portfolios/logo/3.png"
     },
@@ -156,7 +156,7 @@ export const projects = [
         brief: "Operationalized a comprehensive AI governance framework to mitigate 'black box' risks in clinical software. I implemented XAI controls using SHAP and Captum, ensuring that all AI-driven decisions are auditable and satisfy GDPR and EU AI Act mandates for high-risk clinical systems.",
         date: "2025",
         tools: ["SHAP", "Captum", "GDPR", "EU AI Act", "Audit Trail", "Governance Framework"],
-        link: "httpsnias://xai-gov.eu",
+        link: "https://github.com/FilippeZ/xai",
         gallery: ["/resources/img/portfolios/icon/11.jpg"],
         image: "/resources/img/portfolios/icon/11.jpg"
     },
@@ -167,7 +167,7 @@ export const projects = [
         brief: "Optimized brute-force k-NN regression for deployment in computationally constrained environments. I reframed this as a 'Reliability' challenge, using OpenMP and MPI to ensure that parallelized workloads maintain perfect logic integrity under high-concurrency stress. This demonstrates the ability to validate algorithmic performance in mission-critical edge scenarios.",
         date: "2024",
         tools: ["C++", "OpenMP", "MPI", "Parallelism", "Stress Testing", "IDW", "k-NN"],
-        link: "https://knn-parallel.com",
+        link: "https://github.com/FilippeZ/paraknn-openmp-mpi",
         gallery: ["/resources/img/portfolios/logo/4.jpg"],
         image: "/resources/img/portfolios/logo/4.jpg"
     },
@@ -178,7 +178,7 @@ export const projects = [
         brief: "Engineered parallel matrix multiplication programs using MPI, focusing on the auditability of distributed workloads. By implementing Ring Topologies and Cartesian Grids for sub-blocking, I established a framework for validating that large-scale ML computations remain synchronized and logically sound across decentralized nodes.",
         date: "2024",
         tools: ["C", "MPI", "Distributed Systems", "Logic Integrity", "HPC"],
-        link: "https://mpi-distributed.com",
+        link: "https://github.com/FilippeZ/mpi-based-parallel-matrix-multiplication",
         gallery: ["/resources/img/portfolios/logo/8.jpg"],
         image: "/resources/img/portfolios/logo/8.jpg"
     },
@@ -189,7 +189,7 @@ export const projects = [
         brief: "Designed and simulated complex hybrid networking architectures to validate connectivity for enterprise-scale migrations. I leveraged OSPF, eBGP, and ExpressRoute to ensure that institutional data flows remain secure and persistent, providing a verified blueprint for sovereign cloud networking.",
         date: "2024",
         tools: ["GNS3", "OSPF", "eBGP", "ExpressRoute", "IaaS/PaaS", "Core Infrastructure"],
-        link: "https://hybrid-net.io",
+        link: "https://github.com/FilippeZ/sovereign-core-bridge",
         gallery: ["/resources/img/portfolios/card/4.jpg"],
         image: "/resources/img/portfolios/card/4.jpg"
     },
@@ -200,7 +200,7 @@ export const projects = [
         brief: "Modeled architectural trade-offs for distributed 4G LTE systems. I analyzed UE mobility and handover costs through a 'Reliability' lens, providing validated performance metrics that ensure network stability during high-stakes institutional operations.",
         date: "2024",
         tools: ["Python", "NumPy", "Network Modeling", "Distributed Systems", "Performance Audit"],
-        link: "https://4g-sim.com",
+        link: "https://github.com/FilippeZ/cellular-networks-architecture",
         gallery: ["/resources/img/portfolios/card/5.jpeg"],
         image: "/resources/img/portfolios/card/5.jpeg"
     },
@@ -211,7 +211,7 @@ export const projects = [
         brief: "Developed automated Linux compute solutions focusing on process scheduling and IPC integrity. I implemented fork() and semaphore logic to ensure that mission-critical background tasks are auditable and resilient, laying the foundation for zero-failure DevOps environments.",
         date: "2024",
         tools: ["Bash", "C", "IPC", "Semaphores", "DevOps", "Scheduling"],
-        link: "https://linux-devops.io",
+        link: "https://github.com/FilippeZ/os-orchestrator-multitasking",
         gallery: ["/resources/img/portfolios/card/1.jpg"],
         image: "/resources/img/portfolios/card/1.jpg"
     },

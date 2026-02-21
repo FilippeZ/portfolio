@@ -185,13 +185,13 @@ export default function Expertise() {
                                 <stop offset="0%" stopColor="#f59e0b" stopOpacity="0.25" />
                                 <stop offset="100%" stopColor="#f59e0b" stopOpacity="0" />
                             </radialGradient>
-                            {/* Glow filter */}
-                            <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-                                <feGaussianBlur stdDeviation="8" result="blur" />
+                            {/* Glow filter - optimized */}
+                            <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                                <feGaussianBlur stdDeviation="4" result="blur" />
                                 <feComposite in="SourceGraphic" in2="blur" operator="over" />
                             </filter>
-                            <filter id="glow-strong" x="-50%" y="-50%" width="200%" height="200%">
-                                <feGaussianBlur stdDeviation="16" result="blur" />
+                            <filter id="glow-strong" x="-30%" y="-30%" width="160%" height="160%">
+                                <feGaussianBlur stdDeviation="8" result="blur" />
                                 <feComposite in="SourceGraphic" in2="blur" operator="over" />
                             </filter>
                         </defs>

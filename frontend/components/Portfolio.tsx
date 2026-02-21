@@ -140,6 +140,8 @@ export default function Portfolio() {
                                         alt={project.title}
                                         fill
                                         className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        priority={index < 3}
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/50 to-transparent opacity-90"></div>
 
@@ -284,7 +286,7 @@ export default function Portfolio() {
                                                 href={selectedProject.caseStudyUrl}
                                                 className="flex-1 bg-white text-black hover:bg-gray-200 text-center font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-white/20 hover:-translate-y-1 flex items-center justify-center gap-2 group"
                                             >
-                                                In-Depth Case Study
+                                                {t.buttons.caseStudy}
                                                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                                             </Link>
                                         )}
@@ -295,7 +297,7 @@ export default function Portfolio() {
                                                 rel="noopener noreferrer"
                                                 className="px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2 hover:border-white/20"
                                             >
-                                                Live Project <ExternalLink size={18} />
+                                                {t.buttons.liveProject} <ExternalLink size={18} />
                                             </a>
                                         )}
                                     </div>

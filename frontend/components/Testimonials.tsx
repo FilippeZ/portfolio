@@ -29,7 +29,7 @@ export default function Testimonials() {
                 content: localized?.content || testimonial.content
             };
         });
-    }, [language, t.list]);
+    }, [t.list]);
 
     return (
         <section id="testimonials" className="py-16 md:py-24 bg-background-dark relative z-10 overflow-hidden">

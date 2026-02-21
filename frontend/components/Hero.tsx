@@ -143,7 +143,7 @@ export default function Hero() {
                             {/* DIGITAL SIGNATURE & VERIFICATION - Side-by-Side Professional Layout */}
                             <div className="flex flex-col md:flex-row items-start md:items-end gap-6 mt-4">
                                 <div className="relative h-28 w-full max-w-sm">
-                                    <DigitalSignature scrollYProgress={scrollYProgress} />
+                                    <DigitalSignature />
                                 </div>
 
                                 <motion.div
@@ -249,7 +249,7 @@ export default function Hero() {
                             fill
                             className="object-contain object-bottom drop-shadow-[0_20px_60px_rgba(0,0,0,0.8)]"
                             priority
-                            quality={100}
+                            quality={75}
                         />
                         {/* Soft fade to black at bottom */}
                         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#050505] to-transparent"></div>

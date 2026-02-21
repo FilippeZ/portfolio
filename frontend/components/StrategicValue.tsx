@@ -10,15 +10,6 @@ export default function StrategicValue() {
     const { language } = useLanguage();
     const t = locales[language].strategicValue;
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-    const [scanPos, setScanPos] = useState(0);
-
-    // Animated "scanning" line effect
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setScanPos((prev) => (prev + 1) % 100);
-        }, 50);
-        return () => clearInterval(interval);
-    }, []);
 
     return (
         <section className="py-24 relative overflow-hidden">
@@ -26,10 +17,9 @@ export default function StrategicValue() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_70%)]"></div>
             <div className="absolute inset-0 bg-[url('/resources/img/grid.svg')] opacity-[0.02] mix-blend-overlay"></div>
 
-            {/* Animated Scanning Beam */}
+            {/* Animated Scanning Beam - CSS Optimized */}
             <div
-                className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-blue-500/20 to-transparent z-0 pointer-events-none opacity-50"
-                style={{ top: `${scanPos}%` }}
+                className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-blue-500/20 to-transparent z-0 pointer-events-none opacity-50 animate-scan"
             />
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
