@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Lock, User, ArrowRight, ShieldCheck, AlertCircle } from "lucide-react";
+import { Lock, User, ArrowRight, ShieldCheck, AlertCircle, Linkedin } from "lucide-react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import FrameSequencer from "@/components/FrameSequencer";
@@ -145,6 +145,23 @@ export default function LoginPage() {
                             </AnimatePresence>
                         </button>
                     </form>
+
+                    <div className="mt-8 pt-6 border-t border-white/5 flex flex-col items-center gap-3">
+                        <p className="text-gray-400 text-[11px] font-light tracking-wide">
+                            Don't have an access code? Contact me on LinkedIn.
+                        </p>
+                        <motion.a
+                            href="https://www.linkedin.com/in/filippos-paraskevas-zygouris-8a88a8266/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold hover:bg-blue-500/20 transition-all"
+                        >
+                            <Linkedin className="w-3.5 h-3.5" />
+                            LinkedIn Profile
+                        </motion.a>
+                    </div>
                 </div>
 
                 <p className="text-center mt-8 text-gray-500 text-xs tracking-widest uppercase">
