@@ -915,6 +915,8 @@ export const locales = {
             form: {
                 name: "Full Name",
                 name_placeholder: "Enter your name",
+                company: "Company",
+                company_placeholder: "Enter company name (optional)",
                 email: "Email Address",
                 email_placeholder: "Enter your email",
                 sector: "Strategic Sector",
@@ -1977,6 +1979,8 @@ export const locales = {
             form: {
                 name: "Ονοματεπώνυμο",
                 name_placeholder: "Εισάγετε το όνομά σας",
+                company: "Εταιρεία",
+                company_placeholder: "Εισάγετε το όνομα της εταιρείας (προαιρετικό)",
                 email: "Διεύθυνση Email",
                 email_placeholder: "Εισάγετε το email σας",
                 sector: "Στρατηγικός Τομέας",

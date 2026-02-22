@@ -29,6 +29,7 @@ export default function Contact() {
 
     const [formData, setFormData] = useState({
         name: "",
+        company: "",
         email: "",
         sector: "",
         service: "",
@@ -58,7 +59,7 @@ export default function Contact() {
 
             if (response.ok) {
                 setStatus("success");
-                setFormData({ name: "", email: "", sector: "", service: "", message: "" });
+                setFormData({ name: "", company: "", email: "", sector: "", service: "", message: "" });
                 setTimeout(() => setStatus("idle"), 6000);
             } else {
                 setStatus("error");
@@ -252,25 +253,46 @@ export default function Contact() {
                                     </div>
 
                                     <div className="space-y-4 group">
-                                        <label className={`text-[10px] font-mono uppercase tracking-[0.4em] transition-all duration-300 ${focusedField === 'email' ? 'text-blue-400 translate-x-1' : 'text-gray-600'}`}>
-                                            {t.form.email}
+                                        <label className={`text-[10px] font-mono uppercase tracking-[0.4em] transition-all duration-300 ${focusedField === 'company' ? 'text-blue-400 translate-x-1' : 'text-gray-600'}`}>
+                                            {t.form.company}
                                         </label>
                                         <div className="relative">
                                             <input
-                                                type="email"
-                                                name="email"
-                                                required
-                                                placeholder={t.form.email_placeholder}
-                                                onFocus={() => setFocusedField('email')}
+                                                type="text"
+                                                name="company"
+                                                placeholder={t.form.company_placeholder}
+                                                onFocus={() => setFocusedField('company')}
                                                 onBlur={() => setFocusedField(null)}
-                                                value={formData.email}
+                                                value={formData.company}
                                                 onChange={handleChange}
                                                 className="w-full bg-white/[0.01] border border-white/5 rounded-2xl px-6 py-4 text-lg font-bold text-white placeholder:text-gray-800 focus:outline-none focus:border-blue-500/50 focus:bg-blue-500/[0.01] transition-all"
                                             />
-                                            {focusedField === 'email' && (
+                                            {focusedField === 'company' && (
                                                 <motion.div layoutId="input-glow" className="absolute -inset-0.5 bg-blue-500/10 rounded-2xl blur-sm pointer-events-none" />
                                             )}
                                         </div>
+                                    </div>
+                                </div>
+
+                                <div className="space-y-4 group">
+                                    <label className={`text-[10px] font-mono uppercase tracking-[0.4em] transition-all duration-300 ${focusedField === 'email' ? 'text-blue-400 translate-x-1' : 'text-gray-600'}`}>
+                                        {t.form.email}
+                                    </label>
+                                    <div className="relative">
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            required
+                                            placeholder={t.form.email_placeholder}
+                                            onFocus={() => setFocusedField('email')}
+                                            onBlur={() => setFocusedField(null)}
+                                            value={formData.email}
+                                            onChange={handleChange}
+                                            className="w-full bg-white/[0.01] border border-white/5 rounded-2xl px-6 py-4 text-lg font-bold text-white placeholder:text-gray-800 focus:outline-none focus:border-blue-500/50 focus:bg-blue-500/[0.01] transition-all"
+                                        />
+                                        {focusedField === 'email' && (
+                                            <motion.div layoutId="input-glow" className="absolute -inset-0.5 bg-blue-500/10 rounded-2xl blur-sm pointer-events-none" />
+                                        )}
                                     </div>
                                 </div>
 
