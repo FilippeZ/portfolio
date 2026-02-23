@@ -66,15 +66,15 @@ export default function Header() {
                         />
                     </div>
                     <div className="flex flex-col">
-                        <h1 className="text-sm md:text-base font-black tracking-widest text-white uppercase group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-cyan-300 transition-all duration-300">
+                        <h1 className="text-xs sm:text-sm md:text-base font-black tracking-widest text-white uppercase group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-cyan-300 transition-all duration-300">
                             FILIPPOS P. ZYGOURIS
                         </h1>
-                        <span className="text-[9px] text-blue-500/80 font-mono tracking-[0.3em] uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -translate-y-2 group-hover:translate-y-0">Technical Authority</span>
+                        <span className="text-[9px] text-blue-500/80 font-mono tracking-[0.3em] uppercase hidden sm:block opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -translate-y-2 group-hover:translate-y-0">Technical Authority</span>
                     </div>
                 </Link>
 
                 {/* DESKTOP NAVIGATION */}
-                <nav className="hidden md:flex items-center gap-1 bg-[#0a0f1c]/50 p-1.5 rounded-full border border-white/5 backdrop-blur-md shadow-[0_0_20px_rgba(59,130,246,0.05)]">
+                <nav className="hidden lg:flex items-center gap-1 bg-[#0a0f1c]/50 p-1.5 rounded-full border border-white/5 backdrop-blur-md shadow-[0_0_20px_rgba(59,130,246,0.05)]">
                     {navLinks.map((link) => (
                         <MagneticLink key={link.name}>
                             <a
@@ -100,7 +100,7 @@ export default function Header() {
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.5 }}
-                        className="hidden md:block"
+                        className="hidden lg:block"
                     >
                         <a
                             href="/#contact"
@@ -115,7 +115,7 @@ export default function Header() {
                     {/* Mobile Menu Toggle */}
                     <button
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                        className="md:hidden relative z-50 w-10 h-10 flex items-center justify-center text-white"
+                        className="lg:hidden relative z-50 w-10 h-10 flex items-center justify-center text-white"
                     >
                         <span className={`material-symbols-outlined text-3xl transition-transform duration-300 ${mobileMenuOpen ? "rotate-90" : ""}`}>
                             {mobileMenuOpen ? "close" : "menu"}
@@ -132,7 +132,7 @@ export default function Header() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: "-100%" }}
                         transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                        className="fixed inset-0 z-40 bg-[#030303]/95 backdrop-blur-2xl flex flex-col items-center justify-center md:hidden"
+                        className="fixed inset-0 z-40 bg-[#030303]/95 backdrop-blur-2xl flex flex-col items-center justify-center lg:hidden"
                     >
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_70%)]"></div>
                         <div className="absolute inset-0 bg-[url('/resources/img/grid.svg')] opacity-[0.03]"></div>

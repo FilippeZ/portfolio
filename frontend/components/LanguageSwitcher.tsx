@@ -77,7 +77,7 @@ export default function LanguageSwitcher() {
                     </div>
 
                     {/* GR Section */}
-                    <div className="relative px-8 flex items-center justify-center z-10">
+                    <div className="relative px-4 md:px-8 flex items-center justify-center z-10">
                         <motion.span
                             animate={{
                                 opacity: language === 'el' ? 1 : 0.15,
