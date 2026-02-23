@@ -4,7 +4,7 @@ import nodemailer from 'nodemailer';
 export async function POST(request: Request) {
     try {
         const body = await request.json();
-        const { name, company, email, sector, service, message } = body;
+        const { name, company, email, sector, service, message, language } = body;
 
         // Validate basic input
         if (!name || !email || !message) {
@@ -30,7 +30,7 @@ export async function POST(request: Request) {
 
         const submittedAt = new Date().toLocaleString('el-GR', { timeZone: 'Europe/Athens' });
 
-        // 1. Admin Notification (Greek Alert)
+        // 1. Admin Notification (Greek Alert) - Remains in Greek for internal use
         const adminMailOptions = {
             from: process.env.EMAIL_USER,
             to: process.env.EMAIL_USER,
@@ -60,12 +60,36 @@ export async function POST(request: Request) {
             `,
         };
 
-        // 2. User Auto-reply (Bilingual/Professional Template)
+        // 2. User Auto-reply Localized Templates
+        const isEnglish = language === 'en';
+
         const userMailOptions = {
             from: `"Filippos P. Zygouris" <${process.env.EMAIL_USER}>`,
             to: email,
-            subject: `Transmission Received - Filippos P. Zygouris | Technical Authority`,
-            text: `FILIPPOS P. ZYGOURIS | Technical Authority\n` +
+            subject: isEnglish
+                ? `Transmission Received - Filippos P. Zygouris | Technical Authority`
+                : `Transmission Received - Filippos P. Zygouris | Technical Authority`,
+            text: isEnglish
+                ? `FILIPPOS P. ZYGOURIS | Technical Authority\n` +
+                `Architecting the institutional survival of AI systems. Bridging the gap between Innovation and Regulation.\n\n` +
+                `Dear ${name},\n\n` +
+                `Thank you for reaching out.\n\n` +
+                `I have received your request and the information you submitted regarding the ${sector || 'sector'}. Your message is currently under review.\n\n` +
+                `As a Chartered Engineer (TEE), my goal is to ensure the technical integrity and institutional compliance of digital infrastructures. I will personally study your needs regarding the ${service || 'project'} and contact you within 24 hours.\n\n` +
+                `What follows (Protocol Steps):\n\n` +
+                `1. Evaluation of technical and regulatory requirements of your project.\n` +
+                `2. Preparation of a personalized strategy (Compliance-by-Design / Architecture).\n` +
+                `3. Contact to schedule a consultation meeting (Secure Line).\n\n` +
+                `In the meantime, feel free to explore the Governance Framework and my previous work in my portfolio: https://filippos-p-zygouris.vercel.app/\n\n` +
+                `Best Regards,\n\n` +
+                `Filippos P. Zygouris\n` +
+                `Dipl. Eng. | Licensed TEE Engineer\n` +
+                `Fractional PRRC & SaMD Lead Architect\n\n` +
+                `Tactical Coordinates:\n` +
+                `📍 LOC: LAMIA, HEADQUARTERS\n` +
+                `📞 +30 697 592 2894\n` +
+                `✉️ filippos.paraskevas.zygouris@gmail.com`
+                : `FILIPPOS P. ZYGOURIS | Technical Authority\n` +
                 `Architecting the institutional survival of AI systems. Bridging the gap between Innovation and Regulation.\n\n` +
                 `Αγαπητέ/ή ${name},\n\n` +
                 `Σας ευχαριστώ για την επικοινωνία.\n\n` +
@@ -94,24 +118,40 @@ export async function POST(request: Request) {
                     </div>
                     
                     <div style="padding: 50px; line-height: 1.8; font-size: 15px;">
-                        <p>Αγαπητέ/ή <strong>${name}</strong>,</p>
-                        <p>Σας ευχαριστώ για την επικοινωνία.</p>
-                        <p>Έλαβα το αίτημά σας και τα στοιχεία που υποβάλατε σχετικά με τον τομέα <strong>${sector || 'μας'}</strong>. Το μήνυμά σας βρίσκεται υπό εξέταση.</p>
-                        <p>Ως Chartered Engineer (TEE), στόχος μου είναι να διασφαλίζω την τεχνική ακεραιότητα και τη θεσμική συμμόρφωση των ψηφιακών υποδομών. Θα μελετήσω προσωπικά τις ανάγκες σας γύρω από το <strong>${service || 'project σας'}</strong> και θα επικοινωνήσω μαζί σας εντός 24 ωρών.</p>
+                        ${isEnglish ? `
+                            <p>Dear <strong>${name}</strong>,</p>
+                            <p>Thank you for reaching out.</p>
+                            <p>I have received your request and the information you submitted regarding the <strong>${sector || 'sector'}</strong>. Your message is currently under review.</p>
+                            <p>As a Chartered Engineer (TEE), my goal is to ensure the technical integrity and institutional compliance of digital infrastructures. I will personally study your needs regarding the <strong>${service || 'project'}</strong> and contact you within 24 hours.</p>
+                            
+                            <div style="margin: 40px 0; padding: 30px; background-color: #f8fafc; border-radius: 12px; border-left: 4px solid #2563eb;">
+                                <h3 style="margin-top: 0; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #2563eb;">What follows (Protocol Steps):</h3>
+                                <ul style="padding-left: 20px; margin-bottom: 0;">
+                                    <li style="margin-bottom: 10px;">Evaluation of technical and regulatory requirements of your project.</li>
+                                    <li style="margin-bottom: 10px;">Preparation of a personalized strategy (Compliance-by-Design / Architecture).</li>
+                                    <li style="margin-bottom: 0;">Contact to schedule a consultation meeting (Secure Line).</li>
+                                </ul>
+                            </div>
+                        ` : `
+                            <p>Αγαπητέ/ή <strong>${name}</strong>,</p>
+                            <p>Σας ευχαριστώ για την επικοινωνία.</p>
+                            <p>Έλαβα το αίτημά σας και τα στοιχεία που υποβάλατε σχετικά με τον τομέα <strong>${sector || 'μας'}</strong>. Το μήνυμά σας βρίσκεται υπό εξέταση.</p>
+                            <p>Ως Chartered Engineer (TEE), στόχος μου είναι να διασφαλίζω την τεχνική ακεραιότητα και τη θεσμική συμμόρφωση των ψηφιακών υποδομών. Θα μελετήσω προσωπικά τις ανάγκες σας γύρω από το <strong>${service || 'project σας'}</strong> και θα επικοινωνήσω μαζί σας εντός 24 ωρών.</p>
+                            
+                            <div style="margin: 40px 0; padding: 30px; background-color: #f8fafc; border-radius: 12px; border-left: 4px solid #2563eb;">
+                                <h3 style="margin-top: 0; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #2563eb;">Τι ακολουθεί (Protocol Steps):</h3>
+                                <ul style="padding-left: 20px; margin-bottom: 0;">
+                                    <li style="margin-bottom: 10px;">Αξιολόγηση των τεχνικών και ρυθμιστικών απαιτήσεων του project σας.</li>
+                                    <li style="margin-bottom: 10px;">Προετοιμασία μιας εξατομικευμένης στρατηγικής (Compliance-by-Design / Architecture).</li>
+                                    <li style="margin-bottom: 0;">Επικοινωνία για τον προγραμματισμό μιας συμβουλευτικής συνάντησης (Secure Line).</li>
+                                </ul>
+                            </div>
+                        `}
                         
-                        <div style="margin: 40px 0; padding: 30px; background-color: #f8fafc; border-radius: 12px; border-left: 4px solid #2563eb;">
-                            <h3 style="margin-top: 0; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #2563eb;">Τι ακολουθεί (Protocol Steps):</h3>
-                            <ul style="padding-left: 20px; margin-bottom: 0;">
-                                <li style="margin-bottom: 10px;">Αξιολόγηση των τεχνικών και ρυθμιστικών απαιτήσεων του project σας.</li>
-                                <li style="margin-bottom: 10px;">Προετοιμασία μιας εξατομικευμένης στρατηγικής (Compliance-by-Design / Architecture).</li>
-                                <li style="margin-bottom: 0;">Επικοινωνία για τον προγραμματισμό μιας συμβουλευτικής συνάντησης (Secure Line).</li>
-                            </ul>
-                        </div>
-                        
-                        <p>Στο μεταξύ, μπορείτε να εξερευνήσετε το Governance Framework και παλαιότερα έργα μου στο portfolio: <a href="https://filippos-p-zygouris.vercel.app/" style="color: #2563eb; text-decoration: none; border-bottom: 1px solid #2563eb;">filippos-p-zygouris.vercel.app</a></p>
+                        <p>${isEnglish ? 'In the meantime, feel free to explore the Governance Framework and my previous work in my portfolio:' : 'Στο μεταξύ, μπορείτε να εξερευνήσετε το Governance Framework και παλαιότερα έργα μου στο portfolio:'} <a href="https://filippos-p-zygouris.vercel.app/" style="color: #2563eb; text-decoration: none; border-bottom: 1px solid #2563eb;">filippos-p-zygouris.vercel.app</a></p>
                         
                         <div style="margin-top: 50px;">
-                            <p style="margin-bottom: 5px;">Με εκτίμηση,</p>
+                            <p style="margin-bottom: 5px;">${isEnglish ? 'Best Regards,' : 'Με εκτίμηση,'}</p>
                             <p style="margin-top: 0;"><strong>Filippos P. Zygouris</strong><br/>
                             <span style="font-size: 13px; opacity: 0.8;">Dipl. Eng. | Licensed TEE Engineer</span><br/>
                             <span style="font-size: 13px; opacity: 0.8;">Fractional PRRC & SaMD Lead Architect</span></p>
