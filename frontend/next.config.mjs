@@ -52,7 +52,7 @@ const nextConfig = {
             },
             {
                 protocol: 'https',
-                hostname: 'avatars.githubusercontent.com',
+                hostname: 'cdn.icon-icons.com',
             },
         ],
     },

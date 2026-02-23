@@ -298,7 +298,7 @@ export default function About() {
                                                             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300" />
 
                                                             <div className="relative z-10 w-9 h-9 mb-2 filter grayscale group-hover/card:grayscale-0 transition-all duration-300 group-hover/card:scale-110">
-                                                                <img src={skill.icon} alt={skill.name} className="w-full h-full object-contain drop-shadow-md" loading="lazy" />
+                                                                <Image src={skill.icon} alt={skill.name} width={36} height={36} className="w-full h-full object-contain drop-shadow-md" loading="lazy" />
                                                             </div>
                                                             <span className="relative z-10 text-[10px] font-bold text-gray-500 group-hover/card:text-white transition-colors text-center uppercase tracking-tight leading-tight">
                                                                 {skill.name}
@@ -330,7 +330,7 @@ export default function About() {
                                                     <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300" />
 
                                                     <div className="relative z-10 w-9 h-9 mb-2 filter grayscale group-hover/card:grayscale-0 transition-all duration-300 group-hover/card:scale-110">
-                                                        <img src={skill.icon} alt={skill.name} className="w-full h-full object-contain drop-shadow-md" />
+                                                        <Image src={skill.icon} alt={skill.name} width={36} height={36} className="w-full h-full object-contain drop-shadow-md" />
                                                     </div>
                                                     <span className="relative z-10 text-[10px] font-bold text-gray-500 group-hover/card:text-white transition-colors text-center uppercase tracking-tight leading-tight">
                                                         {skill.name}

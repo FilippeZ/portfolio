@@ -37,7 +37,7 @@ export default function Portfolio() {
                 brief: localized?.brief || p.brief
             };
         });
-    }, [language, t.projects]);
+    }, [t.projects]);
 
     const [activeFilter, setActiveFilter] = useState(t.filter_all);
     const [selectedProject, setSelectedProject] = useState<typeof mergedProjects[0] | null>(null);

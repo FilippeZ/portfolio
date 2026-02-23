@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
     Building2,
@@ -140,10 +141,11 @@ export default function StrategicSectors() {
                                     <div className="absolute top-0 left-0 w-full h-full bg-blue-500/10 mix-blend-overlay z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                                     {/* @ts-ignore */}
                                     {item.image && (
-                                        <img
+                                        <Image
                                             /* @ts-ignore */
                                             src={item.image}
                                             alt={item.title}
+                                            fill
                                             className="w-full h-full object-cover group-hover:scale-110 group-hover:rotate-1 transition-transform duration-1000 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] opacity-70 group-hover:opacity-100"
                                         />
                                     )}
@@ -238,10 +240,11 @@ export default function StrategicSectors() {
                                     <div className="absolute top-0 left-0 w-full h-full bg-cyan-500/10 mix-blend-overlay z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                                     {/* @ts-ignore */}
                                     {item.image && (
-                                        <img
+                                        <Image
                                             /* @ts-ignore */
                                             src={item.image}
                                             alt={item.title}
+                                            fill
                                             className="w-full h-full object-cover group-hover:scale-110 group-hover:-rotate-1 transition-transform duration-1000 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] opacity-70 group-hover:opacity-100 grayscale-[15%] group-hover:grayscale-0"
                                         />
                                     )}
@@ -413,9 +416,10 @@ export default function StrategicSectors() {
                                     <div className="relative">
                                         <div className="absolute inset-0 bg-blue-500/50 rounded-full blur-xl opacity-30 group-hover/testimony:opacity-60 group-hover/testimony:scale-110 transition-all duration-500" />
                                         <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-blue-500/30 relative z-10 shadow-2xl">
-                                            <img
+                                            <Image
                                                 src="/resources/img/bg1.png"
                                                 alt={t.professionalLicensure.name}
+                                                fill
                                                 className="w-full h-full object-cover"
                                                 style={{ objectPosition: 'center 20%' }}
                                             />

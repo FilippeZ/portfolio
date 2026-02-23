@@ -149,7 +149,7 @@ export default function LoginPage() {
                     <div className="mt-10 pt-8 border-t border-white/10 flex flex-col items-center gap-4">
                         <div className="text-center space-y-1">
                             <p className="text-gray-400 text-[13px] font-medium">
-                                Don't have the access credentials?
+                                Don&apos;t have the access credentials?
                             </p>
                             <p className="text-gray-500 text-[11px] font-light">
                                 Send me a message on LinkedIn to request access.
