@@ -146,20 +146,25 @@ export default function LoginPage() {
                         </button>
                     </form>
 
-                    <div className="mt-8 pt-6 border-t border-white/5 flex flex-col items-center gap-3">
-                        <p className="text-gray-400 text-[11px] font-light tracking-wide">
-                            Don't have an access code? Contact me on LinkedIn.
-                        </p>
+                    <div className="mt-10 pt-8 border-t border-white/10 flex flex-col items-center gap-4">
+                        <div className="text-center space-y-1">
+                            <p className="text-gray-400 text-[13px] font-medium">
+                                Don't have the access credentials?
+                            </p>
+                            <p className="text-gray-500 text-[11px] font-light">
+                                Send me a message on LinkedIn to request access.
+                            </p>
+                        </div>
                         <motion.a
                             href="https://www.linkedin.com/in/filippos-paraskevas-zygouris-8a88a8266/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            whileHover={{ scale: 1.02 }}
-                            whileTap={{ scale: 0.98 }}
-                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold hover:bg-blue-500/20 transition-all"
+                            whileHover={{ scale: 1.05, translateY: -2 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="inline-flex items-center gap-3 px-8 py-3.5 rounded-2xl bg-[#0077b5] hover:bg-[#0077b5]/90 text-white text-sm font-bold shadow-xl shadow-[#0077b5]/20 transition-all group"
                         >
-                            <Linkedin className="w-3.5 h-3.5" />
-                            LinkedIn Profile
+                            <Linkedin className="w-5 h-5 fill-white group-hover:scale-110 transition-transform" />
+                            <span>Contact on LinkedIn</span>
                         </motion.a>
                     </div>
                 </div>
