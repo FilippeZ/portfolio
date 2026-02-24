@@ -54,6 +54,10 @@ const nextConfig = {
                 protocol: 'https',
                 hostname: 'cdn.icon-icons.com',
             },
+            {
+                protocol: 'https',
+                hostname: 'avatars.githubusercontent.com',
+            },
         ],
     },
 };

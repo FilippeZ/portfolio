@@ -8,7 +8,8 @@ export const locales = {
             tabs: {
                 skills: { label: "Skills & Tools", desc: "Technical Arsenal" },
                 experience: { label: "Certifications & Events", desc: "Continuous Learning" },
-                education: { label: "Education & Experience", desc: "Professional Background" }
+                education: { label: "Education & Experience", desc: "Professional Background" },
+                languages: { label: "Languages", desc: "Linguistic Authority" }
             },
             technical_arsenal: {
                 title: "Technical Arsenal",
@@ -271,7 +272,26 @@ export const locales = {
                     image: "/fotogra/Integrated%20Master%20in%20Computer%20Engineering%20%26%20Informatics%20%28CEID%29.jpeg",
                     type: "Master's Degree"
                 }
-            ]
+            ],
+            languages_list: [
+                {
+                    title: "Greek (Native)",
+                    org: "Hellenic Republic",
+                    date: "Linguistic Substratum",
+                    desc: "**Greek (ελληνικά)** is an independent branch of the Indo-European language family with the longest documented history of any living Indo-European language, spanning at least **3,400 years**. As one of the 24 official languages of the European Union, it serves as the foundation for international scientific and technical vocabulary. I am a **Native Speaker** within a global community of at least 13.5 million people.",
+                    image: "/resources/img/languages/greek.png",
+                    type: "Native"
+                },
+                {
+                    title: "English (Mastery C2)",
+                    org: "LanguageCert / PeopleCert (Ofqual Regulated)",
+                    date: "Exam Date: 16 June 2018",
+                    desc: "Certified at the highest level of the CEFR with a **LanguageCert Level 3 Certificate in ESOL International (Mastery C2)**. Regulated by **Ofqual**, the certification reflects mastery in Speaking, Listening, Reading, and Writing. \n\nLanguageCert (a PeopleCert company) is a global leader in assessment, utilizing advanced technology and maintaining high standards originally evolved from City & Guilds IP.",
+                    image: "/resources/img/languages/english.png",
+                    type: "Mastery C2"
+                }
+            ],
+            language_impact: "Possession of a **C2 Mastery** certificate indicates the ability to understand with ease virtually everything heard or read and to express oneself spontaneously, very fluently, and precisely, even in the most complex situations."
         },
         nav: {
             authority: "Authority",
@@ -670,10 +690,10 @@ export const locales = {
                     category: "Mission-Critical Systems",
                     brief: "Executed a practical Proof of Concept to define the optimal search strategy for complex spatial and clinical data. I architected and benchmarked multidimensional solution designs (K-D Trees, Octrees) and implemented ANN solutions using Locality-Sensitive Hashing. The final strategic recommendation provided a validated roadmap for high-performance querying that balances speed with memory footprints for enterprise-scale clinical environments."
                 },
-                "azure-mesh": {
-                    title: "Azure Real-Time Clinical Data Mesh & Governance Infrastructure",
+                "smartpill": {
+                    title: "SmartPill — Bio-Intelligence Command Center (v2.4)",
                     category: "Mission-Critical Systems",
-                    brief: "Architected a real-time clinical data mesh on Azure, focusing on decentralized data ownership combined with centralized governance. I mapped the Azure Well-Architected Framework to ensure the persistence and reliability of clinical streams, providing a blueprint for data residency and institutional sovereignty in healthcare cloud environments."
+                    brief: "Architected a high-fidelity 'Command Center' for medical IoT, featuring real-time telemetry, teleoperation controls, and advanced bio-intelligence data visualizations. The platform integrates deep-dark aesthetics with mission-critical performance, providing a unified dashboard for remote surgical oversight and pharmaceutical payload monitoring, ensuring safety and precision in bio-intelligence workflows."
                 },
                 "zenithdx-ai": {
                     title: "ZenithDx – High-Performance Agentic Clinical Co-Pilot",
@@ -770,10 +790,10 @@ export const locales = {
                     category: "Mission-Critical Systems",
                     brief: "Performed a deep-dive optimization of a clinical data platform to satisfy institutional 'Persistence' mandates. I re-architected the storage and retrieval layers to ensure audit-ready availability, mapping technical performance directly to regulatory submission requirements."
                 },
-                "casm": {
-                    title: "CASM Platform: Integrated Clinical & Administrative Service Architecture",
+                "ebusiness": {
+                    title: "E-Business Marketing Core — Strategic Digital Platform",
                     category: "Strategic Engineering Coordination",
-                    brief: "Orchestrated the architectural design of a Clinical & Administrative Service Management (CASM) platform. I served as the technical bridge ensuring that administrative data workflows are synchronized with clinical safety standards, establishing a unified lifecycle for institutional resource governance."
+                    brief: "Operationalizing digital marketing strategies into a scalable, high-conversion web ecosystem. This project implements a comprehensive e-business marketing strategy framework, based on the blueprint by Philippos-Paraskevas Zygouris. It operationalizes advanced digital business methodologies to ensure that all digital storefront deployments are data-driven, highly scalable, and structurally aligned with modern market demands."
                 },
                 "startup-week": {
                     title: "High-Impact Project Coordination: Institutional Stakeholder Engagement",
@@ -788,7 +808,10 @@ export const locales = {
             },
             buttons: {
                 liveProject: "Live Project",
-                caseStudy: "In-Depth Case Study"
+                caseStudy: "In-Depth Case Study",
+                technicalDossier: "Technical Dossier",
+                partPrefix: "Part",
+                comingSoon: "Release Link Soon"
             }
         },
         testimonials: {
@@ -1072,7 +1095,8 @@ export const locales = {
             tabs: {
                 skills: { label: "Δεξιότητες & Εργαλεία", desc: "Τεχνικό Οπλοστάσιο" },
                 experience: { label: "Πιστοποιήσεις & Δράσεις", desc: "Συνεχής Μάθηση" },
-                education: { label: "Εκπαίδευση & Εμπειρία", desc: "Επαγγελματικό Υπόβαθρο" }
+                education: { label: "Εκπαίδευση & Εμπειρία", desc: "Επαγγελματικό Υπόβαθρο" },
+                languages: { label: "Γλώσσες", desc: "Γλωσσική Αυθεντία" }
             },
             technical_arsenal: {
                 title: "Τεχνικό Οπλοστάσιο",
@@ -1335,7 +1359,26 @@ export const locales = {
                     image: "/fotogra/Integrated%20Master%20in%20Computer%20Engineering%20%26%20Informatics%20%28CEID%29.jpeg",
                     type: "Master's Degree"
                 }
-            ]
+            ],
+            languages_list: [
+                {
+                    title: "Ελληνικά (Μητρική)",
+                    org: "Ελληνική Δημοκρατία",
+                    date: "Γλωσσικό Υπόβαθρο",
+                    desc: "Τα **Ελληνικά** αποτελούν ανεξάρτητο κλάδο της Ινδοευρωπαϊκής γλωσσικής οικογένειας με τη μεγαλύτερη τεκμηριωμένη ιστορία (τουλάχιστον **3.400 ετών**). Ως μία από τις 24 επίσημες γλώσσες της ΕΕ, αποτελεί τη βάση του διεθνούς επιστημονικού και τεχνικού λεξιλογίου. Είμαι **Μητρικός Ομιλητής** σε μια παγκόσμια κοινότητα τουλάχιστον 13,5 εκατομμυρίων ανθρώπων.",
+                    image: "/resources/img/languages/greek.png",
+                    type: "Μητρική"
+                },
+                {
+                    title: "Αγγλικά (Mastery C2)",
+                    org: "LanguageCert / PeopleCert (Ραδιοελεγχόμενη από Ofqual)",
+                    date: "Ημερομηνία Εξέτασης: 16 Ιουνίου 2018",
+                    desc: "Πιστοποιημένος στο υψηλότερο επίπεδο του CEFR με το **LanguageCert Level 3 Certificate in ESOL International (Mastery C2)**. Ρυθμιζόμενο από το **Ofqual**, η πιστοποίηση αντικατοπτρίζει την απόλυτη κυριαρχία στην Ομιλία, Ακοή, Ανάγνωση και Γραφή.\n\nH LanguageCert (εταιρεία της PeopleCert) είναι παγκόσμιος ηγέτης στην αξιολόγηση, χρησιμοποιώντας προηγμένη τεχνολογία και διατηρώντας υψηλά πρότυπα που εξελίχθηκαν από την IP της City & Guilds.",
+                    image: "/resources/img/languages/english.png",
+                    type: "Mastery C2"
+                }
+            ],
+            language_impact: "Η κατοχή πιστοποιητικού **C2 Mastery** υποδηλώνει την ικανότητα κατανόησης με ευκολία σχεδόν όλων όσων ακούγονται ή διαβάζονται και την ικανότητα αυθόρμητης, πολύ άνετης και ακριβούς έκφρασης, ακόμη και στις πιο περίπλοκες καταστάσεις."
         },
         nav: {
             authority: "Εξουσία",
@@ -1438,8 +1481,7 @@ export const locales = {
                 description_highlight_2: "Επαγγελματική Άδεια (ΤΕΕ)",
                 description_suffix: ", μεταφράζω τις τεχνικές παραμέτρους σε νομικά τεκμήρια. Η αποστολή μου είναι να διασφαλίσω ότι κάθε σύστημα που φέρει την υπογραφή μου είναι",
                 description_highlight_3: "νόμιμο, ασφαλές και τεχνικά άψογο.",
-                cta: "Συζητήστε τη Ρυθμιστική Στρατηγική"
-            }
+            },
         },
         authority: {
             label: "Θεσμική Αντιβαρύτητα",
@@ -1777,10 +1819,10 @@ export const locales = {
                     category: "Συστήματα Κρίσιμης Αποστολής",
                     brief: "Εκτέλεσα ένα πρακτικό Proof of Concept για τον καθορισμό της βέλτιστης στρατηγικής αναζήτησης για σύνθετα χωρικά και κλινικά δεδομένα. Αρχιτεκτόνησα και συνέκρινα σχέδια λύσεων πολυδιάστατων (K-D Trees, Octrees) και εφάρμοσα λύσεις ANN χρησιμοποιώντας Locality-Sensitive Hashing. Η τελική στρατηγική σύσταση παρείχε έναν επικυρωμένο οδικό χάρτη για ερωτήματα υψηλής απόδοσης που εξισορροπούν την ταχύτητα με τα αποτυπώματα μνήμης για κλινικά περιβάλλοντα επιχειρηματικής κλίμακας."
                 },
-                "azure-mesh": {
-                    title: "Azure Real-Time Clinical Data Mesh & Υποδομή Διακυβέρνησης",
+                "smartpill": {
+                    title: "SmartPill — Κέντρο Ελέγχου Βιο-Νοημοσύνης (v2.4)",
                     category: "Συστήματα Κρίσιμης Αποστολής",
-                    brief: "Αρχιτεκτόνησα ένα πλέγμα κλινικών δεδομένων σε πραγματικό χρόνο στο Azure, εστιάζοντας στην αποκεντρωμένη ιδιοκτησία δεδομένων σε συνδυασμό με κεντρική διακυβέρνηση. Χαρτογράφησα το Azure Well-Architected Framework για να διασφαλίσω τη διατήρηση και την αξιοπιστία των κλινικών ροών, παρέχοντας ένα σχέδιο για την εντοπιότητα δεδομένων και τη θεσμική κυριαρχία σε περιβάλλοντα cloud υγείας."
+                    brief: "Αρχιτεκτόνησα ένα 'Κέντρο Επιχειρήσεων' υψηλής πιστότητας για ιατρικό IoT, με τηλεμετρία σε πραγματικό χρόνο, χειριστήρια τηλεχειρισμού και προηγμένες οπτικοποιήσεις δεδομένων βιο-νοημοσύνης. Η πλατφόρμα ενσωματώνει αισθητική 'Deep Dark' με επιδόσεις κρίσιμης αποστολής, παρέχοντας έναν ενιαίο πίνακα ελέγχου για απομακρυσμένη χειρουργική επίβλεψη και παρακολούθηση φαρμακευτικών φορτίων, διασφαλίζοντας ασφάλεια και ακρίβεια στις ροές εργασίας βιο-νοημοσύνης."
                 },
                 "zenithdx-ai": {
                     title: "ZenithDx – Κλινικός Συγκυβερνήτης Agentic AI Υψηλής Απόδοσης",
@@ -1877,10 +1919,10 @@ export const locales = {
                     category: "Συστήματα Κρίσιμης Αποστολής",
                     brief: "Πραγματοποίησα βελτιστοποίηση εις βάθος μιας πλατφόρμας κλινικών δεδομένων για την ικανοποίηση θεσμικών εντολών 'Διατήρησης'. Ανασχεδίασα τα στρώματα αποθήκευσης και ανάκτησης για να διασφαλίσω διαθεσιμότητα έτοιμη για έλεγχο, χαρτογραφώντας την τεχνική απόδοση απευθείας σε απαιτήσεις ρυθμιστικής υποβολής."
                 },
-                "casm": {
-                    title: "Πλατφόρμα CASM: Ολοκληρωμένη Αρχιτεκτονική Κλινικών & Διοικητικών Υπηρεσιών",
+                "ebusiness": {
+                    title: "E-Business Marketing Core — Στρατηγική Ψηφιακή Πλατφόρμα",
                     category: "Στρατηγικός Συντονισμός Μηχανικής",
-                    brief: "Ενορχήστρωσα τον αρχιτεκτονικό σχεδιασμό μιας πλατφόρμας Διαχείρισης Κλινικών & Διοικητικών Υπηρεσιών (CASM). Λειτούργησα ως η τεχνική γέφυρα διασφαλίζοντας ότι οι ροές εργασίας διοικητικών δεδομένων συγχρονίζονται με τα πρότυπα κλινικής ασφάλειας, καθιερώνοντας έναν ενιαίο κύκλο ζωής για τη διακυβέρνηση θεσμικών πόρων."
+                    brief: "Επιχειρησιακή εφαρμογή στρατηγικών ψηφιακού μάρκετινγκ σε ένα επεκτάσιμο οικοσύστημα ιστού υψηλής μετατροπής. Αυτό το έργο υλοποιεί ένα ολοκληρωμένο πλαίσιο στρατηγικής ηλεκτρονικού επιχειρείν, βασισμένο στο προσχέδιο του Φίλιππου-Παρασκευά Ζυγούρη. Μετατρέπει τις θεωρίες μάρκετινγκ σε τεχνικά υλοποιήσιμες λύσεις, διασφαλίζοντας ότι όλες οι ψηφιακές αναπτύξεις είναι βασισμένες σε δεδομένα, υψηλής κλίμακας και δομικά ευθυγραμμισμένες με τις σύγχρονες απαιτήσεις της αγοράς."
                 },
                 "startup-week": {
                     title: "Συντονισμός Έργων Υψηλού Αντικτύπου: Θεσμική Δέσμευση Ενδιαφερομένων",
@@ -1895,7 +1937,10 @@ export const locales = {
             },
             buttons: {
                 liveProject: "Live Project",
-                caseStudy: "Εκτενής Παρουσίαση Έργου"
+                caseStudy: "Εις Βάθος Μελέτη Περίπτωσης",
+                technicalDossier: "Τεχνικός Φάκελος",
+                partPrefix: "Μέρος",
+                comingSoon: "Σύνδεσμος Σύντομα"
             }
         },
         testimonials: {

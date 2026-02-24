@@ -6,10 +6,23 @@ import { Briefcase, Award, Wrench, ChevronRight, Activity, Zap, Shield, Globe, L
 import { useLanguage } from "@/context/LanguageContext";
 import { locales } from "@/data/locales";
 
+// Helper to render bold text and handle newlines
+const renderFormattedText = (text: string) => {
+    if (!text) return null;
+    return text.split('\n').map((line, i) => (
+        <span key={i}>
+            {line.split(/\*\*(.*?)\*\*/g).map((part, j) =>
+                j % 2 === 1 ? <strong key={j} className="text-white font-bold">{part}</strong> : part
+            )}
+            {i < text.split('\n').length - 1 && <br />}
+        </span>
+    ));
+};
+
 export default function About() {
     const { language } = useLanguage();
     const t = locales[language].about;
-    const [activeTab, setActiveTab] = useState<"skills" | "experience" | "education">("skills");
+    const [activeTab, setActiveTab] = useState<"skills" | "experience" | "education" | "languages">("skills");
 
     const tabVariants = {
         hidden: { opacity: 0, y: 20, filter: "blur(10px)" },
@@ -200,6 +213,7 @@ export default function About() {
                                 { id: "skills", label: t.tabs.skills.label, icon: Wrench, desc: t.tabs.skills.desc },
                                 { id: "experience", label: t.tabs.experience.label, icon: Award, desc: t.tabs.experience.desc },
                                 { id: "education", label: t.tabs.education.label, icon: Briefcase, desc: t.tabs.education.desc },
+                                { id: "languages", label: t.tabs.languages.label, icon: Globe, desc: t.tabs.languages.desc },
                             ].map((tab) => (
                                 <button
                                     key={tab.id}
@@ -513,6 +527,91 @@ export default function About() {
                                             ))}
                                         </div>
                                     </div>
+                                </div>
+                            )}
+
+                            {activeTab === "languages" && (
+                                <div className="space-y-16">
+                                    {/* Languages Section */}
+                                    <div>
+                                        <div className="flex items-center justify-between mb-8 border-b border-white/10 pb-6">
+                                            <div>
+                                                <h3 className="text-2xl font-bold text-white tracking-tight">
+                                                    {language === "el" ? "Γλώσσες & Πιστοποιήσεις" : "Languages & Certifications"}
+                                                </h3>
+                                                <p className="text-gray-400 text-sm mt-1">{t.tabs.languages.desc}</p>
+                                            </div>
+                                            <Globe size={48} className="text-blue-500 opacity-20" />
+                                        </div>
+
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                            {t.languages_list.map((item: any, index: number) => (
+                                                <motion.div
+                                                    key={index}
+                                                    initial={{ opacity: 0, scale: 0.95 }}
+                                                    whileInView={{ opacity: 1, scale: 1 }}
+                                                    viewport={{ once: true }}
+                                                    transition={{ delay: index * 0.1 }}
+                                                    className="group relative flex flex-col p-8 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-blue-500/30 hover:bg-white/[0.05] transition-all duration-500 overflow-hidden"
+                                                >
+                                                    <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                                                        <Globe size={60} />
+                                                    </div>
+
+                                                    <div className="flex items-start gap-6 mb-6">
+                                                        <div className="relative w-20 h-20 flex-shrink-0 rounded-2xl bg-white/10 overflow-hidden border border-white/10 shadow-2xl">
+                                                            <Image src={item.image} alt={item.title} fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100" />
+                                                        </div>
+                                                        <div className="flex-1">
+                                                            <h4 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors mb-1">
+                                                                {item.title}
+                                                            </h4>
+                                                            <div className="text-sm text-blue-400 font-medium mb-2">{item.type}</div>
+                                                            <div className="text-xs font-mono text-gray-500 flex items-center gap-2">
+                                                                <Award size={12} className="text-yellow-500" />
+                                                                {item.org}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div className="space-y-4">
+                                                        <div className="text-sm text-gray-400 leading-relaxed italic">
+                                                            "{renderFormattedText(item.desc)}"
+                                                        </div>
+                                                        <div className="pt-4 border-t border-white/5">
+                                                            <span className="text-[10px] font-mono text-gray-500 uppercase tracking-widest">
+                                                                {item.date}
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </motion.div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* Professional Impact */}
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        className="relative p-1 px-1 rounded-3xl bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-blue-500/20"
+                                    >
+                                        <div className="bg-black/90 rounded-[22px] p-8 md:p-10 backdrop-blur-xl">
+                                            <div className="flex flex-col md:flex-row items-center gap-10">
+                                                <div className="flex-1">
+                                                    <h4 className="text-2xl font-bold text-white mb-4">
+                                                        {language === "el" ? "Επαγγελματικός Αντίκτυπος" : "Professional Impact"}
+                                                    </h4>
+                                                    <p className="text-gray-400 leading-relaxed text-lg">
+                                                        {renderFormattedText(t.language_impact)}
+                                                    </p>
+                                                </div>
+                                                <div className="relative w-48 h-24 flex-shrink-0 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+                                                    <Image src="/resources/img/languages/peoplecert.png" alt="PeopleCert" fill className="object-contain" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </motion.div>
                                 </div>
                             )}
                         </motion.div>
