@@ -245,6 +245,15 @@ export default function Portfolio() {
                                         <span className="px-3 py-1 bg-blue-500/10 border border-blue-500/20 text-blue-400 rounded-full text-[10px] font-mono uppercase tracking-widest">
                                             {selectedProject.category}
                                         </span>
+                                        {['zenithdx-data', 'zenithdx-ai', 'zenithdx-pm', 'zenithdx-gov'].includes(selectedProject.id) && (
+                                            <span className="px-3 py-1 bg-white/5 border border-white/10 text-white/50 rounded-full text-[10px] font-mono uppercase tracking-widest">
+                                                {t.buttons.partPrefix} {
+                                                    selectedProject.id === 'zenithdx-data' ? '1/4' :
+                                                        selectedProject.id === 'zenithdx-ai' ? '2/4' :
+                                                            selectedProject.id === 'zenithdx-pm' ? '3/4' : '4/4'
+                                                }
+                                            </span>
+                                        )}
                                         <div className="h-[1px] flex-1 bg-white/10"></div>
                                     </div>
 
@@ -280,7 +289,16 @@ export default function Portfolio() {
 
                                     <div className="flex flex-col sm:flex-row gap-4 mt-12 pt-8 border-t border-white/5">
                                         {/* @ts-ignore */}
-                                        {selectedProject.caseStudyUrl && (
+                                        {['zenithdx-data', 'zenithdx-ai', 'zenithdx-pm', 'zenithdx-gov'].includes(selectedProject.id) ? (
+                                            <Link
+                                                // @ts-ignore
+                                                href={selectedProject.caseStudyUrl || "#"}
+                                                className="flex-1 bg-white text-black hover:bg-gray-200 text-center font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-white/20 hover:-translate-y-1 flex items-center justify-center gap-2 group"
+                                            >
+                                                {t.buttons.technicalDossier}
+                                                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                                            </Link>
+                                        ) : selectedProject.caseStudyUrl && (
                                             <Link
                                                 // @ts-ignore
                                                 href={selectedProject.caseStudyUrl}
@@ -290,16 +308,19 @@ export default function Portfolio() {
                                                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                                             </Link>
                                         )}
-                                        {selectedProject.link !== "#" && (
-                                            <a
-                                                href={selectedProject.link}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2 hover:border-white/20"
-                                            >
-                                                {t.buttons.liveProject} <ExternalLink size={18} />
-                                            </a>
-                                        )}
+
+                                        <a
+                                            href={selectedProject.link !== "#" ? selectedProject.link : undefined}
+                                            target={selectedProject.link !== "#" ? "_blank" : undefined}
+                                            rel={selectedProject.link !== "#" ? "noopener noreferrer" : undefined}
+                                            className={`px-8 py-4 font-bold rounded-xl transition-all flex items-center justify-center gap-2 ${selectedProject.link !== "#"
+                                                    ? "bg-white/5 hover:bg-white/10 border border-white/10 text-white hover:border-white/20"
+                                                    : "bg-white/5 border border-white/5 text-white/30 cursor-not-allowed"
+                                                }`}
+                                        >
+                                            {selectedProject.link !== "#" ? t.buttons.liveProject : t.buttons.comingSoon}
+                                            {selectedProject.link !== "#" && <ExternalLink size={18} />}
+                                        </a>
                                     </div>
                                 </div>
                             </div>

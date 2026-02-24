@@ -8,8 +8,8 @@ export const projects = [
         date: "2025",
         client: "Emergency Departments",
         tools: ["ISO 14971", "IEC 62304", "LangGraph", "XAI", "MDR Compliance", "Agentic AI", "Clinical Risk", "Audit Trails"],
-        link: "https://zenithdx-data.com",
-        caseStudyUrl: "/case-studies/zenithdx",
+        link: "https://github.com/FilippeZ/zenithdx-petient-centric-agentic-decision-support-platform",
+        caseStudyUrl: "/case-studies/zenithdx/data",
         gallery: ["/resources/img/portfolios/web/1.jpg", "/resources/img/portfolios/zenith/z1.jpg", "/resources/img/portfolios/zenith/z2.jpg"],
         image: "/resources/img/portfolios/web/1.jpg"
     },
@@ -21,7 +21,7 @@ export const projects = [
         date: "2024",
         client: "EU Erasmus+",
         tools: ["IoT", "WCAG 2.1", "Public Policy", "Accessibility", "Cross-border Logistics", "Stakeholder Management", "Agile", "User Experience"],
-        link: "https://deafnav.eu",
+        link: "https://github.com/FilippeZ/deafnav-europeancommision",
         gallery: ["/resources/img/portfolios/app/1.jpg", "/resources/img/portfolios/prod/pr1.jpg", "/resources/img/portfolios/prod/pr2.jpg"],
         image: "/resources/img/portfolios/app/1.jpg"
     },
@@ -33,7 +33,7 @@ export const projects = [
         date: "2025",
         client: "Cancer Research Consortium",
         tools: ["GDPR", "Federated Learning", "Privacy-by-Design", "Bayesian Networks", "Data Residency", "Hybrid Cloud", "Medical Imaging", "MDR Annex I"],
-        link: "https://fl-melanoma.org",
+        link: "https://github.com/FilippeZ/dermagnosis-federated-learning",
         gallery: ["/resources/img/portfolios/logo/2.jpg", "/resources/img/portfolios/fl/fl1.jpg", "/resources/img/portfolios/fl/fl2.jpg"],
         image: "/resources/img/portfolios/logo/2.jpg"
     },
@@ -82,15 +82,15 @@ export const projects = [
         image: "/resources/img/portfolios/web/6.jpg"
     },
     {
-        id: "azure-mesh",
-        title: "Azure Real-Time Clinical Data Mesh & Governance Infrastructure",
+        id: "smartpill",
+        title: "SmartPill — Bio-Intelligence Command Center (v2.4)",
         category: "Mission-Critical Systems",
-        brief: "Architected a real-time clinical data mesh on Azure, focusing on decentralized data ownership combined with centralized governance. I mapped the Azure Well-Architected Framework to ensure the persistence and reliability of clinical streams, providing a blueprint for data residency and institutional sovereignty in healthcare cloud environments.",
-        date: "2024",
-        tools: ["Azure", "Data Mesh", "Real-Time", "Governance"],
-        link: "#",
-        gallery: ["/resources/img/portfolios/web/7.png"],
-        image: "/resources/img/portfolios/web/7.png"
+        brief: "Architected a high-fidelity 'Command Center' for medical IoT, featuring real-time telemetry, teleoperation controls, and advanced bio-intelligence data visualizations. The platform integrates deep-dark aesthetics with mission-critical performance, providing a unified dashboard for remote surgical oversight and pharmaceutical payload monitoring, ensuring safety and precision in bio-intelligence workflows.",
+        date: "2025",
+        tools: ["IoT", "Next.js", "Real-Time Telemetry", "Digital Health", "Command Center", "Bio-Intelligence"],
+        link: "https://github.com/FilippeZ/smartpill",
+        gallery: ["/smartpill.jpeg"],
+        image: "/smartpill.jpeg"
     },
     {
         id: "zenithdx-ai",
@@ -99,8 +99,8 @@ export const projects = [
         brief: "I architected ZenithDx, a high-performance agentic AI system deployed on NVIDIA DGX infrastructure. This project wasn't just about building an LLM; it was about engineering a system that survives clinical scrutiny. I implemented robust XAI mechanisms and iterative ReAct loops to ensure all clinical reports are interpretable and auditable, effectively 'validating' the future of clinical AI deployment for high-stakes environments.",
         date: "2025",
         tools: ["LangGraph", "Llama 3.2", "NVIDIA DGX", "XAI", "ReAct", "RAG", "HITL"],
-        link: "https://zenithdx.ai",
-        caseStudyUrl: "/case-studies/zenithdx",
+        link: "https://github.com/FilippeZ/zenithdx-petient-centric-agentic-decision-support-platform",
+        caseStudyUrl: "/case-studies/zenithdx/ai",
         gallery: ["/resources/img/portfolios/logo/1.jpg"],
         image: "/resources/img/portfolios/logo/1.jpg"
     },
@@ -144,8 +144,8 @@ export const projects = [
         brief: "Led the end-to-end product lifecycle for the ZenithDx co-pilot, serving as the bridge between clinicians, AI engineers, and hospital stakeholders. I managed the backlog through a regulatory lens, ensuring that every sprint deliverable was aligned with both clinical needs and future MDR/AI Act submission requirements.",
         date: "2025",
         tools: ["Jira", "Agile", "MDR Strategy", "XAI", "Stakeholder Management", "Acceptance Score"],
-        link: "https://zenithdx-pm.com",
-        caseStudyUrl: "/case-studies/zenithdx",
+        link: "https://github.com/FilippeZ/zenithdx-petient-centric-agentic-decision-support-platform",
+        caseStudyUrl: "/case-studies/zenithdx/pm",
         gallery: ["/resources/img/portfolios/app/2.jpeg"],
         image: "/resources/img/portfolios/app/2.jpeg"
     },
@@ -266,8 +266,8 @@ export const projects = [
         brief: "Designed and operationalized a 'Governance-by-Design' framework for high-risk clinical AI. I integrated ISO 14971 and IEC 62304 mandates into a self-hosted PHI environment, ensuring that the ZenithDx system remains auditable, compliant, and ready for institutional legacy.",
         date: "2025",
         tools: ["ISO 14971", "IEC 62304", "Compliance Roadmap", "Governance-by-Design"],
-        link: "https://zenithdx-gov.com",
-        caseStudyUrl: "/case-studies/zenithdx",
+        link: "https://github.com/FilippeZ/zenithdx-petient-centric-agentic-decision-support-platform",
+        caseStudyUrl: "/case-studies/zenithdx/gov",
         gallery: ["/resources/img/portfolios/icon/9.jpg"],
         image: "/resources/img/portfolios/icon/9.jpg"
     },
@@ -289,7 +289,7 @@ export const projects = [
         brief: "Designed the end-to-end hybrid architecture for the ZenithDx platform. I focused on alignment with the Azure Well-Architected Framework's pillars of 'Performance Efficiency' and 'Reliability', ensuring that the scaling of GPU-intensive Agentic AI workloads is legally and technically persistent.",
         date: "2024",
         tools: ["Azure Arc", "NVIDIA DGX", "Hybrid Cloud", "Performance Efficiency"],
-        link: "https://zencloud.ai",
+        link: "https://github.com/FilippeZ/zenithdx-petient-centric-agentic-decision-support-platform",
         caseStudyUrl: "/case-studies/zenithdx",
         gallery: ["/resources/img/portfolios/card/15.jpg"],
         image: "/resources/img/portfolios/card/15.jpg"
@@ -306,15 +306,15 @@ export const projects = [
         image: "/resources/img/portfolios/card/16.jpg"
     },
     {
-        id: "casm",
-        title: "CASM Platform: Integrated Clinical & Administrative Service Architecture",
+        id: "ebusiness",
+        title: "E-Business Marketing Core — Strategic Digital Platform",
         category: "Strategic Engineering Coordination",
-        brief: "Orchestrated the architectural design of a Clinical & Administrative Service Management (CASM) platform. I served as the technical bridge ensuring that administrative data workflows are synchronized with clinical safety standards, establishing a unified lifecycle for institutional resource governance.",
+        brief: "Operationalizing digital marketing strategies into a scalable, high-conversion web ecosystem. This project implements a comprehensive e-business marketing strategy framework, based on the blueprint by Philippos-Paraskevas Zygouris. It operationalizes advanced digital business methodologies to ensure that all digital storefront deployments are data-driven, highly scalable, and structurally aligned with modern market demands.",
         date: "2024",
-        tools: ["CASM", "Service Management", "Governance Integration"],
-        link: "#",
-        gallery: ["/resources/img/portfolios/app/6.jpg"],
-        image: "/resources/img/portfolios/app/6.jpg"
+        tools: ["WordPress", "MySQL", "PHP", "SEO", "Strategic Blueprint", "E-Business"],
+        link: "https://github.com/FilippeZ/e-business-marketing",
+        gallery: ["/ebusiness.png"],
+        image: "/ebusiness.png"
     },
     {
         id: "startup-week",
