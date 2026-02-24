@@ -576,7 +576,7 @@ export default function About() {
 
                                                     <div className="space-y-4">
                                                         <div className="text-sm text-gray-400 leading-relaxed italic">
-                                                            "{renderFormattedText(item.desc)}"
+                                                            &quot;{renderFormattedText(item.desc)}&quot;
                                                         </div>
                                                         <div className="pt-4 border-t border-white/5">
                                                             <span className="text-[10px] font-mono text-gray-500 uppercase tracking-widest">
