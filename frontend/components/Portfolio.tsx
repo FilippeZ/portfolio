@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo, useEffect, Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -21,7 +21,7 @@ const renderFormattedText = (text: string) => {
     ));
 };
 
-export default function Portfolio() {
+function PortfolioContent() {
     const { language } = useLanguage();
     const t = locales[language].portfolio;
 
@@ -328,5 +328,13 @@ export default function Portfolio() {
                 )}
             </AnimatePresence>
         </section>
+    );
+}
+
+export default function Portfolio() {
+    return (
+        <Suspense fallback={null}>
+            <PortfolioContent />
+        </Suspense>
     );
 }
