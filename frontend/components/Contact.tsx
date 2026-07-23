@@ -80,27 +80,27 @@ export default function Contact() {
         <section
             id="contact"
             ref={containerRef}
-            className="w-full py-32 lg:py-48 relative overflow-hidden"
+            className="w-full py-24 lg:py-36 relative overflow-hidden"
         >
             {/* COMMAND CENTER BACKGROUND SYSTEM */}
             <div className="absolute inset-0 z-0 pointer-events-none">
                 <div className="absolute top-0 right-1/4 w-[700px] h-[700px] bg-blue-600/5 rounded-full blur-[150px]" />
                 <div className="absolute bottom-0 left-1/4 w-[700px] h-[700px] bg-indigo-600/5 rounded-full blur-[150px]" />
-                <div className="absolute inset-0 bg-[url('/resources/img/grid.svg')] opacity-[0.03] mix-blend-overlay" />
-                <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#010101] to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#010101] to-transparent" />
             </div>
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 {/* SECTION HEADER: MISSION INITIALIZATION */}
                 <motion.div
-                    style={{ opacity }}
-                    className="flex flex-col items-center text-center mb-32"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                    className="flex flex-col items-center text-center mb-20"
                 >
-                    <div className="flex items-center gap-4 mb-8">
-                        <div className="h-[1px] w-12 bg-blue-500/30"></div>
-                        <span className="text-blue-400 font-mono text-[10px] uppercase tracking-[0.5em] font-black">{t.system_init}</span>
-                        <div className="h-[1px] w-12 bg-blue-500/30"></div>
+                    <div className="flex items-center justify-center gap-3 mb-6">
+                        <div className="h-px w-12 bg-gradient-to-r from-transparent to-blue-500/60" />
+                        <span className="font-mono text-blue-400/80 text-xs uppercase tracking-[0.3em] font-medium">{t.system_init}</span>
+                        <div className="h-px w-12 bg-gradient-to-l from-transparent to-blue-500/60" />
                     </div>
 
                     <h2 className="text-6xl md:text-8xl lg:text-9xl font-black text-white leading-none tracking-tighter mb-10">

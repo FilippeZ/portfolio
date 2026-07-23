@@ -75,7 +75,7 @@ export default function Hero() {
                     style={{ y: y2 }}
                     className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[150px] mix-blend-screen opacity-30"
                 ></motion.div>
-                <div className="absolute inset-0 bg-[url('/resources/img/grid.svg')] opacity-[0.03] mix-blend-overlay"></div>
+                <div className="absolute inset-0 clinical-grid opacity-30"></div>
             </div>
 
             <div className="max-w-7xl w-full mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
@@ -174,13 +174,23 @@ export default function Hero() {
                         </p>
                     </motion.div>
 
-                    <div className="space-y-4 text-gray-400 leading-relaxed font-light">
-                        <p className="text-lg md:text-xl">
+                    <div className="space-y-4 text-gray-300 leading-relaxed font-light text-base sm:text-lg">
+                        <p className="border-l-2 border-blue-500/40 pl-4 py-1">
                             {renderTextWithHighlights(t.description_1)}
                         </p>
-                        <p className="text-lg md:text-xl border-l-2 border-white/10 pl-6">
+                        <p className="border-l-2 border-cyan-500/30 pl-4 py-1">
                             {renderTextWithHighlights(t.description_2)}
                         </p>
+                        {(t as any).description_3 && (
+                            <p className="border-l-2 border-indigo-500/30 pl-4 py-1">
+                                {renderTextWithHighlights((t as any).description_3)}
+                            </p>
+                        )}
+                        {(t as any).description_4 && (
+                            <p className="border-l-2 border-white/20 pl-4 py-1">
+                                {renderTextWithHighlights((t as any).description_4)}
+                            </p>
+                        )}
                     </div>
 
                     {/* CTAs */}

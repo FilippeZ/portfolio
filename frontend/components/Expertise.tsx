@@ -117,7 +117,7 @@ export default function Expertise() {
                 style={{ y: yBg, opacity: opacityBg }}
                 className="absolute inset-0 z-0 pointer-events-none"
             >
-                <div className="absolute inset-0 bg-[url('/resources/img/grid.svg')] opacity-[0.02] mix-blend-overlay"></div>
+                <div className="absolute inset-0 clinical-grid opacity-20"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(120,119,198,0.08),transparent)]" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(34,197,94,0.04),transparent_50%)]" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.04),transparent_50%)]" />
@@ -136,21 +136,23 @@ export default function Expertise() {
                     <div className="flex items-center justify-center gap-3 mb-6">
                         <div className="h-px w-12 bg-gradient-to-r from-transparent to-blue-500/60" />
                         <span className="font-mono text-blue-400/80 text-xs uppercase tracking-[0.3em] font-medium">
-                            The Strategic Framework
+                            {t?.header?.label || "The AI Engineering Framework"}
                         </span>
                         <div className="h-px w-12 bg-gradient-to-l from-transparent to-blue-500/60" />
                     </div>
 
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight mb-8 leading-[1.1]">
-                        Bridging Innovation with <br className="hidden md:block" />
+                        {t?.header?.title_prefix || "Bridging Deep Tech with"} <br className="hidden md:block" />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-200 to-blue-400">
-                            Institutional Legitimacy
+                            {t?.header?.title_highlight || "Production Safety"}
                         </span>
                     </h2>
 
                     <p className="text-slate-400 text-base md:text-lg leading-relaxed font-light mt-4">
-                        Three pillars converge into a single institutional guarantee.{" "}
-                        <span className="text-blue-400/80 font-medium">Click any zone</span>
+                        {t?.header?.description_prefix || "Three pillars converge to deliver"}{" "}
+                        {t?.header?.description_highlight || "trustworthy, scalable AI systems"}{" "}
+                        {t?.header?.description_suffix || "."}{" "}
+                        <span className="text-blue-400/80 font-medium">{t?.header?.click_text || "Click any zone"}</span>
                     </p>
                 </motion.div>
 
@@ -406,7 +408,7 @@ export default function Expertise() {
                                                     maxWidth: "90px",
                                                 }}
                                             >
-                                                Sign-off<br />Authority
+                                                {coreContent.subtitle || "The Convergence"}
                                             </span>
                                         </div>
                                     </foreignObject>
@@ -523,52 +525,7 @@ export default function Expertise() {
                     ))}
                 </div>
 
-                {/* ── Ethos & Logos Footer ─────────────────────────────── */}
-                <motion.div
-                    initial={{ opacity: 0, y: 32 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-40px" }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="max-w-4xl mx-auto mt-12"
-                >
-                    <div className="relative rounded-[2rem] border border-white/5 bg-[#030303] overflow-hidden shadow-[0_4px_30px_-5px_rgba(59,130,246,0.1)] group">
-                        {/* Top line */}
-                        <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
-                        {/* Bottom line */}
-                        <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-blue-900/20 to-transparent" />
 
-                        <div className="p-8 md:p-12 flex flex-col md:flex-row gap-10 items-center relative z-10">
-                            {/* Icon + Title */}
-                            <div className="flex-1 text-center md:text-left">
-                                <div className="flex items-center justify-center md:justify-start gap-4 mb-5">
-                                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500/20 to-transparent border border-blue-500/30 flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.2)]">
-                                        <span className="material-symbols-outlined text-2xl text-blue-400">verified_user</span>
-                                    </div>
-                                    <div className="flex flex-col">
-                                        <h3 className="text-xl font-bold text-white tracking-wide">Ethos & Logos</h3>
-                                        <p className="text-sm text-blue-400/80 italic font-serif">The Bridge Engineer Philosophy</p>
-                                    </div>
-                                </div>
-                                <p className="text-slate-300 text-sm md:text-base leading-relaxed font-light">
-                                    Leveraging the <span className="text-white font-medium">Integrated Master (CEID)</span> and the <span className="text-white font-medium">Professional License (TEE)</span>, I translate technical parameters into legal evidence. My mission is to ensure that every system bearing my signature is <span className="text-blue-300 font-medium italic">lawful, safe, and technically flawless.</span>
-                                </p>
-                            </div>
-
-                            {/* CTA */}
-                            <div className="flex-shrink-0">
-                                <Link
-                                    href="#contact"
-                                    className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 text-white font-bold text-sm tracking-wide hover:from-blue-500 hover:to-blue-400 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all duration-300 group/btn"
-                                >
-                                    Discuss Regulatory Strategy
-                                    <span className="material-symbols-outlined text-xl group-hover/btn:translate-x-1 transition-transform duration-300">
-                                        arrow_right_alt
-                                    </span>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </motion.div>
 
             </div >
         </section >

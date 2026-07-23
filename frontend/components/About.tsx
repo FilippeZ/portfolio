@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Briefcase, Award, Wrench, ChevronRight, Activity, Zap, Shield, Globe, Lock, Cpu, Server, Radio, Users, GraduationCap } from "lucide-react";
+import { Briefcase, Award, Wrench, ChevronRight, Activity, Zap, Shield, Globe, Lock, Cpu, Server, Radio, Users, GraduationCap, Brain, Database, ExternalLink } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { locales } from "@/data/locales";
 
@@ -36,143 +36,89 @@ export default function About() {
             opacity: 0,
             y: -20,
             filter: "blur(10px)",
-            transition: { duration: 0.3 }
+            transition: { duration: 0.3, ease: [0.7, 0, 0.84, 0] as any }
         }
     };
 
-    // 11-Category Technical Arsenal with Mapped Tools
-    // Text descriptions removed for a cleaner, high-impact look
+    // 7 Clean Pillars Technical Arsenal Architecture
     const technicalArsenal = [
         {
-            category: "1. Core AI & Generative Architectures",
-            focus: "The Design",
-            icon: Zap,
+            category: "1. Agentic AI & Core Architectures",
+            focus: "The Brain",
+            icon: Brain,
             skills: [
-                { name: "LangGraph", icon: "https://avatars.githubusercontent.com/u/126733545?s=200&v=4" }, // LangChain Logo
-                { name: "CrewAI", icon: "https://avatars.githubusercontent.com/u/150600495?s=200&v=4" }, // CrewAI Logo
-                { name: "RAG", icon: "https://cdn-icons-png.flaticon.com/512/12128/12128882.png" }, // Search/Doc AI generic
-                { name: "PyTorch", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
-                { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
-                { name: "XAI (SHAP/LIME)", icon: "https://cdn-icons-png.flaticon.com/512/10006/10006733.png" }, // Explainable/Brain generic
+                { name: "LangGraph, CrewAI & AutoGen", icon: "https://avatars.githubusercontent.com/u/126733545?s=200&v=4" },
+                { name: "LlamaIndex & LangChain", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+                { name: "MCP (Model Context Protocol) & A2A (Agent2Agent)", icon: "https://cdn-icons-png.flaticon.com/512/2906/2906274.png" },
+                { name: "Advanced RAG: Hybrid Search & Reranking", icon: "https://cdn-icons-png.flaticon.com/512/2906/2906274.png" }
             ]
         },
         {
-            category: "2. Deep Engineering, Data Science & Mathematics",
-            focus: "The Engine",
+            category: "2. Data Engineering & Databases",
+            focus: "The Memory",
+            icon: Database,
+            skills: [
+                { name: "Vector DBs: Chroma, Qdrant & Pinecone", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+                { name: "Relational: PostgreSQL & Pgvector", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+                { name: "Data Pipelines & DVC (Data Version Control)", icon: "https://cdn-icons-png.flaticon.com/512/2906/2906274.png" },
+                { name: "Redis & In-memory Caching", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" }
+            ]
+        },
+        {
+            category: "3. Deep Learning, Hardware & Optimization",
+            focus: "The Core",
             icon: Cpu,
             skills: [
-                { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-                { name: "C/C++", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
-                { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
-                { name: "SQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" },
-                { name: "Pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
-                { name: "Scikit-learn", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" },
-                { name: "OpenCV", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" },
-                { name: "Mathematics", icon: "https://cdn-icons-png.flaticon.com/512/4023/4023094.png" }, // Math generic
+                { name: "NVIDIA DGX & Jetson Edge AI", icon: "https://upload.wikimedia.org/wikipedia/commons/2/21/Nvidia_logo.svg" },
+                { name: "PyTorch, CUDA & GPU Compute", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
+                { name: "vLLM & TensorRT Inference", icon: "https://upload.wikimedia.org/wikipedia/commons/2/21/Nvidia_logo.svg" },
+                { name: "PEFT / LoRA & INT8/INT4 Quantization", icon: "https://cdn-icons-png.flaticon.com/512/4023/4023094.png" }
             ]
         },
         {
-            category: "3. Regulatory Governance & SaMD Compliance",
-            focus: "The Shield",
-            icon: Shield,
+            category: "4. GenAIOps & Cloud Infrastructure",
+            focus: "The Engine",
+            icon: Server,
             skills: [
-                { name: "EU AI Act", icon: "https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg" },
-                { name: "MDR 2017/745", icon: "https://cdn-icons-png.flaticon.com/512/2830/2830319.png" }, // Medical Document
-                { name: "IVDR", icon: "https://cdn-icons-png.flaticon.com/512/3004/3004458.png" }, // Lab/Test
-                { name: "GDPR", icon: "https://cdn-icons-png.flaticon.com/512/2091/2091665.png" }, // Privacy Shield
-                { name: "PRRC (Art. 15)", icon: "https://cdn-icons-png.flaticon.com/512/3596/3596091.png" }, // Compliance Officer
+                { name: "Python, TypeScript & FastAPI", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+                { name: "Docker & Kubernetes", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+                { name: "Cloud: Azure, AWS & Sovereign Cloud", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" },
+                { name: "Terraform & GitHub Actions CI/CD", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" }
             ]
         },
         {
-            category: "4. International Standards & Quality Management",
-            focus: "The Standard",
-            icon: Globe,
-            skills: [
-                { name: "ISO 13485", icon: "https://cdn-icons-png.flaticon.com/512/3254/3254095.png" }, // Quality check
-                { name: "ISO 14971", icon: "https://cdn-icons-png.flaticon.com/512/4249/4249079.png" }, // Risk Warning
-                { name: "IEC 62304", icon: "https://cdn-icons-png.flaticon.com/512/2885/2885417.png" }, // Software Process
-                { name: "Internal Auditing", icon: "https://cdn-icons-png.flaticon.com/512/3135/3135694.png" }, // Audit
-            ]
-        },
-        {
-            category: "5. Quality Assurance & V&V",
+            category: "5. LLMOps, Evaluation & Trustworthy AI",
             focus: "The Validator",
             icon: Activity,
             skills: [
-                { name: "V&V Methodology", icon: "https://cdn-icons-png.flaticon.com/512/9637/9637505.png" }, // Checklist
-                { name: "Selenium", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" },
-                { name: "Playwright", icon: "https://cdn.icon-icons.com/icons2/2389/PNG/512/playwright_logo_icon_145295.png" },
-                { name: "Cypress", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" }, // Fallback to Canva logo as Cypress is not available in devicon/flaticon easily, trying alternative if broken: https://assets.stickpng.com/images/5847f40ecef1014c0b5e488a.png (Cypress logo)
-                // Actually let's use a generic testing icon for Cypress if no stable one
-                { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" },
+                { name: "RAGAS, TruLens & Promptfoo (LLM-as-a-Judge)", icon: "https://cdn-icons-png.flaticon.com/512/10006/10006733.png" },
+                { name: "Langfuse, MLflow & Evidently AI", icon: "https://cdn-icons-png.flaticon.com/512/3135/3135694.png" },
+                { name: "XAI: SHAP, Captum & LIME", icon: "https://cdn-icons-png.flaticon.com/512/3067/3067416.png" },
+                { name: "Guardrails AI & NeMo Guardrails", icon: "https://cdn-icons-png.flaticon.com/512/2091/2091665.png" }
             ]
         },
         {
-            category: "6. AI-Specific QA & Reliability Engineering",
-            focus: "QE 3.0",
-            icon: Lock,
+            category: "6. HealthTech Compliance & Strategy",
+            focus: "The Shield",
+            icon: Shield,
             skills: [
-                { name: "Evidently AI", icon: "https://cdn-icons-png.flaticon.com/512/2103/2103633.png" }, // Analysis/Monitoring
-                { name: "Bias (Fairness 360)", icon: "https://cdn-icons-png.flaticon.com/512/2275/2275330.png" }, // Equality/Balance
-                { name: "Adversarial Testing", icon: "https://cdn-icons-png.flaticon.com/512/3067/3067416.png" }, // Hazard/Attack
-                { name: "Risk Assessment", icon: "https://cdn-icons-png.flaticon.com/512/2830/2830206.png" }, // Risk Triangle
+                { name: "EU AI Act, EU MDR 2017/745, GDPR", icon: "https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg" },
+                { name: "ISO 13485 (QMS) & ISO 14971 (Risk Management)", icon: "https://cdn-icons-png.flaticon.com/512/3254/3254095.png" },
+                { name: "CRISP-ML(Q) & Responsible AI", icon: "https://cdn-icons-png.flaticon.com/512/1535/1535019.png" },
+                { name: "Technical Translation (Engineering to Policy)", icon: "https://cdn-icons-png.flaticon.com/512/2620/2620686.png" }
             ]
         },
         {
-            category: "7. Human Factors & Safety Engineering",
-            focus: "The Interface",
+            category: "7. Product-Led Execution & Methodologies",
+            focus: "The Strategist",
             icon: Users,
             skills: [
-                { name: "WCAG 2.1", icon: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Wheelchair_symbol.svg" }, // Accessibility
-                { name: "KLM / Fitts Law", icon: "https://cdn-icons-png.flaticon.com/512/2554/2554602.png" }, // Stopwatch/Time
-                { name: "Root Cause (RCA)", icon: "https://cdn-icons-png.flaticon.com/512/3208/3208726.png" }, // Root/Tree
-                { name: "CAPA", icon: "https://cdn-icons-png.flaticon.com/512/3135/3135702.png" }, // Wrench/Fix
-            ]
-        },
-        {
-            category: "8. Cloud, Networks & Infrastructure",
-            focus: "The Conduit",
-            icon: Server,
-            skills: [
-                { name: "Microsoft Azure", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" },
-                { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-                { name: "Kubernetes", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" },
-                { name: "Terraform", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" },
-                { name: "CI/CD", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" },
-                { name: "BGP / OSPF", icon: "https://cdn-icons-png.flaticon.com/512/3663/3663273.png" }, // Network/Router
-            ]
-        },
-        {
-            category: "9. Hardware & High-Performance Computing (HPC)",
-            focus: "The Foundation",
-            icon: Radio,
-            skills: [
-                { name: "NVIDIA DGX", icon: "https://upload.wikimedia.org/wikipedia/commons/2/21/Nvidia_logo.svg" },
-                { name: "MPI / OpenMP", icon: "https://cdn-icons-png.flaticon.com/512/2103/2103603.png" }, // Parallel/Chip
-                { name: "Micro-architectures", icon: "https://cdn-icons-png.flaticon.com/512/3426/3426653.png" }, // Chip
-                { name: "Ind. Electronics", icon: "https://cdn-icons-png.flaticon.com/512/2882/2882894.png" }, // Circuit
-            ]
-        },
-        {
-            category: "10. Strategic Leadership & EU Policy",
-            focus: "The Bridge",
-            icon: Globe,
-            skills: [
-                { name: "MVP Roadmapping", icon: "https://cdn-icons-png.flaticon.com/512/1508/1508889.png" }, // Roadmap
-                { name: "RICE / SWOT", icon: "https://cdn-icons-png.flaticon.com/512/3233/3233519.png" }, // Strategy
-                { name: "EU Digital Policy", icon: "https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg" },
-                { name: "Ethical AI", icon: "https://cdn-icons-png.flaticon.com/512/3135/3135810.png" }, // Ethics/Check
-            ]
-        },
-        {
-            category: "11. Strategic Product Management & Orchestration",
-            focus: "The Vision",
-            icon: Briefcase,
-            skills: [
-                { name: "Product Strategy", icon: "https://cdn-icons-png.flaticon.com/512/1055/1055644.png" }, // Strategy
-                { name: "Agile / Scrum", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" }, // Jira usually represents Agile well in tech
-                { name: "UX Design Thinking", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" }, // Figma for UX
-                { name: "KPI Analysis", icon: "https://cdn-icons-png.flaticon.com/512/2936/2936725.png" }, // Analytics
+                { name: "Product-Led AI Mindset", icon: "https://cdn-icons-png.flaticon.com/512/1055/1055646.png" },
+                { name: "High-Agency Problem Solving", icon: "https://cdn-icons-png.flaticon.com/512/1535/1535019.png" },
+                { name: "Cross-functional Collaboration", icon: "https://cdn-icons-png.flaticon.com/512/1063/1063196.png" },
+                { name: "Agile & Scrum Orchestration", icon: "https://cdn-icons-png.flaticon.com/512/1063/1063196.png" },
+                { name: "Technical Translation", icon: "https://cdn-icons-png.flaticon.com/512/2620/2620686.png" },
+                { name: "Stakeholder Management", icon: "https://cdn-icons-png.flaticon.com/512/1055/1055646.png" }
             ]
         }
     ];
@@ -199,10 +145,12 @@ export default function About() {
                         transition={{ duration: 0.8 }}
                         className="flex flex-col items-center lg:items-start text-center lg:text-left mb-12 lg:mb-0"
                     >
-                        <span className="flex items-center gap-2 text-blue-500 font-mono text-xs uppercase tracking-[0.2em] mb-4">
-                            <span className="w-8 h-[1px] bg-blue-500"></span>
-                            {t.subtitle}
-                        </span>
+                        <div className="flex items-center gap-3 mb-4">
+                            <div className="h-px w-8 bg-gradient-to-r from-transparent to-blue-500/60" />
+                            <span className="font-mono text-blue-400/80 text-xs uppercase tracking-[0.3em] font-medium">
+                                {t.subtitle}
+                            </span>
+                        </div>
                         <h2 className="text-4xl lg:text-5xl font-black mb-8 leading-tight">
                             {t.title_prefix}<br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">{t.title_gradient}</span>
@@ -323,101 +271,206 @@ export default function About() {
                                             </motion.div>
                                         ))}
                                     </div>
-
-                                    {/* Soft Skills Section (Matching Style) */}
-                                    <div className="mt-20 pt-10 border-t border-white/10">
-                                        <h4 className="flex items-center gap-3 text-lg font-bold text-white mb-8">
-                                            <span className="w-8 h-[2px] bg-blue-500"></span>
-                                            {t.soft_skills.title}
-                                        </h4>
-                                        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-3 pl-11">
-                                            {t.soft_skills_list.map((skill: any, i: number) => (
-                                                <motion.div
-                                                    key={skill.name}
-                                                    initial={{ opacity: 0, scale: 0.9 }}
-                                                    whileInView={{ opacity: 1, scale: 1 }}
-                                                    viewport={{ once: true }}
-                                                    transition={{ delay: i * 0.03 }}
-                                                    whileHover={{ y: -5, backgroundColor: "rgba(255,255,255,0.08)", borderColor: "rgba(59,130,246,0.4)" }}
-                                                    className="group/card flex flex-col items-center justify-center p-3 bg-white/[0.03] rounded-lg border border-white/5 transition-all duration-300 relative overflow-hidden aspect-square cursor-default shadow-lg shadow-black/20"
-                                                >
-                                                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300" />
-
-                                                    <div className="relative z-10 w-9 h-9 mb-2 filter grayscale group-hover/card:grayscale-0 transition-all duration-300 group-hover/card:scale-110">
-                                                        <Image src={skill.icon} alt={skill.name} width={36} height={36} className="w-full h-full object-contain drop-shadow-md" />
-                                                    </div>
-                                                    <span className="relative z-10 text-[10px] font-bold text-gray-500 group-hover/card:text-white transition-colors text-center uppercase tracking-tight leading-tight">
-                                                        {skill.name}
-                                                    </span>
-                                                </motion.div>
-                                            ))}
-                                        </div>
-                                    </div>
                                 </div>
                             )}
 
-                            {/* TAB: EXPERIENCE (Using experience data which is Certs/Events) */}
+                            {/* TAB: CERTIFICATIONS & EVENTS (2 DISTINCT CATEGORIES) */}
                             {activeTab === "experience" && (
-                                <div className="space-y-8">
+                                <div className="space-y-16">
+                                    {/* Section Header */}
                                     <div className="flex items-center justify-between mb-8 border-b border-white/10 pb-6">
                                         <div>
-                                            <h3 className="text-2xl font-bold text-white">{t.certifications.title}</h3>
+                                            <h3 className="text-2xl font-bold text-white tracking-tight">{t.certifications.title}</h3>
                                             <p className="text-gray-400 text-sm mt-1">{t.certifications.subtitle}</p>
                                         </div>
                                         <Award className="text-blue-500 opacity-20" size={48} />
                                     </div>
 
-                                    <div className="relative pl-8 md:pl-0">
-                                        {/* Timeline Line */}
-                                        <div className="absolute left-[3px] md:left-[50%] top-0 bottom-0 w-[1px] bg-gradient-to-b from-blue-500 via-white/10 to-transparent"></div>
+                                    {/* CATEGORY 1: OFFICIAL AI CERTIFICATIONS & CREDENTIALS */}
+                                    <div className="space-y-6">
+                                        <div className="flex items-center gap-3 mb-6">
+                                            <span className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse" />
+                                            <h4 className="text-xl font-bold text-white tracking-tight">
+                                                {language === "el" ? "Επίσημες Πιστοποιήσεις & Διαπιστευτήρια" : "Official AI Certifications & Credentials"}
+                                            </h4>
+                                        </div>
 
-                                        {t.certifications_list.map((item: any, index: number) => (
-                                            <motion.div
-                                                key={index}
-                                                initial={{ opacity: 0, y: 30 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                transition={{ delay: index * 0.15 }}
-                                                className={`relative flex flex-col md:flex-row gap-8 mb-12 group ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}
-                                            >
-                                                {/* Timeline Dot */}
-                                                <div className="absolute left-[-4px] md:left-[50%] md:-translate-x-1/2 top-6 w-[15px] h-[15px] bg-[#050505] border-2 border-blue-500 rounded-full z-10 group-hover:scale-125 group-hover:bg-blue-500 transition-all duration-300 shadow-[0_0_10px_rgba(0,102,255,0.5)]"></div>
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                            {t.certifications_list.map((item: any, index: number) => (
+                                                <motion.div
+                                                    key={index}
+                                                    initial={{ opacity: 0, y: 20 }}
+                                                    whileInView={{ opacity: 1, y: 0 }}
+                                                    viewport={{ once: true }}
+                                                    transition={{ delay: index * 0.1 }}
+                                                    className="group relative flex flex-col justify-between p-6 rounded-2xl bg-[#090d16]/90 border border-white/10 hover:border-blue-500/50 hover:bg-[#0c1322] hover:shadow-[0_10px_30px_rgba(59,130,246,0.15)] transition-all duration-300 overflow-hidden"
+                                                >
+                                                    <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                                                {/* Card */}
-                                                <div className="flex-1 md:w-[calc(50%-2rem)]">
-                                                    <div className="p-6 md:p-8 bg-white/[0.03] border border-white/5 rounded-2xl hover:bg-white/[0.05] hover:border-blue-500/30 transition-all duration-300 group-hover:shadow-2xl">
-                                                        <div className="flex items-center justify-between mb-4">
-                                                            <span className="px-3 py-1 text-[10px] font-mono font-bold uppercase tracking-wider bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20">
+                                                    <div>
+                                                        <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+                                                            <span className="px-3 py-1 text-[10px] font-mono font-bold uppercase tracking-wider bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/30">
                                                                 {item.type}
                                                             </span>
-                                                            <span className="text-xs font-mono text-gray-500">{item.date}</span>
+                                                            <span className="text-xs font-mono text-gray-400">{item.date}</span>
                                                         </div>
-                                                        <h4 className="text-xl font-bold text-white mb-1 group-hover:text-blue-400 transition-colors">{item.title}</h4>
-                                                        <div className="text-sm font-medium text-gray-400 mb-4">{item.org}</div>
 
-                                                        {item.image && (
-                                                            <div className="w-full aspect-video relative rounded-lg overflow-hidden mb-6 border border-white/5 shadow-2xl bg-black/20">
-                                                                <Image
-                                                                    src={item.image}
-                                                                    alt={item.title}
-                                                                    fill
-                                                                    className={`group-hover:scale-105 transition-transform duration-700 ${["Certification", "Certificate", "Credential", "Ambassador", "Lead Engineer", "Policy Advisor", "Internship"].some(t => item.type.includes(t))
-                                                                        ? "object-contain p-4"
-                                                                        : "object-cover object-top"
-                                                                        }`}
-                                                                />
+                                                        <div className="flex items-start gap-4 mb-4">
+                                                            {item.image && (
+                                                                <div className="w-12 h-12 flex-shrink-0 relative rounded-xl overflow-hidden border border-white/10 bg-white/5 shadow-md">
+                                                                    <Image
+                                                                        src={item.image}
+                                                                        alt={item.title}
+                                                                        fill
+                                                                        className={item.image.endsWith(".svg") ? "object-contain p-1.5" : "object-cover object-center"}
+                                                                    />
+                                                                </div>
+                                                            )}
+                                                            <div>
+                                                                <h5 className="text-lg font-bold text-white group-hover:text-blue-300 transition-colors leading-snug">
+                                                                    {item.title}
+                                                                </h5>
+                                                                <span className="text-xs font-mono text-blue-400/80 font-medium block mt-0.5">
+                                                                    {item.org}
+                                                                </span>
+                                                            </div>
+                                                        </div>
+
+                                                        <p className="text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-white/10 pt-4 font-light">
+                                                            {renderFormattedText(item.desc)}
+                                                        </p>
+
+                                                        {item.link && (
+                                                            <div className="mt-4 pt-3 border-t border-white/10 flex justify-end">
+                                                                <a
+                                                                    href={item.link}
+                                                                    target="_blank"
+                                                                    rel="noopener noreferrer"
+                                                                    className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono font-medium text-blue-400 hover:text-white bg-blue-500/10 hover:bg-blue-600 rounded-lg border border-blue-500/20 hover:border-blue-500 transition-all duration-300 shadow-sm group/btn"
+                                                                >
+                                                                    <span>{language === "el" ? "Επαλήθευση Διαπιστευτηρίου" : "Verify Credential"}</span>
+                                                                    <ExternalLink size={13} className="group-hover/btn:translate-x-0.5 transition-transform" />
+                                                                </a>
                                                             </div>
                                                         )}
 
-                                                        <p className="text-sm text-gray-400 leading-relaxed border-t border-white/5 pt-4">
-                                                            {item.desc}
-                                                        </p>
+                                                        {item.photo && (
+                                                            <div className="mt-4 pt-4 border-t border-white/10 w-full aspect-video relative rounded-xl overflow-hidden shadow-2xl border border-white/10 group-hover:border-blue-500/40 bg-black/60">
+                                                                <Image
+                                                                    src={item.photo}
+                                                                    alt={item.title}
+                                                                    fill
+                                                                    className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                                                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                                                    quality={95}
+                                                                />
+                                                            </div>
+                                                        )}
                                                     </div>
-                                                </div>
-                                                {/* Empty space for the other side */}
-                                                <div className="flex-1 hidden md:block"></div>
-                                            </motion.div>
-                                        ))}
+                                                </motion.div>
+                                            ))}
+                                        </div>
                                     </div>
+
+                                    {/* CATEGORY 2: PROFESSIONAL EVENTS, WORKSHOPS & ECOSYSTEM ENGAGEMENT */}
+                                    {t.events_list && t.events_list.length > 0 && (
+                                        <div className="space-y-6 pt-6 border-t border-white/10">
+                                            <div className="flex items-center gap-3 mb-6">
+                                                <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse" />
+                                                <h4 className="text-xl font-bold text-white tracking-tight">
+                                                    {language === "el" ? "Επαγγελματικές Εκδηλώσεις, Workshops & Οικοσύστημα" : "Professional Events, Workshops & AI Ecosystem"}
+                                                </h4>
+                                            </div>
+
+                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                                {t.events_list.map((item: any, index: number) => (
+                                                    <motion.div
+                                                        key={index}
+                                                        initial={{ opacity: 0, y: 20 }}
+                                                        whileInView={{ opacity: 1, y: 0 }}
+                                                        viewport={{ once: true }}
+                                                        transition={{ delay: index * 0.1 }}
+                                                        className="group relative flex flex-col justify-between p-6 rounded-2xl bg-[#090d16]/90 border border-white/10 hover:border-cyan-500/50 hover:bg-[#081522] hover:shadow-[0_10px_30px_rgba(6,182,212,0.15)] transition-all duration-300 overflow-hidden"
+                                                    >
+                                                        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                                                        <div>
+                                                            <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+                                                                <span className="px-3 py-1 text-[10px] font-mono font-bold uppercase tracking-wider bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/30">
+                                                                    {item.type}
+                                                                </span>
+                                                                <span className="text-xs font-mono text-gray-400">{item.date}</span>
+                                                            </div>
+
+                                                            <div className="flex items-start gap-4 mb-4">
+                                                                {item.image && (
+                                                                    <div className="w-12 h-12 flex-shrink-0 relative rounded-xl overflow-hidden border border-white/10 bg-white/5 shadow-md">
+                                                                        <Image
+                                                                            src={item.image}
+                                                                            alt={item.title}
+                                                                            fill
+                                                                            className={item.image.endsWith(".svg") ? "object-contain p-1.5" : "object-cover object-center"}
+                                                                        />
+                                                                    </div>
+                                                                )}
+                                                                <div>
+                                                                    <h5 className="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors leading-snug">
+                                                                        {item.title}
+                                                                    </h5>
+                                                                    <span className="text-xs font-mono text-cyan-400/80 font-medium block mt-0.5">
+                                                                        {item.org}
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+
+                                                            <p className="text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-white/10 pt-4 font-light">
+                                                                {renderFormattedText(item.desc)}
+                                                            </p>
+
+                                                            {item.link && (
+                                                                <div className="mt-4 pt-3 border-t border-white/10 flex justify-end">
+                                                                    <a
+                                                                        href={item.link}
+                                                                        target="_blank"
+                                                                        rel="noopener noreferrer"
+                                                                        className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono font-medium text-cyan-400 hover:text-white bg-cyan-500/10 hover:bg-cyan-600 rounded-lg border border-cyan-500/20 hover:border-cyan-500 transition-all duration-300 shadow-sm group/btn"
+                                                                    >
+                                                                        <span>{language === "el" ? "Βεβαίωση Συμμετοχής" : "Certificate of Participation"}</span>
+                                                                        <ExternalLink size={13} className="group-hover/btn:translate-x-0.5 transition-transform" />
+                                                                    </a>
+                                                                </div>
+                                                            )}
+
+                                                            {item.photo && (
+                                                                <div className="mt-4 pt-4 border-t border-white/10 w-full aspect-video relative rounded-xl overflow-hidden shadow-2xl border border-white/10 group-hover:border-cyan-500/40 bg-black/60">
+                                                                    <Image
+                                                                        src={item.photo}
+                                                                        alt={item.title}
+                                                                        fill
+                                                                        className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                                                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                                                        quality={95}
+                                                                    />
+                                                                </div>
+                                                            )}
+
+                                                            {item.youtubeId && (
+                                                                <div className="mt-4 pt-4 border-t border-white/10 w-full aspect-video rounded-xl overflow-hidden shadow-2xl border border-cyan-500/30 bg-black">
+                                                                    <iframe
+                                                                        src={`https://www.youtube-nocookie.com/embed/${item.youtubeId}`}
+                                                                        title={item.title}
+                                                                        className="w-full h-full border-0"
+                                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                                        allowFullScreen
+                                                                    />
+                                                                </div>
+                                                            )}
+                                                        </div>
+                                                    </motion.div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
                             )}
 
@@ -544,7 +597,7 @@ export default function About() {
                                             <Globe size={48} className="text-blue-500 opacity-20" />
                                         </div>
 
-                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                                             {t.languages_list.map((item: any, index: number) => (
                                                 <motion.div
                                                     key={index}

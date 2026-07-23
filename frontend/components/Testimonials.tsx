@@ -32,12 +32,11 @@ export default function Testimonials() {
     }, [t.list]);
 
     return (
-        <section id="testimonials" className="py-16 md:py-24 bg-background-dark relative z-10 overflow-hidden">
+        <section id="testimonials" className="py-24 lg:py-32 relative z-10 overflow-hidden">
             {/* Background Decorative Elements */}
             <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-                <div className="absolute top-[20%] left-[10%] w-96 h-96 bg-primary rounded-full filter blur-[120px]"></div>
-                <div className="absolute bottom-[20%] right-[10%] w-96 h-96 bg-secondary rounded-full filter blur-[120px]"></div>
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[url('/resources/img/grid.svg')] opacity-20"></div>
+                <div className="absolute top-[20%] left-[10%] w-96 h-96 bg-blue-600 rounded-full filter blur-[120px]"></div>
+                <div className="absolute bottom-[20%] right-[10%] w-96 h-96 bg-indigo-600 rounded-full filter blur-[120px]"></div>
             </div>
 
             <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
@@ -48,13 +47,16 @@ export default function Testimonials() {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-20"
                 >
-                    <span className="text-primary font-mono text-sm uppercase tracking-widest mb-3 block">
-                        {t.subtitle}
-                    </span>
+                    <div className="flex items-center justify-center gap-3 mb-4">
+                        <div className="h-px w-12 bg-gradient-to-r from-transparent to-blue-500/60" />
+                        <span className="font-mono text-blue-400/80 text-xs uppercase tracking-[0.3em] font-medium">
+                            {t.subtitle}
+                        </span>
+                        <div className="h-px w-12 bg-gradient-to-l from-transparent to-blue-500/60" />
+                    </div>
                     <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
                         {t.title}
                     </h2>
-                    <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
                 </motion.div>
 
                 <motion.div

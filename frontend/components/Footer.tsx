@@ -14,7 +14,7 @@ export default function Footer() {
             <div className="absolute inset-0 z-0 pointer-events-none">
                 <div className="absolute top-0 right-1/4 w-[800px] h-[400px] bg-blue-900/10 blur-[150px] rounded-full mix-blend-screen" />
                 <div className="absolute bottom-0 left-1/4 w-[600px] h-[300px] bg-indigo-900/10 blur-[150px] rounded-full mix-blend-screen" />
-                <div className="absolute inset-0 bg-[url('/resources/img/grid.svg')] opacity-[0.02] mix-blend-overlay" />
+                <div className="absolute inset-0 clinical-grid opacity-20 pointer-events-none" />
                 <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
             </div>
 
@@ -63,14 +63,20 @@ export default function Footer() {
                             Navigation
                         </h4>
                         <ul className="space-y-4">
-                            {['Authority', 'About', 'Portfolio', 'Testimonials'].map((item) => (
-                                <li key={item}>
+                            {[
+                                { name: 'Framework', href: '#expertise' },
+                                { name: 'Projects', href: '#portfolio' },
+                                { name: 'Arsenal', href: '#about' },
+                                { name: 'Credentials', href: '#authority' },
+                                { name: 'Testimonials', href: '#testimonials' },
+                            ].map((link) => (
+                                <li key={link.name}>
                                     <Link
-                                        href={`#${item.toLowerCase()}`}
+                                        href={link.href}
                                         className="text-gray-400 hover:text-white text-sm font-medium transition-all duration-300 flex items-center gap-3 group"
                                     >
                                         <span className="w-1.5 h-1.5 rounded-full bg-white/10 group-hover:bg-blue-500 transition-colors" />
-                                        <span className="group-hover:translate-x-1 transition-transform duration-300">{item}</span>
+                                        <span className="group-hover:translate-x-1 transition-transform duration-300">{link.name}</span>
                                     </Link>
                                 </li>
                             ))}

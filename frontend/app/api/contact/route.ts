@@ -67,10 +67,10 @@ export async function POST(request: Request) {
             from: `"Filippos P. Zygouris" <${process.env.EMAIL_USER}>`,
             to: email,
             subject: isEnglish
-                ? `Transmission Received - Filippos P. Zygouris | Technical Authority`
-                : `Transmission Received - Filippos P. Zygouris | Technical Authority`,
+                ? `Transmission Received - Filippos P. Zygouris | AI Engineer`
+                : `Transmission Received - Filippos P. Zygouris | AI Engineer`,
             text: isEnglish
-                ? `FILIPPOS P. ZYGOURIS | Technical Authority\n` +
+                ? `FILIPPOS P. ZYGOURIS | AI Engineer\n` +
                 `Architecting the institutional survival of AI systems. Bridging the gap between Innovation and Regulation.\n\n` +
                 `Dear ${name},\n\n` +
                 `Thank you for reaching out.\n\n` +
@@ -89,7 +89,7 @@ export async function POST(request: Request) {
                 `📍 LOC: LAMIA, HEADQUARTERS\n` +
                 `📞 +30 697 592 2894\n` +
                 `✉️ filippos.paraskevas.zygouris@gmail.com`
-                : `FILIPPOS P. ZYGOURIS | Technical Authority\n` +
+                : `FILIPPOS P. ZYGOURIS | AI Engineer\n` +
                 `Architecting the institutional survival of AI systems. Bridging the gap between Innovation and Regulation.\n\n` +
                 `Αγαπητέ/ή ${name},\n\n` +
                 `Σας ευχαριστώ για την επικοινωνία.\n\n` +

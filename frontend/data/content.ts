@@ -1,22 +1,20 @@
 
 export const projects = [
     {
-        id: "zenithdx-data",
-        title: "ZenithDx: Class IIb Regulatory Architecture & Clinical Orchestration",
-        category: "Regulatory Architecture (SaMD)",
-        brief: "A technical deep-dive into the regulatory architecture of a Class IIb SaMD clinical co-pilot. I architected the integration of ISO 14971 Risk Management into an Agentic AI pipeline, mapping clinical hazards to automated safety gates within a LangGraph-orchestrated inference engine. The goal was to provide high-authority XAI evidence that satisfies both MDR transparency mandates and the EU AI Act's requirements for high-risk systems, ensuring the 'institutional survival' of the product through the audit and into the market.",
-        date: "2025",
-        client: "Emergency Departments",
-        tools: ["ISO 14971", "IEC 62304", "LangGraph", "XAI", "MDR Compliance", "Agentic AI", "Clinical Risk", "Audit Trails"],
+        id: "zenithdx",
+        title: "ZenithDx – High-Performance Agentic Clinical Co-Pilot",
+        category: "AI & HealthTech (Primary)",
+        brief: "I architected and led the end-to-end development of ZenithDx, a production-ready Multimodal Clinical Decision Support System (CDSS) prototype. Trained on NVIDIA DGX infrastructure and optimized for resource-efficient edge inference, the objective was to engineer a high-performance clinical system capable of processing heterogeneous data (images, text, EHR). The architecture was built from the ground up with 'Compliance-by-Design' principles, aligning with the EU AI Act's stringent requirements for high-risk applications and GDPR data residency mandates.",
+        date: "2024 – 2025",
+        tools: ["LangGraph", "Llama 3.2 (LoRA)", "Hybrid RAG", "PyTorch", "FastAPI", "PostgreSQL", "Ollama", "HL7/FHIR & DICOM", "EU AI Act & GDPR", "NVIDIA DGX"],
         link: "https://github.com/FilippeZ/zenithdx-petient-centric-agentic-decision-support-platform",
-        caseStudyUrl: "/case-studies/zenithdx/data",
-        gallery: ["/resources/img/portfolios/web/1.jpg", "/resources/img/portfolios/zenith/z1.jpg", "/resources/img/portfolios/zenith/z2.jpg"],
-        image: "/resources/img/portfolios/web/1.jpg"
+        gallery: ["/resources/img/portfolios/zenith/z1.jpg", "/resources/img/portfolios/zenith/z2.jpg", "/resources/img/portfolios/zenith/z3.jpg", "/resources/img/portfolios/logo/1.jpg"],
+        image: "/resources/img/portfolios/logo/1.jpg"
     },
-    {
+{
         id: "deafnav",
         title: "DeafNav: IoT Accessibility & EU Legislative Policy Integration",
-        category: "AI Governance & Policy",
+        category: "AI Policy, Governance & Strategy",
         brief: "Lead Product Manager & Analysis lead for a multi-national railway accessibility initiative. This project didn't just build technology; it translated European accessibility directives into a technical roadmap for real-time sign language avatars. I served as the bridge between technical sensor networks and the 'Public Officer' persona, ensuring the solution aligned with local legislative requirements and cross-border technical standards to facilitate institutional adoption across five EU member states.",
         date: "2024",
         client: "EU Erasmus+",
@@ -28,7 +26,7 @@ export const projects = [
     {
         id: "dermagnosis-fl",
         title: "DermaGnosis: Federated Learning & GDPR Privacy-by-Design Validation",
-        category: "Regulatory Architecture (SaMD)",
+        category: "AI & HealthTech (Primary)",
         brief: "Architected a privacy-preserving Federated Learning platform for early melanoma detection, emphasizing 'Privacy-by-Design' (GDPR Article 25). I redefined the technical challenge as a regulatory one: ensuring PHI never leaves hospital servers while maintaining diagnostic accuracy. By utilizing Bayesian Networks for decentralized training, I delivered a technical proof-of-concept for 'Sovereign Healthcare' AI that is legally bulletproof and ready for institutional deployment.",
         date: "2025",
         client: "Cancer Research Consortium",
@@ -40,7 +38,7 @@ export const projects = [
     {
         id: "travel-db",
         title: "Relational Data Integrity Layer for High-Stakes Operations",
-        category: "Technical Validation Logic",
+        category: "Data Engineering & Bioinformatics",
         brief: "I architected a robust relational database management system where the focus was 'Data Integrity as a Service'. Beyond modeling, I engineered a logic layer using MySQL Stored Procedures and Triggers to enforce rigid integrity constraints and business rules directly at the source. This architecture ensures that all operational data is verifiable and audit-ready, providing a foundational toolset for high-stakes reservation systems where data failure is not an option.",
         date: "2024",
         tools: ["MySQL", "Java Swing", "JDBC", "Stored Procedures", "Triggers", "ERD", "Normalization", "ETL", "Data Integrity", "Constraints"],
@@ -51,7 +49,7 @@ export const projects = [
     {
         id: "etl-covid",
         title: "End-to-End ETL Pipeline for Economic Impact Validation",
-        category: "Technical Validation Logic",
+        category: "Data Engineering & Bioinformatics",
         brief: "Architected a high-integrity data analysis pipeline to validate commercial impacts for global transport strategies. I implemented a robust ETL process using Python (Pandas) that didn't just transform data, but 'scrubbed' it to ensure accuracy for BI reporting. This project demonstrated the ability to deliver actionable, high-authority insights from heterogeneous data sources, providing stakeholders with validated evidence to optimize supply chain resilience.",
         date: "2023",
         tools: ["Python", "Pandas", "NumPy", "MySQL", "Matplotlib", "ETL", "Data Cleaning", "Validation"],
@@ -62,7 +60,7 @@ export const projects = [
     {
         id: "genomic",
         title: "Genomic Data Quality & Bioinformatics Governance Pipeline",
-        category: "Technical Validation Logic",
+        category: "Data Engineering & Bioinformatics",
         brief: "Spearheaded the development of a comprehensive data access and analysis strategy for large-scale biological data. I implemented stringent data quality and governance protocols for Next-Generation Sequencing (NGS) data, using FastQC to establish automated filtration pipelines based on Phred quality thresholds. This project frames bioinformatics as a 'Data Governance' challenge, ensuring the purity and auditability of sequences for advanced genomic research.",
         date: "2024",
         tools: ["Biopython", "Entrez", "MEME Suite", "FastQC", "NGS", "Governance", "Quality Thresholds"],
@@ -73,7 +71,7 @@ export const projects = [
     {
         id: "indexing-poc",
         title: "Multidimensional Indexing PoC for High-Performance Clinical Search",
-        category: "Mission-Critical Systems",
+        category: "Data Engineering & Bioinformatics",
         brief: "Executed a practical Proof of Concept to define the optimal search strategy for complex spatial and clinical data. I architected and benchmarked multidimensional solution designs (K-D Trees, Octrees) and implemented ANN solutions using Locality-Sensitive Hashing. The final strategic recommendation provided a validated roadmap for high-performance querying that balances speed with memory footprints for enterprise-scale clinical environments.",
         date: "2024",
         tools: ["Python", "NumPy", "LSH", "MinHash", "K-D Tree", "Benchmarking", "Profiling"],
@@ -82,32 +80,9 @@ export const projects = [
         image: "/resources/img/portfolios/web/6.jpg"
     },
     {
-        id: "smartpill",
-        title: "SmartPill — Bio-Intelligence Command Center (v2.4)",
-        category: "Mission-Critical Systems",
-        brief: "Architected a high-fidelity 'Command Center' for medical IoT, featuring real-time telemetry, teleoperation controls, and advanced bio-intelligence data visualizations. The platform integrates deep-dark aesthetics with mission-critical performance, providing a unified dashboard for remote surgical oversight and pharmaceutical payload monitoring, ensuring safety and precision in bio-intelligence workflows.",
-        date: "2025",
-        tools: ["IoT", "Next.js", "Real-Time Telemetry", "Digital Health", "Command Center", "Bio-Intelligence"],
-        link: "https://github.com/FilippeZ/smartpill",
-        gallery: ["/smartpill.jpeg"],
-        image: "/smartpill.jpeg"
-    },
-    {
-        id: "zenithdx-ai",
-        title: "ZenithDx – High-Performance Agentic Clinical Co-Pilot",
-        category: "Regulatory Architecture (SaMD)",
-        brief: "I architected ZenithDx, a high-performance agentic AI system deployed on NVIDIA DGX infrastructure. This project wasn't just about building an LLM; it was about engineering a system that survives clinical scrutiny. I implemented robust XAI mechanisms and iterative ReAct loops to ensure all clinical reports are interpretable and auditable, effectively 'validating' the future of clinical AI deployment for high-stakes environments.",
-        date: "2025",
-        tools: ["LangGraph", "Llama 3.2", "NVIDIA DGX", "XAI", "ReAct", "RAG", "HITL"],
-        link: "https://github.com/FilippeZ/zenithdx-petient-centric-agentic-decision-support-platform",
-        caseStudyUrl: "/case-studies/zenithdx/ai",
-        gallery: ["/resources/img/portfolios/logo/1.jpg"],
-        image: "/resources/img/portfolios/logo/1.jpg"
-    },
-    {
         id: "wgan-telco",
         title: "WGAN-GP Architecture for Privacy-Preserving Synthetic Traffic",
-        category: "Regulatory Architecture (SaMD)",
+        category: "AI & HealthTech (Primary)",
         brief: "Designed a secure, data-centric solution for generating realistic synthetic time-series data for 5G traffic. By implementing WGAN-GP, I enabled the generation of high-fidelity data that satisfies privacy constraints, allowing for the simulation and validation of 5G network performance without compromising real-user data integrity.",
         date: "2024",
         tools: ["PyTorch", "WGAN-GP", "Synthetic Data", "Privacy", "5G"],
@@ -118,7 +93,7 @@ export const projects = [
     {
         id: "azure-ai-studio",
         title: "Mission-Critical Healthcare AI Platform on Azure Studio",
-        category: "Mission-Critical Systems",
+        category: "AI & HealthTech (Primary)",
         brief: "Translated complex healthcare requirements into a high-value PaaS solution on Azure AI Studio. I architected the integration of OpenAI GPT-4 with clinical text analytics and HITL playgrounds, ensuring that the platform satisfies institutional security requirements while delivering state-of-the-art multimodal clinical reasoning.",
         date: "2025",
         tools: ["Azure AI Studio", "GPT-4", "UMLS", "Document Intelligence", "HITL", "Multimodal"],
@@ -129,7 +104,7 @@ export const projects = [
     {
         id: "azure-security",
         title: "Architectural Risk Analysis & Zero-Trust Cloud Security Design",
-        category: "Mission-Critical Systems",
+        category: "Distributed Systems, HPC & Cloud",
         brief: "Performed deep architectural reviews of security vulnerabilities for mission-critical healthcare systems. I aligned the platform with the Azure Well-Architected Framework's Security pillar, designing IAM, FIDO2, and Threat Modeling components to ensure that clinical data is protected by the highest institutional security standards.",
         date: "2024",
         tools: ["Entra ID", "Zero Trust", "Threat Modeling", "FIDO2", "Security Pillar"],
@@ -138,21 +113,9 @@ export const projects = [
         image: "/resources/img/portfolios/card/3.png"
     },
     {
-        id: "zenithdx-pm",
-        title: "ZenithDx – Strategic Product Orchestration & Full Lifecycle",
-        category: "Strategic Engineering Coordination",
-        brief: "Led the end-to-end product lifecycle for the ZenithDx co-pilot, serving as the bridge between clinicians, AI engineers, and hospital stakeholders. I managed the backlog through a regulatory lens, ensuring that every sprint deliverable was aligned with both clinical needs and future MDR/AI Act submission requirements.",
-        date: "2025",
-        tools: ["Jira", "Agile", "MDR Strategy", "XAI", "Stakeholder Management", "Acceptance Score"],
-        link: "https://github.com/FilippeZ/zenithdx-petient-centric-agentic-decision-support-platform",
-        caseStudyUrl: "/case-studies/zenithdx/pm",
-        gallery: ["/resources/img/portfolios/app/2.jpeg"],
-        image: "/resources/img/portfolios/app/2.jpeg"
-    },
-    {
         id: "xai-gov",
         title: "XAI Governance Framework for Auditable, High-Risk Systems",
-        category: "AI Governance & Policy",
+        category: "AI Policy, Governance & Strategy",
         brief: "Operationalized a comprehensive AI governance framework to mitigate 'black box' risks in clinical software. I implemented XAI controls using SHAP and Captum, ensuring that all AI-driven decisions are auditable and satisfy GDPR and EU AI Act mandates for high-risk clinical systems.",
         date: "2025",
         tools: ["SHAP", "Captum", "GDPR", "EU AI Act", "Audit Trail", "Governance Framework"],
@@ -163,7 +126,7 @@ export const projects = [
     {
         id: "knn-parallel",
         title: "Hybrid Parallel k-NN: Algorithmic Integrity & Stress Testing",
-        category: "Technical Validation Logic",
+        category: "Distributed Systems, HPC & Cloud",
         brief: "Optimized brute-force k-NN regression for deployment in computationally constrained environments. I reframed this as a 'Reliability' challenge, using OpenMP and MPI to ensure that parallelized workloads maintain perfect logic integrity under high-concurrency stress. This demonstrates the ability to validate algorithmic performance in mission-critical edge scenarios.",
         date: "2024",
         tools: ["C++", "OpenMP", "MPI", "Parallelism", "Stress Testing", "IDW", "k-NN"],
@@ -174,7 +137,7 @@ export const projects = [
     {
         id: "mpi",
         title: "Distributed ML Architectures: Matrix Integrity Validation",
-        category: "Technical Validation Logic",
+        category: "Distributed Systems, HPC & Cloud",
         brief: "Engineered parallel matrix multiplication programs using MPI, focusing on the auditability of distributed workloads. By implementing Ring Topologies and Cartesian Grids for sub-blocking, I established a framework for validating that large-scale ML computations remain synchronized and logically sound across decentralized nodes.",
         date: "2024",
         tools: ["C", "MPI", "Distributed Systems", "Logic Integrity", "HPC"],
@@ -185,7 +148,7 @@ export const projects = [
     {
         id: "hybrid-network",
         title: "IaaS/PaaS Core Infrastructure: Connectivity Validation",
-        category: "Mission-Critical Systems",
+        category: "Distributed Systems, HPC & Cloud",
         brief: "Designed and simulated complex hybrid networking architectures to validate connectivity for enterprise-scale migrations. I leveraged OSPF, eBGP, and ExpressRoute to ensure that institutional data flows remain secure and persistent, providing a verified blueprint for sovereign cloud networking.",
         date: "2024",
         tools: ["GNS3", "OSPF", "eBGP", "ExpressRoute", "IaaS/PaaS", "Core Infrastructure"],
@@ -196,7 +159,7 @@ export const projects = [
     {
         id: "4g-simulation",
         title: "Distributed Systems Modeling: Architectural Performance Audit",
-        category: "Mission-Critical Systems",
+        category: "Distributed Systems, HPC & Cloud",
         brief: "Modeled architectural trade-offs for distributed 4G LTE systems. I analyzed UE mobility and handover costs through a 'Reliability' lens, providing validated performance metrics that ensure network stability during high-stakes institutional operations.",
         date: "2024",
         tools: ["Python", "NumPy", "Network Modeling", "Distributed Systems", "Performance Audit"],
@@ -207,7 +170,7 @@ export const projects = [
     {
         id: "linux-devops",
         title: "Linux Compute & DevOps: Audit-Ready Deployment Pipelines",
-        category: "Mission-Critical Systems",
+        category: "Distributed Systems, HPC & Cloud",
         brief: "Developed automated Linux compute solutions focusing on process scheduling and IPC integrity. I implemented fork() and semaphore logic to ensure that mission-critical background tasks are auditable and resilient, laying the foundation for zero-failure DevOps environments.",
         date: "2024",
         tools: ["Bash", "C", "IPC", "Semaphores", "DevOps", "Scheduling"],
@@ -218,7 +181,7 @@ export const projects = [
     {
         id: "ux-klm",
         title: "Product Quality Validation: Quantitative Usability Auditing",
-        category: "Strategic Engineering Coordination",
+        category: "AI Policy, Governance & Strategy",
         brief: "Applied KLM and Fitts' Law to quantitatively validate user interface efficiency for high-stakes workflows. I reframed UX as a 'Safety' metric, ensuring that clinical operators can execute critical tasks within defined completion-time baselines to minimize human error.",
         date: "2024",
         tools: ["KLM", "Fitts' Law", "Quantitative UX", "Product Validation"],
@@ -229,7 +192,7 @@ export const projects = [
     {
         id: "whiteboxer",
         title: "Technical Test Strategy: Logic Auditing & Risk Management",
-        category: "Strategic Engineering Coordination",
+        category: "AI Policy, Governance & Strategy",
         brief: "Managed white-box testing strategies for validating complex product logic. I applied cyclomatic complexity and basis path analysis to 'audit' software paths, ensuring that all logical branches are verified and development risks are mitigated through evidence-based QA.",
         date: "2024",
         tools: ["White-Box Testing", "Path Analysis", "Risk Management", "QA Strategy"],
@@ -240,7 +203,7 @@ export const projects = [
     {
         id: "csr-ai",
         title: "Institutional Policy Design: Ethical AI & CSR Governance",
-        category: "AI Governance & Policy",
+        category: "AI Policy, Governance & Strategy",
         brief: "Co-developed a governance framework for the Nikos Analytis CSRHELLAS competition, aligning AI strategies with UN Sustainable Development Goals. I focused on translating ethical mandates into actionable policy design to ensure institutional accountability in social and corporate governance.",
         date: "2024",
         tools: ["Policy Design", "UN SDGs", "CSR", "Ethical AI Governance"],
@@ -251,7 +214,7 @@ export const projects = [
     {
         id: "bigdata-ethics",
         title: "Regulatory Auditability: Big Data Ethics & Accountability Review",
-        category: "AI Governance & Policy",
+        category: "AI Policy, Governance & Strategy",
         brief: "Conducted a deep-dive analysis of ethical and regulatory risks in 'Big Data Ethics' (Zwitter). I identified power structures within data management and proposed accountability framework revisions to ensure institutional accountability in social and corporate governance.",
         date: "2024",
         tools: ["Regulatory Review", "Policy Oversight", "Ethics Framework"],
@@ -260,44 +223,31 @@ export const projects = [
         image: "/resources/img/portfolios/icon/10.jpeg"
     },
     {
-        id: "zenithdx-gov",
-        title: "Governance-by-Design: Clinical AI Compliance Framework",
-        category: "Regulatory Architecture (SaMD)",
-        brief: "Designed and operationalized a 'Governance-by-Design' framework for high-risk clinical AI. I integrated ISO 14971 and IEC 62304 mandates into a self-hosted PHI environment, ensuring that the ZenithDx system remains auditable, compliant, and ready for institutional legacy.",
-        date: "2025",
-        tools: ["ISO 14971", "IEC 62304", "Compliance Roadmap", "Governance-by-Design"],
-        link: "https://github.com/FilippeZ/zenithdx-petient-centric-agentic-decision-support-platform",
-        caseStudyUrl: "/case-studies/zenithdx/gov",
-        gallery: ["/resources/img/portfolios/icon/9.jpg"],
-        image: "/resources/img/portfolios/icon/9.jpg"
-    },
-    {
         id: "edge-ai",
-        title: "Edge AI Agent: Real-Time Clinical & Operational Safety Validation",
-        category: "Regulatory Architecture (SaMD)",
-        brief: "Architected an Edge AI agent for real-time risk mitigation in clinical environments. I focused on validating the inference reliability of local 'Small Language Models' to ensure that operational safety is maintained even in disconnected states, satisfying the highest standards for clinical fault tolerance.",
-        date: "2024",
-        tools: ["Edge AI", "SLMs", "Safety Validation", "Clinical Fault Tolerance"],
-        link: "#",
+        title: "Aria: Multimodal Edge AI & Sovereign Agentic Assistant",
+        category: "AI & HealthTech (Primary)",
+        brief: "Engineered an autonomous, real-time multimodal AI assistant natively deployed on an edge supercomputer (NVIDIA Jetson Orin Nano). The objective was to solve complex human-computer interaction challenges on Linux desktops through a privacy-first, dual-core execution environment. By optimizing Small Language Models (SLMs) for strict hardware boundaries, Aria ensures zero-egress processing for continuous perception and personal data, paired with on-demand cloud routing for complex reasoning. This architecture guarantees ultra-low latency, persistent offline reliability, and data sovereignty—foundational requirements for deploying AI in high-stakes or privacy-critical environments.",
+        date: "2025 – Present",
+        tools: ["NVIDIA Jetson Orin Nano", "Edge AI", "SLMs (Cosmos-Reason2)", "INT4/INT8 Quantization", "llama.cpp", "faster-whisper", "ChromaDB (Local RAG)", "OpenClaw Gateway", "PCIe Gen4 NVMe", "CUDA/Linux GenAIOps"],
+        link: "https://github.com/FilippeZ/aria-ai-assistant",
         gallery: ["/resources/img/portfolios/logo/5.png"],
         image: "/resources/img/portfolios/logo/5.png"
     },
-    {
+{
         id: "zencloud",
         title: "ZenithDx: Hybrid AI Platform & High-Performance Cloud Architecture",
-        category: "Mission-Critical Systems",
+        category: "Distributed Systems, HPC & Cloud",
         brief: "Designed the end-to-end hybrid architecture for the ZenithDx platform. I focused on alignment with the Azure Well-Architected Framework's pillars of 'Performance Efficiency' and 'Reliability', ensuring that the scaling of GPU-intensive Agentic AI workloads is legally and technically persistent.",
         date: "2024",
         tools: ["Azure Arc", "NVIDIA DGX", "Hybrid Cloud", "Performance Efficiency"],
         link: "https://github.com/FilippeZ/zenithdx-petient-centric-agentic-decision-support-platform",
-        caseStudyUrl: "/case-studies/zenithdx",
         gallery: ["/resources/img/portfolios/card/15.jpg"],
         image: "/resources/img/portfolios/card/15.jpg"
     },
     {
         id: "azurecloud",
         title: "Clinical Data Platform: Well-Architected Regulatory Optimization",
-        category: "Mission-Critical Systems",
+        category: "AI & HealthTech (Primary)",
         brief: "Performed a deep-dive optimization of a clinical data platform to satisfy institutional 'Persistence' mandates. I re-architected the storage and retrieval layers to ensure audit-ready availability, mapping technical performance directly to regulatory submission requirements.",
         date: "2024",
         tools: ["Azure Well-Architected", "Data Persistence", "Regulatory Auditability"],
@@ -308,7 +258,7 @@ export const projects = [
     {
         id: "ebusiness",
         title: "E-Business Marketing Core — Strategic Digital Platform",
-        category: "Strategic Engineering Coordination",
+        category: "AI Policy, Governance & Strategy",
         brief: "Operationalizing digital marketing strategies into a scalable, high-conversion web ecosystem. This project implements a comprehensive e-business marketing strategy framework, based on the blueprint by Philippos-Paraskevas Zygouris. It operationalizes advanced digital business methodologies to ensure that all digital storefront deployments are data-driven, highly scalable, and structurally aligned with modern market demands.",
         date: "2024",
         tools: ["WordPress", "MySQL", "PHP", "SEO", "Strategic Blueprint", "E-Business"],
@@ -319,7 +269,7 @@ export const projects = [
     {
         id: "startup-week",
         title: "High-Impact Project Coordination: Institutional Stakeholder Engagement",
-        category: "Strategic Engineering Coordination",
+        category: "AI Policy, Governance & Strategy",
         brief: "Managed strategic coordination for Startup Week Patras, facilitating technical engagement between innovators and institutional stakeholders (PwC, Yodiwo). I reframed project management as 'Lifecycle Orchestration', ensuring that technical validation sessions were aligned with high-level business governance.",
         date: "2024",
         tools: ["Stakeholder Management", "Lifecycle Orchestration", "Strategic Coordination"],
@@ -330,7 +280,7 @@ export const projects = [
     {
         id: "newgov",
         title: "Clinical AI Governance: Policy Design & Bias Monitoring Pipeline",
-        category: "AI Governance & Policy",
+        category: "AI Policy, Governance & Strategy",
         brief: "Architected an automated pipeline for monitoring bias and policy drift in clinical AI agents. I implemented technical audit trails to ensure that model outputs remain within defined ethical boundaries, providing the high-authority evidence needed for institutional sign-off on high-risk clinical deployments.",
         date: "2024",
         tools: ["Bias Monitoring", "Policy Design", "Audit Trails", "Ethics Governance"],
@@ -492,140 +442,92 @@ export const softSkills = [
 
 export const experience = [
     {
-        title: "IAPP Certified AI Governance Professional (AIGP)",
-        org: "International Association of Privacy Professionals",
-        date: "Expected Jun 2026",
-        desc: "Pursuing advanced certification in AI governance to master the intersection of privacy, compliance, and ethical AI deployment.",
-        image: "/fotogra/IAPP%20Certified%20AI%20Governance%20Professional%20(AIGP).jpeg",
-        type: "Certification"
-    },
-    {
         title: "Microsoft Certified: Azure AI Engineer Associate",
         org: "Microsoft",
-        date: "Mar 2026",
-        desc: "Mastering the design and implementation of AI solutions on Azure, focusing on NLP, Computer Vision, and Generative AI integration.",
+        date: "In Progress",
+        desc: "In Progress (Exam AI-103: Developing AI Apps and Agents on Azure). Advanced preparation covering Microsoft Foundry AI & Agentic solutions, LLM/SLM deployment, Multimodal RAG pipelines, Computer Vision, Text Analysis, and Enterprise Information Extraction with responsible AI guardrails.",
         image: "/fotogra/Azure%20AI%20Engineer%20Associate.png",
-        type: "Certification"
+        type: "Certification (In Progress)"
     },
     {
         title: "Microsoft Certified: AI Product Manager",
         org: "Microsoft",
         date: "Jan 2026",
-        desc: "Transitioned from technical implementation to strategic 'Why,' leveraging Microsoft’s methodology to align code with business objectives. I manage AI products as dynamic ecosystems, ensuring that innovation across the lifecycle is grounded in safety, ethics, and scalability for real-world market impact.",
+        desc: "Bridging advanced AI engineering with product strategy. Managing AI products through the CRISP-ML(Q) lifecycle, ensuring technical innovation translates into scalable, safe, and impactful product features.",
         image: "/fotogra/AI%20Product%20Manager.jpg",
         type: "Certification"
     },
     {
         title: "Microsoft European Digital Commitment Day",
-        org: "Strategic Delegate (Vienna, Austria)",
+        org: "Microsoft (Vienna, Austria)",
         date: "Nov 2025",
-        desc: "Strategic Delegate analyzing EU Sovereign Innovation and Data Residency. The event highlighted the shift to 'Digital Resilience'—a unified European digital fortress where innovation and compliance are twin pillars. Gained critical insights on architecting for speed within complex regulatory and geopolitical landscapes.",
+        desc: "Strategic Delegate analyzing EU Sovereign Innovation and Data Residency frameworks. Gained insights into architecting 'Digital Resilience' compliant with complex geopolitical data regulations.",
         image: "/fotogra/microsoft_european_digital_commitment_day.jpeg",
         type: "Event"
-    },
-    {
-        title: "ISO 13485 & IEC 62304 Compliance",
-        org: "In Progress",
-        date: "In Progress",
-        desc: "Focusing on quality management systems for medical devices and software life cycle processes, aiming to become PRRC and Product Manager for medical software.",
-        image: "/fotogra/compliance.jpg",
-        type: "Certification"
     },
     {
         title: "Research Ethics & Compliance (Human Research - Data Privacy)",
         org: "MIT Affiliates",
         date: "Sep 2024",
-        desc: "Attained certification in the ethical conduct of research involving human subjects and data privacy protocols.",
+        desc: "Certified in the ethical conduct of research involving human subjects. Aligning data governance with GDPR standards to ensure patient confidentiality and trustworthy ML model training.",
         image: "/fotogra/citi.jpg",
         type: "Certification"
     },
     {
-        title: "Cornell University Leadership Program",
-        org: "MEXOXO",
-        date: "Dec 2023",
-        desc: "Completed an intensive leadership development program focused on empowering social impact and innovation.",
-        image: "https://upload.wikimedia.org/wikipedia/commons/4/47/Cornell_University_seal.svg",
-        type: "Certificate"
+        title: "AI for Good & Ethical Innovation (8th CSR Competition)",
+        org: "CSR HELLAS & European Parliament Office",
+        date: "Feb 2023 – Feb 2024",
+        desc: "Applied an 'AI for Good' approach to develop AI-driven Corporate Social Responsibility strategies. Aligned technological capabilities with the UN Sustainable Development Goals (SDGs), focusing on ethical innovation and SDG#17.",
+        image: "/resources/img/elements/csr.jpg",
+        type: "Competition"
     },
     {
-        title: "Certificate: Elements of AI",
-        org: "University of Helsinki & MinnaLearn",
-        date: "Apr 2023",
-        desc: "Completed foundational course on AI, its implications, and practical applications.",
-        image: "/resources/img/elements/university-of-helsinki-dark-logo.jpg",
-        type: "Certificate"
+        title: "Advanced AI Risk & Security Training",
+        org: "PwC \"Break AI\" Workshop",
+        date: "Nov 2023",
+        desc: "Selected for specialized, hands-on training in AI Risk Management, Distributed AI architectures, and OWASP machine learning security protocols for enterprise-grade deployments.",
+        image: "/resources/img/elements/pwc.jpeg",
+        type: "Workshop"
     },
     {
         title: "Microsoft Certified: Azure AI Fundamentals (AI-900)",
         org: "Microsoft",
         date: "Apr 2023",
-        desc: "Validated foundational knowledge of machine learning and artificial intelligence concepts and their implementation on Microsoft Azure.",
+        desc: "Foundational mastery of Azure Machine Learning, Computer Vision, and Cloud AI infrastructure services, establishing early platform proficiency.",
         image: "https://media.licdn.com/dms/image/v2/D5610AQHuo6Pb0vttaQ/image-shrink_1280/B56ZXlAfBHGUAM-/0/1743303865722?e=2147483647&v=beta&t=zg6146CQNJUbkbCacu5snlYK71UP4Rpi3zlDkkwpb2A",
         type: "Certification"
     },
     {
-        title: "8th CSR Competition",
-        org: "Competition Participant",
-        date: "Feb 12, 2023 — Feb 6, 2024",
-        desc: "Supported by the European Parliament Office in Greece, I developed AI-driven Corporate Social Responsibility (CSR) strategies for CSR HELLAS, ensuring alignment with the UN Sustainable Development Goals (SDGs) and placing a special focus on SDG#17 (Partnership for the Goals) as a key enabler for the 2030 agenda.",
-        image: "/resources/img/elements/csr.jpg",
-        type: "Competition"
+        title: "Academic AI Foundation (5 ECTS)",
+        org: "University of Helsinki & MinnaLearn",
+        date: "Apr 2023",
+        desc: "Elements of AI (5 ECTS). Rigorous academic validation of core artificial intelligence principles, search algorithms, and machine learning foundations.",
+        image: "/resources/img/elements/university-of-helsinki-dark-logo.jpg",
+        type: "Academic"
     },
     {
-        title: "Microsoft Ignite 2024",
-        org: "Event Attendee",
-        date: "Nov 18–22, 2024",
-        desc: "Explored Copilot, autonomous agents, and Azure AI stack. Attended Satya Nadella’s keynote on generative AI.",
-        image: "https://msftstories.thesourcemediaassets.com/sites/710/2024/11/IGNITE24_Satya_Full-Keynote_Thumb.png",
-        type: "Event"
-    },
-    {
-        title: "Microsoft Ignite 2023",
-        org: "Event Attendee",
-        date: "Nov 16–18, 2023",
-        desc: "Hands-on with Azure AI, data modernization, IoT, and cloud-native patterns.",
-        image: "https://msftstories.thesourcemediaassets.com/sites/710/2024/11/Charles-Lamanna-Ignite-2024.png",
-        type: "Event"
-    },
-    {
-        title: "PwC “Break AI” Workshop",
-        org: "Selected Participant",
-        date: "Nov 24, 2023",
-        desc: "Selected among 30 students for advanced training in AI risk management, tinyML, distributed AI, NVIDIA strategy, and OWASP security.",
-        image: "/resources/img/elements/pwc.jpeg",
-        type: "Workshop"
-    },
-    {
-        title: "NVIDIA GTC 2023: Accelerated Computing & AI",
-        org: "Event Attendee",
-        date: "Mar 21, 2023",
-        desc: "Explored generative AI, robotics, Industrial Metaverse, and DGX labs. Featured keynotes by Jensen Huang and leaders from OpenAI.",
-        image: "/resources/img/elements/nvidia.jpg",
-        type: "Conference"
-    },
-    {
-        title: "Cisco Networking Credentials",
+        title: "Computer Networking & Infrastructure Basics",
         org: "Cisco Networking Academy",
-        date: "Apr 29-30, 2023",
-        desc: "Badge of Networking Basics (April 29, 2023). Credential of Networking Devices and Initial Config (April 30, 2023)",
+        date: "Apr 2023",
+        desc: "Validated baseline knowledge in IP routing and network protocols, establishing a solid foundation for understanding distributed cloud architectures and backend MLOps deployments.",
         image: "/resources/img/elements/cisco.png",
         type: "Credential"
     },
     {
-        title: "Microsoft Envision Greece",
-        org: "Event Attendee",
-        date: "Jun 29, 2022",
-        desc: "Engaged with digital leaders on transformation, post-pandemic acceleration, cybersecurity, and tech sustainability.",
-        image: "/fotogra/Microsoft%20Envision%20Greece.jpg",
-        type: "Event"
+        title: "NVIDIA GTC: Accelerated Computing & AI",
+        org: "NVIDIA",
+        date: "Mar 2023",
+        desc: "Explored the latest advancements in Generative AI architectures, hardware-level inference optimization, and AI accelerators (GPUs/DGX systems) from industry leaders.",
+        image: "/resources/img/elements/nvidia.jpg",
+        type: "Conference"
     },
     {
-        title: "Microsoft Datacenter Experience: Virtual Tour",
-        org: "Participant",
-        date: "Jun 7, 2022",
-        desc: "Completed an interactive 3D tour of Azure datacenter design, AI accelerators (Maia, Cobalt), sustainability, and global operations.",
-        image: "https://www.cnet.com/a/img/resize/94d603762d21e9a002300bdea0d93a5e133a7e16/hub/2009/10/07/10556205-f0fe-11e2-8c7c-d4ae52e62bcc/CH1245.jpg?auto=webp&width=1200",
-        type: "Virtual Tour"
+        title: "Microsoft Envision Greece: Strategic Catalyst",
+        org: "Microsoft",
+        date: "Jun 2022",
+        desc: "The catalyst event that initiated my journey into the Azure ecosystem. Explored Microsoft’s strategic data center investments in Greece and the broader impact of sovereign cloud infrastructure on regional digital transformation.",
+        image: "/fotogra/Microsoft%20Envision%20Greece.jpg",
+        type: "Event"
     }
 ];
 

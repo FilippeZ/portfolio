@@ -20,8 +20,11 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className="dark">
-            <body className={`${inter.variable} ${jetbrainsMono.variable} font-display bg-background-dark text-white antialiased selection:bg-primary selection:text-white`}>
+        <html lang="en" className="dark bg-[#050505]">
+            <head>
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+            </head>
+            <body className={`${inter.variable} ${jetbrainsMono.variable} font-display bg-[#050505] text-white antialiased selection:bg-primary selection:text-white`}>
                 <Providers>
                     {children}
                 </Providers>

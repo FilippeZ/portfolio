@@ -39,25 +39,43 @@ export default function Portfolio() {
         });
     }, [t.projects]);
 
-    const [activeFilter, setActiveFilter] = useState(t.filter_all);
+    const tabs = useMemo(() => [
+        {
+            id: "tab_ai",
+            label: language === "el" ? "AI & HealthTech (Κύρια)" : "AI & HealthTech (Primary)",
+            projectIds: ["zenithdx", "dermagnosis-fl", "azure-ai-studio", "edge-ai", "wgan-telco", "azurecloud"]
+        },
+        {
+            id: "tab_dist",
+            label: language === "el" ? "Κατανεμημένα Συστήματα, HPC & Cloud" : "Distributed Systems, HPC & Cloud",
+            projectIds: ["knn-parallel", "mpi", "hybrid-network", "4g-simulation", "linux-devops", "zencloud", "azure-security"]
+        },
+        {
+            id: "tab_data",
+            label: language === "el" ? "Μηχανική Δεδομένων & Βιοπληροφορική" : "Data Engineering & Bioinformatics",
+            projectIds: ["genomic", "travel-db", "etl-covid", "indexing-poc"]
+        },
+        {
+            id: "tab_inst",
+            label: language === "el" ? "Πολιτική AI, Διακυβέρνηση & Στρατηγική" : "AI Policy, Governance & Strategy",
+            projectIds: ["deafnav", "xai-gov", "newgov", "csr-ai", "bigdata-ethics", "ux-klm", "whiteboxer", "ebusiness", "startup-week"]
+        }
+    ], [language]);
+
+    const [activeTabId, setActiveTabId] = useState("tab_ai");
     const [selectedProject, setSelectedProject] = useState<typeof mergedProjects[0] | null>(null);
 
     // Reset filter when language changes or initialize correctly
     useEffect(() => {
-        setActiveFilter(t.filter_all);
-    }, [language, t.filter_all]);
+        setActiveTabId("tab_ai");
+    }, [language]);
 
-    // Get unique categories
-    const categories = useMemo(() => {
-        const cats = new Set(mergedProjects.map((p) => p.category));
-        return [t.filter_all, ...Array.from(cats)];
-    }, [mergedProjects, t.filter_all]);
-
-    // Filter projects
+    // Filter projects based on active tab
     const filteredProjects = useMemo(() => {
-        if (activeFilter === t.filter_all) return mergedProjects;
-        return mergedProjects.filter((p) => p.category === activeFilter);
-    }, [activeFilter, mergedProjects, t.filter_all]);
+        const currentTab = tabs.find(t => t.id === activeTabId);
+        if (!currentTab) return mergedProjects;
+        return mergedProjects.filter((p) => currentTab.projectIds.includes(p.id));
+    }, [activeTabId, mergedProjects, tabs]);
 
     // Deep Linking Logic
     const searchParams = useSearchParams();
@@ -83,13 +101,15 @@ export default function Portfolio() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 border-b border-white/5 pb-12"
+                    className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 gap-8 border-b border-white/5 pb-12"
                 >
                     <div>
-                        <span className="text-blue-500 font-mono text-xs uppercase tracking-[0.2em] mb-4 block flex items-center gap-2">
-                            <span className="w-8 h-[1px] bg-blue-500"></span>
-                            {t.subtitle}
-                        </span>
+                        <div className="flex items-center gap-3 mb-4">
+                            <div className="h-px w-8 bg-gradient-to-r from-transparent to-blue-500/60" />
+                            <span className="font-mono text-blue-400/80 text-xs uppercase tracking-[0.3em] font-medium">
+                                {t.subtitle}
+                            </span>
+                        </div>
                         <h2 className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tight">
                             {t.title_prefix} <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-400 to-gray-600">
@@ -98,18 +118,18 @@ export default function Portfolio() {
                         </h2>
                     </div>
 
-                    {/* Filter Controls */}
+                    {/* Filter Tabs */}
                     <div className="flex flex-wrap gap-2">
-                        {categories.map((category) => (
+                        {tabs.map((tab) => (
                             <button
-                                key={category}
-                                onClick={() => setActiveFilter(category)}
-                                className={`px-5 py-2.5 rounded-full text-xs font-mono uppercase tracking-wider transition-all duration-300 border backdrop-blur-sm ${activeFilter === category
+                                key={tab.id}
+                                onClick={() => setActiveTabId(tab.id)}
+                                className={`px-4 py-2.5 rounded-full text-xs font-mono uppercase tracking-wider transition-all duration-300 border backdrop-blur-sm ${activeTabId === tab.id
                                     ? "bg-blue-600/10 border-blue-500 text-blue-400 shadow-[0_0_20px_rgba(37,99,235,0.2)]"
                                     : "bg-white/5 border-white/5 text-gray-400 hover:text-white hover:bg-white/10 hover:border-white/10"
                                     }`}
                             >
-                                {category}
+                                {tab.label}
                             </button>
                         ))}
                     </div>
@@ -288,33 +308,12 @@ export default function Portfolio() {
                                     </div>
 
                                     <div className="flex flex-col sm:flex-row gap-4 mt-12 pt-8 border-t border-white/5">
-                                        {/* @ts-ignore */}
-                                        {['zenithdx-data', 'zenithdx-ai', 'zenithdx-pm', 'zenithdx-gov'].includes(selectedProject.id) ? (
-                                            <Link
-                                                // @ts-ignore
-                                                href={selectedProject.caseStudyUrl || "#"}
-                                                className="flex-1 bg-white text-black hover:bg-gray-200 text-center font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-white/20 hover:-translate-y-1 flex items-center justify-center gap-2 group"
-                                            >
-                                                {t.buttons.technicalDossier}
-                                                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                                            </Link>
-                                        ) : selectedProject.caseStudyUrl && (
-                                            <Link
-                                                // @ts-ignore
-                                                href={selectedProject.caseStudyUrl}
-                                                className="flex-1 bg-white text-black hover:bg-gray-200 text-center font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-white/20 hover:-translate-y-1 flex items-center justify-center gap-2 group"
-                                            >
-                                                {t.buttons.caseStudy}
-                                                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                                            </Link>
-                                        )}
-
                                         <a
                                             href={selectedProject.link !== "#" ? selectedProject.link : undefined}
                                             target={selectedProject.link !== "#" ? "_blank" : undefined}
                                             rel={selectedProject.link !== "#" ? "noopener noreferrer" : undefined}
-                                            className={`px-8 py-4 font-bold rounded-xl transition-all flex items-center justify-center gap-2 ${selectedProject.link !== "#"
-                                                    ? "bg-white/5 hover:bg-white/10 border border-white/10 text-white hover:border-white/20"
+                                            className={`w-full py-4 font-bold rounded-xl transition-all flex items-center justify-center gap-2 ${selectedProject.link !== "#"
+                                                    ? "bg-white text-black hover:bg-gray-200 shadow-lg hover:shadow-white/20 hover:-translate-y-0.5"
                                                     : "bg-white/5 border border-white/5 text-white/30 cursor-not-allowed"
                                                 }`}
                                         >

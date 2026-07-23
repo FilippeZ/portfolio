@@ -6,16 +6,45 @@ import { Shield, Brain, Globe, AlertTriangle, Zap, ArrowRight, Lock, Target, Awa
 import { useLanguage } from "@/context/LanguageContext";
 import { locales } from "@/data/locales";
 
+const fallbackStrategicValue = {
+    title_prefix: "Bridging Deep Tech with",
+    title_highlight: "Institutional Authority.",
+    risk_alert: {
+        execution_gap: "The Execution & Compliance Gap",
+        lawyers: "Lawyers write policy without understanding algorithmic logic or model architecture.",
+        coders: "Developers write code without understanding European regulations or liability.",
+        conclusion: "Innovation without compliance is liability; compliance without engineering is unusable."
+    },
+    formula: {
+        caption: "High-Authority Engineering Model"
+    },
+    liabilityMatrix: {
+        comparisonTable: {
+            headers: ["Metric", "Standard Developer", "Technical Authority"],
+            rows: [
+                { label: "Liability", val1: "Executive Burden", val2: "Absorbed (-80%)", sub1: "Unshielded risk", sub2: "State Licensed" },
+                { label: "Compliance", val1: "Afterthought", val2: "By Design", sub1: "", sub2: "EU AI Act Ready" }
+            ]
+        }
+    },
+    pillars: [
+        { subtitle: "01. Liability", title: "State-Chartered Seal", description: "Absorbing liability via official engineering licensure." },
+        { subtitle: "02. Systems", title: "Production AI", description: "Building auditable RAG and Multi-Agent architectures." },
+        { subtitle: "03. Policy", title: "EU AI Act Compliance", description: "Translating EU mandates directly into software pipelines." }
+    ],
+    closing: "Ready for High-Stakes Institutional Engineering"
+};
+
 export default function StrategicValue() {
     const { language } = useLanguage();
-    const t = locales[language].strategicValue;
+    const t = (locales[language] as any)?.strategicValue || fallbackStrategicValue;
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
     return (
         <section className="py-24 relative overflow-hidden">
             {/* Superior Design Layer: Background & Effects */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_70%)]"></div>
-            <div className="absolute inset-0 bg-[url('/resources/img/grid.svg')] opacity-[0.02] mix-blend-overlay"></div>
+            <div className="absolute inset-0 clinical-grid opacity-20" />
 
             {/* Animated Scanning Beam - CSS Optimized */}
             <div
@@ -347,7 +376,7 @@ export default function StrategicValue() {
                                         "hover:shadow-[0_0_50px_rgba(168,85,247,0.15)] border-white/5 hover:border-purple-500/30"}`}
                         >
                             {/* Technical Grid Overlay */}
-                            <div className="absolute inset-0 bg-[url('/resources/img/grid.svg')] opacity-[0.03] pointer-events-none" />
+                            <div className="absolute inset-0 clinical-grid opacity-20 pointer-events-none" />
 
                             {/* Card Background Decoration */}
                             <div className={`absolute top-0 right-0 w-48 h-48 blur-[100px] rounded-full -mr-24 -mt-24 transition-opacity duration-700

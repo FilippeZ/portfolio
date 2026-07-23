@@ -42,9 +42,10 @@ export default function Header() {
     const t = locales[language];
 
     const navLinks = [
-        { name: t.nav.authority, href: "/#authority" },
-        { name: t.nav.about, href: "/#about" },
+        { name: t.nav.framework, href: "/#expertise" },
         { name: t.nav.portfolio, href: "/#portfolio" },
+        { name: t.nav.about, href: "/#about" },
+        { name: t.nav.authority, href: "/#authority" },
         { name: t.nav.testimonials, href: "/#testimonials" },
     ];
 
@@ -69,7 +70,7 @@ export default function Header() {
                         <h1 className="text-xs sm:text-sm md:text-base font-black tracking-widest text-white uppercase group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-cyan-300 transition-all duration-300">
                             FILIPPOS P. ZYGOURIS
                         </h1>
-                        <span className="text-[9px] text-blue-500/80 font-mono tracking-[0.3em] uppercase hidden sm:block opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -translate-y-2 group-hover:translate-y-0">Technical Authority</span>
+                        <span className="text-[9px] text-blue-500/80 font-mono tracking-[0.3em] uppercase hidden sm:block opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -translate-y-2 group-hover:translate-y-0">AI ENGINEER</span>
                     </div>
                 </Link>
 
@@ -135,7 +136,7 @@ export default function Header() {
                         className="fixed inset-0 z-40 bg-[#030303]/95 backdrop-blur-2xl flex flex-col items-center justify-center lg:hidden"
                     >
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_70%)]"></div>
-                        <div className="absolute inset-0 bg-[url('/resources/img/grid.svg')] opacity-[0.03]"></div>
+                        <div className="absolute inset-0 clinical-grid opacity-30"></div>
 
                         <nav className="flex flex-col items-center gap-8 relative z-10 w-full px-6">
                             {navLinks.map((link, i) => (

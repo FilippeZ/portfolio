@@ -21,7 +21,7 @@ import { locales } from "@/data/locales";
 
 export default function HighValueMenu() {
     const { language } = useLanguage();
-    const t = locales[language].highValueMenu;
+    const t = (locales[language] as any).highValueMenu;
 
     const servicesMeta = [
         {
@@ -30,7 +30,7 @@ export default function HighValueMenu() {
             bg: "bg-blue-500/5",
             border: "border-blue-500/20",
             glow: "rgba(37, 99, 235, 0.1)",
-            link: "/?project=zenithdx-gov#portfolio" // 01 The Legal Shield
+            link: "/?project=zenithdx#portfolio" // 01 The Legal Shield
         },
         {
             icon: Compass,
@@ -38,7 +38,7 @@ export default function HighValueMenu() {
             bg: "bg-emerald-500/5",
             border: "border-emerald-500/20",
             glow: "rgba(16, 185, 129, 0.1)",
-            link: "/?project=zenithdx-data#portfolio" // 02 The Institutional Navigator
+            link: "/?project=zenithdx#portfolio" // 02 The Institutional Navigator
         },
         {
             icon: Cpu,
@@ -102,7 +102,7 @@ export default function HighValueMenu() {
             <div className="absolute inset-0 z-0 pointer-events-none">
                 <div className="absolute top-0 right-0 w-full h-[800px] bg-[radial-gradient(circle_at_70%_0%,rgba(59,130,246,0.03),transparent_70%)]" />
                 <div className="absolute bottom-0 left-0 w-full h-[800px] bg-[radial-gradient(circle_at_20%_100%,rgba(168,85,247,0.03),transparent_70%)]" />
-                <div className="absolute inset-0 bg-[url('/resources/img/grid.svg')] opacity-[0.015] mix-blend-overlay" />
+                <div className="absolute inset-0 clinical-grid opacity-20" />
 
                 {/* Hexagonal Background Pattern Extension */}
                 <div className="absolute inset-0 opacity-[0.02]"
@@ -156,7 +156,7 @@ export default function HighValueMenu() {
                     viewport={{ once: true }}
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 border border-white/5 rounded-3xl overflow-hidden shadow-2xl"
                 >
-                    {t.services.map((service, index) => {
+                    {t.services.map((service: any, index: number) => {
                         const meta = servicesMeta[index];
                         const Icon = meta.icon;
 
@@ -265,7 +265,7 @@ export default function HighValueMenu() {
                     >
                         <h4 className="text-xl font-bold text-white tracking-tight">{t.hexagonal_strategy.money_maker_title}</h4>
                         <div className="space-y-8">
-                            {t.hexagonal_strategy.points.map((point, i) => (
+                            {t.hexagonal_strategy.points.map((point: any, i: number) => (
                                 <div key={i} className="flex gap-6 group">
                                     <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 font-mono text-sm group-hover:bg-blue-500 group-hover:text-white transition-all">
                                         0{i + 1}
