@@ -157,12 +157,12 @@
             gallery: ["web/5.jpg","/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/database/db1.jpg", "/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/database/db2.jpg"]
         },
         "etl-covid": {
-            title: "End-to-End ETL Pipeline Architecture for Economic Impact Analytics",
+            title: "Trade Analytics: End-to-End ETL Pipeline for Macroeconomic Intelligence",
             category: "Data & Analytics",
-            brief: "I successfully architected and implemented an end-to-end data analysis pipeline designed to support the analytical strategy concerning the commercial impacts of the COVID-19 pandemic, focusing on efficiency and data integrity. This project involved designing the full ETL process where Python (Pandas) was instrumental for robust data cleaning, transformation, and complex aggregation (grouping by month, country, and transport mode) from heterogeneous sources. I orchestrated the loading of the cleaned data into a MySQL relational database, establishing a reliable and structured foundation capable of supporting ad-hoc queries and business intelligence (BI) reporting. Ultimately, this pipeline achieved strong business alignment by delivering clear, actionable insights through visualizations generated with Matplotlib that enabled stakeholders to quickly identify market trends and optimize their supply chain strategies.",
+            brief: "Architected a high-integrity Data Engineering and ETL (Extract, Transform, Load) platform to validate commercial impacts on global transport strategies, specifically analyzing the unprecedented supply chain shocks of COVID-19 on New Zealand's international trade (2015–2021). Driven by the core philosophy that 'every AI project needs a robust ETL pipeline,' I engineered an automated solution that extracted over 111,000 raw customs records via HTTP endpoints, 'scrubbed' and transformed the data using Python (Pandas), and loaded it via parameterized batch insertions into a relational MySQL data warehouse. This clean data foundation fueled a comprehensive Exploratory Data Analysis (EDA) and a PySimpleGUI Business Intelligence application, providing policymakers and stakeholders with validated, empirical evidence of V-shaped recovery rhythms, modal logistics splits (Sea vs. Air freight), and sectorial commodity dependencies.",
             date: "2023",
             client: "World Bank Partner",
-            tools: "Python, Pandas, NumPy, MySQL, Matplotlib, Seaborn, Jupyter, ETL, Data Cleaning, Aggregation, Grouping, SQLAlchemy, CSV, JSON, Visualization",
+            tools: "Python 3.8+, Pandas, NumPy, Automated HTTP Extraction, MySQL, Parameterized SQL (executemany), Matplotlib, Jupyter Notebooks, Statistical Aggregation, PySimpleGUI, Macroeconomics, Supply Chain Logistics, Trade Analytics",
             link: "https://covid-etl.io",
             gallery: ["web/3.jpeg","/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/covid/cov1.jpg", "/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/covid/cov2.jpg"]
         },
@@ -177,12 +177,12 @@
             gallery: ["web/2.jpg","/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/bio/bio1.jpg", "/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/bio/bio2.jpg"]
         },
         "indexing-poc": {
-            title: "Multidimensional Indexing for High-Performance Analytics",
+            title: "Multidimensional Hybrid Search: Healthcare Analytics",
             category: "Data & Analytics",
-            brief: "I successfully executed a practical Proof of Concept (PoC) to define the optimal analytical strategy for high-performance querying against complex multidimensional spatial and similarity data. This involved architecting and benchmarking multiple indexing solution designs, specifically implementing and evaluating K-D Trees, Octrees, Range Trees, and R-Trees for scalability in both k-Nearest Neighbors (kNN) and Range Queries. Furthermore, I designed and implemented an Approximate Nearest Neighbor (ANN) solution utilizing Locality-Sensitive Hashing (LSH) with MinHash to achieve fast text similarity search against a dataset of U.S. hospital reviews. The project culminated in delivering a final strategic recommendation that balanced query speed, memory footprint, and build time across all candidate data structures to support highly efficient production environments.",
+            brief: "Architected and deployed a high-performance hybrid search engine capable of sub-millisecond retrieval across massive, heterogeneous clinical datasets. Addressing the latency bottlenecks inherent in modern Healthcare AI and Retrieval-Augmented Generation (RAG) pipelines, I engineered a two-phase architecture to query 18,324 patient satisfaction records (CMS HCAHPS). By designing and benchmarking advanced multidimensional spatial indices (Octrees, Range Trees, K-D Trees, R-Trees) alongside Locality-Sensitive Hashing (LSH), the system efficiently prunes multi-axis spatial bounds (ZIP Code, Year, Score) before executing sub-linear textual similarity searches. The resulting pipeline achieves a 28% reduction in query latency (yielding a peak query time of just 1.496s for complex hybrid criteria) while guaranteeing a strict zero-loss retrieval accuracy (Recall@5 = 1.0) required for clinical decision support systems.",
             date: "2024",
             client: "Healthcare AI Startup",
-            tools: "Python, Scikit-learn, NumPy, Annoy, LSH, MinHash, K-D Tree, Octree, R-Tree, Range Tree, kNN, ANN, Benchmarking, Profiling, Memory Analysis",
+            tools: "Locality-Sensitive Hashing (LSH), MinHash, Jaccard Similarity, Octrees, K-D Trees, Range Trees, R-Trees, Python, NumPy, Pandas, Jupyter Notebooks, Time/Memory Profiling, Matplotlib, Seaborn, CMS HCAHPS Data, RAG Pipelines",
             link: "https://indexing-poc.com",
             gallery: ["web/6.jpg","/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/multi/mu1.jpg", "/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/multi/mu2.jpg"]
         },
@@ -290,16 +290,7 @@
             link: "https://linux-devops.io",
             gallery: ["card/1.jpg","/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/cloud/cl9.jpg","/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/cloud/cl10.jpg"]
         },
-        "zencloud": {
-            title: "ZenithDx - Architecting a High-Performance Hybrid AI Platform",
-            category: "Cloud Solutions",
-            brief: "This project involved designing the end-to-end cloud architecture for 'ZenithDx,' a mission-critical AI platform, aligning with the Azure Well-Architected Framework pillars of Performance Efficiency and Reliability. I architected a three-tier architecture with a decoupled FastAPI/Uvicorn backend server acting as the web layer, distinct from the high-performance compute (AI agent) deployed on the NVIDIA DGX Cloud A100 platform, which uses MIG (Multi-Instance GPU) technology for optimal resource partitioning. The networking architecture is secured via HTTPS using Nginx as a reverse proxy for TLS termination and JWT for API authorization. The data center architecture features a distributed storage solution, using PostgreSQL for ACID-compliant structured data and FAISS vector databases for high-throughput semantic search. Finally, I designed a proactive, cost-optimizing hybrid cloud strategy to integrate this environment with Microsoft Azure, using Azure ExpressRoute for dedicated, low-latency networking, with Azure Kubernetes Service (AKS) and Azure Arc for unified management, enabling a split-workload model: computationally expensive AI training (OPEX) in the cloud, and real-time, secure inference (CAPEX) on local servers.",
-            date: "2024",
-            client: "Cloud Ops Team",
-            tools: "FastAPI, Uvicorn, NVIDIA DGX, MIG, Nginx, HTTPS, JWT, PostgreSQL, FAISS, ExpressRoute, AKS, Azure Arc, Hybrid Cloud, OPEX, CAPEX",
-            link: "https://zencloud.ai",
-            gallery: ["card/15.jpg", "/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/zenith/z5.jpg", "/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/zenith/z6.jpg"]
-        },
+
         // PRODUCT & LEADERSHIP (6 projects)
         "deafnav": {
             title: "Hybrid Product & Project Management for the D-PBL Erasmus+ Railway Accessibility Initiative",
@@ -341,16 +332,7 @@
             link: "https://whiteboxer.qa",
             gallery: ["app/3.jpg", "/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/prod/pr5.jpg", "/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/prod/pr6.jpg"]
         },
-        "startup-week": {
-            title: "Strategic Project Coordination & Product Lifecycle Immersion",
-            category: "Product & Leadership",
-            brief: "As a core volunteer for Startup Week Patras 2024, I combined hands-on project coordination and organizational support with a strategic deep-dive into the end-to-end product lifecycle, aligning with the innovation goals of partners. My engagement spanned all event phases, from managing logistics for Day 1's sessions on product validation and iterative testing to supporting Day 2's focus on user-centric development (UX). I facilitated stakeholder engagement for Day 3's 'AI & Startups' summit, gaining insights into strategic AI integration, ethical implementation, and cloud vs. edge compute decisions. Furthermore, I supported the 'Working in Tech' panel, coordinating with executives from firms like PwC and Yodiwo, and the 'Research & Entrepreneurship' finale with VCs, demonstrating a clear ability to bridge high-level business goals with technical execution and stakeholder management.",
-            date: "2024",
-            client: "Startup Week Patras",
-            tools: "Event Coordination, Stakeholder Management, Product Validation, UX, AI Integration, Cloud vs Edge, Panel Facilitation, Logistics, PwC, Yodiwo, VCs, Research, Entrepreneurship, Innovation, Cross-Functional",
-            link: "https://startupweek.patras",
-            gallery: ["app/5.jpg", "/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/prod/pr7.jpg", "/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/prod/pr8.jpg"]
-        },
+
 
         // GOVERNANCE & COMPLIANCE (5 projects)
         "xai-gov": {
@@ -363,16 +345,7 @@
             link: "httpsias://xai-gov.eu",
             gallery: ["icon/11.jpg", "/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/compl/c1.jpg","/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/compl/c2.jpg"]
         },
-        "csr-ai": {
-            title: "Strategic Policy Design for Ethical AI and Sustainable CSR Governance",
-            category: "Governance & Compliance",
-            brief: "As part of a multidisciplinary team (Computer Engineering, Social Work, Nursing) for the Nikos Analytis CSRHELLAS competition, I co-developed a comprehensive governance framework to align artificial intelligence and data management with Corporate Social Responsibility (CSR) and the UN Sustainable Development Goals (SDGs). My role involved extensive cross-functional collaboration, bridging the gap between informatics, healthcare, and social work to design long-term policy strategies for the business landscape. We focused on creating and operationalizing a framework for ethical AI, moving beyond just technological innovation to ensure responsible and transparent business practices. This research initiative delivered a holistic strategy for integrating AI in sectors like healthcare, demonstrating how to align technological advancement with measurable social and environmental sustainability goals.",
-            date: "2024",
-            client: "CSRHELLAS",
-            tools: "Policy Design, UN SDGs, CSR, Ethical AI, Cross-Functional, Informatics, Healthcare, Social Work, Sustainability, Transparency, Responsibility, Governance Framework, Long-Term Strategy, Innovation, Measurable Impact",
-            link: "https://csr-ai.gr",
-            gallery: ["icon/2.jpg", "/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/compl/c3.jpg", "/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/compl/c4.jpg"]
-        },
+
         "zenithdx-gov": {
             title: "ZenithDx – AI Governance & Compliance Framework",
             category: "Governance & Compliance",
@@ -383,16 +356,7 @@
             link: "https://zenithdx-gov.com",
             gallery: ["icon/9.jpg", "/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/zenith/z9.jpg", "/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/zenith/z10.jpg"]
         },
-        "bigdata-ethics": {
-            title: "Strategic Analysis for a Big Data Ethics & Accountability Framework",
-            category: "Governance & Compliance",
-            brief: "As part of a foundational research initiative on Data & AI Governance, I conducted a deep-dive analysis of the ethical and regulatory risks outlined in 'Big Data Ethics' (Zwitter), identifying how traditional accountability frameworks (based on Causality, Knowledge, Choice) are insufficient for modern systems. My work focused on policy design, highlighting how the hyper-networked nature of Big Data blurs moral responsibility and creates new power structures (Collectors, Managers, Analysts) that require a new governance framework and oversight strategy. A key part of this project involved the practical monitoring and auditing of AI systems, where I performed hands-on critical reviews of ChatGPT's outputs to assess their compliance and ethical accuracy, demonstrating the need to re-establish accountability for data-driven power.",
-            date: "2024",
-            client: "Ethics Institute",
-            tools: "Critical Review, Policy Design, Causality, Knowledge, Choice, Hyper-Networked, Moral Responsibility, Power Structures, Collectors, Managers, Analysts, Governance Framework, Oversight, ChatGPT Audit, Ethical Accuracy, Accountability",
-            link: "https://bigdata-ethics.org",
-            gallery: ["icon/10.jpeg", "/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/compl/c5.jpg", "/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/compl/c6.jpg"]
-        }
+
     });
 
     // =============================================

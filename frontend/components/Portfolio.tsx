@@ -42,25 +42,26 @@ function PortfolioContent() {
     const tabs = useMemo(() => [
         {
             id: "tab_ai",
-            label: language === "el" ? "AI & HealthTech (Κύρια)" : "AI & HealthTech (Primary)",
-            projectIds: ["zenithdx", "dermagnosis-fl", "azure-ai-studio", "edge-ai", "wgan-telco", "azurecloud"]
-        },
-        {
-            id: "tab_dist",
-            label: language === "el" ? "Κατανεμημένα Συστήματα, HPC & Cloud" : "Distributed Systems, HPC & Cloud",
-            projectIds: ["knn-parallel", "mpi", "hybrid-network", "4g-simulation", "linux-devops", "zencloud", "azure-security"]
+            label: language === "el" ? "Αρχιτεκτονική AI & Συστήματα HealthTech" : "AI Architecture & HealthTech Systems",
+            projectIds: ["zenithdx", "dermagnosis-fl", "azure-ai-studio", "edge-ai", "wgan-telco"]
         },
         {
             id: "tab_data",
             label: language === "el" ? "Μηχανική Δεδομένων & Βιοπληροφορική" : "Data Engineering & Bioinformatics",
-            projectIds: ["genomic", "travel-db", "etl-covid", "indexing-poc"]
+            projectIds: ["genomic", "travel-db", "etl-covid", "indexing-poc", "ebusiness"]
+        },
+        {
+            id: "tab_dist",
+            label: language === "el" ? "Συστήματα HPC & Επεκτάσιμη Υποδομή" : "HPC Systems & Scalable Infrastructure",
+            projectIds: ["knn-parallel", "mpi", "hybrid-network", "4g-simulation", "linux-devops", "azure-security"]
         },
         {
             id: "tab_inst",
-            label: language === "el" ? "Πολιτική AI, Διακυβέρνηση & Στρατηγική" : "AI Policy, Governance & Strategy",
-            projectIds: ["deafnav", "xai-gov", "newgov", "csr-ai", "bigdata-ethics", "ux-klm", "whiteboxer", "ebusiness", "startup-week"]
+            label: language === "el" ? "Διακυβέρνηση AI, Πολιτική & Ποιοτική Μηχανική" : "AI Governance, Policy & Quality Engineering",
+            projectIds: ["deafnav", "xai-gov", "newgov", "ux-klm", "whiteboxer"]
         }
     ], [language]);
+
 
     const [activeTabId, setActiveTabId] = useState("tab_ai");
     const [selectedProject, setSelectedProject] = useState<typeof mergedProjects[0] | null>(null);

@@ -25,7 +25,7 @@ export default function LoginPage() {
         // Use hardcoded credentials for now as per plan
         if (username === "admin" && password === "portfolio2026") {
             // Set cookie (simple browser side for now, middleware will check it)
-            document.cookie = "auth=true; path=/; max-age=86400; SameSite=Strict";
+            document.cookie = "auth=true; path=/; SameSite=Strict";
             router.push("/");
             router.refresh();
         } else {

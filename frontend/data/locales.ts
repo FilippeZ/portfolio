@@ -717,138 +717,113 @@ export const locales = {
             "filter_all": "All Projects",
             "projects": {
                 "deafnav": {
-                    "title": "DeafNav: IoT Accessibility & EU Legislative Policy Integration",
-                    "category": "AI Policy, Governance & Strategy",
-                    "brief": "Lead Product Manager & Analysis lead for a multi-national railway accessibility initiative. This project didn't just build technology; it translated European accessibility directives into a technical roadmap for real-time sign language avatars. I served as the bridge between technical sensor networks and the 'Public Officer' persona, ensuring the solution aligned with local legislative requirements and cross-border technical standards to facilitate institutional adoption across five EU member states."
+                    "title": "DeafNav: EU Legislative Policy Integration & Accessible IoT",
+                    "category": "AI Governance, Policy & Quality Engineering",
+                    "brief": "Led the technical strategy for DeafNav, a European public transit platform built to empower Deaf and mobility-impaired passengers across EU networks. I translated complex EU AI Act and EAA 2025 directives into a concrete engineering roadmap, integrating haptic wearables, real-time telematics, and a FAISS RAG chatbot. The result was a cross-border solution adopted across five EU member states."
                 },
                 "dermagnosis-fl": {
-                    "title": "DermaGnosis: Federated Learning & GDPR Privacy-by-Design Validation",
-                    "category": "AI & HealthTech (Primary)",
-                    "brief": "Architected a privacy-preserving Federated Learning platform for early melanoma detection, emphasizing 'Privacy-by-Design' (GDPR Article 25). I redefined the technical challenge as a regulatory one: ensuring PHI never leaves hospital servers while maintaining diagnostic accuracy. By utilizing Bayesian Networks for decentralized training, I delivered a technical proof-of-concept for 'Sovereign Healthcare' AI that is legally bulletproof and ready for institutional deployment."
+                    "title": "DermaGnosis: Privacy-Preserving Multimodal AI & Federated MLOps Engine",
+                    "category": "AI Architecture & HealthTech Systems",
+                    "brief": "Built a privacy-first Federated Learning platform for early melanoma detection — patient data never leaves the hospital, only encrypted model weights do. The diagnostic engine combines NLP and Computer Vision radiomics for a full-picture patient assessment, with Bayesian Networks replacing black-box models to provide auditable confidence scores. Fully compliant with GDPR, HIPAA, EU MDR, and EU AI Act."
                 },
                 "travel-db": {
-                    "title": "Relational Data Integrity Layer for High-Stakes Operations",
+                    "title": "Travel Agency RDBMS: Data Integrity & Audit Infrastructure",
                     "category": "Data Engineering & Bioinformatics",
-                    "brief": "I architected a robust relational database management system where the focus was 'Data Integrity as a Service'. Beyond modeling, I engineered a logic layer using MySQL Stored Procedures and Triggers to enforce rigid integrity constraints and business rules directly at the source. This architecture ensures that all operational data is verifiable and audit-ready, providing a foundational toolset for high-stakes reservation systems where data failure is not an option."
+                    "brief": "Designed a relational database system where data integrity wasn't just a feature, it was the architecture. MySQL triggers and stored procedures enforce business rules at the storage level, backed by a tamper-evident audit trail and B-Tree indexing optimized over 60,000+ records. Zero data corruption, even when the application layer fails."
                 },
                 "etl-covid": {
-                    "title": "End-to-End ETL Pipeline for Economic Impact Validation",
+                    "title": "Trade Analytics: End-to-End ETL Pipeline for Macroeconomic Intelligence",
                     "category": "Data Engineering & Bioinformatics",
-                    "brief": "Architected a high-integrity data analysis pipeline to validate commercial impacts for global transport strategies. I implemented a robust ETL process using Python (Pandas) that didn't just transform data, but 'scrubbed' it to ensure accuracy for BI reporting. This project demonstrated the ability to deliver actionable, high-authority insights from heterogeneous data sources, providing stakeholders with validated evidence to optimize supply chain resilience."
+                    "brief": "Built an end-to-end ETL pipeline to analyze how COVID-19 reshaped New Zealand's international trade (2015–2021). I extracted 111,000+ raw customs records, cleaned and transformed them with Python/Pandas, and loaded them into a MySQL data warehouse, giving policymakers validated, data-driven evidence on V-shaped recovery patterns and supply chain shifts."
                 },
                 "genomic": {
-                    "title": "Genomic Data Quality & Bioinformatics Governance Pipeline",
+                    "title": "BioHelix: AI-Powered Computational Drug Discovery Pipeline",
                     "category": "Data Engineering & Bioinformatics",
-                    "brief": "Spearheaded the development of a comprehensive data access and analysis strategy for large-scale biological data. I implemented stringent data quality and governance protocols for Next-Generation Sequencing (NGS) data, using FastQC to establish automated filtration pipelines based on Phred quality thresholds. This project frames bioinformatics as a 'Data Governance' challenge, ensuring the purity and auditability of sequences for advanced genomic research."
+                    "brief": "Built BioHelix, an interactive browser-based platform that walks through the full drug discovery pipeline, from raw DNA sequences to ranked drug candidates. It uses ESMFold for 3D protein structure prediction, Lipinski's Rule of 5 for pharmacokinetic screening, and a Random Forest QSAR model to predict binding affinity across 1,000+ compounds."
                 },
                 "indexing-poc": {
-                    "title": "Multidimensional Indexing PoC for High-Performance Clinical Search",
+                    "title": "Multidimensional Hybrid Search: Healthcare Analytics",
                     "category": "Data Engineering & Bioinformatics",
-                    "brief": "Executed a practical Proof of Concept to define the optimal search strategy for complex spatial and clinical data. I architected and benchmarked multidimensional solution designs (K-D Trees, Octrees) and implemented ANN solutions using Locality-Sensitive Hashing. The final strategic recommendation provided a validated roadmap for high-performance querying that balances speed with memory footprints for enterprise-scale clinical environments."
+                    "brief": "Designed a hybrid search engine that cuts query latency by 28% across 18,000+ clinical records, without sacrificing a single result. The two-phase architecture combines spatial indexing (K-D Trees, Octrees) to prune the search space, then LSH for fast similarity matching. Recall@5 = 1.0: every relevant record, every time."
                 },
                 "wgan-telco": {
-                    "title": "WGAN-GP Architecture for Privacy-Preserving Synthetic Traffic",
-                    "category": "AI & HealthTech (Primary)",
-                    "brief": "Designed a secure, data-centric solution for generating realistic synthetic time-series data for 5G traffic. By implementing WGAN-GP, I enabled the generation of high-fidelity data that satisfies privacy constraints, allowing for the simulation and validation of 5G network performance without compromising real-user data integrity."
+                    "title": "Synthesis Hub: Dual-Domain WGAN-GP Synthetic Data Platform",
+                    "category": "AI Architecture & HealthTech Systems",
+                    "brief": "Built a dual-purpose GAN platform that generates synthetic data for two very different problems: detecting DDoS attacks in 5G networks, and creating privacy-compliant Brain Tumor MRI scans to fix imbalanced medical datasets. The WGAN-GP Critic doubles as an anomaly detector — when the Wasserstein score diverges, an attack is flagged instantly."
                 },
                 "azure-ai-studio": {
                     "title": "Mission-Critical Healthcare AI Platform on Azure Studio",
-                    "category": "AI & HealthTech (Primary)",
-                    "brief": "Translated complex healthcare requirements into a high-value PaaS solution on Azure AI Studio. I architected the integration of OpenAI GPT-4 with clinical text analytics and HITL playgrounds, ensuring that the platform satisfies institutional security requirements while delivering state-of-the-art multimodal clinical reasoning."
+                    "category": "AI Architecture & HealthTech Systems",
+                    "brief": "Integrated OpenAI GPT-4 with clinical text analytics and Human-in-the-Loop playgrounds on Azure AI Studio, translating complex healthcare requirements into a secure, production-ready PaaS solution. Built to meet institutional security standards while delivering state-of-the-art multimodal clinical reasoning."
                 },
                 "azure-security": {
                     "title": "Architectural Risk Analysis & Zero-Trust Cloud Security Design",
-                    "category": "Distributed Systems, HPC & Cloud",
-                    "brief": "Performed deep architectural reviews of security vulnerabilities for mission-critical healthcare systems. I aligned the platform with the Azure Well-Architected Framework's Security pillar, designing IAM, FIDO2, and Threat Modeling components to ensure that clinical data is protected by the highest institutional security standards."
+                    "category": "HPC Systems & Scalable Infrastructure",
+                    "brief": "Conducted deep security reviews for mission-critical healthcare systems on Azure, designing IAM, FIDO2 authentication, and threat modeling aligned with the Azure Well-Architected Framework. The goal: make clinical data provably secure, not just compliant."
                 },
                 "xai-gov": {
-                    "title": "XAI Governance Framework for Auditable, High-Risk Systems",
-                    "category": "AI Policy, Governance & Strategy",
-                    "brief": "Operationalized a comprehensive AI governance framework to mitigate 'black box' risks in clinical software. I implemented XAI controls using SHAP and Captum, ensuring that all AI-driven decisions are auditable and satisfy GDPR and EU AI Act mandates for high-risk clinical systems."
+                    "title": "XAIGO: XAI Governance Framework for Auditable, High-Risk Systems",
+                    "category": "AI Governance, Policy & Quality Engineering",
+                    "brief": "Built XAIGO, a governance middleware that sits between AI models and human operators, forcing every decision to be explainable. Using SHAP, LIME, Grad-CAM and counterfactual generation, it translates raw model outputs into legally compliant, human-readable justifications. A 'Simulatability Engine' actively prevents the illusion of understanding, meeting GDPR Art. 22 and EU AI Act requirements."
                 },
                 "knn-parallel": {
-                    "title": "Hybrid Parallel k-NN: Algorithmic Integrity & Stress Testing",
-                    "category": "Distributed Systems, HPC & Cloud",
-                    "brief": "Optimized brute-force k-NN regression for deployment in computationally constrained environments. I reframed this as a 'Reliability' challenge, using OpenMP and MPI to ensure that parallelized workloads maintain perfect logic integrity under high-concurrency stress. This demonstrates the ability to validate algorithmic performance in mission-critical edge scenarios."
+                    "title": "Hybrid Parallel k-NN: HPC Infrastructure for Machine Learning",
+                    "category": "HPC Systems & Scalable Infrastructure",
+                    "brief": "Scaled a brute-force k-NN algorithm from single-core C to a parallel HPC framework using OpenMP and MPI, then wrapped it into a Python API via Cython and Numba, achieving a 6.48x speedup over Scikit-Learn. The key engineering challenge wasn't just speed; it was ensuring mathematical correctness under distributed parallelism."
                 },
                 "mpi": {
-                    "title": "Distributed ML Architectures: Matrix Integrity Validation",
-                    "category": "Distributed Systems, HPC & Cloud",
-                    "brief": "Engineered parallel matrix multiplication programs using MPI, focusing on the auditability of distributed workloads. By implementing Ring Topologies and Cartesian Grids for sub-blocking, I established a framework for validating that large-scale ML computations remain synchronized and logically sound across decentralized nodes."
+                    "title": "High-Performance MPI Parallel Matrix Multiplication: Accelerating Deep Learning Workloads",
+                    "category": "HPC Systems & Scalable Infrastructure",
+                    "brief": "Implemented parallel matrix multiplication in C with MPI, using Ring and 2D Cartesian Grid topologies, the same patterns that power modern Ring-AllReduce gradient synchronization in distributed deep learning. The challenge was proving that aggressive parallelization never breaks mathematical correctness under high-concurrency stress."
                 },
                 "hybrid-network": {
                     "title": "IaaS/PaaS Core Infrastructure: Connectivity Validation",
-                    "category": "Distributed Systems, HPC & Cloud",
-                    "brief": "Designed and simulated complex hybrid networking architectures to validate connectivity for enterprise-scale migrations. I leveraged OSPF, eBGP, and ExpressRoute to ensure that institutional data flows remain secure and persistent, providing a verified blueprint for sovereign cloud networking."
+                    "category": "HPC Systems & Scalable Infrastructure",
+                    "brief": "Designed and simulated hybrid enterprise networking architectures using OSPF, eBGP, and ExpressRoute to validate connectivity for cloud migrations. Delivered a verified blueprint for sovereign cloud networking, secure, persistent, and auditable institutional data flows."
                 },
                 "4g-simulation": {
-                    "title": "Distributed Systems Modeling: Architectural Performance Audit",
-                    "category": "Distributed Systems, HPC & Cloud",
-                    "brief": "Modeled architectural trade-offs for distributed 4G LTE systems. I analyzed UE mobility and handover costs through a 'Reliability' lens, providing validated performance metrics that ensure network stability during high-stakes institutional operations."
+                    "title": "Distributed Systems Modeling: Intelligent 4G Handover Simulation",
+                    "category": "HPC Systems & Scalable Infrastructure",
+                    "brief": "Replaced reactive 4G handover logic with a BiLSTM model that predicts signal drops before they happen, reducing critical data loss to just 2.45%. Built with Healthcare IoT in mind, where a dropped connection during patient telemetry isn't just inconvenient. An integrated SHAP layer makes every handover decision fully auditable."
                 },
                 "linux-devops": {
-                    "title": "Linux Compute & DevOps: Audit-Ready Deployment Pipelines",
-                    "category": "Distributed Systems, HPC & Cloud",
-                    "brief": "Developed automated Linux compute solutions focusing on process scheduling and IPC integrity. I implemented fork() and semaphore logic to ensure that mission-critical background tasks are auditable and resilient, laying the foundation for zero-failure DevOps environments."
+                    "title": "Linux Compute & DevOps: POSIX Core Systems Architecture",
+                    "category": "HPC Systems & Scalable Infrastructure",
+                    "brief": "Built a POSIX-compliant systems framework in C covering process scheduling, log data mining, and parallel numerical computation. Using fork() and System V Message Queues, I engineered a foundation where mission-critical background tasks run in isolated memory spaces, deadlock-free and fully auditable."
                 },
                 "ux-klm": {
                     "title": "Product Quality Validation: Quantitative Usability Auditing",
-                    "category": "AI Policy, Governance & Strategy",
-                    "brief": "Applied KLM and Fitts' Law to quantitatively validate user interface efficiency for high-stakes workflows. I reframed UX as a 'Safety' metric, ensuring that clinical operators can execute critical tasks within defined completion-time baselines to minimize human error."
+                    "category": "AI Governance, Policy & Quality Engineering",
+                    "brief": "Applied KLM and Fitts' Law to turn UX into a measurable safety metric for clinical workflows. By quantifying task completion times against defined baselines, I could prove — not just assume, that operators could execute critical actions without error."
                 },
                 "whiteboxer": {
                     "title": "Technical Test Strategy: Logic Auditing & Risk Management",
-                    "category": "AI Policy, Governance & Strategy",
-                    "brief": "Managed white-box testing strategies for validating complex product logic. I applied cyclomatic complexity and basis path analysis to 'audit' software paths, ensuring that all logical branches are verified and development risks are mitigated through evidence-based QA."
-                },
-                "csr-ai": {
-                    "title": "Institutional Policy Design: Ethical AI & CSR Governance",
-                    "category": "AI Policy, Governance & Strategy",
-                    "brief": "Co-developed a governance framework for the Nikos Analytis CSRHELLAS competition, aligning AI strategies with UN Sustainable Development Goals. I focused on translating ethical mandates into actionable policy design to ensure institutional accountability in social and corporate governance."
-                },
-                "bigdata-ethics": {
-                    "title": "Regulatory Auditability: Big Data Ethics & Accountability Review",
-                    "category": "AI Policy, Governance & Strategy",
-                    "brief": "Conducted a deep-dive analysis of ethical and regulatory risks in 'Big Data Ethics' (Zwitter). I identified power structures within data management and proposed accountability framework revisions to ensure institutional accountability in social and corporate governance."
+                    "category": "AI Governance, Policy & Quality Engineering",
+                    "brief": "Used cyclomatic complexity and basis path analysis to systematically audit every logical branch of a complex product's codebase. The goal wasn't just testing, it was building evidence-based QA that proves no execution path is left unvalidated."
                 },
                 "edge-ai": {
                     "title": "Aria: Multimodal Edge AI & Sovereign Agentic Assistant",
-                    "category": "AI & HealthTech (Primary)",
+                    "category": "AI Architecture & HealthTech Systems",
                     "subtitle": "Hardware-Constrained SLM Orchestration & Hybrid Cloud Architecture",
-                    "brief": "Engineered an autonomous, real-time multimodal AI assistant natively deployed on an edge supercomputer (NVIDIA Jetson Orin Nano). The objective was to solve complex human-computer interaction challenges on Linux desktops through a privacy-first, dual-core execution environment. By optimizing Small Language Models (SLMs) for strict hardware boundaries, Aria ensures zero-egress processing for continuous perception and personal data, paired with on-demand cloud routing for complex reasoning. This architecture guarantees ultra-low latency, persistent offline reliability, and data sovereignty—foundational requirements for deploying AI in high-stakes or privacy-critical environments.",
+                    "brief": "Built Aria, a fully autonomous AI assistant running locally on an NVIDIA Jetson Orin Nano edge device. It listens, sees, and responds in real time, with sensitive data never leaving the device, and heavier reasoning tasks routed to the cloud only when needed. Privacy-first AI that works even offline.",
                     "fullDescription": "Engineered an autonomous, real-time multimodal AI assistant natively deployed on an edge supercomputer (NVIDIA Jetson Orin Nano). The objective was to solve complex human-computer interaction challenges on Linux desktops through a privacy-first, dual-core execution environment. By optimizing Small Language Models (SLMs) for strict hardware boundaries, Aria ensures zero-egress processing for continuous perception and personal data, paired with on-demand cloud routing for complex reasoning. This architecture guarantees ultra-low latency, persistent offline reliability, and data sovereignty—foundational requirements for deploying AI in high-stakes or privacy-critical environments.\n\n### Key Engineering & Architectural Pillars:\n\n**1. Hardware-Constrained Quantization & Memory Management:** Overcame the strict 8GB Unified Memory Architecture (UMA) bottleneck by implementing aggressive model quantization. Deployed a 2-billion parameter Vision-Language Model (Cosmos-Reason2) using 4-bit K-quants (Q4_K_M) via llama.cpp to reduce the VRAM footprint to 1.2GB. Engineered a high-speed 16GB PCIe Gen4 NVMe Swap pipeline and strict CPU/GPU load balancing to completely eliminate Linux Out-Of-Memory (OOM) failures during parallel multi-model execution.\n\n**2. Dual-Core Hybrid Architecture:** Architected a seamless routing system that splits workloads between the edge and the cloud. Privacy-critical data (local ChromaDB Vector RAG, real-time desktop telemetry, biometric facial recognition via YuNet) is processed strictly on-device, while heavy, multi-step agentic reasoning and deep web research are securely delegated to cloud LLMs via the OpenClaw Gateway.\n\n**3. Real-Time Multimodal Perception:** Orchestrated a synchronized ensemble of specialized models for instant interaction. Integrated faster-whisper (GPU/INT8) for transcription, Kokoro-ONNX (CPU) for speech synthesis with WebRTC Acoustic Echo Cancellation, and optical vision perception for live desktop and webcam spatial reasoning.\n\n**4. Autonomous Desktop Orchestration:** Built a fully autonomous execution layer capable of writing and executing Python scripts, terminal commands, and generating dynamic local GUI applications (.desktop launchers) on-the-fly. The agent controls UI elements natively via PyAutoGUI, demonstrating true product-led 'Agentic Action'.",
                     "techStack": "NVIDIA Jetson Orin Nano | Edge AI | SLMs (Cosmos-Reason2) | INT4/INT8 Quantization | llama.cpp | faster-whisper | ChromaDB (Local RAG) | OpenClaw Gateway | PCIe Gen4 NVMe | CUDA/Linux GenAIOps"
                 },
-                "zencloud": {
-                    "title": "ZenithDx: Hybrid AI Platform & High-Performance Cloud Architecture",
-                    "category": "Distributed Systems, HPC & Cloud",
-                    "brief": "Designed the end-to-end hybrid architecture for the ZenithDx platform. I focused on alignment with the Azure Well-Architected Framework's pillars of 'Performance Efficiency' and 'Reliability', ensuring that the scaling of GPU-intensive Agentic AI workloads is legally and technically persistent."
-                },
-                "azurecloud": {
-                    "title": "Clinical Data Platform: Well-Architected Regulatory Optimization",
-                    "category": "AI & HealthTech (Primary)",
-                    "brief": "Performed a deep-dive optimization of a clinical data platform to satisfy institutional 'Persistence' mandates. I re-architected the storage and retrieval layers to ensure audit-ready availability, mapping technical performance directly to regulatory submission requirements."
-                },
                 "ebusiness": {
-                    "title": "E-Business Marketing Core — Strategic Digital Platform",
-                    "category": "AI Policy, Governance & Strategy",
-                    "brief": "Operationalizing digital marketing strategies into a scalable, high-conversion web ecosystem. This project implements a comprehensive e-business marketing strategy framework, based on the blueprint by Philippos-Paraskevas Zygouris. It operationalizes advanced digital business methodologies to ensure that all digital storefront deployments are data-driven, highly scalable, and structurally aligned with modern market demands."
-                },
-                "startup-week": {
-                    "title": "High-Impact Project Coordination: Institutional Stakeholder Engagement",
-                    "category": "AI Policy, Governance & Strategy",
-                    "brief": "Managed strategic coordination for Startup Week Patras, facilitating technical engagement between innovators and institutional stakeholders (PwC, Yodiwo). I reframed project management as 'Lifecycle Orchestration', ensuring that technical validation sessions were aligned with high-level business governance."
+                    "title": "Algorithmic Foundations of AI: Data Structures & ML Time-Series Pipeline",
+                    "category": "Data Engineering & Bioinformatics",
+                    "brief": "Implemented core data structures in C — AVL Trees, Hash Tables, Max-Heaps — then used those same structural patterns to build a Python ML pipeline for oceanographic forecasting. The project proves these aren't just academic exercises: they're the same mechanics inside Random Forests and LLM embedding lookups. Peak R² of 0.71 on 1,400+ real ocean temperature records."
                 },
                 "newgov": {
-                    "title": "Clinical AI Governance: Policy Design & Bias Monitoring Pipeline",
-                    "category": "AI Policy, Governance & Strategy",
-                    "brief": "Architected an automated pipeline for monitoring bias and policy drift in clinical AI agents. I implemented technical audit trails to ensure that model outputs remain within defined ethical boundaries, providing the high-authority evidence needed for institutional sign-off on high-risk clinical deployments."
+                    "title": "AIDC Energy Simulator: Data Center Grid Flexibility Platform",
+                    "category": "AI Governance, Policy & Quality Engineering",
+                    "brief": "Built an interactive simulator that lets data center operators test whether their AI infrastructure can act as a power grid asset, shifting load across 24 hours against real EPEX SPOT energy prices. Developed to back the quantitative models of ICSGSC 2026 Paper SC5111, with a FastAPI optimization engine and live React dashboard."
                 },
                 "zenithdx": {
                     "title": "ZenithDx – High-Performance Agentic Clinical Co-Pilot",
-                    "category": "AI & HealthTech (Primary)",
+                    "category": "AI Architecture & HealthTech Systems",
                     "subtitle": "End-to-End AI Architecture, Explainable AI & Compliance-by-Design Orchestration",
-                    "brief": "I architected and led the end-to-end development of ZenithDx, a production-ready Multimodal Clinical Decision Support System (CDSS) prototype. Trained on NVIDIA DGX infrastructure and optimized for resource-efficient edge inference, the objective was to engineer a high-performance clinical system capable of processing heterogeneous data (images, text, EHR). The architecture was built from the ground up with 'Compliance-by-Design' principles, aligning with the EU AI Act's stringent requirements for high-risk applications and GDPR data residency mandates.",
+                    "brief": "Led the end-to-end development of ZenithDx, a multimodal Clinical Decision Support System trained on NVIDIA DGX and built for EU AI Act compliance. It processes X-rays, clinical text, and EHR data simultaneously, and every diagnosis comes with a Grad-CAM visual explanation so clinicians understand exactly why the AI reached its conclusion.",
                     "fullDescription": "I architected and led the end-to-end development of ZenithDx, a production-ready Multimodal Clinical Decision Support System (CDSS) prototype. Trained on NVIDIA DGX infrastructure and optimized for resource-efficient edge inference, the objective was to engineer a high-performance clinical system capable of processing heterogeneous data (images, text, EHR). The architecture was built from the ground up with 'Compliance-by-Design' principles, aligning with the EU AI Act's stringent requirements for high-risk applications and GDPR data residency mandates.\n\n### Key Engineering & Architectural Pillars:\n\n**1. Agentic AI & Multimodal Inference:** Engineered a hybrid autonomous AI agent using LangGraph, implementing iterative ReAct (Reasoning + Acting) and Self-Refine loops to power a heavily fine-tuned Llama 3.2 3B model (via LoRA and Unsloth). The agent coordinates three parallel data streams, leveraging an advanced Hybrid RAG pipeline (FAISS, BM25, ColBERT) for semantic medical retrieval, operating with an end-to-end clinical response time of just 25.7 seconds.\n\n**2. Explainable AI (XAI) & Clinical Authority:** To ensure algorithmic transparency and human-in-the-loop oversight (EU AI Act Article 13), I integrated multimodal XAI mechanisms. This includes Grad-CAM for visual attention mapping on chest X-rays (via S²A-UNet & ResNet-50 pipelines) and Captum Feature Ablation for NLP. This guarantees every diagnostic output provides traceable, step-by-step logic for clinical auditing.\n\n**3. Compliance-by-Design & Regulatory Alignment:** Architected the system as a compliance-ready platform, adopting architectural blueprints from ISO 14971 (Risk Management) and IEC 62304 (Medical Device Software). The system utilizes a structured validation pipeline and produces interoperable, fully traceable diagnostic reports formatted for direct EHR integration.\n\n**4. Sovereign Data Governance & Security:** Architected a secure backend environment utilizing FastAPI and PostgreSQL, safeguarded by OAuth2/JWT authentication and bcrypt encryption. Telemetry and processing are handled via zero-egress local LLM execution (Ollama/llama.cpp), ensuring 100% data privacy (GDPR/HIPAA compliance) and immutable HL7/FHIR/DICOM standard integrations.\n\n**5. Clinical Validation & Impact:** The AI co-pilot achieved a 96.28% accuracy in generating correct clinical inferences across complex, multimodal emergency cases, significantly outperforming general LLMs in clarity and diagnostic decisiveness. By bridging the gap between clinical stakeholders and deep engineering, ZenithDx stands as a benchmark for auditable, hallucination-free, and transparent healthcare AI.",
                     "techStack": "LangGraph | Llama 3.2 (LoRA/Unsloth) | FAISS & ColBERT (Hybrid RAG) | PyTorch (ResNet-50, S²A-UNet, HGT) | FastAPI | PostgreSQL | Ollama | HL7/FHIR & DICOM | EU AI Act & GDPR Alignment | NVIDIA DGX (Training)"
                 }
@@ -1883,138 +1858,115 @@ export const locales = {
             "filter_all": "Όλα τα Έργα",
             "projects": {
                 "deafnav": {
-                    "title": "DeafNav: Προσβασιμότητα IoT & Ενσωμάτωση Πολιτικής ΕΕ",
-                    "category": "Πολιτική AI, Διακυβέρνηση & Στρατηγική",
-                    "brief": "Lead Product Manager & Επικεφαλής Ανάλυσης για μια πολυεθνική πρωτοβουλία προσβασιμότητας σιδηροδρόμων. Αυτό το έργο δεν κατασκεύασε απλώς τεχνολογία· μετέφρασε τις ευρωπαϊκές οδηγίες προσβασιμότητας σε έναν τεχνικό οδικό χάρτη για avatars νοηματικής γλώσσας σε πραγματικό χρόνο. Λειτούργησα ως γέφυρα μεταξύ τεχνικών δικτύων αισθητήρων και του ρόλου του 'Δημόσιου Λειτουργού', διασφαλίζοντας ότι η λύση ευθυγραμμίζεται με τις τοπικές νομοθετικές απαιτήσεις και τα διασυνοριακά τεχνικά πρότυπα για τη διευκόλυνση της θεσμικής υιοθέτησης σε πέντε κράτη μέλη της ΕΕ."
+                    "title": "DeafNav: Ενσωμάτωση Πολιτικής ΕΕ & Προσβάσιμο IoT",
+                    "category": "Διακυβέρνηση AI, Πολιτική & Ποιοτική Μηχανική",
+                    "brief": "Ηγήθηκα της τεχνικής στρατηγικής για το DeafNav, μια ευρωπαϊκή πλατφόρμα προσβασιμότητας συγκοινωνιών για κωφούς και εμποδιζόμενα άτομα. Μετέφρασα τις οδηγίες του EU AI Act και EAA 2025 σε τεχνικό οδικό χάρτη, ενσωματώνοντας απτικά wearables, τηλεματική και ένα FAISS RAG chatbot. Το αποτέλεσμα ήταν μια διασυνοριακή λύση που υιοθετήθηκε σε 5 κράτη-μέλη της ΕΕ."
                 },
                 "dermagnosis-fl": {
                     "title": "DermaGnosis: Ομοσπονδιακή Μάθηση & Επικύρωση GDPR Privacy-by-Design",
-                    "category": "AI & HealthTech (Κύρια)",
-                    "brief": "Αρχιτεκτόνησα μια πλατφόρμα Ομοσπονδιακής Μάθησης για την έγκαιρη ανίχνευση μελανώματος με έμφαση στο 'Privacy-by-Design' (GDPR Άρθρο 25). Επαναπροσδιόρισα την τεχνική πρόκληση ως ρυθμιστική: διασφαλίζοντας ότι τα PHI δεν εγκαταλείπουν ποτέ τους διακομιστές του νοσοκομείου, διατηρώντας παράλληλα τη διαγνωστική ακρίβεια. Χρησιμοποιώντας Μπεϋζιανά Δίκτυα για αποκεντρωμένη εκπαίδευση, παρέδωσα ένα τεχνικό proof-of-concept για 'Κυρίαρχη Υγεία' AI που είναι νομικά θωρακισμένο και έτοιμο για θεσμική εφαρμογή."
+                    "category": "Αρχιτεκτονική AI & Συστήματα HealthTech",
+                    "brief": "Δημιούργησα μια πλατφόρμα Ομοσπονδιακής Μάθησης για έγκαιρη ανίχνευση μελανώματος, όπου τα δεδομένα ασθενών δεν φεύγουν ποτέ από το νοσοκομείο, παρά μόνο τα κρυπτογραφημένα βάρη του μοντέλου. Συνδυάζει NLP και Computer Vision με Μπεϋζιανά Δίκτυα για ελέγξιμες διαγνώσεις, πλήρως συμβατή με GDPR, HIPAA, EU MDR και EU AI Act."
                 },
                 "travel-db": {
                     "title": "Στρώμα Ακεραιότητας Σχεσιακών Δεδομένων για Λειτουργίες Υψηλού Κινδύνου",
                     "category": "Μηχανική Δεδομένων & Βιοπληροφορική",
-                    "brief": "Αρχιτεκτόνησα ένα ισχυρό σύστημα διαχείρισης σχεσιακών βάσεων δεδομένων με επίκεντρο την 'Ακεραιότητα Δεδομένων ως Υπηρεσία'. Πέρα από τη μοντελοποίηση, κατασκεύασα ένα λογικό στρώμα χρησιμοποιώντας MySQL Stored Procedures και Triggers για την επιβολή αυστηρών περιορισμών ακεραιότητας και επιχειρηματικών κανόνων απευθείας στην πηγή. Αυτή η αρχιτεκτονική διασφαλίζει ότι όλα τα επιχειρησιακά δεδομένα είναι επαληθεύσιμα και έτοιμα για έλεγχο, παρέχοντας ένα θεμελιώδες σύνολο εργαλείων για συστήματα κρατήσεων υψηλού διακυβεύματος όπου η αποτυχία δεδομένων δεν αποτελεί επιλογή."
+                    "brief": "Σχεδίασα ένα σύστημα σχεσιακής βάσης δεδομένων όπου η ακεραιότητα δεδομένων είναι ενσωματωμένη στην ίδια την αρχιτεκτονική. Με MySQL triggers και stored procedures που επιβάλλουν κανόνες στο επίπεδο αποθήκευσης, καθώς και tamper-evident audit trail, διασφαλίζεται μηδενική αλλοίωση δεδομένων ακόμα και σε σφάλματα του application layer."
                 },
                 "etl-covid": {
-                    "title": "Αγωγός ETL End-to-End για Επικύρωση Οικονομικού Αντικτύπου",
+                    "title": "Αναλυτική Εμπορίου: End-to-End Αγωγός ETL για Μακροοικονομική Νοημοσύνη",
                     "category": "Μηχανική Δεδομένων & Βιοπληροφορική",
-                    "brief": "Αρχιτεκτόνησα έναν αγωγό ανάλυσης δεδομένων υψηλής ακεραιότητας για την επικύρωση εμπορικών επιπτώσεων για παγκόσμιες στρατηγικές μεταφορών. Εφάρμοσα μια ισχυρή διαδικασία ETL χρησιμοποιώντας Python (Pandas) που δεν μετασχημάτιζε απλώς τα δεδομένα, αλλά τα 'καθάριζε' για να διασφαλίσει ακρίβεια για αναφορές BI. Αυτό το έργο απέδειξε την ικανότητα παροχής αξιοποιήσιμων, υψηλής εξουσίας γνώσεων από ετερογενείς πηγές δεδομένων, παρέχοντας στους ενδιαφερόμενους επικυρωμένα στοιχεία για τη βελτιστοποίηση της ανθεκτικότητας της εφοδιαστικής αλυσίδας."
+                    "brief": "Κατασκεύασα έναν αγωγό ETL για την ανάλυση των επιπτώσεων του COVID-19 στο διεθνές εμπόριο της Νέας Ζηλανδίας (2015–2021). Εξήγαγα 111.000+ ακατέργαστες τελωνειακές εγγραφές, τις μετασχημάτισα με Python/Pandas και τις φόρτωσα σε MySQL data warehouse, παρέχοντας τεκμηριωμένα στοιχεία για τους ρυθμούς ανάκαμψης στους υπεύθυνους αποφάσεων."
                 },
                 "genomic": {
-                    "title": "Ποιότητα Γονιδιωματικών Δεδομένων & Αγωγός Διακυβέρνησης Βιοπληροφορικής",
+                    "title": "BioHelix: Υπολογιστική Ανακάλυψη Φαρμάκων με AI",
                     "category": "Μηχανική Δεδομένων & Βιοπληροφορική",
-                    "brief": "Ηγήθηκα της ανάπτυξης μιας ολοκληρωμένης στρατηγικής πρόσβασης και ανάλυσης δεδομένων για βιολογικά δεδομένα μεγάλης κλίμακας. Εφάρμοσα αυστηρά πρωτόκολλα ποιότητας δεδομένων και διακυβέρνησης για δεδομένα Αλληλούχισης Επόμενης Γενιάς (NGS), χρησιμοποιώντας FastQC για τη δημιουργία αυτοματοποιημένων αγωγών φιλτραρίσματος βάσει ορίων ποιότητας Phred. Αυτό το έργο πλαισιώνει τη βιοπληροφορική ως πρόκληση 'Διακυβέρνησης Δεδομένων', διασφαλίζοντας την καθαρότητα και την ελεξιμότητα των αλληλουχιών για προηγμένη γονιδιωματική έρευνα."
+                    "brief": "Ανέπτυξα το BioHelix, μια διαδραστική πλατφόρμα ανακάλυψης φαρμάκων στον browser που καλύπτει όλο το εύρος από αλληλουχίες DNA έως την κατάταξη υποψήφιων μορίων. Χρησιμοποιεί ESMFold για 3D πρόβλεψη πρωτεϊνών, φαρμακοκινητικό έλεγχο Lipinski και Random Forest QSAR μοντέλο για πρόβλεψη δεσμευτικότητας σε 1.000+ ενώσεις."
                 },
+
                 "indexing-poc": {
-                    "title": "PoC Πολυδιάστατης Ευρετηρίασης για Κλινική Αναζήτηση Υψηλής Απόδοσης",
+                    "title": "Πολυδιάστατη Υβριδική Αναζήτηση: Αναλυτική Υγείας",
                     "category": "Μηχανική Δεδομένων & Βιοπληροφορική",
-                    "brief": "Εκτέλεσα ένα πρακτικό Proof of Concept για τον καθορισμό της βέλτιστης στρατηγικής αναζήτησης για σύνθετα χωρικά και κλινικά δεδομένα. Αρχιτεκτόνησα και συνέκρινα σχέδια λύσεων πολυδιάστατων (K-D Trees, Octrees) και εφάρμοσα λύσεις ANN χρησιμοποιώντας Locality-Sensitive Hashing. Η τελική στρατηγική σύσταση παρείχε έναν επικυρωμένο οδικό χάρτη για ερωτήματα υψηλής απόδοσης που εξισορροπούν την ταχύτητα με τα αποτυπώματα μνήμης για κλινικά περιβάλλοντα επιχειρηματικής κλίμακας."
+                    "brief": "Σχεδίασα μια υβριδική μηχανή αναζήτησης που μειώνει την καθυστέρηση ερωτημάτων κατά 28% σε 18.000+ κλινικές εγγραφές χωρίς καμία απώλεια ακρίβειας. Η αρχιτεκτονική δύο φάσεων συνδυάζει spatial indexing (K-D Trees, Octrees) και LSH για ταχύτατη ανάκτηση με Recall@5 = 1.0."
                 },
                 "wgan-telco": {
-                    "title": "Αρχιτεκτονική WGAN-GP για Συνθετική Κίνηση με Προστασία Ιδιωτικότητας",
-                    "category": "AI & HealthTech (Κύρια)",
-                    "brief": "Σχεδίασα μια ασφαλή, δεδομενο-κεντρική λύση για τη δημιουργία ρεαλιστικών συνθετικών δεδομένων χρονοσειρών για κίνηση 5G. Εφαρμόζοντας WGAN-GP, επέτρεψα τη δημιουργία δεδομένων υψηλής πιστότητας που ικανοποιούν περιορισμούς ιδιωτικότητας, επιτρέποντας την προσομοίωση και επικύρωση της απόδοσης δικτύου 5G χωρίς να διακυβεύεται η ακεραιότητα των πραγματικών δεδομένων χρηστών."
+                    "title": "Synthesis Hub: Πλατφόρμα Συνθετικών Δεδομένων Διπλού Τομέα WGAN-GP",
+                    "category": "Αρχιτεκτονική AI & Συστήματα HealthTech",
+                    "brief": "Ανάπτυξη πλατφόρμας GAN διπλού σκοπού για δημιουργία συνθετικών δεδομένων: ανίχνευση επιθέσεων DDoS σε δίκτυα 5G και παραγωγή φωτορεαλιστικών MRI εγκεφαλικού όγκου για την ενίσχυση ιατρικών συνόλων δεδομένων. Ο WGAN-GP Critic λειτουργεί ταυτόχρονα και ως real-time ανιχνευτής ανωμαλιών."
                 },
                 "azure-ai-studio": {
                     "title": "Πλατφόρμα AI Υγείας Κρίσιμης Αποστολής στο Azure Studio",
-                    "category": "AI & HealthTech (Κύρια)",
-                    "brief": "Μετέφρασα σύνθετες απαιτήσεις υγειονομικής περίθαλψης σε μια λύση PaaS υψηλής αξίας στο Azure AI Studio. Αρχιτεκτόνησα την ενσωμάτωση του OpenAI GPT-4 με κλινική ανάλυση κειμένου και playgrounds HITL, διασφαλίζοντας ότι η πλατφόρμα ικανοποιεί τις απαιτήσεις θεσμικής ασφάλειας παρέχοντας ταυτόχρονα πολυτροπική κλινική λογική αιχμής."
+                    "category": "Αρχιτεκτονική AI & Συστήματα HealthTech",
+                    "brief": "Ενσωμάτωσα το OpenAI GPT-4 με ανάλυση κειμένου και HITL playgrounds στο Azure AI Studio, μετατρέποντας σύνθετες απαιτήσεις υγείας σε μια ασφαλή PaaS λύση παραγωγικής ποιότητας με πολυτροπική κλινική αιτιοαιτιολόγηση."
                 },
                 "azure-security": {
                     "title": "Ανάλυση Αρχιτεκτονικού Κινδύνου & Σχεδιασμός Ασφάλειας Cloud Zero-Trust",
-                    "category": "Κατανεμημένα Συστήματα, HPC & Cloud",
-                    "brief": "Πραγματοποίησα βαθιές αρχιτεκτονικές ανασκοπήσεις τρωτών σημείων ασφαλείας για συστήματα υγειονομικής περίθαλψης κρίσιμης αποστολής. Ευθυγράμμισα την πλατφόρμα με τον πυλώνα Ασφάλειας του Azure Well-Architected Framework, σχεδιάζοντας στοιχεία IAM, FIDO2 και Μοντελοποίησης Απειλών για να διασφαλίσω ότι τα κλινικά δεδομένα προστατεύονται από τα υψηλότερα πρότυπα θεσμικής ασφάλειας."
+                    "category": "Συστήματα HPC & Επεκτάσιμη Υποδομή",
+                    "brief": "Πραγματοποίησα εις βάθος αρχιτεκτονικό έλεγχο ασφαλείας για κρίσιμα συστήματα υγείας στο Azure, σχεδιάζοντας μηχανισμούς IAM, FIDO2 και μοντελοποίηση απειλών βάσει του Azure Well-Architected Framework για απόλυτη προστασία δεδομένων."
                 },
                 "xai-gov": {
-                    "title": "Πλαίσιο Διακυβέρνησης XAI για Ελέξιμα Συστήματα Υψηλού Κινδύνου",
-                    "category": "Πολιτική AI, Διακυβέρνηση & Στρατηγική",
-                    "brief": "Λειτούργησα ένα ολοκληρωμένο πλαίσιο διακυβέρνησης AI για τον μετριασμό των κινδύνων 'μαύρου κουτιού' σε κλινικό λογισμικό. Εφάρμοσα ελέγχους XAI χρησιμοποιώντας SHAP και Captum, διασφαλίζοντας ότι όλες οι αποφάσεις που λαμβάνονται από AI είναι ελέγξιμες και ικανοποιούν τις εντολές GDPR και EU AI Act για κλινικά συστήματα υψηλού κινδύνου."
+                    "title": "XAIGO: Πλαίσιο Διακυβέρνησης XAI για Ελέγξιμα Συστήματα Υψηλού Κινδύνου",
+                    "category": "Διακυβέρνηση AI, Πολιτική & Ποιοτική Μηχανική",
+                    "brief": "Δημιούργησα το XAIGO, ένα middleware διακυβέρνησης AI ανάμεσα σε μοντέλα και ανθρώπους, καθιστώντας κάθε απόφαση εξηγήσιμη. Με SHAP, LIME, Grad-CAM και αντιπαραδειγματικές αναδρομές, μετατρέπει τις εξόδους των μοντέλων σε νομικά συμβατές εξηγήσεις βάσει του GDPR και του EU AI Act."
                 },
                 "knn-parallel": {
                     "title": "Υβριδικό Παράλληλο k-NN: Αλγοριθμική Ακεραιότητα & Stress Testing",
-                    "category": "Κατανεμημένα Συστήματα, HPC & Cloud",
-                    "brief": "Βελτιστοποίησα την παλινδρόμηση k-NN brute-force για ανάπτυξη σε υπολογιστικά περιορισμένα περιβάλλοντα. Το επαναπροσδιόρισα ως πρόκληση 'Αξιοπιστίας', χρησιμοποιώντας OpenMP και MPI για να διασφαλίσω ότι οι παραλληλισμένοι φόρτοι εργασίας διατηρούν τέλεια λογική ακεραιότητα υπό συνθήκες υψηλής ταυτόχρονης εκτέλεσης. Αυτό αποδεικνύει την ικανότητα επικύρωσης της αλγοριθμικής απόδοσης σε σενάρια άκρων κρίσιμης αποστολής."
+                    "category": "Συστήματα HPC & Επεκτάσιμη Υποδομή",
+                    "brief": "Μετέφερα αλγόριθμο k-NN από C σε παράλληλη υποδομή HPC με OpenMP και MPI και στη συνέχεια σε Python API μέσω Cython, επιτυγχάνοντας επιτάχυνση 6.48x έναντι του Scikit-Learn διατηρώντας απόλυτη μαθηματική ακεραιότητα."
                 },
                 "mpi": {
-                    "title": "Κατανεμημένες Αρχιτεκτονικές ML: Επικύρωση Ακεραιότητας Μήτρας",
-                    "category": "Κατανεμημένα Συστήματα, HPC & Cloud",
-                    "brief": "Κατασκεύασα προγράμματα παράλληλου πολλαπλασιασμού μητρών χρησιμοποιώντας MPI, εστιάζοντας στην ελεξιμότητα κατανεμημένων φορτίων εργασίας. Εφαρμόζοντας Τοπολογίες Δακτυλίου και Καρτεσιανά Πλέγματα για υπο-блоκαρίσματα, καθιέρωσα ένα πλαίσιο για την επικύρωση ότι οι υπολογισμοί ML μεγάλης κλίμακας παραμένουν συγχρονισμένοι και λογικά ορθοί σε αποκεντρωμένους κόμβους."
+                    "title": "Parallel MPI Πολλαπλασιασμός Πινάκων Υψηλής Απόδοσης",
+                    "category": "Συστήματα HPC & Επεκτάσιμη Υποδομή",
+                    "brief": "Υλοποίησα παράλληλο πολλαπλασιασμό πινάκων σε C με MPI, χρησιμοποιώντας τοπολογίες Ring και 2D Cartesian Grid, που αποτελούν τη βάση του συγχρονισμού gradient Ring-AllReduce στο distributed deep learning με εγγυημένη μαθηματική ακρίβεια."
                 },
+
                 "hybrid-network": {
                     "title": "Βασική Υποδομή IaaS/PaaS: Επικύρωση Συνδεσιμότητας",
-                    "category": "Κατανεμημένα Συστήματα, HPC & Cloud",
-                    "brief": "Σχεδίασα και προσομοίωσα σύνθετες υβριδικές αρχιτεκτονικές δικτύωσης για την επικύρωση της συνδεσιμότητας για μεταναστεύσεις επιχειρηματικής κλίμακας. Αξιοποίησα OSPF, eBGP και ExpressRoute για να διασφαλίσω ότι οι ροές θεσμικών δεδομένων παραμένουν ασφαλείς και διατηρητέες, παρέχοντας ένα επαληθευμένο σχέδιο για κυρίαρχη δικτύωση cloud."
+                    "category": "Συστήματα HPC & Επεκτάσιμη Υποδομή",
+                    "brief": "Σχεδίασα και προσομοίωσα υβριδικές εταιρικές δικτυακές αρχιτεκτονικές με OSPF, eBGP και ExpressRoute για την επικύρωση συνδεσιμότητας σε cloud migrations, προσφέροντας έναν ελεγμένο οδηγό για κυρίαρχη δικτύωση."
                 },
                 "4g-simulation": {
                     "title": "Μοντελοποίηση Κατανεμημένων Συστημάτων: Έλεγχος Αρχιτεκτονικής Απόδοσης",
-                    "category": "Κατανεμημένα Συστήματα, HPC & Cloud",
-                    "brief": "Μοντελοποίησα αρχιτεκτονικούς συμβιβασμούς για κατανεμημένα συστήματα 4G LTE. Ανέλυσα την κινητικότητα UE και το κόστος παράδοσης μέσω του φακού της 'Αξιοπιστίας', παρέχοντας επικυρωμένες μετρήσεις απόδοσης που διασφαλίζουν τη σταθερότητα του δικτύου κατά τη διάρκεια θεσμικών λειτουργιών υψηλού διακυβεύματος."
+                    "category": "Συστήματα HPC & Επεκτάσιμη Υποδομή",
+                    "brief": "Αντικατέστησα τη στατική λογική 4G handover με μοντέλο BiLSTM που προβλέπει πτώσεις σήματος εκ των προτέρων, μειώνοντας την απώλεια κρίσιμων δεδομένων στο 2.45% για Healthcare IoT με πλήρη διαφάνεια μέσω SHAP."
                 },
                 "linux-devops": {
                     "title": "Linux Compute & DevOps: Αγωγοί Ανάπτυξης Έτοιμοι για Έλεγχο",
-                    "category": "Κατανεμημένα Συστήματα, HPC & Cloud",
-                    "brief": "Ανέπτυξα αυτοματοποιημένες λύσεις υπολογιστών Linux με επίκεντρο τον προγραμματισμό διεργασιών και την ακεραιότητα IPC. Εφάρμοσα λογική fork() και σηματοφόρων για να διασφαλίσω ότι οι εργασίες παρασκηνίου κρίσιμης αποστολής είναι ελέγξιμες και ανθεκτικές, θέτοντας τα θεμέλια για περιβάλλοντα DevOps μηδενικής αποτυχίας."
+                    "category": "Συστήματα HPC & Επεκτάσιμη Υποδομή",
+                    "brief": "Ανέπτυξα πλαίσιο POSIX συστημάτων σε C για προγραμματισμό διεργασιών και παράλληλους υπολογισμούς. Με fork() και System V Message Queues, δημιούργησα θεμέλια όπου οι εργασίες εκτελούνται σε απομονωμένη μνήμη χωρίς κίνδυνο deadlock."
                 },
                 "ux-klm": {
                     "title": "Επικύρωση Ποιότητας Προϊόντος: Ποσοτικός Έλεγχος Ευχρηστίας",
-                    "category": "Πολιτική AI, Διακυβέρνηση & Στρατηγική",
-                    "brief": "Εφάρμοσα KLM και Νόμο του Fitts για την ποσοτική επικύρωση της αποδοτικότητας διεπαφής χρήστη για ροές εργασίας υψηλού διακυβεύματος. Επαναπροσδιόρισα το UX ως μέτρηση 'Ασφάλειας', διασφαλίζοντας ότι οι κλινικοί χειριστές μπορούν να εκτελούν κρίσιμες εργασίες εντός καθορισμένων γραμμών βάσης χρόνου ολοκλήρωσης για την ελαχιστοποίηση ανθρωπίνου λάθους."
+                    "category": "Διακυβέρνηση AI, Πολιτική & Ποιοτική Μηχανική",
+                    "brief": "Εφάρμοσα KLM και Νόμο του Fitts για μετατροπή του UX σε ποσοτική μέτρηση ασφάλειας. Υπολογίζοντας τους χρόνους εκτέλεσης εργασιών, εξασφάλισα ότι οι κλινικοί χειριστές εκτελούν ενέργειες χωρίς περιθώρια λάθους."
                 },
                 "whiteboxer": {
                     "title": "Στρατηγική Τεχνικών Δοκιμών: Λογικός Έλεγχος & Διαχείριση Κινδύνου",
-                    "category": "Πολιτική AI, Διακυβέρνηση & Στρατηγική",
-                    "brief": "Διαχειρίστηκα στρατηγικές δοκιμών λευκού κουτιού για την επικύρωση σύνθετης λογικής προϊόντος. Εφάρμοσα κυκλωματική πολυπλοκότητα και ανάλυση διαδρομής βάσης για τον 'έλεγχο' διαδρομών λογισμικού, διασφαλίζοντας ότι όλοι οι λογικοί κλάδοι επαληθεύονται και οι κίνδυνοι ανάπτυξης μετριάζονται μέσω τεκμηριωμένης QA."
-                },
-                "csr-ai": {
-                    "title": "Σχεδιασμός Θεσμικής Πολιτικής: Ηθική AI & Διακυβέρνηση ΕΚΕ",
-                    "category": "Πολιτική AI, Διακυβέρνηση & Στρατηγική",
-                    "brief": "Συν-ανέπτυξα ένα πλαίσιο διακυβέρνησης για τον διαγωνισμό Nikos Analytis CSRHELLAS, ευθυγραμμίζοντας στρατηγικές AI με τους Στόχους Βιώσιμης Ανάπτυξης του ΟΗΕ. Εστίασα στη μετάφραση ηθικών εντολών σε δράσιμες πολιτικές για τη διασφάλιση της θεσμικής λογοδοσίας στην κοινωνική και εταιρική διακυβέρνηση."
-                },
-                "bigdata-ethics": {
-                    "title": "Ρυθμιστική Ελεξιμότητα: Ηθική Big Data & Ανασκόπηση Λογοδοσίας",
-                    "category": "Πολιτική AI, Διακυβέρνηση & Στρατηγική",
-                    "brief": "Διενήργησα ανάλυση εις βάθος ηθικών και ρυθμιστικών κινδύνων στην 'Ηθική Big Data' (Zwitter). Εντόπισα δομές εξουσίας εντός της διαχείρισης δεδομένων και πρότεινα αναθεωρήσεις πλαισίου λογοδοσίας για τη διασφάλιση της θεσμικής λογοδοσίας στην κοινωνική και εταιρική διακυβέρνηση."
+                    "category": "Διακυβέρνηση AI, Πολιτική & Ποιοτική Μηχανική",
+                    "brief": "Χρησιμοποίησα κυκλωματική πολυπλοκότητα και ανάλυση διαδρομής βάσης για συστηματικό έλεγχο κάθε λογικού κλάδου στον κώδικα, δημιουργώντας τεκμηριωμένο QA που επικυρώνει κάθε μονοπάτι εκτέλεσης."
                 },
                 "edge-ai": {
                     "title": "Aria: Multimodal Edge AI & Sovereign Agentic Assistant",
-                    "category": "AI & HealthTech (Κύρια)",
+                    "category": "Αρχιτεκτονική AI & Συστήματα HealthTech",
                     "subtitle": "Hardware-Constrained SLM Orchestration & Hybrid Cloud Architecture",
-                    "brief": "Σχεδίασα έναν αυτόνομο, πολυτροπικό βοηθό AI σε πραγματικό χρόνο, εγκατεστημένο εγγενώς σε υπερυπολογιστή edge (NVIDIA Jetson Orin Nano). Με βελτιστοποίηση SLMs για αυστηρά όρια υλικού, το Aria διασφαλίζει μηδενική διαρροή δεδομένων (zero-egress) για συνεχή αντίληψη, σε συνδυασμό με δρομολόγηση cloud για σύνθετη αιτιολόγηση.",
+                    "brief": "Κατασκεύασα το Aria, έναν αυτόνομο βοηθό AI που τρέχει τοπικά σε συσκευή edge NVIDIA Jetson Orin Nano. Ακούει, βλέπει και απαντά σε πραγματικό χρόνο, διατηρώντας τα ευαίσθητα δεδομένα στη συσκευή και δρομολογώντας στο cloud μόνο πολύπλοκες εργασίες.",
                     "fullDescription": "Σχεδίασα έναν αυτόνομο, πολυτροπικό βοηθό AI σε πραγματικό χρόνο, εγκατεστημένο εγγενώς σε υπερυπολογιστή edge (NVIDIA Jetson Orin Nano). Με βελτιστοποίηση SLMs για αυστηρά όρια υλικού, το Aria διασφαλίζει μηδενική διαρροή δεδομένων (zero-egress) για συνεχή αντίληψη, σε συνδυασμό με δρομολόγηση cloud για σύνθετη αιτιολόγηση.\n\n### Κύριοι Μηχανικοί & Αρχιτεκτονικοί Πυλώνες:\n\n**1. Hardware-Constrained Quantization & Memory Management:** Ξεπέρασα το όριο των 8GB UMA εφαρμόζοντας επιθετική ποσοτικοποίηση 4-bit (Q4_K_M) σε μοντέλο Cosmos-Reason2 2B μέσω llama.cpp, μειώνοντας το VRAM footprint σε 1.2GB και εξαλείφοντας σφάλματα Out-Of-Memory.\n\n**2. Dual-Core Hybrid Architecture:** Αρχιτεκτονική δρομολόγησης που διαχωρίζει τις εργασίες μεταξύ edge και cloud. Ευαίσθητα δεδομένα (ChromaDB Vector RAG, τηλεμετρία, βιομετρική αναγνώριση YuNet) εκτελούνται αυστηρά τοπικά, ενώ βαριές εργασίες ανατίθενται στο cloud μέσω OpenClaw Gateway.\n\n**3. Real-Time Multimodal Perception:** Συντονισμένος συνδυασμός μοντέλων: faster-whisper (GPU/INT8) για μεταγραφή, Kokoro-ONNX (CPU) για σύνθεση ομιλίας με WebRTC Acoustic Echo Cancellation και οπτική αντίληψη οθόνης/κάμερας.\n\n**4. Autonomous Desktop Orchestration:** Αυτόνομο στρώμα εκτέλεσης ικανό να γράφει και να εκτελεί Python scripts, εντολές τερματικού και τοπικές εφαρμογές GUI (.desktop launchers) με έλεγχο PyAutoGUI.",
                     "techStack": "NVIDIA Jetson Orin Nano | Edge AI | SLMs (Cosmos-Reason2) | INT4/INT8 Quantization | llama.cpp | faster-whisper | ChromaDB (Local RAG) | OpenClaw Gateway | PCIe Gen4 NVMe | CUDA/Linux GenAIOps"
                 },
-                "zencloud": {
-                    "title": "ZenithDx: Υβριδική Πλατφόρμα AI & Αρχιτεκτονική Cloud Υψηλής Απόδοσης",
-                    "category": "Κατανεμημένα Συστήματα, HPC & Cloud",
-                    "brief": "Σχεδίασα την υβριδική αρχιτεκτονική end-to-end για την πλατφόρμα ZenithDx. Εστίασα στην ευθυγράμμιση με τους πυλώνες 'Αποδοτικότητας Απόδοσης' και 'Αξιοπιστίας' του Azure Well-Architected Framework, διασφαλίζοντας ότι η κλιμάκωση φορτίων εργασίας Agentic AI έντασης GPU είναι νομικά και τεχνικά διατηρητέα."
-                },
-                "azurecloud": {
-                    "title": "Πλατφόρμα Κλινικών Δεδομένων: Βελτιστοποίηση Ρυθμιστικής Well-Architected",
-                    "category": "AI & HealthTech (Κύρια)",
-                    "brief": "Πραγματοποίησα βελτιστοποίηση εις βάθος μιας πλατφόρμας κλινικών δεδομένων για την ικανοποίηση θεσμικών εντολών 'Διατήρησης'. Ανασχεδίασα τα στρώματα αποθήκευσης και ανάκτησης για να διασφαλίσω διαθεσιμότητα έτοιμη για έλεγχο, χαρτογραφώντας την τεχνική απόδοση απευθείας σε απαιτήσεις ρυθμιστικής υποβολής."
-                },
                 "ebusiness": {
-                    "title": "E-Business Marketing Core — Στρατηγική Ψηφιακή Πλατφόρμα",
-                    "category": "Πολιτική AI, Διακυβέρνηση & Στρατηγική",
-                    "brief": "Επιχειρησιακή εφαρμογή στρατηγικών ψηφιακού μάρκετινγκ σε ένα επεκτάσιμο οικοσύστημα ιστού υψηλής μετατροπής. Αυτό το έργο υλοποιεί ένα ολοκληρωμένο πλαίσιο στρατηγικής ηλεκτρονικού επιχειρείν, βασισμένο στο προσχέδιο του Φίλιππου-Παρασκευά Ζυγούρη. Μετατρέπει τις θεωρίες μάρκετινγκ σε τεχνικά υλοποιήσιμες λύσεις, διασφαλίζοντας ότι όλες οι ψηφιακές αναπτύξεις είναι βασισμένες σε δεδομένα, υψηλής κλίμακας και δομικά ευθυγραμμισμένες με τις σύγχρονες απαιτήσεις της αγοράς."
-                },
-                "startup-week": {
-                    "title": "Συντονισμός Έργων Υψηλού Αντικτύπου: Θεσμική Δέσμευση Ενδιαφερομένων",
-                    "category": "Πολιτική AI, Διακυβέρνηση & Στρατηγική",
-                    "brief": "Διαχειρίστηκα τον στρατηγικό συντονισμό για το Startup Week Patras, διευκολύνοντας την τεχνική δέσμευση μεταξύ καινοτόμων και θεσμικών ενδιαφερομένων (PwC, Yodiwo). Επαναπροσδιόρισα τη διαχείριση έργου ως 'Ενορχήστρωση Κύκλου Ζωής', διασφαλίζοντας ότι οι συνεδρίες τεχνικής επικύρωσης ευθυγραμμίζονταν με επιχειρηματική διακυβέρνηση υψηλού επιπέδου."
+                    "title": "Αλγοριθμικά Θεμέλια του AI: Δομές Δεδομένων & Pipeline Χρονοσειρών ML",
+                    "category": "Μηχανική Δεδομένων & Βιοπληροφορική",
+                    "brief": "Υλοποίησα βασικές δομές δεδομένων σε C (AVL Trees, Hash Tables, Max-Heaps) και τις χρησιμοποίησα για να φτιάξω ένα Python ML pipeline πρόβλεψης ωκεανογραφικών χρονοσειρών, πετυχαίνοντας R² 0.71 σε 1.400+ εγγραφές θερμοκρασίας."
                 },
                 "newgov": {
-                    "title": "Διακυβέρνηση Κλινικής AI: Σχεδιασμός Πολιτικής & Αγωγός Παρακολούθησης Μεροληψίας",
-                    "category": "Πολιτική AI, Διακυβέρνηση & Στρατηγική",
-                    "brief": "Αρχιτεκτόνησα έναν αυτοματοποιημένο αγωγό για την παρακολούθηση μεροληψίας και μετατόπισης πολιτικής σε πράκτορες κλινικής AI. Εφάρμοσα τεχνικά ίχνη ελέγχου για να διασφαλίσω ότι οι έξοδοι του μοντέλου παραμένουν εντός καθορισμένων ηθικών ορίων, παρέχοντας τα αποδεικτικά στοιχεία υψηλής εξουσίας που απαιτούνται για τη θεσμική έγκριση σε κλινικές αναπτύξεις υψηλού κινδύνου."
+                    "title": "Προσομοιωτής Ενέργειας AIDC: Πλατφόρμα Ευελιξίας Δικτύου Data Center",
+                    "category": "Διακυβέρνηση AI, Πολιτική & Ποιοτική Μηχανική",
+                    "brief": "Δημιούργησα έναν διαδραστικό προσομοιωτή που επιτρέπει σε διαχειριστές data centers να ελέγχουν αν η υποδομή AI μπορεί να λειτουργήσει ως στοιχείο ευελιξίας του ηλεκτρικού δικτύου. Αναπτύχθηκε για το paper ICSGSC 2026 SC5111 με FastAPI engine και React dashboard."
                 },
                 "zenithdx": {
                     "title": "ZenithDx – High-Performance Agentic Clinical Co-Pilot",
-                    "category": "AI & HealthTech (Κύρια)",
+                    "category": "Αρχιτεκτονική AI & Συστήματα HealthTech",
                     "subtitle": "End-to-End AI Architecture, Explainable AI & Compliance-by-Design Orchestration",
-                    "brief": "Σχεδίασα και καθοδήγησα την ανάπτυξη του ZenithDx, ενός παραγωγικού πρωτοτύπου Πολυτροπικού Συστήματος Υποστήριξης Κλινικών Αποφάσεων (CDSS). Εκπαιδευμένο σε υποδομή NVIDIA DGX και βελτιστοποιημένο για τοπική εκτέλεση (edge inference), το σύστημα επεξεργάζεται ετερογενή δεδομένα (εικόνες, κείμενο, EHR) με αυστηρή συμμόρφωση Compliance-by-Design βάσει του EU AI Act και του GDPR.",
+                    "brief": "Ηγήθηκα της ανάπτυξης του ZenithDx, ενός πολυτροπικού συστήματος υποστήριξης κλινικών αποφάσεων εκπαιδευμένου σε NVIDIA DGX βάσει του EU AI Act. Επεξεργάζεται ακτινογραφίες, κείμενα και EHR με οπτικές εξηγήσεις Grad-CAM για απόλυτη διαφάνεια στη διάγνωση.",
                     "fullDescription": "Σχεδίασα και καθοδήγησα την ανάπτυξη του ZenithDx, ενός παραγωγικού πρωτοτύπου Πολυτροπικού Συστήματος Υποστήριξης Κλινικών Αποφάσεων (CDSS). Εκπαιδευμένο σε υποδομή NVIDIA DGX και βελτιστοποιημένο για τοπική εκτέλεση (edge inference), το σύστημα επεξεργάζεται ετερογενή δεδομένα (εικόνες, κείμενο, EHR) με αυστηρή συμμόρφωση Compliance-by-Design βάσει του EU AI Act και του GDPR.\n\n### Κύριοι Μηχανικοί & Αρχιτεκτονικοί Πυλώνες:\n\n**1. Agentic AI & Multimodal Inference:** Ανάπτυξη υβριδικού αυτόνομου πράκτορα AI με LangGraph, εφαρμόζοντας ReAct (Reasoning + Acting) και Self-Refine loops για την τροφοδοσία μοντέλου Llama 3.2 3B (μέσω LoRA & Unsloth) με Hybrid RAG (FAISS, BM25, ColBERT) και χρόνο απόκρισης μόλις 25.7s.\n\n**2. Explainable AI (XAI) & Clinical Authority:** Ενσωμάτωση Grad-CAM για οπτικούς χάρτες προσοχής σε ακτινογραφίες θώρακος (S²A-UNet & ResNet-50) και Captum Feature Ablation για NLP, διασφαλίζοντας 100% ελέγξιμες διαγνώσεις (EU AI Act Article 13).\n\n**3. Compliance-by-Design & Regulatory Alignment:** Ενσωμάτωση προτύπων ISO 14971 (Risk Management) και IEC 62304 (Medical Device Software) απευθείας στην αρχιτεκτονική του συστήματος.\n\n**4. Sovereign Data Governance & Security:** Ασφαλές backend με FastAPI & PostgreSQL, OAuth2/JWT, και zero-egress εκτέλεση (Ollama/llama.cpp) για 100% προστασία δεδομένων (GDPR/HIPAA) και υποστήριξη HL7/FHIR/DICOM.\n\n**5. Clinical Validation & Impact:** Διαγνωστική ακρίβεια 96,28% σε σύνθετα περιστατικά, καθιστώντας το ZenithDx σημείο αναφοράς για ασφαλές, ελέγξιμο λογισμικό υγείας.",
                     "techStack": "LangGraph | Llama 3.2 (LoRA/Unsloth) | FAISS & ColBERT (Hybrid RAG) | PyTorch (ResNet-50, S²A-UNet, HGT) | FastAPI | PostgreSQL | Ollama | HL7/FHIR & DICOM | EU AI Act & GDPR Alignment | NVIDIA DGX (Training)"
                 }

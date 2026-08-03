@@ -157,12 +157,12 @@
             gallery: ["web/5.jpg","/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/database/db1.jpg", "/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/database/db2.jpg"]
         },
         "etl-covid": {
-            title: "End-to-End ETL Pipeline Architecture for Economic Impact Analytics",
+            title: "Trade Analytics: End-to-End ETL Pipeline for Macroeconomic Intelligence",
             category: "Data & Analytics",
-            brief: "I successfully architected and implemented an end-to-end data analysis pipeline designed to support the analytical strategy concerning the commercial impacts of the COVID-19 pandemic, focusing on efficiency and data integrity. This project involved designing the full ETL process where Python (Pandas) was instrumental for robust data cleaning, transformation, and complex aggregation (grouping by month, country, and transport mode) from heterogeneous sources. I orchestrated the loading of the cleaned data into a MySQL relational database, establishing a reliable and structured foundation capable of supporting ad-hoc queries and business intelligence (BI) reporting. Ultimately, this pipeline achieved strong business alignment by delivering clear, actionable insights through visualizations generated with Matplotlib that enabled stakeholders to quickly identify market trends and optimize their supply chain strategies.",
+            brief: "Architected a high-integrity Data Engineering and ETL (Extract, Transform, Load) platform to validate commercial impacts on global transport strategies, specifically analyzing the unprecedented supply chain shocks of COVID-19 on New Zealand's international trade (2015–2021). Driven by the core philosophy that 'every AI project needs a robust ETL pipeline,' I engineered an automated solution that extracted over 111,000 raw customs records via HTTP endpoints, 'scrubbed' and transformed the data using Python (Pandas), and loaded it via parameterized batch insertions into a relational MySQL data warehouse. This clean data foundation fueled a comprehensive Exploratory Data Analysis (EDA) and a PySimpleGUI Business Intelligence application, providing policymakers and stakeholders with validated, empirical evidence of V-shaped recovery rhythms, modal logistics splits (Sea vs. Air freight), and sectorial commodity dependencies.",
             date: "2023",
             client: "World Bank Partner",
-            tools: "Python, Pandas, NumPy, MySQL, Matplotlib, Seaborn, Jupyter, ETL, Data Cleaning, Aggregation, Grouping, SQLAlchemy, CSV, JSON, Visualization",
+            tools: "Python 3.8+, Pandas, NumPy, Automated HTTP Extraction, MySQL, Parameterized SQL (executemany), Matplotlib, Jupyter Notebooks, Statistical Aggregation, PySimpleGUI, Macroeconomics, Supply Chain Logistics, Trade Analytics",
             link: "https://covid-etl.io",
             gallery: ["web/3.jpeg","/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/covid/cov1.jpg", "/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/covid/cov2.jpg"]
         },
@@ -177,12 +177,12 @@
             gallery: ["web/2.jpg","/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/bio/bio1.jpg", "/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/bio/bio2.jpg"]
         },
         "indexing-poc": {
-            title: "Multidimensional Indexing for High-Performance Analytics",
+            title: "Multidimensional Hybrid Search: Healthcare Analytics",
             category: "Data & Analytics",
-            brief: "I successfully executed a practical Proof of Concept (PoC) to define the optimal analytical strategy for high-performance querying against complex multidimensional spatial and similarity data. This involved architecting and benchmarking multiple indexing solution designs, specifically implementing and evaluating K-D Trees, Octrees, Range Trees, and R-Trees for scalability in both k-Nearest Neighbors (kNN) and Range Queries. Furthermore, I designed and implemented an Approximate Nearest Neighbor (ANN) solution utilizing Locality-Sensitive Hashing (LSH) with MinHash to achieve fast text similarity search against a dataset of U.S. hospital reviews. The project culminated in delivering a final strategic recommendation that balanced query speed, memory footprint, and build time across all candidate data structures to support highly efficient production environments.",
+            brief: "Architected and deployed a high-performance hybrid search engine capable of sub-millisecond retrieval across massive, heterogeneous clinical datasets. Addressing the latency bottlenecks inherent in modern Healthcare AI and Retrieval-Augmented Generation (RAG) pipelines, I engineered a two-phase architecture to query 18,324 patient satisfaction records (CMS HCAHPS). By designing and benchmarking advanced multidimensional spatial indices (Octrees, Range Trees, K-D Trees, R-Trees) alongside Locality-Sensitive Hashing (LSH), the system efficiently prunes multi-axis spatial bounds (ZIP Code, Year, Score) before executing sub-linear textual similarity searches. The resulting pipeline achieves a 28% reduction in query latency (yielding a peak query time of just 1.496s for complex hybrid criteria) while guaranteeing a strict zero-loss retrieval accuracy (Recall@5 = 1.0) required for clinical decision support systems.",
             date: "2024",
             client: "Healthcare AI Startup",
-            tools: "Python, Scikit-learn, NumPy, Annoy, LSH, MinHash, K-D Tree, Octree, R-Tree, Range Tree, kNN, ANN, Benchmarking, Profiling, Memory Analysis",
+            tools: "Locality-Sensitive Hashing (LSH), MinHash, Jaccard Similarity, Octrees, K-D Trees, Range Trees, R-Trees, Python, NumPy, Pandas, Jupyter Notebooks, Time/Memory Profiling, Matplotlib, Seaborn, CMS HCAHPS Data, RAG Pipelines",
             link: "https://indexing-poc.com",
             gallery: ["web/6.jpg","/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/multi/mu1.jpg", "/COMPLETE-PORTFOLIO-WEBSITE/public/resources/img/portfolios/multi/mu2.jpg"]
         },

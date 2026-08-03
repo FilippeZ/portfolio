@@ -5,8 +5,9 @@ import { locales } from "@/data/locales";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { LogOut } from "lucide-react";
 
 import Image from "next/image";
 
@@ -14,6 +15,12 @@ export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const pathname = usePathname();
+    const router = useRouter();
+
+    const handleLogout = () => {
+        document.cookie = "auth=; path=/; max-age=0; SameSite=Strict";
+        router.push("/login");
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -95,8 +102,15 @@ export default function Header() {
                 </nav>
 
                 {/* CONNECT BUTTON & MOBILE TOGGLE */}
-                <div className="flex items-center gap-6">
+                <div className="flex items-center gap-4">
                     <LanguageSwitcher />
+                    <button
+                        onClick={handleLogout}
+                        title="Logout"
+                        className="hidden lg:flex items-center gap-2 px-3 py-2 text-gray-400 hover:text-red-400 transition-colors duration-200 text-xs font-mono tracking-widest uppercase group"
+                    >
+                        <LogOut className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                    </button>
                     <motion.div
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
