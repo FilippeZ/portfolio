@@ -1,5 +1,14 @@
 export const locales = {
     "en": {
+        "nav": {
+            "framework": "Framework",
+            "portfolio": "Projects",
+            "degree": "Degree Journey",
+            "about": "Arsenal",
+            "authority": "Authority",
+            "testimonials": "Testimonials",
+            "contact": "Contact"
+        },
         "about": {
             "title_prefix": "Beyond the",
             "title_gradient": "University.",
@@ -346,14 +355,6 @@ export const locales = {
                     "photo": "/fotogra/microsoft_envision_greece.jpg"
                 }
             ]
-        },
-        "nav": {
-            "framework": "Framework",
-            "authority": "Authority",
-            "about": "About",
-            "portfolio": "Portfolio",
-            "testimonials": "Testimonials",
-            "contact": "Let's Talk"
         },
         "hero": {
             "title": "AI ENGINEER | AGENTIC SYSTEMS & HEALTHTECH",
@@ -1246,10 +1247,11 @@ export const locales = {
     "el": {
         "nav": {
             "framework": "Πλαίσιο",
+            "portfolio": "Έργα",
+            "degree": "Ακαδημαϊκή Πορεία",
+            "about": "Οπλοστάσιο",
             "authority": "Αρχή",
-            "about": "Σχετικά",
-            "portfolio": "Χαρτοφυλάκιο",
-            "testimonials": "Μαρτυρίες",
+            "testimonials": "Συστάσεις",
             "contact": "Επικοινωνία"
         },
         "about": {
