@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Expertise from "@/components/Expertise";
 import Portfolio from "@/components/Portfolio";
+import DegreeJourney from "@/components/DegreeJourney";
 import About from "@/components/About";
 
 const Authority = dynamic(() => import("@/components/Authority"));
@@ -50,13 +51,22 @@ export default function Home() {
                     <div className="w-2 h-2 rounded-full bg-indigo-500/40 blur-[2px]"></div>
                 </div>
 
-                {/* 3. ARSENAL (id="about") */}
+                {/* 3. DEGREE JOURNEY (id="degree") */}
+                <DegreeJourney />
+
+                {/* Connector Beam 3.5 */}
+                <div className="w-full flex flex-col items-center justify-center my-2 py-4 z-20 pointer-events-none">
+                    <div className="w-px h-16 bg-gradient-to-b from-indigo-500/40 via-cyan-500/20 to-transparent"></div>
+                    <div className="w-2 h-2 rounded-full bg-cyan-500/40 blur-[2px]"></div>
+                </div>
+
+                {/* 3.6. EXTRACURRICULAR JOURNEY (id="about") */}
                 <About />
 
                 {/* Connector Beam 4 */}
                 <div className="w-full flex flex-col items-center justify-center my-2 py-4 z-20 pointer-events-none">
-                    <div className="w-px h-16 bg-gradient-to-b from-blue-500/40 via-blue-400/20 to-transparent"></div>
-                    <div className="w-2 h-2 rounded-full bg-blue-500/40 blur-[2px]"></div>
+                    <div className="w-px h-16 bg-gradient-to-b from-cyan-500/40 via-blue-400/20 to-transparent"></div>
+                    <div className="w-2 h-2 rounded-full bg-blue-400/40 blur-[2px]"></div>
                 </div>
 
                 {/* 4. CREDENTIALS (id="authority") */}

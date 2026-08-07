@@ -92,12 +92,12 @@ export const projects = [
 
     {
         id: "azure-ai-studio",
-        title: "Mission-Critical Healthcare AI Platform on Azure Studio",
+        title: "OmniHealth AI: Multi-Agent Clinical Document Synthesis & Patient Literacy Engine",
         category: "AI Architecture & HealthTech Systems",
-        brief: "Translated complex healthcare requirements into a high-value PaaS solution on Azure AI Studio. I architected the integration of OpenAI GPT-4 with clinical text analytics and HITL playgrounds, ensuring that the platform satisfies institutional security requirements while delivering state-of-the-art multimodal clinical reasoning.",
+        brief: "OmniHealth AI is a multi-agent clinical platform built on the Microsoft Agent Framework and Azure AI Foundry. It automates the extraction and indexing of unstructured, handwritten, and scanned legacy hospital records using specialized agents: DeepSeek-V3.2 for orchestration and RAG queries, Mistral OCR 4.0 for multi-column PDF parsing, Clinical NLP for UMLS and ICD-10 entity mapping, and FLUX.2-pro for generating patient-friendly anatomical diagrams. The entire system operates under an Azure Safety Control Bridge enforcing EU AI Act Article 14 Human-in-the-Loop oversight and GDPR Article 9 compliance.",
         date: "2025",
-        tools: ["Azure AI Studio", "GPT-4", "UMLS", "Document Intelligence", "HITL", "Multimodal"],
-        link: "https://azure-ai.health",
+        tools: ["Microsoft Agent Framework", "Azure AI Foundry", "DeepSeek-V3.2", "Mistral OCR 4.0", "FLUX.2-pro", "UMLS", "ICD-10", "FastAPI", "React", "EU AI Act"],
+        link: "https://github.com/FilippeZ/OmniHealth-Azure-AI",
         gallery: ["/resources/img/portfolios/card/2.png"],
         image: "/resources/img/portfolios/card/2.png"
     },
@@ -341,6 +341,13 @@ export const testimonials = [
         content: "I had the opportunity to collaborate with Filippos on a research-driven project that aimed to bridge AI and healthcare innovation. From the very beginning, he demonstrated remarkable clarity of vision and a strong ability to translate complex research goals into a structured, actionable roadmap. His entrepreneurial initiative in assembling and guiding a high-impact team reflected both leadership and foresight. Filippos showcased deep technical expertise in areas such as Agentic AI, Explainable AI, and Medical Imaging, integrating these domains seamlessly to advance clinically meaningful innovation. He combines technical depth with an impressive ability to align research direction toward tangible real-world outcomes, making him an inspiring and forward-thinking collaborator.",
         image: "/resources/img/people/gaut.jpeg",
         rating: 5
+    },
+    {
+        name: "Georgina Barquin Rotchford",
+        role: "Global Leadership Consultant & Mentor, European Commission D-PBL Erasmus+ Initiative",
+        content: "I had the pleasure of mentoring Filippos-Paraskevas Zygouris during the D-PBL Erasmus+ program, a flagship European Commission-supported initiative developed by seven universities. Filippos showed strong leadership as Technical Product Manager and Analysis Team Lead for the “DeafNav” project, successfully guiding a diverse international team throughout the process. His work focused on improving mobility for deaf people in Lisbon’s underground, combining rigorous technical analysis with a practical vision for inclusive design and accessibility that aligns with EU directives. The final result was very well received and warmly applauded by the evaluation panel.",
+        image: "/testim/georgina.jpeg",
+        rating: 5
     }
 ];
 
@@ -496,15 +503,15 @@ export const education = [
     },
     // B. Professional Evolution
     {
-        title: "Advanced Industrial AI & Process Validation",
+        title: "Data & ML Engineering Intern (UNBOUND PROMETHEUS Scholar)",
         org: "F.H.L. I. KIRIAKIDIS Group | Kavala, Greece (On-site)",
         date: "Jul 2022 – Aug 2022",
-        desc: "Under the auspices of the UNBOUND PROMETHEUS scholarship, I applied advanced algorithms to real-world, large-scale industrial data, managing logistics for 330,000 tons of marble. Utilizing the KDD (Knowledge Discovery in Databases) cycle and IQR-based anomaly detection, I identified and resolved three critical bottlenecks in the production process, ensuring operational continuity. This experience acted as a catalyst for my shift toward Quality Assurance (QA) and Process Validation in high-stakes environments.",
+        desc: "Awarded the prestigious UNBOUND PROMETHEUS Data Science Scholarship—administered in New York featuring Ivy League faculty under the auspices of Archbishop Elpidophoros of America—to apply advanced statistical algorithms and Dataset Engineering principles to high-stakes industrial operations. Managed and preprocessed massive logistics datasets representing over 330,000 tons of structural materials. Engineered end-to-end Knowledge Discovery in Databases (KDD) pipelines and robust Interquartile Range (IQR) statistical anomaly detection models to monitor data streams, identify latency patterns, and successfully resolve three critical production and supply-chain bottlenecks. This immersive experience in continuous process validation and industrial AI observability served as the primary catalyst for my career-long specialization in Data Quality, systematic risk mitigation, and robust production-grade infrastructure.",
         image: "/resources/img/4.jpeg",
         type: "Internship"
     },
     {
-        title: "Azure AI Engineer & Solutions Architect",
+        title: "Azure AI Solutions Developer (Beta Microsoft Learn Student Ambassador)",
         org: "Microsoft (Beta Student Ambassador) | Global (Hybrid)",
         date: "Jul 2023 – Jan 2026",
         desc: "As a Microsoft Certified Azure AI Engineer Associate and Beta Student Ambassador, I have trained over 125 specialists in Azure AI orchestration and Responsible AI, bridging the gap between raw technological power and regulatory ethics. I specialize in designing architectures that prioritize Sovereign Data Residency, ensuring cloud solutions align with GDPR and the EU AI Act through systematic algorithmic bias mitigation and rigorous risk management. By translating academic theory into industrial application, I guide peers through the implementation of end-to-end intelligent systems, utilizing tools like Azure AI Search and Text Analytics for Health, while mentoring fellow Ambassadors toward their Alpha Milestone to foster a global community dedicated to secure, scalable, and ethically sound AI.",
@@ -512,26 +519,26 @@ export const education = [
         type: "Ambassador"
     },
     {
-        title: "Technical Product Manager",
-        org: "European Commission (Erasmus+ D-PBL) | Lisbon, Portugal (Remote)",
+        title: "Technical Product Manager (Erasmus+ D-PBL)",
+        org: "European Commission | Lisbon, Portugal (Remote)",
         date: "Mar 2024 – May 2024",
-        desc: "I led a multinational team of 10+ experts from five European countries to develop the 'DeafNav' project, an IoT infrastructure designed for the safety of deaf travelers. Acting as the 'bridge' between Policy and Engineering, I translated European accessibility directives into WCAG technical specifications using Agile Scrum methodology. My proficiency in precise sprint planning led to the delivery of a functional prototype in just three months, earning international leadership accolades.",
+        desc: "Led a cross-functional multinational engineering team of 10+ specialists across five European countries (Greece, Lithuania, Portugal, Serbia, and Spain) to architect 'DeafNav'—an EU-compliant public transit IoT accessibility platform. Served as the primary technical translator bridging complex EU legislation—including the European Accessibility Act (EAA 2025), EU AI Act (Art. 50), WCAG 2.1 AAA, and EN 301 549—with production engineering requirements. Implemented an Evaluation-Driven Development lifecycle under Agile/Scrum methodologies, coordinating the integration of a local FAISS RAG pipeline (Qwen 2.5 7B), live GPS telematics ingestion, and MQTT haptic wearable synchronization. Streamlined cross-border execution to deliver a fully functional, audit-ready software-hardware prototype in just three months, earning international leadership accolades and peer endorsements for exceptional product management.",
         image: "/resources/img/2.png",
         type: "Internship"
     },
     {
-        title: "Technical AI Product Lead & Engineer (ZenithDx)",
-        org: "University of Patras, Greece",
+        title: "Lead AI Systems Architect & Technical Product Lead (Diploma Thesis)",
+        org: "University of Patras | Patras, Greece",
         date: "Aug 2024 – Oct 2025",
-        desc: "I took the technical lead of ZenithDx, transforming academic research into a High-Risk AI Medical Device ready for MDR certification. I integrated cutting-edge technologies such as Agentic Frameworks (ReAct loops) and Explainable AI (XAI) (SHAP, Grad-CAM), allowing the system to not only diagnose with 96%+ accuracy but also explain its decision-making process. My 'Compliance-by-Design' approach ensured the product met the transparency requirements of GDPR and the EU AI Act, making it a benchmark for safe and auditable medical software.",
-        image: "/resources/img/portfolios/logo/1.jpg", // Using ZenithDx logo
+        desc: "Led the 14-month engineering and product lifecycle of 'ZenithDx' (Integrated M.Eng. Thesis, Grade: 10/10), transitioning it from academic research to a production-grade, High-Risk Software as a Medical Device (SaMD) prototype ready for CE/MDR certification. Applying a strict 'Compliance-by-Design' philosophy on NVIDIA DGX, architected an end-to-end multimodal MLOps and agentic pipeline orchestrating a fine-tuned 3B reasoning core (Llama-3.2 SFT) via LangGraph ReAct loops, a dual-lobe S²A-UNet lung segmentation model (0.9718 Dice), a masked ResNet-50 ROI classifier (96%+ diagnostic accuracy, sub-32s latency), and a Heterogeneous Graph Transformer (HGT) for longitudinal EHR graph traversal. Guaranteed absolute clinical interpretability and auditable decision-making by integrating PyTorch Captum feature ablation alongside Final-Layer Grad-CAM visual heatmaps, successfully embedding EU AI Act (Art. 14 Human-in-the-Loop), GDPR (Art. 22), and ISO 14971/IEC 62304 safety/privacy controls directly into the CI/CD pipeline.",
+        image: "/resources/img/portfolios/logo/1.jpg",
         type: "Lead Engineer"
     },
     {
-        title: "Technical Program Lead",
+        title: "Technical Program Lead & AI Mentor",
         org: "Startup Week 2024 | Patras, Greece",
-        date: "Oct 20 – 25, 2024",
-        desc: "Serving as the Technical Program Lead, I spearheaded the technical design and coordination of one of the region's most significant entrepreneurship events. My role went beyond standard programming; I managed the technical program flow and coordinated cross-functional teams, solidifying my profile as a Technical Authority. The event's success demonstrated my ability to inspire the local tech community and turn organizational challenges into innovation opportunities.",
+        date: "Oct 2024",
+        desc: "Operated at the intersection of AI engineering and product management to spearhead the technical architecture, software program flow, and cross-functional logistics for one of Western Greece's premier tech and innovation summits. Championed the role of 'Technical Translator', bridging the communication gap between multidisciplinary engineering teams and business stakeholders to orchestrate developer hackathon tracks and program streams. Implemented Agile ML principles and Evaluation-Driven prototyping methodologies to mentor early-stage startup teams in leveraging generative AI APIs, local LLM wrappers, and rapid deployment workflows, guiding them to successfully transform complex organizational and business challenges into scalable, production-ready AI product proofs-of-concept.",
         image: "/resources/img/1.jpg",
         type: "Volunteering"
     },
@@ -544,10 +551,10 @@ export const education = [
         type: "Community"
     },
     {
-        title: "Public Policy Task Force Member",
+        title: "AI Policy Advisor & Technical Translator",
         org: "European Young Engineers (EYE) | Europe (Hybrid)",
         date: "Feb 2026 – Present",
-        desc: "In this institutional role, I act as a Technical Authority shaping the European strategy for young engineers. I bridge the gap between innovation and legislation by drafting Position Papers and providing technical briefings to Members of the European Parliament (MEPs) regarding the EU AI Act and MDR. My mission focuses on promoting Sovereign Innovation, ensuring Europe remains a technological leader while maintaining strict data sovereignty.",
+        desc: "Serving as the primary technical authority bridging deep machine learning systems with European legislation, I translate complex regulatory frameworks—primarily the EU AI Act (High-Risk classifications, transparency mandates), EU MDR (SaMD), and GDPR—into actionable engineering specifications and CI/CD traceability parameters. I deliver rigorous technical briefings on algorithmic auditability, bias mitigation, and sovereign AI compute infrastructures to Members of the European Parliament (MEPs) and cross-border engineering bodies. My mission is to operationalize \"Compliance-by-Design\" principles, advocating for sovereign EU architectures that foster rapid technological innovation while guaranteeing strict data residency, auditability, and mathematical trustworthy AI standards.",
         image: "https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg",
         type: "Policy Advisor"
     }

@@ -15,7 +15,7 @@ import {
     ArrowRight,
     Linkedin,
     Github,
-    Twitter,
+    Instagram,
     FileText,
     ChevronRight
 } from "lucide-react";
@@ -126,19 +126,18 @@ export default function Contact() {
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="group block relative p-10 bg-white/[0.02] border border-white/5 rounded-3xl hover:bg-white/[0.04] hover:border-blue-500/30 transition-all duration-500 overflow-hidden"
+                            className="group block relative p-8 md:p-10 bg-white/[0.02] border border-white/5 rounded-3xl hover:bg-white/[0.04] hover:border-blue-500/30 transition-all duration-500 overflow-hidden"
                         >
                             <div className="absolute -right-8 -top-8 w-32 h-32 bg-blue-500/5 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
                             <div className="relative z-10">
-                                <div className="flex items-center justify-between mb-8">
-                                    <div className="text-[10px] font-mono text-gray-600 uppercase tracking-widest flex items-center gap-2">
-                                        <Radio className="text-blue-500 animate-pulse" size={14} />
+                                <div className="flex items-center justify-between mb-6">
+                                    <div className="text-xs font-mono text-blue-400 uppercase tracking-widest flex items-center gap-2">
+                                        <Mail className="text-blue-500" size={16} />
                                         {t.email_protocol}
                                     </div>
-                                    <div className="text-[10px] font-mono text-gray-800">PRTCL_SEC_A</div>
                                 </div>
-                                <h3 className="text-sm font-black text-gray-400 uppercase tracking-widest mb-2">{t.email_label}</h3>
-                                <p className="text-lg md:text-xl font-bold text-white group-hover:text-blue-400 transition-colors">filippos.paraskevas.zygouris@gmail.com</p>
+                                <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">{t.email_label}</h3>
+                                <p className="text-base md:text-lg font-bold text-white group-hover:text-blue-400 transition-colors break-all">filippos.paraskevas.zygouris@gmail.com</p>
                             </div>
                         </motion.a>
 
@@ -149,19 +148,18 @@ export default function Contact() {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
-                            className="group block relative p-10 bg-white/[0.02] border border-white/5 rounded-3xl hover:bg-white/[0.04] hover:border-indigo-500/30 transition-all duration-500 overflow-hidden"
+                            className="group block relative p-8 md:p-10 bg-white/[0.02] border border-white/5 rounded-3xl hover:bg-white/[0.04] hover:border-indigo-500/30 transition-all duration-500 overflow-hidden"
                         >
                             <div className="absolute -right-8 -top-8 w-32 h-32 bg-indigo-500/5 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
                             <div className="relative z-10">
-                                <div className="flex items-center justify-between mb-8">
-                                    <div className="text-[10px] font-mono text-gray-600 uppercase tracking-widest flex items-center gap-2">
-                                        <Activity className="text-indigo-500 animate-pulse" size={14} />
+                                <div className="flex items-center justify-between mb-6">
+                                    <div className="text-xs font-mono text-indigo-400 uppercase tracking-widest flex items-center gap-2">
+                                        <Phone className="text-indigo-500" size={16} />
                                         {t.phone_protocol}
                                     </div>
-                                    <div className="text-[10px] font-mono text-gray-800">PRTCL_SEC_B</div>
                                 </div>
-                                <h3 className="text-sm font-black text-gray-400 uppercase tracking-widest mb-2">{t.phone_label}</h3>
-                                <p className="text-lg md:text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">+30 697 592 2894</p>
+                                <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">{t.phone_label}</h3>
+                                <p className="text-base md:text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">+30 697 592 2894</p>
                             </div>
                         </motion.a>
 
@@ -171,14 +169,16 @@ export default function Contact() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.2 }}
-                            className="p-10 bg-white/[0.02] border border-white/5 rounded-3xl group overflow-hidden"
+                            className="p-8 md:p-10 bg-white/[0.02] border border-white/5 rounded-3xl group overflow-hidden"
                         >
-                            <div className="flex items-center justify-between mb-8 pb-4 border-b border-white/5">
-                                <div className="text-[10px] font-mono text-gray-600 uppercase tracking-widest">{t.location_label}</div>
-                                <MapPin size={16} className="text-gray-800" />
+                            <div className="flex items-center justify-between mb-6 pb-4 border-b border-white/5">
+                                <div className="text-xs font-mono text-gray-400 uppercase tracking-widest flex items-center gap-2">
+                                    <MapPin size={16} className="text-blue-500" />
+                                    {t.location_label}
+                                </div>
                             </div>
 
-                            <div className="aspect-video w-full rounded-2xl overflow-hidden relative grayscale opacity-30 group-hover:opacity-70 group-hover:grayscale-0 transition-all duration-1000 border border-white/5">
+                            <div className="aspect-video w-full rounded-2xl overflow-hidden relative opacity-60 group-hover:opacity-90 transition-all duration-1000 border border-white/5">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.6789!2d22.435!3d38.905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDU0JzE4LjAiTiAyMsKwMjYnMDYuMCJF!5e0!3m2!1sen!2sgr!4v1234567890"
                                     width="100%"
@@ -188,25 +188,42 @@ export default function Contact() {
                                     loading="lazy"
                                 />
                                 <div className="absolute inset-0 bg-blue-500/10 mix-blend-color pointer-events-none"></div>
-                                <div className="absolute bottom-4 left-4 bg-black/80 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10 text-[10px] font-mono text-white tracking-widest flex items-center gap-2">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
+                                <div className="absolute bottom-4 left-4 bg-black/80 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10 text-xs font-mono text-white tracking-wide flex items-center gap-2">
+                                    <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
                                     {t.location_text}
                                 </div>
                             </div>
                         </motion.div>
 
-                        {/* Social Matrix */}
+                        {/* Social Links */}
                         <div className="grid grid-cols-3 gap-3">
-                            {t.socials.map((social, i) => (
-                                <motion.a
-                                    key={i}
-                                    href="#"
-                                    whileHover={{ y: -3, backgroundColor: "rgba(255,255,255,0.03)" }}
-                                    className="p-4 border border-white/5 bg-white/[0.01] rounded-2xl text-center text-[8px] font-mono tracking-[0.2em] text-gray-700 hover:text-white transition-all uppercase"
-                                >
-                                    {social}
-                                </motion.a>
-                            ))}
+                            <motion.a
+                                href="https://www.linkedin.com/in/filippos-paraskevas-zygouris-8a88a8266/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                whileHover={{ y: -3, backgroundColor: "rgba(255,255,255,0.05)" }}
+                                className="p-4 border border-white/10 bg-white/[0.02] rounded-2xl text-center text-xs font-mono tracking-wider text-slate-300 hover:text-blue-400 transition-all uppercase font-medium flex items-center justify-center gap-1.5"
+                            >
+                                <Linkedin size={14} /> LINKEDIN
+                            </motion.a>
+                            <motion.a
+                                href="https://github.com/FilippeZ"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                whileHover={{ y: -3, backgroundColor: "rgba(255,255,255,0.05)" }}
+                                className="p-4 border border-white/10 bg-white/[0.02] rounded-2xl text-center text-xs font-mono tracking-wider text-slate-300 hover:text-blue-400 transition-all uppercase font-medium flex items-center justify-center gap-1.5"
+                            >
+                                <Github size={14} /> GITHUB
+                            </motion.a>
+                            <motion.a
+                                href="https://www.instagram.com/philip_zygouris/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                whileHover={{ y: -3, backgroundColor: "rgba(255,255,255,0.05)" }}
+                                className="p-4 border border-white/10 bg-white/[0.02] rounded-2xl text-center text-xs font-mono tracking-wider text-slate-300 hover:text-pink-400 transition-all uppercase font-medium flex items-center justify-center gap-1.5"
+                            >
+                                <Instagram size={14} /> INSTAGRAM
+                            </motion.a>
                         </div>
                     </div>
 

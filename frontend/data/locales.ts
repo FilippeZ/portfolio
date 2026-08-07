@@ -2,7 +2,7 @@ export const locales = {
     "en": {
         "about": {
             "title_prefix": "Beyond the",
-            "title_gradient": "Code.",
+            "title_gradient": "University.",
             "subtitle": "My Professional Journey",
             "quote": "Obsessed with quality, driven by innovation, and grounded in engineering principles.",
             "tabs": {
@@ -11,8 +11,8 @@ export const locales = {
                     "desc": "7 AI Engineering Pillars"
                 },
                 "education": {
-                    "label": "Experience & Education",
-                    "desc": "Roles & Academic Degrees"
+                    "label": "Professional Experience",
+                    "desc": "Roles & Technical Directorships"
                 },
                 "experience": {
                     "label": "Certifications & Events",
@@ -192,7 +192,7 @@ export const locales = {
                     "title": "AI Policy Advisor & Technical Translator",
                     "org": "European Young Engineers (EYE) | Europe (Hybrid)",
                     "date": "Feb 2026 – Present",
-                    "desc": "Serving as the vital bridge between Deep Engineering and European Legislation, I act as a Technical Authority shaping the strategy for young engineers. I translate complex regulatory frameworks (EU AI Act, MDR) into actionable engineering specifications, providing technical briefings to Members of the European Parliament (MEPs). My mission is to advocate for Sovereign AI Infrastructure—ensuring that European tech policy fosters rapid innovation while enforcing strict data sovereignty, auditability, and Trustworthy AI standards.",
+                    "desc": "I bridge deep systems engineering with European digital legislation by translating frameworks like the EU AI Act and GDPR into practical software specifications. I brief Members of the European Parliament on algorithmic auditability and built an energy and carbon flexibility simulator to help optimize AI compute grid assets.",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg",
                     "type": "Policy Advisor"
                 },
@@ -200,47 +200,47 @@ export const locales = {
                     "title": "Agentic AI Builder & MVP Engineer",
                     "org": "CPH Vibe Coders | Copenhagen, Denmark",
                     "date": "Jan 2026 – Present",
-                    "desc": "As an active builder in this grassroots tech community, I specialize in rapid GenAI prototyping and Agentic AI orchestration. Moving past theoretical hype, I engineer multi-agent workflows that compress the development lifecycle, transforming raw business concepts into functional, scalable AI products within hours. This hands-on involvement hones my 'Product-Led Execution' mentality, allowing me to continuously test and deploy cutting-edge LLM frameworks in fast-paced, real-world startup environments.",
+                    "desc": "Active builder in Copenhagen's AI developer community, specializing in rapid generative AI prototyping and multi agent workflows with LangGraph and FastAPI. I transform raw business ideas into functional containerized products in hours while testing cutting edge LLM frameworks and Model Context Protocols in startup environments.",
                     "image": "/fotogra/copeenhagen.jpeg",
                     "type": "Community"
                 },
                 {
-                    "title": "Azure AI Solutions Engineer (Beta Ambassador)",
+                    "title": "Azure AI Solutions Developer (Microsoft Learn Student Ambassador)",
                     "org": "Microsoft | Global (Hybrid)",
                     "date": "Jul 2023 – Jan 2026",
-                    "desc": "As a Microsoft Certified Azure AI Engineer Associate, I specialized in designing and deploying scalable GenAIOps architectures with a strict 'Compliance-by-Design' approach. I trained over 125 engineering specialists in orchestrating advanced RAG pipelines (utilizing Azure AI Search) and domain-specific models (Text Analytics for Health). My engineering focus was on embedding Responsible AI guardrails directly into the deployment lifecycle—ensuring Sovereign Data Residency, systematic algorithmic bias mitigation, and technical alignment with the EU AI Act and GDPR. I actively bridged the gap between raw compute power and regulatory ethics, translating theoretical frameworks into robust, audit-ready industrial applications.",
+                    "desc": "Specialized in designing scalable Azure AI architectures with a focus on compliance by design. I trained over 125 engineers on advanced RAG pipelines with Azure AI Search and healthcare models, while embedding Responsible AI guardrails into deployments to align with data residency, privacy, and EU regulations.",
                     "image": "/resources/img/microsoft.svg",
                     "type": "Ambassador"
                 },
                 {
-                    "title": "Lead AI Engineer & Technical Product Lead (ZenithDx)",
+                    "title": "Lead AI Systems Architect & Technical Product Lead (Diploma Thesis)",
                     "org": "University of Patras | Patras, Greece",
                     "date": "Aug 2024 – Oct 2025",
-                    "desc": "I led the engineering and product lifecycle of ZenithDx, transitioning it from academic research to a production-grade, High-Risk AI Medical Device (SaMD) ready for MDR certification. Applying a rigorous 'Compliance-by-Design' philosophy, I architected end-to-end MLOps pipelines integrating Agentic Frameworks (ReAct loops) and Explainable AI (SHAP, Grad-CAM). This ensured the system not only delivered 96%+ diagnostic accuracy but also provided clinical interpretability. I embedded EU AI Act and GDPR transparency requirements directly into the CI/CD pipeline, establishing a benchmark for safe, auditable, and Trustworthy AI healthcare software.",
+                    "desc": "Led the engineering of ZenithDx, a medical AI software prototype awarded a top 10/10 grade. Built on NVIDIA DGX, I architected multimodal MLOps pipelines combining Llama reasoning cores, lung segmentation, and explainable AI heatmaps with PyTorch Captum, embedding medical device safety standards and EU AI Act controls directly into CI/CD.",
                     "image": "/resources/img/portfolios/logo/1.jpg",
                     "type": "Lead Engineer"
                 },
                 {
-                    "title": "Technical Program Lead",
+                    "title": "Technical Program Lead & AI Mentor",
                     "org": "Startup Week 2024 | Patras, Greece",
-                    "date": "Oct 20 – Oct 25, 2024",
-                    "desc": "Operating at the intersection of AI Engineering and Product Management, I spearheaded the technical architecture and cross-functional coordination for one of the region's premier tech events. My role focused heavily on 'Technical Translation'—bridging the communication gap between engineering teams and business stakeholders. By implementing Agile ML principles and Evaluation-Driven methodologies, I orchestrated the technical program flow, guiding teams to transform complex organizational challenges into scalable, innovation-driven AI prototypes.",
+                    "date": "Oct 2024 (Volunteering)",
+                    "desc": "Spearheaded technical architecture and hackathon tracks for a major regional tech summit. Acted as a bridge between engineering teams and business stakeholders, mentoring early stage startups on generative AI APIs, local LLM wrappers, and rapid prototyping to turn ideas into working proofs of concept.",
                     "image": "/resources/img/1.jpg",
                     "type": "Volunteering"
                 },
                 {
-                    "title": "Technical Product Manager",
-                    "org": "European Commission (Erasmus+ D-PBL) | Lisbon, Portugal (Remote)",
+                    "title": "Technical Product Manager (Erasmus+ D-PBL)",
+                    "org": "European Commission | Lisbon, Portugal (Remote)",
                     "date": "Mar 2024 – May 2024",
-                    "desc": "I led a cross-functional engineering team of 10+ experts across five European countries to architect 'DeafNav', an IoT infrastructure for the safety of deaf travelers. Acting as the technical translator between Policy and Engineering, I applied an Evaluation-Driven Development mindset. I successfully translated strict European accessibility directives into actionable technical specifications (WCAG) and measurable validation metrics. By orchestrating the development lifecycle through Agile ML/Scrum methodologies, I streamlined execution and delivered a fully functional, compliance-ready prototype in just three months, earning international leadership accolades.",
+                    "desc": "Led a team of over 10 engineers across five European countries to build DeafNav, an IoT public transit accessibility platform. Translated European accessibility laws into technical requirements, integrating a local FAISS RAG pipeline, live GPS, and haptic wearables to deliver a working prototype in three months.",
                     "image": "/resources/img/2.png",
                     "type": "Internship"
                 },
                 {
-                    "title": "Data & ML Engineer",
+                    "title": "Data & ML Engineering Intern (UNBOUND PROMETHEUS Scholar)",
                     "org": "F.H.L. I. KIRIAKIDIS Group | Kavala, Greece (On-site)",
                     "date": "Jul 2022 – Aug 2022",
-                    "desc": "Under the auspices of the UNBOUND PROMETHEUS scholarship, I applied advanced statistical algorithms to real-world, large-scale industrial data, managing logistics datasets representing 330,000 tons of material. Focusing on Dataset Engineering and AI Observability, I utilized the KDD (Knowledge Discovery in Databases) pipeline and engineered IQR-based anomaly detection models to identify and resolve three critical production bottlenecks. This hands-on experience in a high-stakes industrial environment served as the catalyst for my specialization in Data Quality, continuous Process Validation, and robust AI infrastructure.",
+                    "desc": "Awarded the UNBOUND PROMETHEUS Data Science Scholarship to apply statistical algorithms to industrial operations. Preprocessed logistics datasets covering over 330,000 tons of materials and built anomaly detection pipelines to resolve critical supply chain bottlenecks, laying the groundwork for my focus on data quality and risk mitigation.",
                     "image": "/resources/img/4.jpeg",
                     "type": "Internship"
                 }
@@ -362,8 +362,8 @@ export const locales = {
             "role_title": "(Dipl. Eng. | Chartered EU Engineer)",
             "subtitle": "Bridging AI experimentation and production with Trustworthy AI & Compliance-by-Design.",
             "quote": "I don't just write code to train a model. I build Trustworthy AI infrastructures where innovation aligns seamlessly with the law, safety, and technical excellence.",
-            "description_1": "In high-risk markets like HealthTech, an AI proof-of-concept without reliability and technical documentation is simply a ##legal liability##. As an AI Engineer, I specialize in ##moving LLMs out of Jupyter notebooks## into ##robust, production-ready systems## where compliance is built-in from day one. My day-to-day involves engineering ##GenAIOps pipelines##, advanced ##RAG architectures##, and multi-agent orchestration (LangGraph, CrewAI), tackling aggressive ##model quantization, inference optimization##, and edge-cloud deployment in flagship projects like ##ARIA AI Assistant## and ##ZenithDx##.",
-            "description_2": "What sets me apart is a ##\"Compliance-by-Design\"## approach. Drawing from my role as Technical Expert for European Young Engineers (EYE) and methodologies like ##CRISP-ML(Q)##, I integrate Explainable AI (XAI), ##RAGAS evaluation frameworks##, patient safety guardrails, and architectural traceability directly into CI/CD. I don't just write code; I turn strict regulatory frameworks (EU AI Act, MDR/IVDR, GDPR) into a ##technical competitive advantage##, bringing a ##Product-First mindset## to deliver scalable, real-world business impact.",
+            "description_1": "I am an ##AI Research Engineer## and ##Licensed Computer Engineer## specializing in ##agentic workflows##, ##advanced RAG architectures##, and ##Large Language Models## for ##HealthTech and Life Sciences##. Graduating in the ##top five percent## of my class, I maintain a ##product-first philosophy## that transforms complex models from research notebooks into ##robust, concurrent production infrastructure##. My technical toolkit spans ##GenAIOps##, ##multi-agent orchestration##, ##cloud and edge inference optimization##, and ##vector database management##. By addressing ##memory constraints, latency, and concurrency##, I ensure deployed artificial intelligence applications remain efficient, stable, and integrated into enterprise ecosystems like ##Microsoft Azure##.",
+            "description_2": "What sets me apart is my ability to convert strict European regulatory frameworks such as the ##EU AI Act##, ##EU MDR##, and ##GDPR## into ##verifiable, auditable software architectures## through ##compliance-by-design principles##. Serving as an ##AI Policy Advisor at European Young Engineers##, I embed ##explainable AI frameworks## and ##safety guardrails## directly into automated pipelines, reinforcing systems like the ##ZenithDx clinical decision support platform## and the ##ARIA AI assistant##. As a ##state-authorized engineer##, my goal is to assume ##high-agency ownership## within deep tech teams, turning critical medical and operational workflows into secure, compliant, and scalable technologies.",
             "signature": {
                 "label": "Verified Digital Integrity",
                 "status": "SIGNED_&_VERIFIED",
@@ -405,81 +405,81 @@ export const locales = {
             },
             "pillars": {
                 "engineering": {
-                    "label": "AI Engineering & GenAIOps",
+                    "label": "Agentic AI Engineering & High-Performance Inference",
                     "subtitle": "The Hands-on Builder",
-                    "description": "Moving LLMs out of Jupyter notebooks and into production. This pillar focuses on building end-to-end scalable Agentic workflows, advanced RAG pipelines, and optimizing inference. Full product-lifecycle control ensures every line of code serves a functional purpose with production-grade reliability — eliminating the risk of 'theoretical' proof-of-concepts that cannot scale.",
+                    "description": "Moving complex language models from research notebooks into robust low latency production environments, combining autonomous agentic workflows and advanced RAG pipelines with hardware aware optimizations. I specialize in designing multi agent systems and RAG pipelines, orchestrating ReAct loops via LangGraph and CrewAI, alongside high performance indexing with FAISS, ChromaDB, and ColBERT reranking. My technical approach includes hardware optimizations such as INT4 and INT8 quantization and GPU offloading via llama.cpp for secure local model execution like Cosmos Reason2 2B on edge hardware including NVIDIA Jetson Orin Nano under memory constraints using a 16GB NVMe swap partition.",
                     "highlights": [
-                        "Agentic Workflows (LangGraph/CrewAI)",
-                        "Advanced RAG & Vector Search",
-                        "Model Quantization & Edge AI",
-                        "Full Lifecycle Control"
+                        "Agentic Workflows (LangGraph & CrewAI)",
+                        "FAISS, ChromaDB & ColBERT",
+                        "INT4/INT8 & GPU Offloading",
+                        "NVIDIA Jetson Edge Inference"
                     ]
                 },
                 "regulatory": {
-                    "label": "AI Governance & Compliance-by-Design",
+                    "label": "Compliance-by-Design & Trustworthy AI Architectures",
                     "subtitle": "The Compliance Integrator",
-                    "description": "Strategic navigation through high-risk environments (HealthTech/SaMD). This pillar transforms strict legal frameworks—like the EU AI Act and Europe's MDR—into actionable technical architecture. It turns compliance from an afterthought into a competitive advantage, embedding patient safety and data privacy into the system's core from day one.",
+                    "description": "Translating strict European legal and environmental directives into core code architecture, turning compliance into a strategic advantage for high risk HealthTech and SaMD applications. I embed Trustworthy AI principles from day one, converting EU AI Act, GDPR, and EU MDR SaMD regulations into technical specs, prompt constraints, and continuous deployment guardrails. I ensure decision transparency using Explainable AI frameworks like SHAP, LIME, and PyTorch Captum feature ablation, while protecting sensitive health data privacy through Federated Learning and Differential Privacy.",
                     "highlights": [
-                        "EU AI Act & MDR Readiness",
-                        "Trustworthy AI Principles",
-                        "GDPR & Data Privacy",
-                        "Patient Safety Guardrails"
+                        "EU AI Act, GDPR & EU MDR SaMD",
+                        "XAI (SHAP, LIME & PyTorch Captum)",
+                        "Continuous Deployment Guardrails",
+                        "Federated Learning & Privacy"
                     ]
                 },
                 "qa": {
-                    "label": "MLOps & LLM Evaluation",
+                    "label": "Data Platform Engineering & MLOps Pipelines",
                     "subtitle": "The Quality Champion",
-                    "description": "Quality is the technical bedrock of AI reliability. Through rigorous methodologies like CRISP-ML(Q) and evaluation frameworks (like RAGAS) integrated directly into CI/CD pipelines, non-deterministic AI outputs are tamed into deterministic value. This ensures models are thoroughly evaluated for hallucinations, bias, and performance degradation in production.",
+                    "description": "Data quality, integrity, and full traceability form the academic and technical bedrock for reliable non deterministic AI systems. I apply the CRISP-ML(Q) methodology and design normalized 3NF relational databases using PostgreSQL with pgvector and MySQL. Through observability and tracking tools like Langfuse and MLflow, I record immutable training and inference metadata while guaranteeing output quality and faithfulness in production using automated evaluation pipelines like RAGAS and TruLens integrated directly into CI/CD pipelines such as in DeafNav with 98% Relevance and 99% Faithfulness.",
                     "highlights": [
-                        "CRISP-ML(Q) Methodology",
-                        "LLM-as-a-Judge & Observability",
-                        "Automated Evaluation (RAGAS)",
-                        "Continuous Monitoring & Alerting"
+                        "CRISP-ML(Q) & 3NF PostgreSQL/pgvector",
+                        "Langfuse & MLflow Observability",
+                        "RAGAS & TruLens (DeafNav 98%/99%)",
+                        "CI/CD Automated Evaluation"
                     ]
                 }
             },
             "intersections": {
                 "eng_reg": {
                     "label": "Compliance-by-Design Innovation",
-                    "subtitle": "Engineering + Regulatory",
-                    "description": "This is where \"Proactive Compliance\" is born for AI products. Legislation translates directly into system architecture and prompts. By applying ethical AI frameworks natively during development, the product is compliant by design — reducing deployment friction and accelerating time-to-market for High-Risk AI systems.",
+                    "subtitle": "Engineering & Regulatory",
+                    "description": "This is where proactive compliance is born, with regulation organically embedded into system design rather than acting as a barrier. I translate legal requirements directly into source code, system prompts, and Pydantic validation layers. By incorporating dynamic explainable AI overlays such as blended Grad-CAM heatmaps and PyTorch Captum saliency plots in ZenithDx, I enable clinicians to visually interpret model decisions, minimizing deployment risk and dramatically accelerating time to market.",
                     "highlights": [
-                        "Legal Specs to Code",
-                        "Proactive Risk Mitigation",
-                        "Accelerated Market Access"
+                        "Proactive Code-Level Compliance",
+                        "Dynamic Grad-CAM & Captum Overlays",
+                        "Pydantic Validation & Reduced Risk"
                     ]
                 },
                 "eng_qa": {
                     "label": "Technically Validated Safety",
-                    "subtitle": "Engineering + QA",
-                    "description": "This intersection bridges experimentation with production. Technical knowledge validates safety in practice—tackling compounding errors in multi-step agents, implementing robust tool-use, fallback paths, and continuous adversarial testing to guarantee deterministic execution and end-user protection.",
+                    "subtitle": "Engineering & QA",
+                    "description": "This intersection bridges AI development with systems rigor, applying deep technical knowledge to verify and safeguard system stability against compounding errors. I tackle edge case risks in multi agent networks by designing loop defense guards such as step count limits at step 7 in ZenithDx to prevent infinite loop executions. I ensure deterministic execution via CI/CT/CD orchestration, robust local to cloud fallback routes using local Qwen 2.5 7B with automatic failover to cloud Gemini Flash, and continuous adversarial stress testing during deployment.",
                     "highlights": [
-                        "Deterministic Execution",
-                        "CI/CT/CD Orchestration",
-                        "Edge-case Risk Mitigation"
+                        "Loop Defense Guards (ZenithDx Step 7)",
+                        "Qwen 2.5 7B to Gemini Flash Failover",
+                        "CI/CT/CD Adversarial Stress Testing"
                     ]
                 },
                 "qa_reg": {
                     "label": "Audit-Ready AI Infrastructure",
-                    "subtitle": "QA + Regulatory",
-                    "description": "This intersection delivers full transparency and accountability. By implementing rigorous internal frameworks and maintaining comprehensive metadata, it ensures complete technical documentation and traceability, fully aligning with CE Marking (ISO 13485) and the EU AI Act's strict record-keeping requirements (Articles 11 & 12).",
+                    "subtitle": "QA & Regulatory",
+                    "description": "This intersection guarantees complete transparency and accountability, converting CE Marking (ISO 13485) and EU AI Act record keeping requirements into automated pipelines. Through QMS frameworks and SQLite WAL with MLflow logging, I ensure every parameter change, model training run, and diagnostic decision carries a digital signature, SHA-256 timestamping, and full traceability. This keeps the infrastructure continuously audit ready without manual intervention, turning compliance paperwork into automated engineering work.",
                     "highlights": [
-                        "CE Marking Readiness",
-                        "Metadata & Traceability (Articles 11/12)",
-                        "Technical Documentation Readiness"
+                        "CE Marking & ISO 13485 Compliance",
+                        "EU AI Act Automated Record-Keeping",
+                        "SHA-256 Time-Stamping & Audit Logs"
                     ]
                 }
             },
             "core": {
-                "label": "100% PRODUCTION-READY AI ENGINEER",
+                "label": "100% PRODUCTION-READY AI SYSTEMS ENGINEER",
                 "subtitle": "The Convergence",
-                "description": "At the center lies the ability to deploy Safe AI at scale. Academic excellence, deep technical capability, and regulatory awareness converge to build AI systems that are not just innovative, but scalable, legally compliant, and ready for production environments.",
+                "description": "At the center of the framework lies the capability to deploy safe, legally compliant, and scalable AI at industrial scale where academic excellence meets systems rigor. As a Computer Engineer (CEID Integrated Master 300 ECTS, Top 5%) and State-Authorized Engineer (Reg. No: 174033), I synthesize advanced ML, NLP, and CV methodologies with low level hardware awareness, algorithmic rigor, and regulatory safeguards under the EU AI Act, EU MDR, and GDPR. This convergence powers flagship projects like ZenithDx, ARIA, DeafNav, and NetVal, delivering a high agency engineer who takes full ownership to turn complex sensitive workflows into safe, production grade technology.",
                 "highlights": [
-                    "Agentic AI & RAG Systems",
-                    "Compliance-by-Design (EU AI Act)",
-                    "Level 7 Integrated Master (CEID)",
-                    "Licensed EU Engineer",
-                    "Trustworthy AI Builder"
+                    "Integrated Master CEID (Top 5%)",
+                    "Reg. No: 174033 State-Authorized Engineer",
+                    "LangGraph, RAG, GNNs & Vision",
+                    "EU AI Act, EU MDR & GDPR Guardrails",
+                    "ZenithDx, ARIA, DeafNav & NetVal Architect"
                 ]
             },
             "footer": {
@@ -582,53 +582,50 @@ export const locales = {
         },
         "authority": {
             "label": "State Authorization & Governance",
-            "title": "State-Authorized Technical Guarantor & AI Professional",
-            "subtitle": "Legal & Technical Accountability for Production AI Systems",
-            "description": "As a Licensed Chartered Engineer, my signature is not a technical formality; it is a legal instrument of accountability. I institutionally guarantee the integrity of high-risk AI systems, embedding 'Compliance-by-Design' to transform code into certified Technical Works under the authority of the State and European mandates.",
+            "title": "State Authorization & Governance",
+            "subtitle": "Licensed Engineering & Regulatory Integrity for High-Risk AI Systems",
+            "description": "As a Licensed Chartered Engineer, my signature is not a technical formality; it is a legal instrument of accountability. I institutionally guarantee the safety, compliance, and architectural integrity of high-risk AI systems, embedding Compliance-by-Design to transform complex software into certified engineering works under European mandates.",
             "pillars": [
                 {
                     "id": "tee",
-                    "badge": "REG. NO: 174033 (2026)",
-                    "title": "Licensed Computer & Informatics Engineer (TEE-TCG)",
+                    "badge": "REG. NO: 174033",
+                    "title": "State-Authorized Computer & Informatics Engineer",
                     "org": "Technical Chamber of Greece (TEE-TCG)",
-                    "role": "Official Member | State-Authorized Engineer",
-                    "desc": "Authorized by the Technical Chamber of Greece to architect, validate, and deploy systems critical to human life and data protection. This encompasses full legal rights for engineering **Secure Cloud Architectures**, **High-Risk AI Integration**, and ensuring **SaMD (Software as a Medical Device) & MDR Compliance** for biomedical informatics.",
+                    "role": "State-Authorized Technical Guarantor",
+                    "desc": "Legally authorized and state-certified to architect, validate, and sign off on high-stakes software systems critical to data protection and human life. Oversees secure sovereign cloud infrastructure, high-risk AI system integrations, and medical device software (SaMD) compliance under EU MDR (2017/745) and ISO 13485 / ISO 14971 standards.",
                     "highlights": [
-                        "Secure Cloud Architecture",
-                        "High-Risk AI Integration",
-                        "SaMD & MDR Compliance",
-                        "Compliance-by-Design",
-                        "State-Authorized Validation"
+                        "Secure & Sovereign Cloud",
+                        "High-Risk AI Systems",
+                        "SaMD & EU MDR Compliance",
+                        "ISO 13485 / ISO 14971"
                     ]
                 },
                 {
                     "id": "eetn",
-                    "badge": "EETN / EurAI REGULAR MEMBER",
-                    "title": "Regular Member & Scientific AI Expert, Hellenic AI Society (EETN / EurAI)",
-                    "org": "Hellenic AI Society (EurAI Member)",
-                    "role": "Recognized Scientific AI Expert",
-                    "desc": "Admitted based on specialized expertise in AI subfields, joining Greece’s premier scientific AI body (European Association for Artificial Intelligence network). Actively contributing to the drafting of national AI policies, fostering **Algorithmic Transparency**, and advancing R&D in **Explainable AI (XAI)** alongside top European researchers.",
+                    "badge": "EurAI Network Member",
+                    "title": "Regular Member & Scientific AI Expert",
+                    "org": "Hellenic AI Society (EETN / EurAI)",
+                    "role": "Scientific AI Expert",
+                    "desc": "Admitted based on specialized academic and practical AI expertise. Collaborating with leading European researchers and policymakers to drive algorithmic transparency, explainable AI (XAI) feature attribution methods (SHAP, LIME, Grad-CAM), and forward-looking EU AI strategy.",
                     "highlights": [
-                        "Recognized Scientific AI Expert",
-                        "EurAI Network Member",
                         "Algorithmic Transparency",
-                        "Explainable AI (XAI) R&D",
-                        "National AI Policy Drafting"
+                        "Explainable AI (XAI)",
+                        "SHAP & Grad-CAM R&D",
+                        "EU AI Strategy"
                     ]
                 },
                 {
                     "id": "ida",
-                    "badge": "IDA IT PROFESSIONALS",
-                    "title": "Member, Danish Society of Engineers - IT Professionals (IDA IT)",
-                    "org": "Danish Society of Engineers (IDA)",
-                    "role": "European Tech Ecosystem Integration",
-                    "desc": "Engaged in Denmark’s strongest network for high-level IT professionals, active within the specialized **Machine Learning** and **GDPR** communities. Bridging Nordic technological innovation with EU-wide regulatory frameworks through cross-border knowledge sharing on scalable, GDPR-compliant software development and modern cloud infrastructures.",
+                    "badge": "IDA IT Member",
+                    "title": "Member, Danish Society of Engineers",
+                    "org": "Danish Society of Engineers (IDA IT)",
+                    "role": "Nordic Tech Integration",
+                    "desc": "Engaged in Denmark's premier professional network for IT specialists, collaborating within Machine Learning and GDPR communities to bridge Nordic technological innovation with EU policy and facilitate cross-border engineering exchange on GDPR-compliant software architectures.",
                     "highlights": [
-                        "European Tech Ecosystem Integration",
                         "Nordic Tech Ecosystem",
-                        "Cross-Border ML & Cloud",
-                        "GDPR-Compliant Dev",
-                        "EU AI Policy Alignment"
+                        "Bridge Nordic Tech & EU Policy",
+                        "Cross-Border Engineering",
+                        "GDPR-Compliant Dev"
                     ]
                 }
             ]
@@ -752,9 +749,9 @@ export const locales = {
                     "brief": "Built a dual-purpose GAN platform that generates synthetic data for two very different problems: detecting DDoS attacks in 5G networks, and creating privacy-compliant Brain Tumor MRI scans to fix imbalanced medical datasets. The WGAN-GP Critic doubles as an anomaly detector — when the Wasserstein score diverges, an attack is flagged instantly."
                 },
                 "azure-ai-studio": {
-                    "title": "Mission-Critical Healthcare AI Platform on Azure Studio",
+                    "title": "OmniHealth AI: Multi-Agent Clinical Document Synthesis & Patient Literacy Engine",
                     "category": "AI Architecture & HealthTech Systems",
-                    "brief": "Integrated OpenAI GPT-4 with clinical text analytics and Human-in-the-Loop playgrounds on Azure AI Studio, translating complex healthcare requirements into a secure, production-ready PaaS solution. Built to meet institutional security standards while delivering state-of-the-art multimodal clinical reasoning."
+                    "brief": "OmniHealth AI is a multi-agent clinical platform built on the Microsoft Agent Framework and Azure AI Foundry. It automates the extraction and indexing of unstructured, handwritten, and scanned legacy hospital records using specialized agents: DeepSeek-V3.2 for orchestration and RAG queries, Mistral OCR 4.0 for multi-column PDF parsing, Clinical NLP for UMLS and ICD-10 entity mapping, and FLUX.2-pro for generating patient-friendly anatomical diagrams. The entire system operates under an Azure Safety Control Bridge enforcing EU AI Act Article 14 Human-in-the-Loop oversight and GDPR Article 9 compliance."
                 },
                 "azure-security": {
                     "title": "Architectural Risk Analysis & Zero-Trust Cloud Security Design",
@@ -946,61 +943,58 @@ export const locales = {
             ]
         },
         "contactPage": {
-            "system_init": "System.Initialize(Contact)",
-            "title_1": "TALK TO",
-            "title_2": "THE CORE",
-            "description": "Whether you're looking to redefine AI regulation or build the next sovereign cloud, the transmission lines are open.",
-            "email_protocol": "Signal Protocol",
+            "system_init": "DIRECT COMMUNICATION & ADVISORY",
+            "title_1": "LET'S BUILD",
+            "title_2": "TOGETHER.",
+            "description": "Whether you are looking to navigate complex EU AI regulations or architect mission-critical AI systems, I am here to help transform your vision into safe, production-ready technology.",
+            "email_protocol": "Direct Email",
             "email_label": "Email",
-            "phone_protocol": "Secure Line",
+            "phone_protocol": "Direct Phone",
             "phone_label": "Phone",
-            "location_label": "Tactical Coordinates",
-            "location_text": "LOC: LAMIA, HEADQUARTERS",
+            "location_label": "Engineering Headquarters",
+            "location_text": "Lamia & Patras, Greece",
             "socials": [
                 "LINKEDIN",
                 "GITHUB",
-                "X / TWITTER"
+                "INSTAGRAM"
             ],
             "form": {
                 "name": "Full Name",
-                "name_placeholder": "Enter your name",
-                "company": "Company",
+                "name_placeholder": "Enter your full name",
+                "company": "Company or Organization",
                 "company_placeholder": "Enter company name (optional)",
                 "email": "Email Address",
-                "email_placeholder": "Enter your email",
+                "email_placeholder": "Enter your email address",
                 "sector": "Strategic Sector",
-                "sector_placeholder": "Select your sector",
-                "service": "Service Interest",
-                "service_placeholder": "Select service",
-                "message": "Message",
-                "message_placeholder": "Enter your message",
-                "submit_idle": "INITIALIZE TRANSMISSION",
-                "submit_loading": "TRANSMITTING SIGNAL...",
-                "submit_success": "SIGNAL DELIVERED",
-                "submit_error": "RETRY TRANSMISSION"
+                "sector_placeholder": "Select your organization's sector",
+                "service": "Area of Interest",
+                "service_placeholder": "Select area of interest",
+                "message": "Project Context & Goals",
+                "message_placeholder": "Tell me about your project, timeline, or key objectives...",
+                "submit_idle": "SEND MESSAGE",
+                "submit_loading": "SENDING MESSAGE...",
+                "submit_success": "MESSAGE SENT SUCCESSFULLY",
+                "submit_error": "ERROR SENDING MESSAGE"
             },
-            "disclaimer": "\"As a Licensed Engineer and member of the TEE, I ensure the institutional compliance and technical integrity of digital health infrastructures, shielding your organization against the requirements of European regulations.\"",
+            "disclaimer": "As a State-Authorized Computer Engineer and member of the Technical Chamber of Greece (TEE), I institutionally guarantee technical integrity, data security, and full regulatory compliance under European frameworks.",
             "sectors": [
-                "MedTech & SaMD (Software as a Medical Device)",
-                "Pharmaceuticals & Clinical Research",
-                "Cloud & Sovereign Infrastructure",
-                "Industrial AI & Smart Manufacturing",
-                "RegTech & Technical Consultancies",
-                "Ministries of Health & Digital Governance",
-                "University Spin-offs & Research Labs",
-                "Judicial, IP & Financial Authorities",
-                "Smart Cities & IoT Infrastructure",
-                "European Commission & Policy Task Forces",
-                "Other"
+                "Healthcare & Medical Devices (SaMD)",
+                "AI Engineering & Generative Workflows",
+                "Cloud Infrastructure & Data Platforms",
+                "Biomedical Research & HealthTech",
+                "Enterprise Software & SaaS",
+                "Public Sector & Policy Advisory",
+                "Academic & Research Innovation",
+                "Other / General Inquiry"
             ],
             "services": [
-                "The Legal Shield",
-                "The Institutional Navigator",
-                "The Safety Authority",
-                "The Strategic Navigator",
-                "The Quality Architect",
-                "The Deep-Tech Auditor",
-                "Ecosystem Entry: Technical Audit for Startups"
+                "AI Systems Architecture & Engineering",
+                "EU AI Act & Regulatory Compliance",
+                "Medical Device Software (SaMD / MDR)",
+                "Full-Stack & Edge AI Development",
+                "Data Platform & MLOps Pipeline Design",
+                "Strategic Technical Advisory",
+                "General Collaboration & Inquiry"
             ]
         },
         "strategicSectors": {
@@ -1119,6 +1113,134 @@ export const locales = {
                     "image": "/resources/img/sectors/eu.jpg"
                 }
             ]
+        },
+        "degreeJourney": {
+            "title_prefix": "ACADEMIC",
+            "title_highlight": "DEGREE JOURNEY",
+            "subtitle": "Integrated Master (M.Eng.) in Computer Engineering & Informatics",
+            "summary_banner": "CEID, University of Patras | GPA: 8.05/10 (Top 5% of Class) | 300 ECTS • Specialized in Artificial Intelligence, Software Engineering, and HealthTech",
+            "education_milestones": [
+                {
+                    "date": "2020 – 2025",
+                    "type": "Integrated Master (EQF Level 7)",
+                    "image": "/fotogra/Integrated%20Master%20in%20Computer%20Engineering%20%26%20Informatics%20%28CEID%29.jpeg",
+                    "title": "Integrated Master (M.Eng.) — 5-Year Curriculum (EQF Level 7)",
+                    "org": "Department of Computer Engineering & Informatics (CEID), University of Patras",
+                    "desc": "Completed 300 ECTS of rigorous coursework spanning advanced software architecture, hardware systems, and distributed networks with zero failed exams. Culminated in a 10/10 Master’s Thesis (ZenithDx), pioneering a 'Compliance-by-Design' autonomous clinical workstation running on NVIDIA DGX infrastructure."
+                },
+                {
+                    "date": "2017 – 2020",
+                    "type": "Foundational Stepping Stone",
+                    "image": "https://newsroom.ocde.us/wp-content/uploads/2025/09/PANA3047-2560x1707.jpeg",
+                    "title": "Secondary Education & PISA Participation",
+                    "org": "2nd General High School of Lamia, Greece",
+                    "desc": "Graduated with a near-perfect 19.8/20 in national examinations, ranking in the top tier nationwide. Participated in the international PISA study, which, along with rigorous high school preparation, laid the analytical and mathematical foundations required for complex algorithms and systems engineering."
+                }
+            ],
+            "commitment_quote": "Continuous engineering excellence and rigorous mathematical foundations drive my commitment to high-impact AI systems.",
+            "stats": {
+                "gpa": { "value": "8.05 / 10", "label": "General GPA (Top 5%)", "sub": "Out of 10.0" },
+                "rank": { "value": "300 ECTS", "label": "Integrated Master (M.Eng)", "sub": "EQF Level 7" },
+                "high_grades": { "value": "10 / 10", "label": "Master's Thesis & AI", "sub": "NVIDIA DGX Workstation" },
+                "zero_e": { "value": "0 Fails", "label": "Flawless Clean Record", "sub": "Zero Failed Exams" }
+            },
+            "distribution_title": "ECTS Grade Breakdown & Performance Index",
+            "distribution_subtitle": "Mathematically exact ECTS distribution across 10 semesters (236/300 ECTS with A & B grades)",
+            "grades": [
+                { "grade": "Grade A & P (45%)", "category": "Excellent & Elite Pass", "percentage": "45%", "ects": "135 ECTS", "color": "emerald", "details": "120 ECTS (Grade A) + 15 ECTS (3 high-tier P-graded courses: 10.0, 9.5 & 8.0). Includes 10/10 Master's Thesis & Core AI/Infrastructure." },
+                { "grade": "Grade B (34%)", "category": "Very Good", "percentage": "34%", "ects": "101 ECTS", "color": "blue", "details": "Top 35% of class performance across complex core engineering, algorithms, and systems modules." },
+                { "grade": "Grade C (14%)", "category": "Good", "percentage": "14%", "ects": "42 ECTS", "color": "purple", "details": "Solid completion of 7 core engineering and applied mathematics modules." },
+                { "grade": "Grade D (7%)", "category": "Satisfactory", "percentage": "7%", "ects": "22 ECTS", "color": "amber", "details": "Satisfactory performance across 5 engineering electives." },
+                { "grade": "Grade E (0%)", "category": "Bottom Bracket", "percentage": "0%", "ects": "0 ECTS", "color": "slate", "details": "Zero bottom-bracket passing grades (5.0-5.9) or failed exams in academic history. Absolute consistency with zero blind spots." }
+            ],
+            "courses_title": "Core Academic Coursework",
+            "courses_subtitle": "5-Year Polytechnic Integrated Master (EQF Level 7) spanning AI, HPC hardware, and distributed systems",
+            "course_categories": [
+                {
+                    "id": "math_ai",
+                    "icon": "🧠",
+                    "title": "AI, Machine Learning & Mathematical Foundations",
+                    "desc": "Rigorous probabilistic modeling, high-dimensional calculus, medical imaging architectures, and clinical AI reasoning cores.",
+                    "badge": "Mathematical Precision",
+                    "courses": [
+                        { "code": "CEID_NΔ01-06", "name": "Diploma Thesis (ZenithDx Clinical AI)", "grade": "10.0 (A)", "impact": "Flagstone AI Research: 14-month deep-tech design pioneering autonomous multi-modal CDSS on NVIDIA DGX, leveraging LangGraph ReAct loops, S²A-UNet lung segmentation (0.9718 Dice), ResNet-50 classifiers, and Heterogeneous Graph GNNs." },
+                        { "code": "CEID_NY204", "name": "Probability & Basic Statistics", "grade": "10.0 (A)", "impact": "Mathematical Precision: The foundational bedrock of statistical learning, Bayesian networks, and ML predictive uncertainty." },
+                        { "code": "CEID_NY102", "name": "Mathematics II (Multivariable Calculus)", "grade": "9.5 (A)", "impact": "Mathematical Precision: High-dimensional optimization, gradient computation, and neural network backpropagation." },
+                        { "code": "CEID_NY240", "name": "Numerical Analysis & Implementation Environments", "grade": "8.5 (A)", "impact": "Mathematical Precision: Numerical stability, floating-point error propagation, and algorithm compilation." },
+                        { "code": "CEID_NE548", "name": "Introduction to Bioinformatics", "grade": "9.5 (P)", "impact": "Computational Biology: Suffix Tree pattern matching, sequence alignment (Needleman-Wunsch DP), and structural 3D protein folding." },
+                        { "code": "CEID_NE562", "name": "Data Mining & Machine Learning", "grade": "8.0 (B)", "impact": "Machine Learning Core: Supervised/unsupervised pattern recognition, clustering, and statistical model evaluation." },
+                        { "code": "CEID_NY343", "name": "Scientific Computing", "grade": "7.5 (A)", "impact": "Computational Math: High-performance linear solvers, dense matrix factorization, and SciPy-level simulations." },
+                        { "code": "CEID_NY110", "name": "Linear Algebra", "grade": "6.5 (B)", "impact": "Mathematical Precision: Vector spaces, matrix transformations, eigenvalues/eigenvectors, and tensor decompositions." },
+                        { "code": "CEID_NY451", "name": "Artificial Intelligence", "grade": "6.5 (B)", "impact": "Machine Learning Core: Heuristic search, constraint satisfaction, and deterministic semantic reasoning systems." }
+                    ]
+                },
+                {
+                    "id": "hpc_hardware",
+                    "icon": "⚡",
+                    "title": "High-Performance Computing & Hardware",
+                    "desc": "Micro-architecture, low-level execution, parallel processing, edge computing, and wireless telemetry.",
+                    "badge": "Systems Execution",
+                    "courses": [
+                        { "code": "CEID_NY261", "name": "Topics in Computer Architecture (Computer Architecture I)", "grade": "8.5 (A)", "impact": "Hardware Optimization: Dynamic branch prediction, Instruction-Level Parallelism (ILP), memory hierarchy, and cache coherency protocols." },
+                        { "code": "CEID_NY262", "name": "Modern Topics in Computer Architecture (Computer Architecture II)", "grade": "7.0 (B)", "impact": "Hardware Optimization: Thread-level parallelism, memory consistency models, multi-core cache coherence (MSI/MESI), and Network-on-Chip (NoC) routing. Highly relevant for optimizing high-throughput concurrent model-serving systems." },
+                        { "code": "CEID_NY361", "name": "Microprocessors", "grade": "10.0 (A)", "impact": "Systems Execution: Low-level assembly programming, register allocation, hardware interrupts, and memory-constrained execution." },
+                        { "code": "CEID_NY463", "name": "Advanced Microprocessors", "grade": "6.5 (B)", "impact": "Systems Execution: Superscalar pipelines, dynamic instruction scheduling (Tomasulo algorithm), out-of-order and speculative execution, and vector processing extensions (SIMD/AVX). Critical for optimizing low-level tensor operations." },
+                        { "code": "CEID_NY381", "name": "Digital Signal Processing (DSP)", "grade": "8.0 (A)", "impact": "Systems Execution: Discrete Fourier Transforms (DFT/FFT), digital filter design, and convolution. Translates directly to audio feature extraction (Mel-Spectrograms) in real-time voice AI (e.g., faster-whisper)." },
+                        { "code": "CEID_NY164", "name": "Digital Design II (Logic Design II)", "grade": "8.0 (A)", "impact": "Hardware Synthesis: Advanced hardware description languages (VHDL/Verilog), RTL design on FPGAs, and Finite State Machine synthesis." },
+                        { "code": "CEID_NY163", "name": "Digital Design I (Logic Design I)", "grade": "7.5 (B)", "impact": "Hardware Synthesis: Combinational and sequential logic minimization, Karnaugh maps, and flip-flop timing diagrams." },
+                        { "code": "CEID_N4408", "name": "Parallel Processing", "grade": "7.5 (B)", "impact": "HPC Execution: Shared-memory concurrency, multi-core thread pooling, and OpenMP performance models." },
+                        { "code": "CEID_NE4128", "name": "Parallel Algorithms", "grade": "6.5 (B)", "impact": "HPC Execution: Distributed-memory cluster scaling, MPI topology routing, and message-passing IPC." },
+                        { "code": "CEID_NE577", "name": "5G Architectures & Edge Computing", "grade": "10.0 (P)", "impact": "Edge Infrastructure: Multi-access edge computing (MEC) virtual networks, low-latency deployments, and QoS." },
+                        { "code": "CEID_NE592", "name": "Fundamentals of Cellular Networks", "grade": "8.0 (P)", "impact": "Wireless Infrastructure: Signal propagation, log path loss models, and predictive ML cell handover simulation." }
+                    ]
+                },
+                {
+                    "id": "software_systems",
+                    "icon": "💻",
+                    "title": "Software Systems & Data Engineering",
+                    "desc": "Data structures, high-dimensional indexing, distributed databases, end-to-end SDLC, and quality assurance standards.",
+                    "badge": "Production Infrastructure",
+                    "courses": [
+                        { "code": "CEID_NE5577", "name": "Software Quality Assurance and Standards", "grade": "10.0 (A)", "impact": "Quality & Compliance: Software Verification and Validation (V&V), automated testing, and EU AI Act auditability." },
+                        { "code": "CEID_NE5358", "name": "Applied Information Systems II", "grade": "10.0 (A)", "impact": "Production Infrastructure: Enterprise-grade distributed application architectures and high-throughput concurrent systems." },
+                        { "code": "CEID_NE5367", "name": "Advanced Information Systems", "grade": "9.5 (B)", "impact": "Production Infrastructure: Distributed databases, RPCs, consensus protocols, and cluster resource orchestration." },
+                        { "code": "CEID_NY232", "name": "Software Engineering", "grade": "9.0 (A)", "impact": "Production Infrastructure: Systems analysis, OOP architectural design patterns, UML modeling, and Scrum frameworks." },
+                        { "code": "CEID_NY334", "name": "Database Systems", "grade": "9.0 (A)", "impact": "Relational algebra, query optimization, B-Tree indexing, and transaction ACID properties." },
+                        { "code": "CEID_NY134", "name": "Object Oriented Programming", "grade": "8.0 (B)", "impact": "Production Infrastructure: Advanced software architecture in C++ and Java. Emphasized polymorphism, memory management, and behavioral design patterns." },
+                        { "code": "CEID_NY233", "name": "Data Structures", "grade": "8.0 (B)", "impact": "Production Infrastructure: Custom implementations of AVL Trees, Max-Heaps, and Hash Tables. Translates to optimizing LLM Key-Value (KV) caches." },
+                        { "code": "CEID_NE4338", "name": "Multidimensional Data Structures", "grade": "10.0 (B)", "impact": "Spatial Retrieval: High-dimensional spatial indexing (K-D Trees, Octrees) and sub-linear vector similarity search." }
+                    ]
+                }
+            ],
+            "pillars_title": "Academic Engineering Pillars",
+            "pillars": [
+                { "id": "rigor", "icon": "🏛️", "badge": "EQF Level 7", "title": "Academic Rigor", "summary": "An 8.05/10 GPA in a 5-year Integrated Master (300 ECTS) from CEID represents an unshakeable mathematical and systems-level foundation." },
+                { "id": "rank", "icon": "🏆", "badge": "Top 5% Rank", "title": "Elite Currency", "summary": "Graduating in the Top 5% of class serves as universal proof of academic and cognitive excellence." },
+                { "id": "consistency", "icon": "📈", "badge": "79% A & B Grades", "title": "High Consistency", "summary": "Maintaining A & B grades across 236 / 300 ECTS demonstrates exceptional focus and long-term dedication to quality." },
+                { "id": "clean_record", "icon": "🛡️", "badge": "0% Grade E", "title": "Zero Blind Spots", "summary": "A perfect 0% in Grade E proves there are no skipped primitives or weak spots in engineering toolkit under complex workloads." }
+            ]
+        },
+        "footer": {
+            "tagline_prefix": "Architecting the institutional survival of AI systems.",
+            "tagline_highlight": "Bridging the gap between Innovation and Regulation.",
+            "nav_title": "Navigation",
+            "status_title": "System Status",
+            "all_systems_operational": "All Systems Operational",
+            "build_version": "Build Version",
+            "version_number": "2026.3.0",
+            "last_build": "Last Build",
+            "last_build_date": "August 2026",
+            "back_to_top": "Back to Top",
+            "rights_reserved": "All Rights Reserved.",
+            "links": [
+                { "name": "Framework", "href": "#expertise" },
+                { "name": "Projects", "href": "#portfolio" },
+                { "name": "Degree Journey", "href": "#degree" },
+                { "name": "Arsenal", "href": "#about" },
+                { "name": "Authority", "href": "#authority" },
+                { "name": "Testimonials", "href": "#testimonials" },
+                { "name": "Contact", "href": "#contact" }
+            ]
         }
     },
     "el": {
@@ -1131,8 +1253,8 @@ export const locales = {
             "contact": "Επικοινωνία"
         },
         "about": {
-            "title_prefix": "Πέρα από τον",
-            "title_gradient": "Κώδικα.",
+            "title_prefix": "Πέρα από το",
+            "title_gradient": "Πανεπιστήμιο.",
             "subtitle": "Η Επαγγελματική μου Πορεία",
             "quote": "Εμμονή με την ποιότητα, κίνητρο η καινοτομία, θεμέλιο οι αρχές της μηχανικής.",
             "tabs": {
@@ -1141,8 +1263,8 @@ export const locales = {
                     "desc": "7 Πυλώνες AI Engineering"
                 },
                 "education": {
-                    "label": "Εμπειρία & Εκπαίδευση",
-                    "desc": "Ρόλοι & Ακαδημαϊκοί Τίτλοι"
+                    "label": "Επαγγελματική Εμπειρία",
+                    "desc": "Ρόλοι & Μηχανικός Αντίκτυπος"
                 },
                 "experience": {
                     "label": "Πιστοποιήσεις & Εκδηλώσεις",
@@ -1343,10 +1465,10 @@ export const locales = {
                     "type": "Πρακτική Άσκηση"
                 },
                 {
-                    "title": "Data & ML Engineer",
+                    "title": "Data & ML Engineering Intern (Υπότροφος UNBOUND PROMETHEUS)",
                     "org": "Όμιλος F.H.L. Ι. ΚΥΡΙΑΚΙΔΗΣ | Καβάλα, Ελλάδα (Δια ζώσης)",
                     "date": "Ιουλ 2022 – Αυγ 2022",
-                    "desc": "Υπό την αιγίδα της υποτροπίας UNBOUND PROMETHEUS, εφάρμοσα προηγμένους στατιστικούς αλγορίθμους σε βιομηχανικά δεδομένα μεγάλης κλίμακας, διαχειριζόμενος logistics για 330.000 τόνους υλικού. Εστιάζοντας στο Dataset Engineering και το AI Observability, χρησιμοποίησα τον αγωγό KDD (Knowledge Discovery in Databases) και ανέπτυξα μοντέλα ανίχνευσης ανωμαλιών IQR για την επίλυση τριών κρίσιμων σημείων συμφόρησης στην παραγωγή. Αυτή η εμπειρία λειτούργησε ως καταλύτης για την εξειδίκευσή μου στην Ποιότητα Δεδομένων, τη συνεχή Επικύρωση Διαδικασιών και τις ισχυρές υποδομές AI.",
+                    "desc": "Τιμήθηκα με την υποτροπία UNBOUND PROMETHEUS Data Science — που διεξήχθη στη Νέα Υόρκη με διδάσκοντες από πανεπιστήμια Ivy League υπό την αιγίδα του Αρχιεπισκόπου Αμερικής Ελπιδοφόρου — για την εφαρμογή προηγμένων στατιστικών αλγορίθμων και αρχών Dataset Engineering σε βιομηχανικές λειτουργίες υψηλού ρίσκου. Διαχειρίστηκα και προεπεξεργάστηκα δεδομένα logistics άνω των 330.000 τόνων δομικών υλικών. Σχεδίασα αγωγούς Knowledge Discovery in Databases (KDD) και στατιστικά μοντέλα ανίχνευσης ανωμαλιών IQR για την παρακολούθηση ροών δεδομένων, τον εντοπισμό μοτίβων καθυστέρησης και την επίλυση τριών κρίσιμων σημείων συμφόρησης στην παραγωγή και την εφοδιαστική αλυσίδα. Αυτή η εμπειρία συνεπούς επικύρωσης διεργασιών και βιομηχανικής παρατηρησιμότητας AI αποτέλεσε τον κύριο καταλύτη για την εξειδίκευσή μου στην Ποιότητα Δεδομένων, τη συστηματική μείωση ρίσκου και τις ισχυρές παραγωγικές υποδομές.",
                     "image": "/resources/img/4.jpeg",
                     "type": "Πρακτική Άσκηση"
                 }
@@ -1460,8 +1582,8 @@ export const locales = {
             "role_title": "(Διπλ. Μηχ. | Chartered EU Engineer)",
             "subtitle": "Γεφυρώνοντας τον πειραματισμό AI και την παραγωγή με Αξιόπιστο AI & Compliance-by-Design.",
             "quote": "Δεν γράφω απλώς κώδικα για την εκπαίδευση ενός μοντέλου. Κατασκευάζω υποδομές Αξιόπιστης Τεχνητής Νοημοσύνης (Trustworthy AI) όπου η καινοτομία ευθυγραμμίζεται απόλυτα με τον νόμο, την ασφάλεια και την τεχνική αριστεία.",
-            "description_1": "Σε αγορές υψηλού κινδύνου όπως το HealthTech, ένα AI proof-of-concept χωρίς αξιοπιστία και τεχνική τεκμηρίωση είναι απλώς ##νομική ευθύνη##. Ως AI Engineer, εξειδικεύομαι στη ##μεταφορά των LLMs έξω από τα Jupyter notebooks## σε ##στιβαρά συστήματα παραγωγής## όπου η συμμόρφωση είναι ενσωματωμένη από την πρώτη ημέρα. Σχεδιάζω ##GenAIOps pipelines##, προηγμένες ##αρχιτεκτονικές RAG## και ενορχήστρωση πολλαπλών agents (LangGraph, CrewAI), αντιμετωπίζοντας επιθετική ##ποσοτικοποίηση μοντέλων, βελτιστοποίηση inference## και υβριδική ανάπτυξη Edge-Cloud σε έργα όπως ο ##ARIA AI Assistant## και το ##ZenithDx##.",
-            "description_2": "Αυτό που με διαφοροποιεί είναι η προσέγγιση ##\"Compliance-by-Design\"##. Αντλώντας από τον ρόλο μου ως Τεχνικός Εμπειρογνώμονας για τους Ευρωπαίους Νέους Μηχανικούς (EYE) και μεθοδολογίες όπως το ##CRISP-ML(Q)##, ενσωματώνω Explainable AI (XAI), ##πλαίσια αξιολόγησης RAGAS##, guardrails ασφαλείας και αρχιτεκτονική ιχνηλασιμότητα απευθείας στο CI/CD. Μετατρέπω αυστηρά κανονιστικά πλαίσια (EU AI Act, MDR/IVDR, GDPR) σε ##τεχνικό ανταγωνιστικό πλεονέκτημα##, φέρνοντας ένα ##Product-First mindset## για παραγωγή πραγματικής επιχειρηματικής αξίας.",
+            "description_1": "Είμαι ##AI Research Engineer## και ##Διπωματούχος Μηχανικός Η/Υ## με εξειδίκευση σε ##agentic workflows##, ##προηγμένες αρχιτεκτονικές RAG## και ##Large Language Models## για ##HealthTech και Life Sciences##. Αποφοιτώντας στο ##κορυφαίο 5%## της τάξης μου, διατηρώ μια ##product-first φιλοσοφία## που μετασχηματίζει σύνθετα μοντέλα από ερευνητικά σημειωματάρια σε ##στιβαρές, παράλληλες υποδομές παραγωγής##. Το τεχνικό μου οπλοστάσιο καλύπτει ##GenAIOps##, ##multi-agent orchestration##, ##βελτιστοποίηση inference σε cloud και edge##, καθώς και ##διαχείριση διανυσματικών βάσεων δεδομένων##. Αντιμετωπίζοντας περιορισμούς μνήμης, καθυστέρησης (latency) και παραλληλίας, διασφαλίζω ότι οι εφαρμογές τεχνητής νοημοσύνης παραμένουν αποδοτικές, σταθερές και ενσωματωμένες σε εταιρικά οικοσυστήματα όπως το ##Microsoft Azure##.",
+            "description_2": "Αυτό που με διαφοροποιεί είναι η ικανότητά μου να μετατρέπω αυστηρά Ευρωπαϊκά κανονιστικά πλαίσια όπως το ##EU AI Act##, το ##EU MDR## και ο ##GDPR## σε ##επαληθεύσιμες, ελέγξιμες αρχιτεκτονικές λογισμικού## μέσω αρχών ##compliance-by-design##. Υπηρετώντας ως ##Σύμβουλος Πολιτικής AI στους European Young Engineers##, ενσωματώνω ##πλαίσια ερμηνεύσιμης AI## και ##προστατευτικά κιγκλιδώματα ασφαλείας## απευθείας σε αυτοματοποιημένα pipelines, ενισχύοντας συστήματα όπως η πλατφόρμα κλινικής υποστήριξης ##ZenithDx## και ο βοηθός ##ARIA AI##. Ως πιστοποιημένος μηχανικός από το κράτος, στόχος μου είναι η ανάληψη ##ευθύνης υψηλής αυτονομίας (high-agency ownership)## σε ομάδες deep tech, μετατρέποντας κρίσιμες ιατρικές και επιχειρησιακές ροές σε ασφαλείς, συμμορφούμενες και επεκτάσιμες τεχνολογίες.",
             "signature": {
                 "label": "Ψηφιακή Επαλήθευση",
                 "status": "ΥΠΟΓΕΓΡΑΜΜΕΝΟ",
@@ -1503,81 +1625,81 @@ export const locales = {
             },
             "pillars": {
                 "engineering": {
-                    "label": "AI Engineering & GenAIOps",
-                    "subtitle": "Ο Πρακτικός Αρχιτέκτονας",
-                    "description": "Μεταφέροντας τα LLMs έξω από τα Jupyter notebooks και στην παραγωγή. Αυτός ο πυλώνας εστιάζει στην κατασκευή scalable Agentic workflows, προηγμένων RAG pipelines και τη βελτιστοποίηση inference. Ο πλήρης έλεγχος κύκλου ζωής διασφαλίζει ότι κάθε γραμμή κώδικα εξυπηρετεί λειτουργικό σκοπό με ετοιμότητα παραγωγής — εξαλείφοντας τον κίνδυνο 'θεωρητικών' proof-of-concepts.",
+                    "label": "Agentic AI Engineering & High-Performance Inference",
+                    "subtitle": "The Hands-on Builder",
+                    "description": "Μεταφέρω πολύπλοκα γλωσσικά μοντέλα από ερευνητικά notebooks σε εύρρωστα περιβάλλοντα παραγωγής χαμηλού latency, συνδυάζοντας την ανάπτυξη αυτόνομων agentic workflows και προηγμένων RAG pipelines με hardware-aware βελτιστοποιήσεις. Εξειδικεύομαι στη σχεδίαση αυτόνομων multi agent συστημάτων και advanced RAG pipelines, ενορχηστρώνοντας ReAct loops με LangGraph και CrewAI, καθώς και στην υλοποίηση high performance indexing με FAISS, ChromaDB και ColBERT reranking. Η τεχνική μου προσέγγιση περιλαμβάνει βελτιστοποιήσεις σε επίπεδο hardware όπως quantization (INT4/INT8) και GPU offloading μέσω llama.cpp για την ασφαλή εκτέλεση τοπικών μοντέλων όπως το Cosmos Reason2 2B σε edge συστήματα NVIDIA Jetson Orin Nano υπό αυστηρούς περιορισμούς μνήμης με τη χρήση 16GB NVMe swap partition.",
                     "highlights": [
-                        "Agentic Workflows (LangGraph/CrewAI)",
-                        "Advanced RAG & Vector Search",
-                        "Model Quantization & Edge AI",
-                        "Πλήρης Έλεγχος Κύκλου Ζωής"
+                        "Agentic Workflows (LangGraph & CrewAI)",
+                        "FAISS, ChromaDB & ColBERT",
+                        "INT4/INT8 & GPU Offloading",
+                        "NVIDIA Jetson Edge Inference"
                     ]
                 },
                 "regulatory": {
-                    "label": "AI Governance & Compliance-by-Design",
-                    "subtitle": "Ο Στρατηγικός Πλοηγός",
-                    "description": "Στρατηγική πλοήγηση σε περιβάλλοντα υψηλού κινδύνου (HealthTech/SaMD). Αυτός ο πυλώνας μετατρέπει αυστηρά νομικά πλαίσια — όπως το EU AI Act και το MDR — σε εφαρμοσμένη τεχνική αρχιτεκτονική. Μετατρέπει τη συμμόρφωση σε ανταγωνιστικό πλεονέκτημα, ενσωματώνοντας την ασφάλεια και την ιδιωτικότητα δεδομένων στον πυρήνα του συστήματος.",
+                    "label": "Compliance-by-Design & Trustworthy AI Architectures",
+                    "subtitle": "The Compliance Integrator",
+                    "description": "Μετατρέπω τις αυστηρές ευρωπαϊκές νομικές και περιβαλλοντικές οδηγίες σε θεμελιώδη αρχιτεκτονική κώδικα, καθιστώντας τη συμμόρφωση στρατηγικό ανταγωνιστικό πλεονέκτημα για high risk εφαρμογές HealthTech και SaMD. Ενσωματώνω αρχές Trustworthy AI από την πρώτη μέρα, μεταφράζοντας τους κανονισμούς EU AI Act, GDPR και EU MDR SaMD σε πρακτικές τεχνικές προδιαγραφές, prompt constraints και continuous deployment guardrails. Διασφαλίζω τη διαφάνεια των αυτοματοποιημένων αποφάσεων με Explainable AI frameworks όπως SHAP, LIME και PyTorch Captum feature ablation, ενώ προστατεύω το απόρρητο ευαίσθητων δεδομένων υγείας μέσω Federated Learning και Differential Privacy.",
                     "highlights": [
-                        "EU AI Act & MDR Readiness",
-                        "Αρχές Αξιόπιστου AI",
-                        "GDPR & Ιδιωτικότητα Δεδομένων",
-                        "Guardrails Ασφαλείας"
+                        "EU AI Act, GDPR & EU MDR SaMD",
+                        "XAI (SHAP, LIME & PyTorch Captum)",
+                        "Continuous Deployment Guardrails",
+                        "Federated Learning & Privacy"
                     ]
                 },
                 "qa": {
-                    "label": "MLOps & Αξιολόγηση LLMs",
-                    "subtitle": "Ο Τεχνικός Ελεγκτής",
-                    "description": "Η ποιότητα είναι το τεχνικό θεμέλιο της αξιοπιστίας του AI. Μέσω αυστηρών μεθοδολογιών όπως το CRISP-ML(Q) και πλαισίων αξιολόγησης (όπως το RAGAS) ενσωματωμένων απευθείας σε CI/CD pipelines, τα μη-ντετερμινιστικά outputs τιθασεύονται σε αξία παραγωγής.",
+                    "label": "Data Platform Engineering & MLOps Pipelines",
+                    "subtitle": "The Quality Champion",
+                    "description": "Η ποιότητα, η ακεραιότητα και η πλήρης ιχνηλασιμότητα των δεδομένων αποτελούν το ακαδημαϊκό και τεχνικό θεμέλιο για την αξιοπιστία κάθε μη ντετερμινιστικού συστήματος AI. Εφαρμόζω τη συστηματική μεθοδολογία CRISP-ML(Q) και σχεδιάζω normalized relational databases 3NF με PostgreSQL pgvector και MySQL. Μέσω εργαλείων παρατηρησιμότητας όπως το Langfuse και το MLflow, καταγράφω αμετάβλητα metadata εκπαίδευσης και inference, ενώ εγγυώμαι την ποιότητα και την πιστότητα των απαντήσεων στην παραγωγή με automated evaluation pipelines όπως RAGAS και TruLens ενσωματωμένα απευθείας στα CI/CD pipelines όπως στο DeafNav με 98% Relevance και 99% Faithfulness.",
                     "highlights": [
-                        "Μεθοδολογία CRISP-ML(Q)",
-                        "LLM-as-a-Judge & Παρατηρησιμότητα",
-                        "Αυτοματοποιημένη Αξιολόγηση (RAGAS)",
-                        "Συνεχής Παρακολούθηση & Ειδοποιήσεις"
+                        "CRISP-ML(Q) & 3NF PostgreSQL/pgvector",
+                        "Langfuse & MLflow Observability",
+                        "RAGAS & TruLens (DeafNav 98%/99%)",
+                        "CI/CD Automated Evaluation"
                     ]
                 }
             },
             "intersections": {
                 "eng_reg": {
-                    "label": "Compliance-by-Design Καινοτομία",
-                    "subtitle": "Μηχανική + Ρυθμιστικό",
-                    "description": "Εδώ γεννιέται η \"Προληπτική Συμμόρφωση\" για προϊόντα AI. Η νομοθεσία μεταφράζεται άμεσα σε αρχιτεκτονική συστήματος και prompts. Εφαρμόζοντας ηθικά πλαίσια AI εγγενώς κατά την ανάπτυξη, το προϊόν είναι συμμορφούμενο εκ σχεδιασμού — μειώνοντας τις τριβές ανάπτυξης και επιταχύνοντας τον χρόνο διάθεσης στην αγορά.",
+                    "label": "Compliance-by-Design Innovation",
+                    "subtitle": "Engineering & Regulatory",
+                    "description": "Εδώ γεννιέται η προληπτική συμμόρφωση, όπου η νομοθεσία ενσωματώνεται οργανικά στη σχεδίαση του συστήματος αντί να αποτελεί εμπόδιο. Μεταφράζω τις νομικές προδιαγραφές απευθείας σε πηγαίο κώδικα, system prompts και Pydantic validation layers. Ενσωματώνοντας dynamic explainable AI overlays όπως blended Grad-CAM heatmaps και PyTorch Captum saliency plots στο ZenithDx, επιτρέπω στους κλινικούς ιατρούς να κατανοούν άμεσα και οπτικά τις αποφάσεις του μοντέλου, ελαχιστοποιώντας το deployment risk και επιταχύνοντας δραστικά το time to market.",
                     "highlights": [
-                        "Κώδικας από Νομικές Προδιαγραφές",
-                        "Προληπτική Μείωση Κινδύνου",
-                        "Ταχύτερη Πρόσβαση στην Αγορά"
+                        "Proactive Code-Level Compliance",
+                        "Dynamic Grad-CAM & Captum Overlays",
+                        "Pydantic Validation & Reduced Risk"
                     ]
                 },
                 "eng_qa": {
-                    "label": "Τεχνικά Επικυρωμένη Ασφάλεια",
-                    "subtitle": "Μηχανική + QA",
-                    "description": "Αυτή η τομή γεφυρώνει τον πειραματισμό με την παραγωγή. Η τεχνική γνώση επικυρώνει την ασφάλεια στην πράξη—αντιμετωπίζοντας συσσωρευτικά σφάλματα σε agents πολλαπλών βημάτων, εφαρμόζοντας στιβαρό tool-use, διαδρομές fallback και συνεχή έλεγχο για τη διασφάλιση ντετερμινιστικής εκτέλεσης.",
+                    "label": "Technically Validated Safety",
+                    "subtitle": "Engineering & QA",
+                    "description": "Αυτή η διασταύρωση γεφυρώνει την ανάπτυξη AI με τη συστημική αυστηρότητα, χρησιμοποιώντας τη βαθιά τεχνική γνώση για την έμπρακτη επαλήθευση και θωράκιση της ασφάλειας των συστημάτων απέναντι σε αστάθειες και compounding errors. Αντιμετωπίζω edge case κινδύνους σε multi agent δίκτυα σχεδιάζοντας loop defense guards όπως ο περιορισμός των μέγιστων iterations σε step count 7 στο ZenithDx για την αποτροπή infinite loop εκτελέσεων. Διασφαλίζω τη ντετερμινιστική εκτέλεση μέσω CI/CT/CD orchestration, robust local to cloud fallback διαδρομών με εκτέλεση τοπικού Qwen 2.5 7B με αυτόματο failover σε cloud Gemini Flash και συνεχών adversarial stress tests κατά το deployment.",
                     "highlights": [
-                        "Ντετερμινιστική Εκτέλεση",
-                        "Ενορχήστρωση CI/CT/CD",
-                        "Μείωση Κινδύνου Edge-Cases"
+                        "Loop Defense Guards (ZenithDx Step 7)",
+                        "Qwen 2.5 7B to Gemini Flash Failover",
+                        "CI/CT/CD Adversarial Stress Testing"
                     ]
                 },
                 "qa_reg": {
-                    "label": "Audit-Ready Υποδομή AI",
-                    "subtitle": "QA + Ρυθμιστικό",
-                    "description": "Αυτή η τομή προσφέρει πλήρη διαφάνεια και λογοδοσία. Εφαρμόζοντας αυστηρά εσωτερικά πλαίσια και διατηρώντας ολοκληρωμένα μεταδεδομένα, διασφαλίζει πλήρη τεχνική τεκμηρίωση και ιχνηλασιμότητα, ευθυγραμμισμένη με τη Σήμανση CE (ISO 13485) και τις απαιτήσεις τήρησης αρχείων του EU AI Act (Άρθρα 11 & 12).",
+                    "label": "Audit-Ready AI Infrastructure",
+                    "subtitle": "QA & Regulatory",
+                    "description": "Η συγκεκριμένη επικάλυψη εγγυάται απόλυτη διαφάνεια και λογοδοσία, μετατρέποντας τις απαιτήσεις CE Marking (ISO 13485) και record keeping του EU AI Act σε αυτοματοποιημένα pipelines. Μέσω QMS πλαισίων και SQLite WAL και MLflow logging, διασφαλίζω ότι κάθε αλλαγή παραμέτρων, εκπαίδευση μοντέλου και διαγνωστική απόφαση φέρει ψηφιακή υπογραφή, SHA-256 time stamping και πλήρη ιχνηλασιμότητα. Αυτό κρατά την υποδομή μόνιμα έτοιμη για κανονιστικό έλεγχο χωρίς χειροκίνητη παρέμβαση, μετατρέποντας τη γραφειοκρατία σε αυτοματοποιημένο engineering work.",
                     "highlights": [
-                        "Ετοιμότητα Σήμανσης CE",
-                        "Μεταδεδομένα & Ιχνηλασιμότητα (Άρθρα 11/12)",
-                        "Ετοιμότητα Τεχνικής Τεκμηρίωσης"
+                        "CE Marking & ISO 13485 Compliance",
+                        "EU AI Act Automated Record-Keeping",
+                        "SHA-256 Time-Stamping & Audit Logs"
                     ]
                 }
             },
             "core": {
-                "label": "100% PRODUCTION-READY AI ENGINEER",
-                "subtitle": "Η Σύγκλιση",
-                "description": "Στο κέντρο βρίσκεται η ικανότητα ανάπτυξης Ασφαλούς AI σε κλίμακα. Ακαδημαϊκή αριστεία, βαθιά τεχνική ικανότητα και ρυθμιστική επίγνωση συγκλίνουν για την κατασκευή συστημάτων AI που είναι όχι μόνο καινοτόμα, αλλά επεκτάσιμα, νόμιμα συμμορφούμενα και έτοιμα για παραγωγή.",
+                "label": "100% PRODUCTION-READY AI SYSTEMS ENGINEER",
+                "subtitle": "The Convergence",
+                "description": "Στο επίκεντρο του πλαισίου βρίσκεται η ικανότητα ανάπτυξης ασφαλούς, legally compliant και κλιμακούμενης AI σε βιομηχανική κλίμακα, εκεί όπου η ακαδημαϊκή αριστεία συναντά τη συστημική αυστηρότητα. Ως Διπλωματούχος Μηχανικός Υπολογιστών (CEID, integrated master 300 ECTS στο κορυφαίο 5% των αποφοίτων) και Κρατικά Πιστοποιημένος Μηχανικός (Reg. No: 174033), συνθέτω προηγμένες ML, NLP και CV μεθοδολογίες με low level hardware awareness, αλγοριθμική αυστηρότητα και κανονιστική θωράκιση υπό το EU AI Act, EU MDR και GDPR. Η σύγκλιση αυτή μετουσιώνεται σε flagship projects όπως ZenithDx, ARIA, DeafNav και NetVal, προσφέροντας στην αγορά έναν υπεύθυνο Doer που μπορεί να αναλάβει πλήρες ownership και να μετατρέψει πολύπλοκα ευαίσθητα workflows σε ασφαλή παραγωγική τεχνολογία παγκόσμιας αξίας.",
                 "highlights": [
-                    "Συστήματα Agentic AI & RAG",
-                    "Compliance-by-Design (EU AI Act)",
-                    "Integrated Master Επίπεδο 7 (CEID)",
-                    "Licensed EU Engineer",
-                    "Trustworthy AI Builder"
+                    "Integrated Master CEID (Top 5%)",
+                    "Reg. No: 174033 State-Authorized Engineer",
+                    "LangGraph, RAG, GNNs & Vision",
+                    "EU AI Act, EU MDR & GDPR Guardrails",
+                    "ZenithDx, ARIA, DeafNav & NetVal Architect"
                 ]
             },
             "footer": {
@@ -1594,53 +1716,50 @@ export const locales = {
         },
         "authority": {
             "label": "Κρατική Εξουσιοδότηση & Διακυβέρνηση",
-            "title": "Κρατικά Εξουσιοδοτημένος Τεχνικός Εγγυητής & Επαγγελματίας AI",
-            "subtitle": "Νομική & Τεχνική Αυθεντία για Συστήματα AI Παραγωγής",
-            "description": "Ως Αδειούχος Διπλωματούχος Μηχανικός, η υπογραφή μου δεν είναι μια τεχνική τυπικότητα· είναι νομικό μέσο λογοδοσίας. Εγγυώμαι θεσμικά την ακεραιότητα συστημάτων AI υψηλού κινδύνου, ενσωματώνοντας το 'Compliance-by-Design' για να μετατρέψω τον κώδικα σε πιστοποιημένο Τεχνικό Έργο υπό την εξουσία του Κράτους και των Ευρωπαϊκών οδηγιών.",
+            "title": "Κρατική Εξουσιοδότηση & Διακυβέρνηση",
+            "subtitle": "Αδειούχος Μηχανικός & Ρυθμιστική Ακεραιότητα για Συστήματα AI Υψηλού Κινδύνου",
+            "description": "Ως Αδειούχος Διπλωματούχος Μηχανικός, η υπογραφή μου δεν είναι μια τεχνική τυπικότητα· είναι νομικό μέσο λογοδοσίας. Εγγυώμαι θεσμικά την ασφάλεια, τη συμμόρφωση και την αρχιτεκτονική ακεραιότητα συστημάτων AI υψηλού κινδύνου, ενσωματώνοντας το Compliance-by-Design για τη μετατροπή του κώδικα σε πιστοποιημένο Τεχνικό Έργο υπό ευρωπαϊκές οδηγίες.",
             "pillars": [
                 {
                     "id": "tee",
-                    "badge": "ΑΡ. ΜΗΤΡΩΟΥ: 174033 (2026)",
-                    "title": "Αδειούχος Μηχανικός Η/Υ & Πληροφορικής (ΤΕΕ-TCG)",
+                    "badge": "ΑΡ. ΜΗΤΡΩΟΥ: 174033",
+                    "title": "Κρατικά Εξουσιοδοτημένος Μηχανικός Η/Υ & Πληροφορικής",
                     "org": "Τεχνικό Επιμελητήριο Ελλάδας (ΤΕΕ)",
-                    "role": "Τακτικό Μέλος | Κρατικό Δίπλωμα Μηχανικού",
-                    "desc": "Εξουσιοδοτημένος από το Τεχνικό Επιμελητήριο Ελλάδας για τον σχεδιασμό, την επικύρωση και την ανάπτυξη συστημάτων κρίσιμων για τη ζωή και την προστασία δεδομένων. Περιλαμβάνει πλήρη νομικά δικαιώματα για **Αρχιτεκτονικές Ασφαλούς Cloud**, **Ενσωμάτωση AI Υψηλού Κινδύνου** και διασφάλιση συμμόρφωσης **SaMD (Software as a Medical Device) & MDR** για βιοϊατρική πληροφορική.",
+                    "role": "Κρατικός Τεχνικός Εγγυητής",
+                    "desc": "Νομικά εξουσιοδοτημένος και πιστοποιημένος για τον σχεδιασμό, την επικύρωση και υπογραφή κρίσιμων συστημάτων λογισμικού για προστασία δεδομένων και ανθρώπινη ζωή. Εποπτεία ασφαλών υποδομών cloud, ενσωμάτωσης AI υψηλού κινδύνου και συμμόρφωσης SaMD υπό το EU MDR (2017/745) και πρότυπα ISO 13485 / ISO 14971.",
                     "highlights": [
-                        "Αρχιτεκτονική Ασφαλούς Cloud",
-                        "Ενσωμάτωση AI Υψηλού Κινδύνου",
+                        "Ασφαλές Cloud",
+                        "AI Υψηλού Κινδύνου",
                         "Συμμόρφωση SaMD & MDR",
-                        "Compliance-by-Design",
-                        "Κρατικά Εξουσιοδοτημένη Επικύρωση"
+                        "ISO 13485 / ISO 14971"
                     ]
                 },
                 {
                     "id": "eetn",
-                    "badge": "ΤΑΚΤΙΚΟ ΜΕΛΟΣ ΕΕΤΝ / EurAI",
-                    "title": "Τακτικό Μέλος & Επιστημονικός Ειδικός AI, Ελληνική Εταιρεία Τεχνητής Νοημοσύνης (ΕΕΤΝ / EurAI)",
-                    "org": "Ελληνική Εταιρεία ΤΝ (Μέλος EurAI)",
-                    "role": "Αναγνωρισμένος Επιστημονικός Ειδικός AI",
-                    "desc": "Εισαγωγή βάσει εξειδικευμένης εμπειρογνωμοσύνης σε υποπεδία του AI, στον κορυφαίο επιστημονικό φορέα AI της Ελλάδας (δίκτυο European Association for Artificial Intelligence). Ενεργή συμβολή στη σύνταξη εθνικών πολιτικών AI, την προώθηση της **Αλγοριθμικής Διαφάνειας** και την ανάπτυξη R&D στο **Εξηγήσιμο AI (XAI)** μαζί με κορυφαίους Ευρωπαίους ερευνητές.",
+                    "badge": "Μέλος Δικτύου EurAI",
+                    "title": "Τακτικό Μέλος & Επιστημονικός Ειδικός AI",
+                    "org": "Ελληνική Εταιρεία Τεχνητής Νοημοσύνης (ΕΕΤΝ / EurAI)",
+                    "role": "Επιστημονικός Ειδικός AI",
+                    "desc": "Εισαγωγή βάσει εξειδικευμένης ακαδημαϊκής και πρακτικής εμπειρογνωμοσύνης AI. Συνεργασία με κορυφαίους Ευρωπαίους ερευνητές για την προώθηση της αλγοριθμικής διαφάνειας, μεθόδων Εξηγήσιμου AI (XAI) όπως SHAP, LIME & Grad-CAM, και της ευρωπαϊκής στρατηγικής AI.",
                     "highlights": [
-                        "Αναγνωρισμένος Επιστημονικός Ειδικός AI",
-                        "Μέλος Δικτύου EurAI",
                         "Αλγοριθμική Διαφάνεια",
-                        "Εξηγήσιμο AI (XAI) R&D",
-                        "Σύνταξη Εθνικής Πολιτικής AI"
+                        "Εξηγήσιμο AI (XAI)",
+                        "SHAP & Grad-CAM R&D",
+                        "Στρατηγική AI ΕΕ"
                     ]
                 },
                 {
                     "id": "ida",
-                    "badge": "ΕΠΑΓΓΕΛΜΑΤΙΕΣ IT IDA",
-                    "title": "Μέλος, Danish Society of Engineers - IT Professionals (IDA IT)",
-                    "org": "Danish Society of Engineers (IDA)",
-                    "role": "Ευρωπαϊκό Οικοσύστημα & Δικτύωση",
-                    "desc": "Συμμετοχή στο ισχυρότερο δίκτυο επαγγελματιών πληροφορικής της Δανίας, ενεργό μέλος στις εξειδικευμένες κοινότητες **Machine Learning** και **GDPR**. Γεφύρωση της νορδικής τεχνολογικής καινοτομίας με τα ευρωπαϊκά κανονιστικά πλαίσια μέσω διασυνοριακής ανταλλαγής γνώσεων για κλιμακώσιμο, συμβατό με GDPR λογισμικό και σύγχρονες υποδομές cloud.",
+                    "badge": "Μέλος IDA IT",
+                    "title": "Μέλος, Danish Society of Engineers",
+                    "org": "Danish Society of Engineers (IDA IT)",
+                    "role": "Νορδική Ενσωμάτωση Tech",
+                    "desc": "Συμμετοχή στο κορυφαίο επαγγελματικό δίκτυο της Δανίας για ειδικούς IT, με συνεργασία στις κοινότητες Machine Learning και GDPR για τη γεφύρωση της νορδικής καινοτομίας με τις ευρωπαϊκές πολιτικές και τη διασυνοριακή ανταλλαγή γνώσεων.",
                     "highlights": [
-                        "Ευρωπαϊκό Οικοσύστημα & Δικτύωση",
                         "Νορδικό Οικοσύστημα Tech",
-                        "Διασυνοριακό ML & Cloud",
-                        "Ανάπτυξη Συμβατή με GDPR",
-                        "Ευθυγράμμιση με Πολιτική AI της ΕΕ"
+                        "Γεφύρωση Tech & Πολιτικών ΕΕ",
+                        "Διασυνοριακή Μηχανική",
+                        "Ανάπτυξη Συμβατή με GDPR"
                     ]
                 }
             ]
@@ -1674,7 +1793,7 @@ export const locales = {
                     "subtitle": "Fractional PRRC & Υπογράφων SaMD | (MDR Article 15)",
                     "description": "Σε ένα περιβάλλον εξαντλητικού ελέγχου για το SaMD και το High-Risk AI, ο ρόλος του Fractional PRRC είναι νομική αναγκαιότητα. Ως η εξουσιοδοτημένη τεχνική αρχή, αναλαμβάνεται η πλήρης θεσμική ευθύνη για τη συμμόρφωση των προϊόντων με το MDR και το EU AI Act.",
                     "advantage": "Η υπογραφή αυτή λειτουργεί ως «χρυσό διαβατήριο» για την είσοδο στην αγορά, θωρακίζοντας νομικά την καινοτομία έναντι κάθε ελεγκτικού μηχανισμού και επιταχύνοντας τη σήμανση CE.",
-                    "linkText": "Προβολή Ρυθμιστικής Αρχιτεκτονικής"
+                    "linkText": "Προβολή Ρυθμιστικής Αρχιτεκτρονικής"
                 },
                 {
                     "tag": "04",
@@ -1894,9 +2013,9 @@ export const locales = {
                     "brief": "Ανάπτυξη πλατφόρμας GAN διπλού σκοπού για δημιουργία συνθετικών δεδομένων: ανίχνευση επιθέσεων DDoS σε δίκτυα 5G και παραγωγή φωτορεαλιστικών MRI εγκεφαλικού όγκου για την ενίσχυση ιατρικών συνόλων δεδομένων. Ο WGAN-GP Critic λειτουργεί ταυτόχρονα και ως real-time ανιχνευτής ανωμαλιών."
                 },
                 "azure-ai-studio": {
-                    "title": "Πλατφόρμα AI Υγείας Κρίσιμης Αποστολής στο Azure Studio",
+                    "title": "OmniHealth AI: Πολυ-Πρακτορική Σύνθεση Κλινικών Εγγράφων & Μηχανή Προσβασιμότητας Ασθενών",
                     "category": "Αρχιτεκτονική AI & Συστήματα HealthTech",
-                    "brief": "Ενσωμάτωσα το OpenAI GPT-4 με ανάλυση κειμένου και HITL playgrounds στο Azure AI Studio, μετατρέποντας σύνθετες απαιτήσεις υγείας σε μια ασφαλή PaaS λύση παραγωγικής ποιότητας με πολυτροπική κλινική αιτιοαιτιολόγηση."
+                    "brief": "Το OmniHealth AI είναι μια πολυ-πρακτορική κλινική πλατφόρμα παραγωγής βασισμένη στο Microsoft Agent Framework και το Azure AI Foundry. Ψηφιοποιεί αδόμητα χειρόγραφα και σαρωμένα νοσοκομειακά αρχεία μέσω εξειδικευμένων agents: DeepSeek-V3.2 για ενορχήστρωση και RAG ερωτήματα, Mistral OCR 4.0 για ανάλυση PDF, Clinical NLP για χαρτογράφηση UMLS και ICD-10, και FLUX.2-pro για παραγωγή ανατομικών διαγραμμάτων. Ολόκληρη η αρχιτεκτονική διέπεται από το Azure Safety Control Bridge εξασφαλίζοντας συμμόρφωση με το EU AI Act Άρθρο 14 για ανθρώπινη εποπτεία HITL και GDPR Άρθρο 9."
                 },
                 "azure-security": {
                     "title": "Ανάλυση Αρχιτεκτονικού Κινδύνου & Σχεδιασμός Ασφάλειας Cloud Zero-Trust",
@@ -2046,61 +2165,58 @@ export const locales = {
             ]
         },
         "contactPage": {
-            "system_init": "System.Initialize(Επικοινωνία)",
-            "title_1": "ΜΙΛΗΣΤΕ ΜΕ",
-            "title_2": "ΤΟΝ ΠΥΡΗΝΑ",
-            "description": "Είτε θέλετε να επαναπροσδιορίσετε τη ρύθμιση της AI είτε να χτίσετε το επόμενο κυρίαρχο νέφος, οι γραμμές μετάδοσης είναι ανοιχτές.",
-            "email_protocol": "Πρωτόκολλο Σήματος",
+            "system_init": "ΑΜΕΣΗ ΕΠΙΚΟΙΝΩΝΙΑ & ΣΥΜΒΟΥΛΕΥΤΙΚΗ",
+            "title_1": "ΑΣ ΔΗΜΙΟΥΡΓΗΣΟΥΜΕ",
+            "title_2": "ΜΑΖΙ.",
+            "description": "Είτε θέλετε να πλοηγηθείτε στο πλαίσιο του EU AI Act είτε να σχεδιάσετε ασφαλείς υποδομές παραγωγής, είμαι στη διάθεσή σας για να μετατρέψουμε το όραμά σας σε αξιόπιστη τεχνολογία.",
+            "email_protocol": "Άμεση Αποστολή Email",
             "email_label": "Email",
-            "phone_protocol": "Ασφαλής Γραμμή",
+            "phone_protocol": "Άμεση Τηλεφωνική Γραμμή",
             "phone_label": "Τηλέφωνο",
-            "location_label": "Τακτικές Συντεταγμένες",
-            "location_text": "ΤΟΠ: ΛΑΜΙΑ, ΑΡΧΗΓΕΙΟ",
+            "location_label": "Έδρα Μηχανικού",
+            "location_text": "Λαμία & Πάτρα, Ελλάδα",
             "socials": [
                 "LINKEDIN",
                 "GITHUB",
-                "X / TWITTER"
+                "INSTAGRAM"
             ],
             "form": {
                 "name": "Ονοματεπώνυμο",
-                "name_placeholder": "Εισάγετε το όνομά σας",
-                "company": "Εταιρεία",
-                "company_placeholder": "Εισάγετε το όνομα της εταιρείας (προαιρετικό)",
+                "name_placeholder": "Εισάγετε το ονοματεπώνυμό σας",
+                "company": "Εταιρεία ή Οργανισμός",
+                "company_placeholder": "Εισάγετε όνομα εταιρείας (προαιρετικό)",
                 "email": "Διεύθυνση Email",
                 "email_placeholder": "Εισάγετε το email σας",
                 "sector": "Στρατηγικός Τομέας",
-                "sector_placeholder": "Επιλέξτε τον τομέα σας",
-                "service": "Ενδιαφέρον Υπηρεσίας",
-                "service_placeholder": "Επιλέξτε υπηρεσία",
-                "message": "Μήνυμα",
-                "message_placeholder": "Εισάγετε το μήνυμά σας",
-                "submit_idle": "ΕΚΚΙΝΗΣΗ ΜΕΤΑΔΟΣΗΣ",
-                "submit_loading": "ΜΕΤΑΔΟΣΗ ΣΗΜΑΤΟΣ...",
-                "submit_success": "ΤΟ ΣΗΜΑ ΠΑΡΑΔΟΘΗΚΕ",
-                "submit_error": "ΕΠΑΝΑΛΗΨΗ ΜΕΤΑΔΟΣΗΣ"
+                "sector_placeholder": "Επιλέξτε τον τομέα του οργανισμού σας",
+                "service": "Πεδίο Ενδιαφέροντος",
+                "service_placeholder": "Επιλέξτε πεδίο ενδιαφέροντος",
+                "message": "Πλαίσιο & Στόχοι Έργου",
+                "message_placeholder": "Περιγράψτε το έργο, το χρονοδιάγραμμα ή τους κύριους στόχους σας...",
+                "submit_idle": "ΑΠΟΣΤΟΛΗ ΜΗΝΥΜΑΤΟΣ",
+                "submit_loading": "ΑΠΟΣΤΟΛΗ...",
+                "submit_success": "ΤΟ ΜΗΝΥΜΑ ΑΠΕΣΤΑΛΗ ΕΠΙΤΥΧΩΣ",
+                "submit_error": "ΣΦΑΛΜΑ ΑΠΟΣΤΟΛΗΣ"
             },
-            "disclaimer": "\"Ως Διπλωματούχος Μηχανικός και μέλος του ΤΕΕ, διασφαλίζω τη θεσμική συμμόρφωση και την τεχνική ακεραιότητα των υποδομών ψηφιακής υγείας, θωρακίζοντας τον οργανισμό σας έναντι των απαιτήσεων των ευρωπαϊκών κανονισμών.\"",
+            "disclaimer": "Ως Διπλωματούχος Μηχανικός Υπολογιστών και μέλος του ΤΕΕ (Αρ. Μητρώου: 174033), εγγυώμαι θεσμικά την τεχνική ακεραιότητα, την ασφάλεια δεδομένων και την πλήρη κανονιστική συμμόρφωση υπό τις ευρωπαϊκές οδηγίες.",
             "sectors": [
-                "MedTech & SaMD (Software as a Medical Device)",
-                "Pharmaceuticals & Clinical Research",
-                "Cloud & Sovereign Infrastructure",
-                "Industrial AI & Smart Manufacturing",
-                "RegTech & Technical Consultancies",
-                "Ministries of Health & Digital Governance",
-                "University Spin-offs & Research Labs",
-                "Judicial, IP & Financial Authorities",
-                "Smart Cities & IoT Infrastructure",
-                "European Commission & Policy Task Forces",
-                "Άλλο"
+                "Υγεία & Ιατρικό Λογισμικό (SaMD)",
+                "Μηχανική AI & Αυτόνομοι Agents",
+                "Υποδομές Cloud & Πλατφόρμες Δεδομένων",
+                "Βιοϊατρική Έρευνα & HealthTech",
+                "Εταιρικό Λογισμικό & SaaS",
+                "Δημόσιος Τομέας & Θεσμική Συμβουλευτική",
+                "Ακαδημαϊκή & Ερευνητική Καινοτομία",
+                "Άλλο / Γενικό Αίτημα"
             ],
             "services": [
-                "The Legal Shield",
-                "The Institutional Navigator",
-                "The Safety Authority",
-                "The Strategic Navigator",
-                "The Quality Architect",
-                "The Deep-Tech Auditor",
-                "Ecosystem Entry: Τεχνικός Έλεγχος για Startups"
+                "Αρχιτεκτονική & Ανάπτυξη Συστημάτων AI",
+                "Συμμόρφωση EU AI Act & Κανονιστική Θωράκιση",
+                "Πιστοποίηση Ιατρικού Λογισμικού (SaMD / MDR)",
+                "Full-Stack & Edge AI Υλοποίηση",
+                "Σχεδιασμός Αγωγών Δεδομένων & MLOps",
+                "Στρατηγική Τεχνική Συμβουλευτική",
+                "Γενική Συνεργασία & Ερώτημα"
             ]
         },
         "strategicSectors": {
@@ -2218,6 +2334,134 @@ export const locales = {
                     "value": "Διαμορφώνεις το μέλλον της νομοθεσίας. Drafting Position Papers για το EU AI Act, διασφαλίζοντας ότι η Ευρωπαϊκή καινοτομία παραμένει κυρίαρχη (Sovereign) και τεχνικά εφικτή, γεφυρώνοντας το κενό μεταξύ MEPs και Engineering reality.",
                     "image": "/resources/img/sectors/eu.jpg"
                 }
+            ]
+        },
+        "degreeJourney": {
+            "title_prefix": "ΑΚΑΔΗΜΑΪΚΗ",
+            "title_highlight": "ΠΟΡΕΙΑ ΣΠΟΥΔΩΝ",
+            "subtitle": "Δίπλωμα Μηχανικού Η/Υ & Πληροφορικής (M.Eng.)",
+            "summary_banner": "ΤΜΗΥΠ, Πανεπιστήμιο Πατρών | Βαθμός: 8.05/10 (Top 5% του τμήματος) | 300 ECTS • Εξειδίκευση στην Τεχνητή Νοημοσύνη, τη Μηχανική Λογισμικού και το HealthTech",
+            "education_milestones": [
+                {
+                    "date": "2020 – 2025",
+                    "type": "Integrated Master (EQF Level 7)",
+                    "image": "/fotogra/Integrated%20Master%20in%20Computer%20Engineering%20%26%20Informatics%20%28CEID%29.jpeg",
+                    "title": "Integrated Master (M.Eng.) — 5-Ετές Πρόγραμμα Σπουδών (EQF Level 7)",
+                    "org": "Τμήμα Μηχανικών Η/Υ & Πληροφορικής (ΤΜΗΥΠ), Πανεπιστήμιο Πατρών",
+                    "desc": "Ολοκλήρωση 300 ECTS απαιτητικών μαθημάτων σε προηγμένες αρχιτεκτονικές λογισμικού, συστήματα υλικού και κατανεμημένα δίκτυα χωρίς κανένα οφειλόμενο μάθημα. Ολοκληρώθηκε με 10/10 στη Διπλωματική Εργασία (ZenithDx), σχεδιάζοντας έναν αυτόνομο κλινικό σταθμό εργασίας 'Compliance-by-Design' σε υποδομή NVIDIA DGX."
+                },
+                {
+                    "date": "2017 – 2020",
+                    "type": "Θεμελιώδες Σκαλοπάτι",
+                    "image": "https://newsroom.ocde.us/wp-content/uploads/2025/09/PANA3047-2560x1707.jpeg",
+                    "title": "Δευτεροβάθμια Εκπαίδευση & Συμμετοχή στο PISA",
+                    "org": "2ο Γενικό Λύκειο Λαμίας, Ελλάδα",
+                    "desc": "Αποφοίτηση με σχεδόν άριστα 19.8/20 στις Πανελλαδικές Εξετάσεις, κατακτώντας κορυφαία επίδοση πανελλαδικά. Συμμετοχή στη διεθνή μελέτη PISA, η οποία μαζί με την αυστηρή προετοιμασία έθεσαν τις αναλυτικές και μαθηματικές βάσεις για σύνθετους αλγορίθμους και μηχανική συστημάτων."
+                }
+            ],
+            "commitment_quote": "Η συνεχής μηχανική αριστεία και οι αυστηρές μαθηματικές βάσεις καθοδηγούν την προσήλωσή μου σε συστήματα ΑΙ υψηλού αντίκτυπου.",
+            "stats": {
+                "gpa": { "value": "8.05 / 10", "label": "Γενικός Βαθμός (Top 5%)", "sub": "Με άριστα το 10.0" },
+                "rank": { "value": "300 ECTS", "label": "Integrated Master (M.Eng)", "sub": "EQF Level 7" },
+                "high_grades": { "value": "10 / 10", "label": "Διπλωματική & AI", "sub": "NVIDIA DGX Workstation" },
+                "zero_e": { "value": "0 Οφειλόμενα", "label": "Καθαρό Ακαδημαϊκό Ιστορικό", "sub": "Πλήρης Συνέπεια" }
+            },
+            "distribution_title": "Κατανομή ECTS & Δείκτης Ακαδημαϊκής Επίδοσης",
+            "distribution_subtitle": "Μαθηματικά ακριβής κατανομή ECTS σε 10 εξάμηνα (236/300 ECTS με βαθμούς Α & Β)",
+            "grades": [
+                { "grade": "Grade A & P (45%)", "category": "Άριστα & Εξαιρετικά", "percentage": "45%", "ects": "135 ECTS", "color": "emerald", "details": "120 ECTS (Βαθμός Α) + 15 ECTS (3 υψηλού επιπέδου μαθήματα Pass: 10.0, 9.5 & 8.0). Περιλαμβάνει 10/10 Διπλωματική & Core AI." },
+                { "grade": "Grade B (34%)", "category": "Λίαν Καλώς", "percentage": "34%", "ects": "101 ECTS", "color": "blue", "details": "Κορυφαίο 35% της τάξης σε προηγμένα μαθήματα κορμού, αλγορίθμους και συστήματα." },
+                { "grade": "Grade C (14%)", "category": "Καλώς", "percentage": "14%", "ects": "42 ECTS", "color": "purple", "details": "Σταθερή ολοκλήρωση 7 μαθημάτων κορμού μηχανικής και εφαρμοσμένων μαθηματικών." },
+                { "grade": "Grade D (7%)", "category": "Ικανοποιητικά", "percentage": "7%", "ects": "22 ECTS", "color": "amber", "details": "Ικανοποιητική απόδοση σε 5 μαθήματα επιλογής." },
+                { "grade": "Grade E (0%)", "category": "Κατώτατη Βάση", "percentage": "0%", "ects": "0 ECTS", "color": "slate", "details": "0% στη χαμηλότερη βάση (5.0-5.9) και μηδέν αποτυχίες στην ακαδημαϊκή ιστορία. Απόλυτη συνέπεια χωρίς αδύναμα σημεία." }
+            ],
+            "courses_title": "Κύρια Ακαδημαϊκά Μαθήματα",
+            "courses_subtitle": "5-Ετές Πολυτεχνικό Integrated Master (EQF Level 7) σε AI, HPC υλικό και κατανεμημένα συστήματα",
+            "course_categories": [
+                {
+                    "id": "math_ai",
+                    "icon": "🧠",
+                    "title": "AI, Μηχανική Μάθηση & Μαθηματικά Θεμέλια",
+                    "desc": "Αυστηρή πιθανοτική μοντελοποίηση, πολυδιάστατος λογισμός, αρχιτεκτονικές ιατρικής απεικόνισης και πυρήνες κλινικής AI.",
+                    "badge": "Μαθηματική Ακρίβεια",
+                    "courses": [
+                        { "code": "CEID_NΔ01-06", "name": "Διπλωματική Εργασία (ZenithDx Clinical AI)", "grade": "10.0 (A)", "impact": "Έρευνα Αιχμής AI: 14-μηνος σχεδιασμός αυτόνομου πολυτροπικού CDSS σε NVIDIA DGX, με LangGraph ReAct loops, S²A-UNet τμηματοποίηση (0.9718 Dice), ταξινομητές ResNet-50 και Heterogeneous Graph GNNs." },
+                        { "code": "CEID_NY204", "name": "Πιθανότητες & Βασική Στατιστική", "grade": "10.0 (A)", "impact": "Μαθηματική Ακρίβεια: Θεμέλιο στατιστικής μάθησης, δικτύων Bayes και αβεβαιότητας μοντέλων ML." },
+                        { "code": "CEID_NY102", "name": "Μαθηματικά II (Απειροστικός Λογισμός)", "grade": "9.5 (A)", "impact": "Μαθηματική Ακρίβεια: Πολυδιάστατη βελτιστοποίηση, υπολογισμός gradients και neural backpropagation." },
+                        { "code": "CEID_NY240", "name": "Αριθμητική Ανάλυση & Περιβάλλοντα Εφαρμογής", "grade": "8.5 (A)", "impact": "Μαθηματική Ακρίβεια: Αριθμητική σταθερότητα, διάδοση σφαλμάτων κινητής υποδιαστολής και μεταγλώττιση αλγορίθμων." },
+                        { "code": "CEID_NE548", "name": "Εισαγωγή στη Βιοπληροφορική", "grade": "9.5 (P)", "impact": "Υπολογιστική Βιολογία: Αναζήτηση προτύπων Suffix Tree, στοίχιση αλληλουχιών (Needleman-Wunsch DP) και 3D αναδίπλωση πρωτεϊνών." },
+                        { "code": "CEID_NE562", "name": "Εξόρυξη Δεδομένων & Μηχανική Μάθηση", "grade": "8.0 (B)", "impact": "Πυρήνας ML: Επιβλεπόμενη/μη επιβλεπόμενη αναγνώριση προτύπων, συσταδοποίηση και αξιολόγηση μοντέλων." },
+                        { "code": "CEID_NY343", "name": "Επιστημονικοί Υπολογισμοί", "grade": "7.5 (A)", "impact": "Υπολογιστικά Μαθηματικά: Γραμμικοί επιλυτές υψηλής απόδοσης, παραγοντοποίηση μητρών και προσομοιώσεις SciPy." },
+                        { "code": "CEID_NY110", "name": "Γραμμική Άλγεβρα", "grade": "6.5 (B)", "impact": "Μαθηματική Ακρίβεια: Διανυσματικοί χώροι, μετασχηματισμοί μητρών, ιδιοτιμές/ιδιοδιανύσματα και αποσυνθέσεις τανυστών." },
+                        { "code": "CEID_NY451", "name": "Τεχνητή Νοημοσύνη", "grade": "6.5 (B)", "impact": "Πυρήνας ML: Ευρετική αναζήτηση, ικανοποίηση περιορισμών και ντετερμινιστικά συστήματα σημασιολογικής συλλογιστικής." }
+                    ]
+                },
+                {
+                    "id": "hpc_hardware",
+                    "icon": "⚡",
+                    "title": "Υπολογιστές Υψηλής Αποδόσεως & Υλικό",
+                    "desc": "Μικροαρχιτεκτονική, εκτέλεση χαμηλού επιπέδου, παράλληλη επεξεργασία, edge computing και ασύρματη τηλεμετρία.",
+                    "badge": "Εκτέλεση Συστημάτων",
+                    "courses": [
+                        { "code": "CEID_NY261", "name": "Θέματα Αρχιτεκτονικής Υπολογιστών I", "grade": "8.5 (A)", "impact": "Βελτιστοποίηση Υλικού: Δυναμική πρόβλεψη διακλαδώσεων, παραλληλία σε επίπεδο εντολών (ILP), ιεραρχία μνήμης και πρωτόκολλα συνοχής cache." },
+                        { "code": "CEID_NY262", "name": "Σύγχρονα Θέματα Αρχιτεκτονικής Υπολογιστών II", "grade": "7.0 (B)", "impact": "Βελτιστοποίηση Υλικού: Παραλληλία επιπέδου νημάτων, μοντέλα συνέπειας μνήμης, συνοχή cache (MSI/MESI) και δρομολόγηση Network-on-Chip (NoC)." },
+                        { "code": "CEID_NY361", "name": "Μικροεπεξεργαστές", "grade": "10.0 (A)", "impact": "Εκτέλεση Συστημάτων: Προγραμματισμός assembly χαμηλού επιπέδου, καταχωρητές, διακοπές υλικού και περιορισμένη μνήμη." },
+                        { "code": "CEID_NY463", "name": "Προηγμένοι Μικροεπεξεργαστές", "grade": "6.5 (B)", "impact": "Εκτέλεση Συστημάτων: Υπερβαθμωτά pipelines, δυναμικός προγραμματισμός εντολών (Tomasulo), out-of-order εκτέλεση και διανυσματικές επεκτάσεις (SIMD/AVX)." },
+                        { "code": "CEID_NY381", "name": "Ψηφιακή Επεξεργασία Σήματος (DSP)", "grade": "8.0 (A)", "impact": "Εκτέλεση Συστημάτων: Μετασχηματισμοί Fourier (DFT/FFT), ψηφιακά φίλτρα και συνέλιξη. Εξαγωγή Mel-Spectrograms σε real-time voice AI (faster-whisper)." },
+                        { "code": "CEID_NY164", "name": "Ψηφιακή Σχεδίαση II (Λογική Σχεδίαση II)", "grade": "8.0 (A)", "impact": "Σύνθεση Υλικού: Γλώσσες VHDL/Verilog, σχεδίαση RTL σε FPGAs και σύνθεση Finite State Machines (FSM)." },
+                        { "code": "CEID_NY163", "name": "Ψηφιακή Σχεδίαση I (Λογική Σχεδίαση I)", "grade": "7.5 (B)", "impact": "Σύνθεση Υλικού: Συνδυαστική και ακολουθιακή λογική, χάρτες Karnaugh και διαγράμματα συγχρονισμού flip-flop." },
+                        { "code": "CEID_N4408", "name": "Παράλληλη Επεξεργασία", "grade": "7.5 (B)", "impact": "Εκτέλεση HPC: Παραλληλία διαμοιραζόμενης μνήμης, multi-core thread pooling και μοντέλα OpenMP." },
+                        { "code": "CEID_NE4128", "name": "Παράλληλοι Αλγόριθμοι", "grade": "6.5 (B)", "impact": "Εκτέλεση HPC: Κλιμάκωση clusters κατανεμημένης μνήμης, δρομολόγηση τοπολογίας MPI και IPC." },
+                        { "code": "CEID_NE577", "name": "Αρχιτεκτονικές 5G & Edge Computing", "grade": "10.0 (P)", "impact": "Υποδομές Edge: Εικονικά δίκτυα Multi-access Edge Computing (MEC), αναπτύξεις χαμηλού latency και QoS." },
+                        { "code": "CEID_NE592", "name": "Θεμελιώσεις Κυψελοειδών Δικτύων", "grade": "8.0 (P)", "impact": "Ασύρματες Υποδομές: Διάδοση σήματος, μοντέλα απωλειών και προσομοίωση ML handover κυψελών." }
+                    ]
+                },
+                {
+                    "id": "software_systems",
+                    "icon": "💻",
+                    "title": "Συστήματα Λογισμικού & Μηχανική Δεδομένων",
+                    "desc": "Δομές δεδομένων, πολυδιάστατη ευρετηρίαση, κατανεμημένες βάσεις δεδομένων, SDLC και πρότυπα διασφάλισης ποιότητας.",
+                    "badge": "Υποδομές Παραγωγής",
+                    "courses": [
+                        { "code": "CEID_NE5577", "name": "Διασφάλιση Ποιότητας Λογισμικού & Πρότυπα", "grade": "10.0 (A)", "impact": "Ποιότητα & Συμμόρφωση: Επαλήθευση και επικύρωση λογισμικού (V&V), αυτοματοποιημένες δοκιμές και EU AI Act." },
+                        { "code": "CEID_NE5358", "name": "Εφαρμοσμένα Πληροφοριακά Συστήματα II", "grade": "10.0 (A)", "impact": "Υποδομή Παραγωγής: Εταιρικές αρχιτεκτονικές κατανεμημένων εφαρμογών και συστήματα υψηλής παραλληλίας." },
+                        { "code": "CEID_NE5367", "name": "Προηγμένα Πληροφοριακά Συστήματα", "grade": "9.5 (B)", "impact": "Υποδομή Παραγωγής: Κατανεμημένες βάσεις δεδομένων, RPCs, πρωτόκολλα συναίνεσης και ορχήστρωση πόρων." },
+                        { "code": "CEID_NY232", "name": "Μηχανική Λογισμικού", "grade": "9.0 (A)", "impact": "Υποδομή Παραγωγής: Ανάλυση συστημάτων, OOP αρχιτεκτονικά πρότυπα, μοντελοποίηση UML και πλαίσια Scrum." },
+                        { "code": "CEID_NY334", "name": "Συστήματα Βάσεων Δεδομένων", "grade": "9.0 (A)", "impact": "Υποδομή Παραγωγής: Σχεσιακή άλγεβρα, βελτιστοποίηση επερωτήσεων, ευρετηρίαση B-Tree και ιδιότητες ACID." },
+                        { "code": "CEID_NY134", "name": "Αντικειμενοστρεφής Προγραμματισμός", "grade": "8.0 (B)", "impact": "Υποδομή Παραγωγής: Προηγμένη αρχιτεκτονική λογισμικού σε C++ και Java. Πολυμορφισμός, διαχείριση μνήμης και σχεδιαστικά πρότυπα." },
+                        { "code": "CEID_NY233", "name": "Δομές Δεδομένων", "grade": "8.0 (B)", "impact": "Υποδομή Παραγωγής: Υλοποιήσεις AVL Trees, Max-Heaps και Hash Tables. Βελτιστοποίηση LLM Key-Value (KV) caches." },
+                        { "code": "CEID_NE4338", "name": "Πολυδιάστατες Δομές Δεδομένων", "grade": "10.0 (B)", "impact": "Χωρική Ανάκτηση: Πολυδιάστατη χωρική ευρετηρίαση (K-D Trees, Octrees) και διανυσματική αναζήτηση ομοιότητας." }
+                    ]
+                }
+            ],
+            "pillars_title": "Αναλυτικοί & Τεχνικοί Πυλώνες",
+            "pillars": [
+                { "id": "rigor", "icon": "🏛️", "badge": "EQF Level 7", "title": "Ακαδημαϊκή Αυστηρότητα", "summary": "Ο βαθμός 8.05/10 σε 5-ετές Integrated Master (300 ECTS) από το ΤΜΗΥΠ αντιπροσωπεύει αδιάσειστες μαθηματικές βάσεις και κατανόηση συστημάτων." },
+                { "id": "rank", "icon": "🏆", "badge": "Top 5% Κατάταξη", "title": "Κορυφαία Διαπίστευση", "summary": "Η αποφοίτηση στο Top 5% του τμήματος αποτελεί παγκόσμια απόδειξη ακαδημαϊκής και γνωστικής αριστείας." },
+                { "id": "consistency", "icon": "📈", "badge": "79% Βαθμοί A & B", "title": "Υψηλή Συνέπεια", "summary": "Η διατήρηση βαθμών A & B σε 236 / 300 ECTS αποδεικνύει εξαιρετική προσήλωση και μακροπρόθεσμη αφοσίωση στην ποιότητα." },
+                { "id": "clean_record", "icon": "🛡️", "badge": "0% Βαθμός E", "title": "Μηδενικά Αδύναμα Σημεία", "summary": "Το απόλυτο 0% στον βαθμό E αποδεικνύει ότι δεν υπάρχουν παραλειπόμενα θεμέλια ή αδυναμίες στο εργαλείο μηχανικού υπό οποιονδήποτε φόρτο." }
+            ]
+        },
+        "footer": {
+            "tagline_prefix": "Αρχιτεκτονική θεσμικής επιβίωσης συστημάτων AI.",
+            "tagline_highlight": "Γεφυρώνοντας το χάσμα μεταξύ Καινοτομίας και Κανονιστικής Συμμόρφωσης.",
+            "nav_title": "Πλοήγηση",
+            "status_title": "Κατάσταση Συστήματος",
+            "all_systems_operational": "Όλα τα Συστήματα Λειτουργικά",
+            "build_version": "Έκδοση Build",
+            "version_number": "2026.3.0",
+            "last_build": "Τελευταίο Build",
+            "last_build_date": "Αύγουστος 2026",
+            "back_to_top": "Επιστροφή στην Κορυφή",
+            "rights_reserved": "Με την επιφύλαξη παντός δικαιώματος.",
+            "links": [
+                { "name": "Πλαίσιο AI", "href": "#expertise" },
+                { "name": "Έργα", "href": "#portfolio" },
+                { "name": "Ακαδημαϊκή Πορεία", "href": "#degree" },
+                { "name": "Οπλοστάσιο", "href": "#about" },
+                { "name": "Αρχή", "href": "#authority" },
+                { "name": "Συστάσεις", "href": "#testimonials" },
+                { "name": "Επικοινωνία", "href": "#contact" }
             ]
         }
     }

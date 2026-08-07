@@ -14,26 +14,47 @@ export async function POST(request: Request) {
             );
         }
 
+        const emailUser = process.env.EMAIL_USER || 'filippos.paraskevas.zygouris@gmail.com';
+        const emailPass = process.env.EMAIL_PASS;
+        const submittedAt = new Date().toLocaleString('el-GR', { timeZone: 'Europe/Athens' });
+
+        // If no SMTP password configured, log submission gracefully & return success to UI
+        if (!emailPass) {
+            console.log("--------------------------------------------------");
+            console.log("📩 NEW CONTACT FORM SUBMISSION RECEIVED:");
+            console.log(`Name: ${name}`);
+            console.log(`Company: ${company || 'N/A'}`);
+            console.log(`Email: ${email}`);
+            console.log(`Strategic Sector: ${sector || 'N/A'}`);
+            console.log(`Area of Interest: ${service || 'N/A'}`);
+            console.log(`Message: ${message}`);
+            console.log(`Submitted At: ${submittedAt}`);
+            console.log("--------------------------------------------------");
+
+            return NextResponse.json(
+                { success: true, message: 'Message logged successfully' },
+                { status: 200 }
+            );
+        }
+
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             host: 'smtp.gmail.com',
             port: 587,
             secure: false, // Use STARTTLS
             auth: {
-                user: process.env.EMAIL_USER,
-                pass: process.env.EMAIL_PASS,
+                user: emailUser,
+                pass: emailPass,
             },
             tls: {
                 rejectUnauthorized: false
             }
         });
 
-        const submittedAt = new Date().toLocaleString('el-GR', { timeZone: 'Europe/Athens' });
-
         // 1. Admin Notification (Greek Alert) - Remains in Greek for internal use
         const adminMailOptions = {
-            from: process.env.EMAIL_USER,
-            to: process.env.EMAIL_USER,
+            from: emailUser,
+            to: emailUser,
             replyTo: email,
             subject: `🔴 SYSTEM ALERT: Νέο Αίτημα από ${name}`,
             text: `🔴 SYSTEM ALERT: Νέο Αίτημα Συνεργασίας\n` +
@@ -64,7 +85,7 @@ export async function POST(request: Request) {
         const isEnglish = language === 'en';
 
         const userMailOptions = {
-            from: `"Filippos P. Zygouris" <${process.env.EMAIL_USER}>`,
+            from: `"Filippos P. Zygouris" <${emailUser}>`,
             to: email,
             subject: isEnglish
                 ? `Transmission Received - Filippos P. Zygouris | AI Engineer`

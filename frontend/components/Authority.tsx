@@ -35,12 +35,10 @@ export default function Authority() {
     const pillars: AuthorityPillar[] = t.pillars || [];
 
     return (
-        <section id="authority" className="w-full py-24 lg:py-36 relative overflow-hidden bg-[#050505] text-white">
-            {/* Ambient Background & Grid Overlay */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(59,130,246,0.07),transparent_70%)] pointer-events-none" />
-            <div className="absolute inset-0 clinical-grid opacity-20 pointer-events-none" />
-            <div className="absolute top-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
-            <div className="absolute bottom-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-900/30 to-transparent" />
+        <section id="authority" className="w-full py-24 lg:py-32 relative overflow-hidden text-white">
+            {/* Background Atmosphere matching Portfolio */}
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[120px] pointer-events-none opacity-50" />
+            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-purple-900/10 rounded-full blur-[100px] pointer-events-none opacity-30" />
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
 
@@ -53,16 +51,6 @@ export default function Authority() {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         className="relative inline-block max-w-4xl mx-auto"
                     >
-                        {/* Glow halo */}
-                        <div className="absolute -inset-16 bg-blue-500/10 blur-[100px] rounded-full opacity-60 pointer-events-none" />
-
-                        <div className="inline-flex items-center justify-center gap-2.5 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 mb-6 backdrop-blur-md">
-                            <span className="w-2 h-2 rounded-full bg-blue-400 animate-ping" />
-                            <span className="font-mono text-blue-400 text-xs uppercase tracking-[0.25em] font-semibold">
-                                {t.label}
-                            </span>
-                        </div>
-
                         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 tracking-tight uppercase leading-[1.15]">
                             {t.title}
                         </h2>
@@ -77,7 +65,7 @@ export default function Authority() {
                         <motion.div
                             whileHover={{ scale: 1.01 }}
                             transition={{ duration: 0.3 }}
-                            className="relative max-w-3xl mx-auto text-left bg-gradient-to-b from-[#0d1322] to-[#070b14] border border-blue-500/25 rounded-2xl p-7 md:p-9 shadow-2xl backdrop-blur-xl group"
+                            className="relative max-w-3xl mx-auto text-left bg-[#0a0a0a] border border-white/10 rounded-2xl p-7 md:p-9 shadow-2xl backdrop-blur-xl group"
                         >
                             <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-blue-400 via-blue-600 to-indigo-600 rounded-l-2xl" />
                             <p className="text-slate-200 text-base md:text-lg font-light leading-relaxed italic pl-4 group-hover:text-white transition-colors">
@@ -97,7 +85,7 @@ export default function Authority() {
                             whileHover={{ y: -8, scale: 1.02 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.12 }}
-                            className="relative rounded-2xl border border-white/10 bg-[#090d16]/90 backdrop-blur-xl p-8 flex flex-col justify-between group hover:border-blue-500/50 hover:bg-[#0c1322] hover:shadow-[0_15px_45px_-10px_rgba(59,130,246,0.25)] transition-all duration-500 overflow-hidden"
+                            className="relative rounded-2xl border border-white/10 bg-[#0a0a0a] backdrop-blur-xl p-8 flex flex-col justify-between group hover:border-blue-500/50 hover:shadow-[0_15px_45px_-10px_rgba(59,130,246,0.15)] transition-all duration-500 overflow-hidden"
                         >
                             {/* Top Laser Beam Animation on Hover */}
                             <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-blue-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
